@@ -1,0 +1,496 @@
+[
+    {
+        "question_text": "平时都玩哪些游戏？",
+        "initial_codes": [
+            {
+                "respondent_id": "1",
+                "original_answer_segment": "原神，星露谷，皇帝养成计划",
+                "code_name": [
+                    "养成/模拟"
+                ],
+                "supporting_quote": [
+                    "原神，星露谷，皇帝养成计划"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "2",
+                "original_answer_segment": "S PS 游戏就射击枪战，射击游戏？",
+                "code_name": [
+                    "FPS"
+                ],
+                "supporting_quote": [
+                    "S PS 游戏就射击枪战，射击游戏？"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "3",
+                "original_answer_segment": "三角洲射击类游戏32比32",
+                "code_name": [
+                    "FPS"
+                ],
+                "supporting_quote": [
+                    "三角洲射击类游戏32比32"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "4",
+                "original_answer_segment": "玩儿篮球游戏，足球游戏，玩儿英雄联盟",
+                "code_name": [
+                    "竞技体育",
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "玩儿篮球游戏，足球游戏",
+                    "玩儿英雄联盟"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "5",
+                "original_answer_segment": "我平时不怎么玩游戏。",
+                "code_name": [
+                    "不常玩"
+                ],
+                "supporting_quote": [
+                    "我平时不怎么玩游戏。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "6",
+                "original_answer_segment": "我平时喜欢玩王者荣耀。",
+                "code_name": [
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "我平时喜欢玩王者荣耀。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "7",
+                "original_answer_segment": "平时喜欢玩一些烧脑的游戏。",
+                "code_name": [
+                    "解谜烧脑"
+                ],
+                "supporting_quote": [
+                    "平时喜欢玩一些烧脑的游戏。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "8",
+                "original_answer_segment": "玩fps或者养成游戏。",
+                "code_name": [
+                    "FPS",
+                    "养成/模拟"
+                ],
+                "supporting_quote": [
+                    "玩fps或者养成游戏。",
+                    "玩fps或者养成游戏。"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "9",
+                "original_answer_segment": "我平时除了玩《我的世界》，还会玩《王者荣耀》、金铲铲，还有一些主机类的联机游戏",
+                "code_name": [
+                    "MOBA",
+                    "仅MC"
+                ],
+                "supporting_quote": [
+                    "还会玩《王者荣耀》、金铲铲，还有一些主机类的联机游戏",
+                    "我平时除了玩《我的世界》，"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "10",
+                "original_answer_segment": "锈湖，巴别塔圣歌，苏丹的游戏，胡闹厨房",
+                "code_name": [
+                    "解谜烧脑",
+                    "养成/模拟"
+                ],
+                "supporting_quote": [
+                    "锈湖，巴别塔圣歌，苏丹的游戏，胡闹厨房",
+                    "锈湖，巴别塔圣歌，苏丹的游戏，胡闹厨房"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "11",
+                "original_answer_segment": "解谜游戏、角色扮演游戏、休闲模拟经营类游戏比较多",
+                "code_name": [
+                    "解谜烧脑",
+                    "养成/模拟"
+                ],
+                "supporting_quote": [
+                    "解谜游戏、角色扮演游戏、休闲模拟经营类游戏比较多",
+                    "解谜游戏、角色扮演游戏、休闲模拟经营类游戏比较多"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "12",
+                "original_answer_segment": "英雄联盟；使命召唤；瓦罗兰特；三角洲行动；战地1；战地5；黑神话悟空；赛博朋克2077；极品飞车21；极品飞车22；部落冲突；Apex；守望先锋；我的世界；GTA5；极限国度；泰坦陨落2；星露谷物语；WRC7；",
+                "code_name": [
+                    "MOBA",
+                    "FPS",
+                    "养成/模拟",
+                    "仅MC"
+                ],
+                "supporting_quote": [
+                    "英雄联盟",
+                    "使命召唤；瓦罗兰特；三角洲行动；战地1；战地5；Apex；守望先锋；泰坦陨落2",
+                    "星露谷物语",
+                    "我的世界"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3",
+                    "4-4"
+                ]
+            },
+            {
+                "respondent_id": "13",
+                "original_answer_segment": "平时会玩无畏契约、逆水寒、恋与深空，蛋仔派对等",
+                "code_name": [
+                    "FPS",
+                    "休闲类",
+                    "养成/模拟"
+                ],
+                "supporting_quote": [
+                    "无畏契约",
+                    "蛋仔派对",
+                    "逆水寒、恋与深空"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": "14",
+                "original_answer_segment": "光遇，第五人格，恋与深空，模拟人生",
+                "code_name": [
+                    "养成/模拟",
+                    "休闲类"
+                ],
+                "supporting_quote": [
+                    "光遇，第五人格，恋与深空，模拟人生",
+                    "光遇，第五人格，恋与深空，模拟人生"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "15",
+                "original_answer_segment": "现在就是玩王者荣耀。",
+                "code_name": [
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "现在就是玩王者荣耀。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "16",
+                "original_answer_segment": "王者荣耀，光遇，双人成行其实玩来玩去最后还是回MC盖房子最解压",
+                "code_name": [
+                    "MOBA",
+                    "养成/模拟",
+                    "仅MC"
+                ],
+                "supporting_quote": [
+                    "王者荣耀",
+                    "光遇，双人成行",
+                    "玩来玩去最后还是回MC盖房子最解压"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": "17",
+                "original_answer_segment": "fps类型居多",
+                "code_name": [
+                    "FPS"
+                ],
+                "supporting_quote": [
+                    "fps类型居多"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "18",
+                "original_answer_segment": "平时玩的更多的是CSGO之类的枪战游戏",
+                "code_name": [
+                    "FPS"
+                ],
+                "supporting_quote": [
+                    "平时玩的更多的是CSGO之类的枪战游戏"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "19",
+                "original_answer_segment": "各种各样的独立游戏吧",
+                "code_name": [
+                    "休闲类"
+                ],
+                "supporting_quote": [
+                    "各种各样的独立游戏吧"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "20",
+                "original_answer_segment": "fps，cs，无畏契约",
+                "code_name": [
+                    "FPS"
+                ],
+                "supporting_quote": [
+                    "fps，cs，无畏契约"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "21",
+                "original_answer_segment": "主要玩 MC，偶尔玩王者，但 MC 玩得最久。就是喜欢自己盖房子，不像别的游戏要一直打怪，MC 比较自由，想怎么玩就怎么玩。",
+                "code_name": [
+                    "仅MC",
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "主要玩 MC，偶尔玩王者，但 MC 玩得最久。",
+                    "偶尔玩王者"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "22",
+                "original_answer_segment": "王者荣耀",
+                "code_name": [
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "王者荣耀"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "23",
+                "original_answer_segment": "平时玩王者荣耀，第五人格，和平精英",
+                "code_name": [
+                    "MOBA",
+                    "休闲类",
+                    "FPS"
+                ],
+                "supporting_quote": [
+                    "王者荣耀",
+                    "第五人格",
+                    "和平精英"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": "24",
+                "original_answer_segment": "王者荣耀",
+                "code_name": [
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "王者荣耀"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "25",
+                "original_answer_segment": "平时玩老爹汉堡店或者是一些煮饭游戏",
+                "code_name": [
+                    "养成/模拟",
+                    "休闲类"
+                ],
+                "supporting_quote": [
+                    "平时玩老爹汉堡店或者是一些煮饭游戏",
+                    "平时玩老爹汉堡店或者是一些煮饭游戏"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "26",
+                "original_answer_segment": "王者荣耀",
+                "code_name": [
+                    "MOBA"
+                ],
+                "supporting_quote": [
+                    "王者荣耀"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "27",
+                "original_answer_segment": "只玩 MC，因为喜欢自由创造的感觉，别的游戏玩一会儿就腻了。就是在 MC 里能实现现实中做不到的事，比如盖空中城堡。",
+                "code_name": [
+                    "仅MC"
+                ],
+                "supporting_quote": [
+                    "只玩 MC，因为喜欢自由创造的感觉，别的游戏玩一会儿就腻了。就是在 MC 里能实现现实中做不到的事，比如盖空中城堡。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "28",
+                "original_answer_segment": "王者、饥荒，还有那个摔来摔去的游戏，叫什么来着…额，但MC是我玩得最久的，就是上瘾了。",
+                "code_name": [
+                    "MOBA",
+                    "休闲类",
+                    "仅MC"
+                ],
+                "supporting_quote": [
+                    "王者",
+                    "饥荒，还有那个摔来摔去的游戏，叫什么来着…",
+                    "但MC是我玩得最久的，就是上瘾了。"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "MOBA",
+                "code_definition": "玩MOBA类（多人在线竞技）游戏"
+            },
+            {
+                "code_name": "FPS",
+                "code_definition": "玩FPS/射击类游戏"
+            },
+            {
+                "code_name": "养成/模拟",
+                "code_definition": "玩养成、模拟、经营类游戏"
+            },
+            {
+                "code_name": "解谜烧脑",
+                "code_definition": "玩解谜、烧脑类游戏"
+            },
+            {
+                "code_name": "竞技体育",
+                "code_definition": "玩体育竞技类游戏"
+            },
+            {
+                "code_name": "休闲类",
+                "code_definition": "玩休闲、派对、独立游戏"
+            },
+            {
+                "code_name": "仅MC",
+                "code_definition": "只玩《我的世界》或以MC为主"
+            },
+            {
+                "code_name": "不常玩",
+                "code_definition": "平时不怎么玩游戏"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "动作竞技与对抗",
+                "theme_definition": "玩家主要偏好竞技、对抗性强的游戏类型，如MOBA、射击及体育类游戏，追求操作、竞争和团队合作体验。",
+                "included_initial_codes": [
+                    "MOBA",
+                    "FPS",
+                    "竞技体育"
+                ]
+            },
+            {
+                "theme_name": "养成模拟与休闲体验",
+                "theme_definition": "玩家喜欢在养成、模拟、休闲、解谜等低压力游戏中获得放松与自我表达，强调探索、经营或策略乐趣。",
+                "included_initial_codes": [
+                    "养成/模拟",
+                    "解谜烧脑",
+                    "休闲类"
+                ]
+            },
+            {
+                "theme_name": "明显偏好MC",
+                "theme_definition": "部分玩家对《我的世界》表现出高度专注或唯一性偏好，游戏自由创造的特性成为其持久吸引力。",
+                "included_initial_codes": [
+                    "仅MC"
+                ]
+            },
+            {
+                "theme_name": "游戏涉猎较少",
+                "theme_definition": "少数被访者平时基本不玩游戏或兴趣较低，游戏对其日常影响有限。",
+                "included_initial_codes": [
+                    "不常玩"
+                ]
+            }
+        ]
+    }
+]
