@@ -1,0 +1,89 @@
+2025-06-06T01:12:23.338753 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T01:12:23.339329 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T01:12:23.339494 - 错误: 工作流 - 工作流执行过程中发生错误: name 'validate_workflow_config' is not defined
+2025-06-06T01:12:23.339611 - 失败: 完成 - 工作流程执行失败，请检查日志文件了解详细信息
+2025-06-06T01:14:48.467788 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T01:14:48.468527 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T01:14:48.468577 - 错误: 工作流 - 工作流执行过程中发生错误: name 'validate_workflow_config' is not defined
+2025-06-06T01:14:48.468614 - 失败: 完成 - 工作流程执行失败，请检查日志文件了解详细信息
+2025-06-06T01:15:50.585415 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T01:15:50.585752 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T01:15:50.586004 - 信息: 进度 - 创建目录结构 (2/3)
+2025-06-06T01:15:50.586895 - 信息: 进度 - 移动文件 (3/3)
+2025-06-06T01:15:50.586947 - 开始: 移动文件 - 准备移动初始数据文件...
+2025-06-06T01:15:50.587023 - 成功: 创建目录 - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:15:50.587663 - 成功: 移动文件 - 已移动 'myworld.csv'
+2025-06-06T01:15:50.587717 - 成功: 创建目录 - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:15:50.588278 - 成功: 移动文件 - 已移动 'myworld-outline.csv'
+2025-06-06T01:15:50.588315 - 完成: 移动文件 - 所有文件移动操作已完成
+2025-06-06T01:15:50.588347 - 完成: 工作流 - 工作流程 'SETUP' 执行成功
+2025-06-06T01:15:50.588382 - 成功: 完成 - 项目环境已准备就绪
+2025-06-06T01:15:50.588453 - 信息: 提示 - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:16:10.391102 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T01:16:10.391486 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T01:16:10.391773 - 信息: 进度 - 创建目录结构 (2/3)
+2025-06-06T01:16:10.391970 - 信息: 进度 - 移动文件 (3/3)
+2025-06-06T01:16:10.392012 - 开始: 移动文件 - 准备移动初始数据文件...
+2025-06-06T01:16:10.392067 - 信息: 移动文件 - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-06T01:16:10.392115 - 信息: 移动文件 - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-06T01:16:10.392150 - 完成: 移动文件 - 所有文件移动操作已完成
+2025-06-06T01:16:10.392191 - 完成: 工作流 - 工作流程 'SETUP' 执行成功
+2025-06-06T01:16:10.392225 - 成功: 完成 - 项目环境已准备就绪
+2025-06-06T01:16:10.392259 - 信息: 提示 - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:27:30.572963 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T01:27:30.573434 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T01:27:30.574064 - 信息: 进度 - 创建目录结构 (2/3)
+2025-06-06T01:27:30.574322 - 信息: 进度 - 移动文件 (3/3)
+2025-06-06T01:27:30.574379 - 开始: 移动文件 - 准备移动初始数据文件...
+2025-06-06T01:27:30.574462 - 信息: 移动文件 - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-06T01:27:30.574522 - 信息: 移动文件 - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-06T01:27:30.574604 - 完成: 移动文件 - 所有文件移动操作已完成
+2025-06-06T01:27:30.574660 - 完成: 工作流 - 工作流程 'SETUP' 执行成功
+2025-06-06T01:27:30.574715 - 成功: 完成 - 项目环境已准备就绪
+2025-06-06T01:27:30.574765 - 信息: 提示 - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:44:18.772387 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T01:44:18.772988 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T01:44:18.773868 - 信息: 进度 - 创建目录结构 (2/3)
+2025-06-06T01:44:18.775444 - 信息: 进度 - 移动文件 (3/3)
+2025-06-06T01:44:18.775495 - 开始: 移动文件 - 准备移动初始数据文件...
+2025-06-06T01:44:18.775571 - 成功: 创建目录 - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:44:18.786216 - 成功: 移动文件 - 已移动 'myworld.csv'
+2025-06-06T01:44:18.786380 - 成功: 创建目录 - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T01:44:18.788093 - 成功: 移动文件 - 已移动 'myworld-outline.csv'
+2025-06-06T01:44:18.788180 - 完成: 移动文件 - 所有文件移动操作已完成
+2025-06-06T01:44:18.788230 - 完成: 工作流 - 工作流程 'SETUP' 执行成功
+2025-06-06T01:44:18.788299 - 成功: 完成 - 项目环境已准备就绪
+2025-06-06T01:44:18.788352 - 信息: 提示 - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T02:06:20.376451 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T02:06:20.376919 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T02:06:20.377144 - 信息: 进度 - 创建目录结构 (2/3)
+2025-06-06T02:06:20.377203 - 信息: 创建目录 - 正在检查并按需创建项目目录...
+2025-06-06T02:06:20.377355 - 信息: 进度 - 移动文件 (3/3)
+2025-06-06T02:06:20.377394 - 开始: 移动文件 - 准备移动初始数据文件...
+2025-06-06T02:06:20.377441 - 信息: 移动文件 - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-06T02:06:20.377489 - 信息: 移动文件 - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-06T02:06:20.377526 - 完成: 移动文件 - 所有文件移动操作已完成
+2025-06-06T02:06:20.377561 - 完成: 工作流 - 工作流程 'SETUP' 执行成功
+2025-06-06T02:06:20.377596 - 成功: 完成 - 项目环境已准备就绪
+2025-06-06T02:06:20.377632 - 信息: 提示 - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T02:06:20.377666 - 开始: 测试 - 
+--- 开始测试数据访问接口 ---
+2025-06-06T02:06:20.377701 - 信息: 初始化 - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-06T02:06:20.377751 - 信息: 初始化 - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-06T02:13:33.004306 - 开始: 工作流 - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-06T02:13:33.004741 - 信息: 进度 - 验证配置 (1/3)
+2025-06-06T02:13:33.005341 - 信息: 进度 - 创建目录结构 (2/3)
+2025-06-06T02:13:33.005405 - 信息: 创建目录 - 正在检查并按需创建项目目录...
+2025-06-06T02:13:33.005568 - 成功: 创建目录 - 所有必需的目录已创建完成
+2025-06-06T02:13:33.005610 - 信息: 进度 - 移动文件 (3/3)
+2025-06-06T02:13:33.005648 - 开始: 移动文件 - 准备移动初始数据文件...
+2025-06-06T02:13:33.005726 - 信息: 移动文件 - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-06T02:13:33.005777 - 信息: 移动文件 - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-06T02:13:33.005818 - 完成: 移动文件 - 所有文件移动操作已完成
+2025-06-06T02:13:33.005858 - 完成: 工作流 - 工作流程 'SETUP' 执行成功
+2025-06-06T02:13:33.005908 - 成功: 完成 - 项目环境已准备就绪
+2025-06-06T02:13:33.005950 - 信息: 提示 - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-06T02:13:33.005991 - 开始: 测试 - 
+--- 开始测试数据访问接口 ---
+2025-06-06T02:13:33.006034 - 信息: 初始化 - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-06T02:13:33.006092 - 信息: 初始化 - 应用 'myworld' 的路径配置已成功初始化。

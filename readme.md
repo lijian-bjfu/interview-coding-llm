@@ -108,3 +108,58 @@ inductive_questionN.json根据问题在大纲中的所属模块，放入02_inter
 生成每个问题的初步编码本的提示语在interview-prompts.txt中。生成的文件命名为Q1c.py, Q2c.py的格式...
 
 将生成的数据根据parameter.py里的路径标注，放入相应的项目文件夹
+
+# LangGPT 提示词工程师助手
+
+这是一个专门用于创建和优化 LangGPT 格式提示词的 AI 助手定义。
+
+## 特点
+
+- 完全遵循 LangGPT 结构化提示词框架
+- 专注于中文提示词创建
+- 提供交互式提示词创建流程
+- 包含提示词验证和优化功能
+
+## 使用方法
+
+1. 复制 `langgpt_assistant.md` 中的内容
+2. 将内容粘贴到你使用的 AI 助手（如 ChatGPT）中
+3. 使用以下命令与助手交互：
+
+- `/start` - 开始创建新的 LangGPT 提示词
+- `/analyze` - 分析并改进现有提示词
+- `/validate` - 检查提示词是否符合 LangGPT 结构
+- `/optimize` - 为提示词提供优化建议
+- `/examples` - 显示相关示例
+- `/help` - 显示可用命令和指导
+
+## 使用示例
+
+1. 创建新提示词：
+```
+/start
+目标：创建一个专门用于写技术文档的 AI 助手
+```
+
+2. 分析现有提示词：
+```
+/analyze
+[粘贴你的提示词内容]
+```
+
+3. 获取帮助：
+```
+/help
+```
+
+## 最佳实践
+
+1. 在开始创建提示词之前，先明确助手的具体用途和目标
+2. 确保包含所有必要的 LangGPT 结构组件
+3. 使用清晰的描述和具体的约束条件
+4. 在完成后使用 `/validate` 命令进行验证
+
+## 参考
+
+- [LangGPT GitHub 仓库](https://github.com/langgptai/LangGPT)
+- [LangGPT 文档](https://feishu.langgpt.ai/)

@@ -1,0 +1,45 @@
+---
+description: indective coding 工作流程及各流程标签
+globs: 
+alwaysApply: false
+---
+# 访谈数据归纳编码工作流
+
+本项目用于辅助 LLM 对定性访谈数据进行归纳编码（inductive coding）分析。以下是完整的工作流程：
+
+## #preprocess 数据预处理
+使用 [01create_user_and_question_data.py](mdc:01create_user_and_question_data.py) 处理原始访谈数据：
+- 输入：CSV 格式的原始访谈文件
+- 输出：
+  - `{app}_user.txt`: 以用户为视角的文本
+  - `{app}_question.txt`: 以问题为视角的文本
+- 位置：`01_preprocessed_for_llm_dir/`
+
+## #llm_coding LLM 开放式编码
+使用预设的 prompts 引导 LLM 进行编码：
+- 输入：`{app}_question.txt` 中的问题文本
+- 过程：用户与 LLM 交互，完成编码
+- 输出：每个问题对应一个编码 JSON 文件
+- 位置：`02_interview_outline_dir/{category}/question_data_dir/`
+- 提示词：[prompts_inductive_coding.txt](mdc:prompts_inductive_coding.txt)
+
+## #merge_json 合并编码结果
+使用 [02inductive_merge_json.py](mdc:02inductive_merge_json.py) 合并各问题的编码：
+- 输入：各问题的编码 JSON 文件
+- 输出：`{app}_inductive_codes.json`
+- 位置：`03_inductive_coding_dir/`
+
+## #maxqda_convert 转换为 MaxQDA 格式
+使用 [03inductive_create_maxqda_themecode.py.py](mdc:03inductive_create_maxqda_themecode.py.py) 生成可导入文件：
+- 输入：合并后的编码 JSON 文件
+- 输出：`{app}_inductive_maxqda_themecode.txt`
+- 位置：`03_inductive_coding_dir/`
+
+## 文件结构参考
+项目的详细文件结构请参考 [parameters.py](mdc:parameters.py)，其中定义了所有相关路径和配置。
+
+## 标签速查
+- #preprocess - 数据预处理阶段
+- #llm_coding - LLM 编码阶段
+- #merge_json - JSON 合并阶段
+- #maxqda_convert - MaxQDA 转换阶段
