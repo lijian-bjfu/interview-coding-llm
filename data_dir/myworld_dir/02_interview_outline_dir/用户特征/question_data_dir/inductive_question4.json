@@ -3,15 +3,15 @@
         "question_text": "在什么情况下会选择玩我的世界",
         "initial_codes": [
             {
-                "respondent_id": "1",
+                "respondent_id": "P1",
                 "original_answer_segment": "最近的话是因为。我前一阵那个音频课作业，我想到可以拿我的世界的那个音频来做，然后我就进游戏里去录那个音频，然后发现跟我之前玩的时候他更新了很多。",
                 "code_name": [
-                    "受新内容吸引",
-                    "创造与建造"
+                    "游玩情境与条件",
+                    "创造与探索"
                 ],
                 "supporting_quote": [
-                    "然后发现跟我之前玩的时候他更新了很多。",
-                    "我想到可以拿我的世界的那个音频来做，然后我就进游戏里去录那个音频"
+                    "我前一阵那个音频课作业，我想到可以拿我的世界的那个音频来做",
+                    "发现跟我之前玩的时候他更新了很多"
                 ],
                 "pairs": [
                     "1-1",
@@ -19,10 +19,10 @@
                 ]
             },
             {
-                "respondent_id": "2",
+                "respondent_id": "P2",
                 "original_answer_segment": "有几个好朋友一块玩的话",
                 "code_name": [
-                    "与朋友同玩"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "有几个好朋友一块玩的话"
@@ -32,10 +32,10 @@
                 ]
             },
             {
-                "respondent_id": "3",
+                "respondent_id": "P3",
                 "original_answer_segment": "在自己在外面的时候，只有身身边只有手机的时候",
                 "code_name": [
-                    "无聊打发时间"
+                    "游玩情境与条件"
                 ],
                 "supporting_quote": [
                     "在自己在外面的时候，只有身身边只有手机的时候"
@@ -45,10 +45,10 @@
                 ]
             },
             {
-                "respondent_id": "4",
+                "respondent_id": "P4",
                 "original_answer_segment": "在回忆过去的时候，或者说有朋友张罗的话",
                 "code_name": [
-                    "与朋友同玩"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "有朋友张罗的话"
@@ -58,15 +58,15 @@
                 ]
             },
             {
-                "respondent_id": "5",
+                "respondent_id": "P5",
                 "original_answer_segment": "实在是无聊的时候会玩一会儿，一般喜欢在下雨天的时候宅在家里面玩，会比较有感觉。",
                 "code_name": [
-                    "无聊打发时间",
-                    "氛围体验"
+                    "填补无聊",
+                    "游玩情境与条件"
                 ],
                 "supporting_quote": [
                     "实在是无聊的时候会玩一会儿",
-                    "下雨天的时候宅在家里面玩，会比较有感觉"
+                    "一般喜欢在下雨天的时候宅在家里面玩，会比较有感觉。"
                 ],
                 "pairs": [
                     "1-1",
@@ -74,10 +74,10 @@
                 ]
             },
             {
-                "respondent_id": "6",
+                "respondent_id": "P6",
                 "original_answer_segment": "朋友邀请我就会一起玩，自己很少玩，因为感觉一个人玩会有点无聊。",
                 "code_name": [
-                    "与朋友同玩"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "朋友邀请我就会一起玩"
@@ -87,10 +87,10 @@
                 ]
             },
             {
-                "respondent_id": "7",
+                "respondent_id": "P7",
                 "original_answer_segment": "如果是以前的话就是朋友叫我一起的时候会玩。",
                 "code_name": [
-                    "与朋友同玩"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "朋友叫我一起的时候会玩"
@@ -100,10 +100,10 @@
                 ]
             },
             {
-                "respondent_id": "8",
+                "respondent_id": "P8",
                 "original_answer_segment": "在非常非常无聊的情况下会玩。",
                 "code_name": [
-                    "无聊打发时间"
+                    "填补无聊"
                 ],
                 "supporting_quote": [
                     "在非常非常无聊的情况下会玩。"
@@ -113,31 +113,34 @@
                 ]
             },
             {
-                "respondent_id": "9",
+                "respondent_id": "P9",
                 "original_answer_segment": "一般来说，当我和朋友们联机没什么其他游戏可玩的时候，我们就会选择打开《我的世界》，一起探索、建造，享受那种无拘无束的乐趣。",
                 "code_name": [
-                    "与朋友同玩",
-                    "无聊打发时间"
+                    "社交驱动",
+                    "填补无聊",
+                    "创造与探索"
                 ],
                 "supporting_quote": [
-                    "当我和朋友们联机没什么其他游戏可玩的时候，我们就会选择打开《我的世界》，一起探索、建造",
-                    "没什么其他游戏可玩的时候"
+                    "当我和朋友们联机",
+                    "没什么其他游戏可玩的时候",
+                    "一起探索、建造，享受那种无拘无束的乐趣"
                 ],
                 "pairs": [
                     "1-1",
-                    "2-2"
+                    "2-2",
+                    "3-3"
                 ]
             },
             {
-                "respondent_id": "10",
+                "respondent_id": "P10",
                 "original_answer_segment": "没网，想建房子",
                 "code_name": [
-                    "创造与建造",
-                    "放松解压"
+                    "游玩情境与条件",
+                    "创造与探索"
                 ],
                 "supporting_quote": [
-                    "想建房子",
-                    "没网"
+                    "没网",
+                    "想建房子"
                 ],
                 "pairs": [
                     "1-1",
@@ -145,10 +148,10 @@
                 ]
             },
             {
-                "respondent_id": "11",
+                "respondent_id": "P11",
                 "original_answer_segment": "想要放松的时候吧，因为不像竞技游戏之类的会费脑子",
                 "code_name": [
-                    "放松解压"
+                    "放松与解压"
                 ],
                 "supporting_quote": [
                     "想要放松的时候吧，因为不像竞技游戏之类的会费脑子"
@@ -158,55 +161,51 @@
                 ]
             },
             {
-                "respondent_id": "12",
+                "respondent_id": "P12",
                 "original_answer_segment": "有朋友的时候，或者突发奇想",
                 "code_name": [
-                    "与朋友同玩",
-                    "受新内容吸引"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
-                    "有朋友的时候",
-                    "突发奇想"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "13",
-                "original_answer_segment": "在平时想探索创造自己的时间的时候会玩，在社交平台，比如b站和抖音等这类平台，如果看到各类我的世界大佬建造的地图，我也会想着去模仿",
-                "code_name": [
-                    "创造与建造",
-                    "受新内容吸引"
-                ],
-                "supporting_quote": [
-                    "在平时想探索创造自己的时间的时候会玩",
-                    "在社交平台，比如b站和抖音等这类平台，如果看到各类我的世界大佬建造的地图，我也会想着去模仿"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "14",
-                "original_answer_segment": "和朋友联系的时候，如果我朋友来找我，那我会玩",
-                "code_name": [
-                    "与朋友同玩"
-                ],
-                "supporting_quote": [
-                    "如果我朋友来找我，那我会玩"
+                    "有朋友的时候"
                 ],
                 "pairs": [
                     "1-1"
                 ]
             },
             {
-                "respondent_id": "15",
+                "respondent_id": "P13",
+                "original_answer_segment": "在平时想探索创造自己的时间的时候会玩，在社交平台，比如b站和抖音等这类平台，如果看到各类我的世界大佬建造的地图，我也会想着去模仿",
+                "code_name": [
+                    "创造与探索"
+                ],
+                "supporting_quote": [
+                    "在平时想探索创造自己的时间的时候会玩",
+                    "如果看到各类我的世界大佬建造的地图，我也会想着去模仿"
+                ],
+                "pairs": [
+                    "1-1",
+                    "1-2"
+                ]
+            },
+            {
+                "respondent_id": "P14",
+                "original_answer_segment": "和朋友联系的时候，如果我朋友来找我，那我会玩",
+                "code_name": [
+                    "社交驱动"
+                ],
+                "supporting_quote": [
+                    "和朋友联系的时候，如果我朋友来找我，那我会玩"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "P15",
                 "original_answer_segment": "在很无聊的时候。",
                 "code_name": [
-                    "无聊打发时间"
+                    "填补无聊"
                 ],
                 "supporting_quote": [
                     "在很无聊的时候。"
@@ -216,29 +215,26 @@
                 ]
             },
             {
-                "respondent_id": "16",
+                "respondent_id": "P16",
                 "original_answer_segment": "想放松的时候吧，比如压力很大的时候盖个小木屋，挖挖矿特别解压，听着背景音乐能忘记烦恼，嗯还有就是朋友约联机：开生存服一起打末影龙，或者玩躲猫猫这类小游戏",
                 "code_name": [
-                    "放松解压",
-                    "创造与建造",
-                    "与朋友同玩"
+                    "放松与解压",
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "想放松的时候吧，比如压力很大的时候盖个小木屋，挖挖矿特别解压，听着背景音乐能忘记烦恼",
-                    "盖个小木屋，挖挖矿",
                     "朋友约联机：开生存服一起打末影龙，或者玩躲猫猫这类小游戏"
                 ],
                 "pairs": [
                     "1-1",
-                    "2-2",
-                    "3-3"
+                    "2-2"
                 ]
             },
             {
-                "respondent_id": "17",
+                "respondent_id": "P17",
                 "original_answer_segment": "实在是没事干了",
                 "code_name": [
-                    "无聊打发时间"
+                    "填补无聊"
                 ],
                 "supporting_quote": [
                     "实在是没事干了"
@@ -248,10 +244,10 @@
                 ]
             },
             {
-                "respondent_id": "18",
+                "respondent_id": "P18",
                 "original_answer_segment": "有朋友一起的时候会玩mc",
                 "code_name": [
-                    "与朋友同玩"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "有朋友一起的时候会玩mc"
@@ -261,11 +257,11 @@
                 ]
             },
             {
-                "respondent_id": "19",
+                "respondent_id": "P19",
                 "original_answer_segment": "陪朋友玩 或者mc出了什么我感兴趣的新内容或者mod",
                 "code_name": [
-                    "与朋友同玩",
-                    "受新内容吸引"
+                    "社交驱动",
+                    "创造与探索"
                 ],
                 "supporting_quote": [
                     "陪朋友玩",
@@ -277,10 +273,10 @@
                 ]
             },
             {
-                "respondent_id": "20",
+                "respondent_id": "P20",
                 "original_answer_segment": "和朋友一起的时候",
                 "code_name": [
-                    "与朋友同玩"
+                    "社交驱动"
                 ],
                 "supporting_quote": [
                     "和朋友一起的时候"
@@ -290,15 +286,15 @@
                 ]
             },
             {
-                "respondent_id": "21",
+                "respondent_id": "P21",
                 "original_answer_segment": "晚上写完作业后，大概九点多，关上门偷偷玩。然后有时候周末下午，约同学联机，边玩边用语音聊天，比如他在游戏里喊 “我挖到钻石了”，然后我就去抢他的资源。",
                 "code_name": [
-                    "与朋友同玩",
-                    "创造与建造"
+                    "游玩情境与条件",
+                    "社交驱动"
                 ],
                 "supporting_quote": [
-                    "约同学联机，边玩边用语音聊天，比如他在游戏里喊 “我挖到钻石了”，然后我就去抢他的资源。",
-                    "写完作业后，大概九点多，关上门偷偷玩"
+                    "晚上写完作业后，大概九点多，关上门偷偷玩",
+                    "约同学联机，边玩边用语音聊天"
                 ],
                 "pairs": [
                     "1-1",
@@ -306,10 +302,10 @@
                 ]
             },
             {
-                "respondent_id": "22",
+                "respondent_id": "P22",
                 "original_answer_segment": "在很无聊的时候",
                 "code_name": [
-                    "无聊打发时间"
+                    "填补无聊"
                 ],
                 "supporting_quote": [
                     "在很无聊的时候"
@@ -319,26 +315,23 @@
                 ]
             },
             {
-                "respondent_id": "23",
+                "respondent_id": "P23",
                 "original_answer_segment": "想悠闲一下的时候就会在我的世界里面玩",
                 "code_name": [
-                    "无聊打发时间",
-                    "放松解压"
+                    "放松与解压"
                 ],
                 "supporting_quote": [
-                    "想悠闲一下的时候就会在我的世界里面玩",
                     "想悠闲一下的时候就会在我的世界里面玩"
                 ],
                 "pairs": [
-                    "1-1",
-                    "2-1"
+                    "1-1"
                 ]
             },
             {
-                "respondent_id": "24",
+                "respondent_id": "P24",
                 "original_answer_segment": "有电脑的时候，手机上不好玩，电脑配置比较好",
                 "code_name": [
-                    "条件允许"
+                    "游玩情境与条件"
                 ],
                 "supporting_quote": [
                     "有电脑的时候，手机上不好玩，电脑配置比较好"
@@ -348,10 +341,10 @@
                 ]
             },
             {
-                "respondent_id": "25",
+                "respondent_id": "P25",
                 "original_answer_segment": "时间很充裕的时候",
                 "code_name": [
-                    "无聊打发时间"
+                    "游玩情境与条件"
                 ],
                 "supporting_quote": [
                     "时间很充裕的时候"
@@ -361,10 +354,10 @@
                 ]
             },
             {
-                "respondent_id": "26",
+                "respondent_id": "P26",
                 "original_answer_segment": "在很无聊的时候",
                 "code_name": [
-                    "无聊打发时间"
+                    "填补无聊"
                 ],
                 "supporting_quote": [
                     "在很无聊的时候"
@@ -374,11 +367,11 @@
                 ]
             },
             {
-                "respondent_id": "27",
+                "respondent_id": "P27",
                 "original_answer_segment": "周末下午或者晚上，打开创造模式，听着音乐，慢慢搭建筑。然后有时候心里有烦恼，就狂盖房子，把方块当 “压力” 砸下去，盖完就舒服了。",
                 "code_name": [
-                    "创造与建造",
-                    "放松解压"
+                    "创造与探索",
+                    "放松与解压"
                 ],
                 "supporting_quote": [
                     "打开创造模式，听着音乐，慢慢搭建筑",
@@ -390,10 +383,10 @@
                 ]
             },
             {
-                "respondent_id": "28",
+                "respondent_id": "P28",
                 "original_answer_segment": "写完作业放松呗。有时候考试没考好，就进游戏砍树，然后听着方块“咚咚”的声音，心情会好很多，就是一种发泄方式吧。",
                 "code_name": [
-                    "放松解压"
+                    "放松与解压"
                 ],
                 "supporting_quote": [
                     "写完作业放松呗。有时候考试没考好，就进游戏砍树，然后听着方块“咚咚”的声音，心情会好很多，就是一种发泄方式吧。"
@@ -405,64 +398,48 @@
         ],
         "codes": [
             {
-                "code_name": "与朋友同玩",
-                "code_definition": "有朋友参与、邀约或联机时会玩"
+                "code_name": "社交驱动",
+                "code_definition": "在朋友的邀请、陪伴或影响下开始游戏，将游戏作为一种社交方式。"
             },
             {
-                "code_name": "无聊打发时间",
-                "code_definition": "感到无聊、空闲或没事做时会玩"
+                "code_name": "放松与解压",
+                "code_definition": "将游戏作为一种缓解压力、放松身心、调节情绪或逃避烦恼的手段。"
             },
             {
-                "code_name": "放松解压",
-                "code_definition": "想要放松、解压或发泄情绪时会玩"
+                "code_name": "创造与探索",
+                "code_definition": "出于建造、创造、探索未知、体验新内容或模仿他人作品的动机而玩游戏。"
             },
             {
-                "code_name": "创造与建造",
-                "code_definition": "想创造、建造、模仿或尝试新玩法时会玩"
+                "code_name": "填补无聊",
+                "code_definition": "在感到无聊、没事可做或没有其他娱乐选择时，用游戏来打发时间。"
             },
             {
-                "code_name": "受新内容吸引",
-                "code_definition": "被更新内容、mod或外界信息刺激时会玩"
-            },
-            {
-                "code_name": "条件允许",
-                "code_definition": "设备或网络等条件允许时会玩"
-            },
-            {
-                "code_name": "氛围体验",
-                "code_definition": "特定氛围下（如下雨天）体验游戏"
+                "code_name": "游玩情境与条件",
+                "code_definition": "游戏的发生与特定的时间、地点、设备或个人状态等外部条件紧密相关。"
             }
         ],
         "themes": [
             {
-                "theme_name": "社交与陪伴体验",
-                "theme_definition": "选择玩《我的世界》很大程度受社交影响，常因朋友邀约、联机陪伴而游玩。",
+                "theme_name": "情感与心态驱动",
+                "theme_definition": "该主题聚焦于玩家的内在心理状态。玩家将《我的世界》作为一种工具，用于管理个人情绪，如寻求放松、排解压力与烦恼，或仅仅是填充空虚无聊的时刻。这是一种以调节自我感受为核心的游玩动机。",
                 "included_initial_codes": [
-                    "与朋友同玩"
+                    "放松与解压",
+                    "填补无聊"
                 ]
             },
             {
-                "theme_name": "情感调节与放松",
-                "theme_definition": "玩家常因无聊、压力或想放松选择进入游戏，将其视为一种情绪调节和日常消遣方式。",
+                "theme_name": "目标与互动驱动",
+                "theme_definition": "该主题涵盖了游戏内更具体的目标导向行为。玩家的动力来源于与他人的互动（社交联机）或与游戏本身的互动（建造、探索新内容）。这体现了游戏在满足人类社交需求和创造欲方面的核心吸引力。",
                 "included_initial_codes": [
-                    "无聊打发时间",
-                    "放松解压",
-                    "氛围体验"
+                    "社交驱动",
+                    "创造与探索"
                 ]
             },
             {
-                "theme_name": "创造与探索动机",
-                "theme_definition": "游戏激发玩家的创造、探索、模仿和尝试新玩法的兴趣，包括对新内容和社区创作的响应。",
+                "theme_name": "现实情境与条件",
+                "theme_definition": "该主题揭示了开启一次游戏所需满足的外部现实条件。它包括了特定的时间（如写完作业后）、空间（如在家）、设备（如电脑）、网络状况（如没网时），甚至是具体的任务（如课程作业），这些是促成游戏行为的现实催化剂。",
                 "included_initial_codes": [
-                    "创造与建造",
-                    "受新内容吸引"
-                ]
-            },
-            {
-                "theme_name": "条件与机会驱动",
-                "theme_definition": "玩家在设备、网络条件允许下选择玩游戏，体现机会驱动性。",
-                "included_initial_codes": [
-                    "条件允许"
+                    "游玩情境与条件"
                 ]
             }
         ]

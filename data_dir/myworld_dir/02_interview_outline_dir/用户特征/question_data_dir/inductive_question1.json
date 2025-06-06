@@ -1,0 +1,427 @@
+[
+    {
+        "question_text": "什么时候开始玩我的世界的",
+        "initial_codes": [
+            {
+                "respondent_id": "被访者 1",
+                "original_answer_segment": "2014年左右",
+                "code_name": [
+                    "提及具体年份或版本"
+                ],
+                "supporting_quote": [
+                    "2014年左右"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 2",
+                "original_answer_segment": "小学三年级。",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学三年级。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 3",
+                "original_answer_segment": "小学六年级开始玩的",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学六年级开始玩的"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 4",
+                "original_answer_segment": "小学23年级得有好几年没玩了",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学23年级"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 5",
+                "original_answer_segment": "我是从小学三年级开始玩的。",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "我是从小学三年级开始玩的。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 6",
+                "original_answer_segment": "初一开始的，被朋友拉着一起玩。",
+                "code_name": [
+                    "中学时期入门",
+                    "受他人影响入门"
+                ],
+                "supporting_quote": [
+                    "初一开始的",
+                    "被朋友拉着一起玩。"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者 7",
+                "original_answer_segment": "小学吧。",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学吧。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 8",
+                "original_answer_segment": "大概是初中。",
+                "code_name": [
+                    "中学时期入门"
+                ],
+                "supporting_quote": [
+                    "大概是初中。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 9",
+                "original_answer_segment": "我记得应该是从小学开始吧，那时候就迷上了《我的世界》联机版，一玩就停不下来。",
+                "code_name": [
+                    "小学时期入门",
+                    "受他人影响入门"
+                ],
+                "supporting_quote": [
+                    "我记得应该是从小学开始吧",
+                    "那时候就迷上了《我的世界》联机版"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者 10",
+                "original_answer_segment": "小学三四年级吧",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学三四年级吧"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 11",
+                "original_answer_segment": "很早以前了，估计最开始是在小学时候",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "估计最开始是在小学时候"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 12",
+                "original_answer_segment": "小学三年",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学三年"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 13",
+                "original_answer_segment": "大概是从初中(2017年)的时候开始玩我的世界",
+                "code_name": [
+                    "中学时期入门",
+                    "提及具体年份或版本"
+                ],
+                "supporting_quote": [
+                    "大概是从初中(2017年)的时候开始玩我的世界"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 14",
+                "original_answer_segment": "估计小学23年级二年级的样子，然后最开始玩是在那个4399上玩那个我的世界的盗版，我没办法，我以前那个字都认不全，我还能玩那个已经很厉害了，",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "估计小学23年级二年级的样子"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 15",
+                "original_answer_segment": "我从小学开始玩我的世界。",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "我从小学开始玩我的世界。"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 16",
+                "original_answer_segment": "我是从2013年Beta 1.7.3版本开始玩的，第一次玩的时候连木头都不会砍，对着树干空手撸了半天...后来看贴吧教程才知道要长按鼠标。最怀念当时发现第一个钻石矿的激动，结果被苦力怕炸没了，现在想想还是哎。又气又好笑。",
+                "code_name": [
+                    "提及具体年份或版本"
+                ],
+                "supporting_quote": [
+                    "我是从2013年Beta 1.7.3版本开始玩的"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 17",
+                "original_answer_segment": "我从小学就开始玩了",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "我从小学就开始玩了"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 18",
+                "original_answer_segment": "从小学就开始接触了",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "从小学就开始接触了"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 19",
+                "original_answer_segment": "小学三年级大概",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学三年级大概"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 20",
+                "original_answer_segment": "六年级差不多那个时候",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "六年级差不多那个时候"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 21",
+                "original_answer_segment": "额… 好像是初中？刚开始啥也不会，就是砍树、搭小木屋，然后慢慢上瘾了。",
+                "code_name": [
+                    "中学时期入门"
+                ],
+                "supporting_quote": [
+                    "额… 好像是初中？"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 22",
+                "original_answer_segment": "初中的时候",
+                "code_name": [
+                    "中学时期入门"
+                ],
+                "supporting_quote": [
+                    "初中的时候"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 23",
+                "original_answer_segment": "好像是小学的时候我表弟介绍给我玩的，然后我们在一起玩，",
+                "code_name": [
+                    "小学时期入门",
+                    "受他人影响入门"
+                ],
+                "supporting_quote": [
+                    "好像是小学的时候",
+                    "我表弟介绍给我玩的"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者 24",
+                "original_answer_segment": "2016年",
+                "code_name": [
+                    "提及具体年份或版本"
+                ],
+                "supporting_quote": [
+                    "2016年"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 25",
+                "original_answer_segment": "小学",
+                "code_name": [
+                    "小学时期入门"
+                ],
+                "supporting_quote": [
+                    "小学"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 26",
+                "original_answer_segment": "初中的时候",
+                "code_name": [
+                    "中学时期入门"
+                ],
+                "supporting_quote": [
+                    "初中的时候"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者 27",
+                "original_answer_segment": "高一上学期吧？2022 年？室友带我入坑的，他说 “大学课余时间多，一起玩 MC 盖房子”，然后我就跟着玩了，现在周末经常玩，就是放松大脑。",
+                "code_name": [
+                    "中学时期入门",
+                    "提及具体年份或版本",
+                    "受他人影响入门"
+                ],
+                "supporting_quote": [
+                    "高一上学期吧？",
+                    "2022 年？",
+                    "室友带我入坑的"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": "被访者 28",
+                "original_answer_segment": "小学的时候，那时候身边好多同学都在玩，看着有趣就跟着入坑了。",
+                "code_name": [
+                    "小学时期入门",
+                    "受他人影响入门"
+                ],
+                "supporting_quote": [
+                    "小学的时候",
+                    "那时候身边好多同学都在玩，看着有趣就跟着入坑了。"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "小学时期入门",
+                "code_definition": "被访者明确表示他们在小学阶段首次接触《我的世界》。"
+            },
+            {
+                "code_name": "中学时期入门",
+                "code_definition": "被访者表示他们在初中或高中阶段首次接触游戏。"
+            },
+            {
+                "code_name": "提及具体年份或版本",
+                "code_definition": "被访者用具体的公历年份或游戏版本来定位开始玩的时间。"
+            },
+            {
+                "code_name": "受他人影响入门",
+                "code_definition": "被访者提及由朋友、家人或同学介绍而开始玩游戏。"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "开启《我的世界》的时期",
+                "theme_definition": "该主题揭示了玩家开始玩《我的世界》的时间节点。绝大多数玩家在他们的求学阶段，尤其是小学时期，初次接触该游戏。这表明《我的世界》深刻地融入了一代人的成长记忆中，成为他们童年或青少年时期的重要组成部分。玩家们通过学业阶段（如小学、中学）或具体年份来标记这个起点。",
+                "included_initial_codes": [
+                    "小学时期入门",
+                    "中学时期入门",
+                    "提及具体年份或版本"
+                ]
+            },
+            {
+                "theme_name": "社交因素的驱动作用",
+                "theme_definition": "该主题强调了社交圈在吸引新玩家过程中的关键作用。相当一部分玩家并非独自发现这款游戏，而是通过朋友、同学、室友或家人的介绍与推荐“入坑”的。这不仅说明了游戏本身具备的社交传播属性，也暗示了“联机同玩”是游戏吸引力的重要来源之一。",
+                "included_initial_codes": [
+                    "受他人影响入门"
+                ]
+            }
+        ]
+    }
+]

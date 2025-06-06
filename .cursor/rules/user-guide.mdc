@@ -1,0 +1,209 @@
+---
+description: parameters.py使用指南
+globs: 
+alwaysApply: false
+---
+# Parameters.py 用户指南
+
+## 1. 系统概述
+
+Parameters.py 是项目的中央配置枢纽，用于统一管理所有数据文件的路径和访问方式。它具有以下核心功能：
+
+1. **标准化项目结构**
+   - 基于 `@data-stucture.mdc` 规范定义清晰、一致的文件和目录结构
+   - 覆盖从原始数据到最终产出的所有项目阶段
+
+2. **项目环境管理**
+   - 自动创建项目目录骨架
+   - 归档和管理初始数据文件
+   - 支持环境重置以便调试
+
+3. **路径访问接口**
+   - 提供简洁、健壮的函数接口
+   - 支持安全地获取任何文件或目录路径
+
+## 2. 项目初始化
+
+### 2.1 前置要求
+
+用户必须在项目根目录提供两个核心原始文件：
+
+1. **访谈数据文件**
+   - 文件名：`[app_name].csv`（例如：`myworld.csv`）
+
+2. **访谈大纲文件**
+   - 文件名：`[app_name]-outline.csv`（例如：`myworld-outline.csv`）
+   - 必需列（顺序固定）：
+     - 第一列：问题号（question_number）
+     - 第二列：问题分类（category，支持中文）
+
+### 2.2 构建模式（Setup Mode）
+
+用于创建新项目的完整目录结构并归档初始文件。
+
+**执行命令**：
+```bash
+python parameters.py setup
+# 或直接运行（setup 为默认模式）
+python parameters.py
+```
+
+**执行流程**：
+1. 解析大纲：读取并解析 `[app_name]-outline.csv`，提取分类信息
+2. 创建目录：在 `data_dir/[app_name]_dir/` 下创建完整目录结构
+3. 归档文件：将原始文件移动到 `00_rawdata_dir/` 目录
+4. 生成日志：在根目录创建 `workflow.log` 记录操作历史
+
+### 2.3 还原模式（Reset Mode）
+
+用于调试目的，将已归档的初始文件还原到项目根目录。
+
+**执行命令**：
+```bash
+python parameters.py reset
+```
+
+**执行效果**：
+- 将 `00_rawdata_dir/` 中的原始文件移回项目根目录
+- 保留已创建的目录结构
+
+### 2.4 测试模式
+
+提供两种测试模式用于开发者自检：
+
+1. **测试路径接口**：
+```bash
+python parameters.py test_paths
+```
+- 测试核心路径获取接口
+- 输出测试结果报告
+
+2. **完整测试套件**：
+```bash
+python parameters.py --test
+```
+- 模拟执行各种工作流
+- 生成完整测试报告
+
+## 3. 在外部脚本中使用 Parameters.py
+
+### 3.1 基础导入
+
+在外部脚本中，通常需要以下导入：
+
+```python
+# 路径获取函数
+from parameters import (
+    get_path,
+    get_path_list,
+    get_category_specific_path
+)
+
+# 全局配置和数据
+from parameters import (
+    APP_NAME,
+    OUTLINE,
+    UNIQUE_CATEGORIES
+)
+
+# 常量定义
+from parameters import (
+    SDIR_GROUP_QDATA,
+    SDIR_GROUP_CBOOK,
+    SDIR_GROUP_META
+)
+```
+
+**注意事项**：
+- 导入时自动执行 `parse_interview_outline()`
+- 路径配置字典在首次调用时初始化
+
+### 3.2 核心函数使用指南
+
+#### 3.2.1 get_path(key: str) -> str
+
+用于获取单个文件或目录的路径。
+
+**使用场景**：
+- 需要访问特定文件或目录时
+- key 必须对应单一路径而非路径列表
+
+**示例**：
+```python
+# 获取原始数据文件路径
+raw_data_path = get_path('UI')
+print(f"原始数据路径: {raw_data_path}")
+
+# 获取归纳编码输出目录
+inductive_dir = get_path('inductive_global_dir')
+print(f"归纳编码目录: {inductive_dir}")
+```
+
+#### 3.2.2 get_path_list(key: str) -> List[Any]
+
+用于获取预定义的路径列表。
+
+**使用场景**：
+- 需要处理分类分组的文件路径
+- 返回值可能是一维或嵌套列表
+
+**示例**：
+```python
+# 获取所有分类的问题数据目录
+qdata_dirs = get_path_list('grouped_qdata_category_dirs')
+print(f"问题数据目录列表: {qdata_dirs}")
+
+# 获取归纳编码JSON文件路径（按分类分组）
+inductive_jsons = get_path_list('grouped_inductive_q_jsons')
+flat_jsons = [j for cat in inductive_jsons for j in cat]
+print(f"共有 {len(flat_jsons)} 个归纳编码文件")
+```
+
+#### 3.2.3 get_category_specific_path(category_name: str, sub_dir_type: str, file_name: str = None) -> str
+
+用于构建特定分类下的文件或目录路径。
+
+**参数说明**：
+- `category_name`：分类名称（如 "用户体验"）
+- `sub_dir_type`：目录类型常量
+- `file_name`：可选，具体文件名
+
+**使用场景**：
+- 需要在特定分类目录下创建或访问文件
+- 路径未在配置中预定义时
+
+**示例**：
+```python
+category = "用户体验"
+output_file = f"{APP_NAME}_analysis.json"
+
+# 获取目录路径
+dir_path = get_category_specific_path(
+    category,
+    SDIR_GROUP_QDATA
+)
+
+# 获取文件完整路径
+file_path = get_category_specific_path(
+    category,
+    SDIR_GROUP_QDATA,
+    output_file
+)
+```
+
+## 4. 最佳实践
+
+1. **路径访问**
+   - 始终使用提供的接口函数
+   - 避免手动拼接路径
+   - 使用前验证路径存在
+
+2. **错误处理**
+   - 捕获并处理可能的异常
+   - 保持完整的操作日志
+   - 定期验证文件完整性
+
+3. **开发建议**
+   - 充分利用测试模式
+   - 保持代码的可维护性
+   - 遵循项目的命名规范

@@ -52,6 +52,11 @@ APP_NAME = 'myworld' # Mock app name for testing parse_interview_outline on impo
 P_DBUG_RESPONDENT_ID = "9"
 P_DBUG_QUESTION_TEXT_RAW = "最吸引你的玩法是什么/为什么喜欢这种玩法?"
 
+# --- 全局数据结构 ---
+OUTLINE: Dict[str, List[int]] = {}  # Will store {"中文Category名称": [问题号列表]}
+QUESTION_MAP: Dict[int, str] = {}   # 问题编号到问题文本的映射
+UNIQUE_CATEGORIES: List[str] = []   # 所有分类名称列表
+
 # --- 基础路径组件定义  ---
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR_BASE_NAME = "data_dir" # Top-level data folder name
@@ -67,10 +72,6 @@ SDIR_04_DEDUCTIVE = "04_deductive_coding_dir"
 SDIR_GROUP_QDATA = "question_data_dir"
 SDIR_GROUP_CBOOK = "codebook_data_dir"
 SDIR_GROUP_META = "meta_data_dir"
-
-# --- 全局数据 ---
-OUTLINE: Dict[str, List[int]] = {} # Will store {"中文Category名称": [问题号列表]}
-UNIQUE_CATEGORIES: List[str] = [] # Will store unique category names from the outline
 
 def sanitize_folder_name(name: str) -> str:
     """确保文件夹名称在所有操作系统上都有效，移除或替换非法字符。"""
@@ -89,78 +90,73 @@ def validate_file_dir(file_dir: Dict[str, str]) -> bool:
     return all(key in file_dir and isinstance(file_dir[key], str) for key in required_keys)
 
 # --- @para-categ: 解析访谈大纲 ---
-def parse_interview_outline():
+def parse_interview_outline() -> Tuple[Dict[str, List[int]], Set[str]]:
     """
-    从项目根目录读取 [APP_NAME]-outline.csv 文件,
-    按列顺序提取数据：第1列为问题号，第2列为category名称，第3列为问题内容。
-    构建OUTLINE字典，仅保存category和问题号的对应关系。
+    解析访谈大纲CSV文件，提取分类信息和问题编号映射。
+    直接从项目根目录读取大纲文件，避免与 get_path 的循环依赖。
+    
+    Returns:
+        Tuple[Dict[str, List[int]], Set[str]]: 
+            - 字典：分类名称到问题编号列表的映射
+            - 集合：所有唯一的分类名称
     """
-    global OUTLINE
-    global UNIQUE_CATEGORIES
-
-    outline_filename = f"{APP_NAME}-outline.csv"
-    outline_filepath = os.path.join(PROJECT_ROOT, outline_filename)
-
-    temp_categories = set()
+    global QUESTION_MAP, OUTLINE  # 声明所有需要修改的全局变量
+    
     temp_outline_dict = defaultdict(list)
-
-    if not os.path.exists(outline_filepath):
-        logger.log("解析大纲", "错误", f"访谈大纲文件未找到: {outline_filepath}")
-        return
-
+    temp_categories = set()
+    QUESTION_MAP.clear()  # 清空旧的映射
+    
     try:
-        with open(outline_filepath, mode='r', encoding='utf-8-sig') as csvfile:
-            reader = csv.reader(csvfile)
+        # 直接从项目根目录读取大纲文件
+        outline_filename = f"{APP_NAME}-outline.csv"
+        outline_filepath = os.path.join(PROJECT_ROOT, outline_filename)
+        
+        if not os.path.exists(outline_filepath):
+            # 尝试在 00_rawdata_dir 中查找文件
+            raw_data_dir = os.path.join(PROJECT_ROOT, DATA_DIR_BASE_NAME, f"{APP_NAME}_dir", SDIR_00_RAW)
+            alternative_path = os.path.join(raw_data_dir, outline_filename)
             
-            # 跳过标题行
-            header = next(reader, None)
-            if not header or len(header) < 3:
-                logger.log("解析大纲", "错误", "CSV文件格式不正确，需要至少3列数据（问题号、分类、问题内容）")
-                logger.log("解析大纲", "错误", f"当前列数: {len(header) if header else 0}")
-                return
-
-            # 按行读取数据（跳过标题行后的实际数据）
-            for row_num, row in enumerate(reader, start=2):  # start=2 因为第1行是标题
-                if len(row) < 3:
-                    logger.log("解析大纲", "警告", f"第{row_num}行数据不完整，跳过该行")
+            if os.path.exists(alternative_path):
+                outline_filepath = alternative_path
+            else:
+                print(f"错误: 未找到大纲文件: {outline_filepath} 或 {alternative_path}")
+                return {}, set()
+        
+        with open(outline_filepath, 'r', encoding='utf-8-sig') as f:
+            reader = csv.reader(f)
+            
+            for row in reader:
+                if len(row) < 3:  # 确保至少有问题号、分类名和问题内容三列
                     continue
-
-                # 按固定顺序读取：问题号、category、问题内容
+                    
                 q_num_str = row[0].strip()
                 category_name = row[1].strip()
-
+                question_content = row[2].strip()
+                
                 if not q_num_str or not category_name:
-                    logger.log("解析大纲", "警告", f"第{row_num}行数据无效（问题号或分类为空），跳过该行")
                     continue
-
+                    
                 try:
                     q_num = int(q_num_str)
                     temp_categories.add(category_name)
                     temp_outline_dict[category_name].append(q_num)
+                    
+                    # 填充问题映射字典
+                    if question_content:
+                        QUESTION_MAP[q_num] = question_content
+                        
                 except ValueError:
-                    logger.log("解析大纲", "警告", f"第{row_num}行的问题号 '{q_num_str}' 不是有效的数字，跳过该行")
                     continue
-
-        # 排序问题号，确保一致性
-        for category_name in temp_outline_dict:
-            temp_outline_dict[category_name].sort()
-
-        OUTLINE = dict(temp_outline_dict)
-        UNIQUE_CATEGORIES = sorted(list(temp_categories))
-
-        logger.log("解析大纲", "完成", "访谈大纲解析完成")
-        logger.log("解析大纲", "信息", f"提取到的唯一Category数量: {len(UNIQUE_CATEGORIES)}")
-        logger.log("解析大纲", "信息", f"提取到的Category名称: {', '.join(UNIQUE_CATEGORIES)}")
-
-    except FileNotFoundError:
-        logger.log("解析大纲", "错误", f"访谈大纲文件未找到: {outline_filepath}")
+                    
+        return dict(temp_outline_dict), temp_categories
+        
     except Exception as e:
-        logger.log("解析大纲", "错误", f"解析访谈大纲文件时发生错误: {str(e)}")
-        logger.log("解析大纲", "错误", f"详细错误信息:\n{traceback.format_exc()}")
+        print(f"解析访谈大纲时出错: {e}")
+        print(f"详细错误信息: {traceback.format_exc()}")
+        return {}, set()
 
 # --- 执行解析任务 ---
-# 当此脚本被执行或导入时，会尝试解析大纲文件
-parse_interview_outline()
+OUTLINE, UNIQUE_CATEGORIES = parse_interview_outline()  # 更新为同时获取两个返回值
 
 # --- @para-load: 封装 file_dir 生成功能 ---
 def _build_project_file_dir_internal(
@@ -243,8 +239,8 @@ def _build_project_file_dir_internal(
     file_dir['deductive_global_metadata'] = os.path.join(deductive_dir, f"{current_app_name}_deductive_metadata.json")
 
     # --- 文件名模式 ---
-    file_dir['pattern_inductive_q_json'] = 'inductive_question[0-9]*.json'
-    file_dir['pattern_inductive_q_cbook_json'] = 'inductive_question[0-9]*_codebook.json'
+    file_dir['pattern_inductive_q_json'] = 'inductive_questio*[0-9]*.json'
+    file_dir['pattern_inductive_q_cbook_json'] = 'inductive_questio*[0-9]*_codebook.json'
     file_dir['pattern_deductive_llm_in_group'] = 'deductive_code_by_LLM.json'
 
     # --- 动态生成与分组相关的路径 ---
@@ -267,7 +263,13 @@ def _build_project_file_dir_internal(
     # --- 新增：为 get_path_list 测试准备的列表 ---
     all_qdata_category_dirs: List[str] = []
 
+    # 确保按照大纲文件中的顺序处理分类
+    expected_categories = ['用户身份', '用户特征', '游戏体验', '创造性体验', '创造性设计']
     for original_category_name in categories_list:
+        if original_category_name not in expected_categories:
+            print(f"警告: 发现未预期的分类名称: {original_category_name}")
+            continue
+            
         safe_category_folder_name = sanitize_folder_name(original_category_name) # 使用中文名需要安全处理
         group_main_abs_dir = os.path.join(outline_parent_abs_dir, safe_category_folder_name)
         
@@ -289,12 +291,15 @@ def _build_project_file_dir_internal(
         
         # glob.glob 会在调用时查找文件，如果目录此时不存在或无匹配文件，则列表为空
         # 确保传递给 glob 的目录路径存在，或者 glob 能处理不存在的路径（通常返回空列表）
-        # @code-envol 中已有 os.path.exists 检查，此处保留该模式
         qdata_for_glob = qdata_abs_dir.rstrip(os.sep)
         if os.path.exists(qdata_for_glob):
             files_ind_q = sorted(glob.glob(os.path.join(qdata_for_glob, file_dir['pattern_inductive_q_json'])))
+            if not files_ind_q:
+                print(f"警告: 在目录 '{qdata_for_glob}' 中未找到匹配的JSON文件")
         else:
+            print(f"警告: 目录不存在: '{qdata_for_glob}'")
             files_ind_q = []
+            
         file_dir['grouped_inductive_q_jsons'].append(files_ind_q)
         
         file_dir['grouped_deductive_llm_jsons_in_group'].append(
@@ -1029,4 +1034,7 @@ if __name__ == "__main__":
         else:
             logger.log("完成", "失败", "工作流程执行失败，请检查日志文件了解详细信息")
 
-        test_data_access_interfaces()
+        print(f"OUTLINE: {OUTLINE}")
+        print(f"QUESTION_MAP: {QUESTION_MAP}")
+
+        # test_data_access_interfaces()

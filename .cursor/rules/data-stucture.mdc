@@ -1,0 +1,325 @@
+---
+description: 项目结构，路径设置以及文件格式规则
+globs: 
+alwaysApply: false
+---
+# 项目结构规范
+
+本文档定义了项目的目录结构、文件格式以及数据组织方式。
+
+## 1. 目录结构
+
+### 1.1 基本目录结构
+
+```
+📁 data_dir/                              # 预设根目录
+└── 📁 {APP_NAME}_dir/                    # 以用户输入的调研产品名称命名
+    ├── 📁 00_rawdata_dir/                # 原始数据
+    ├── 📁 01_preprocessed_for_llm_dir/   # 预处理数据
+    ├── 📁 02_interview_outline_dir/      # 访谈大纲数据
+    ├── 📁 03_inductive_coding_dir/       # 归纳编码数据
+    └── 📁 04_deductive_coding_dir/       # 演绎编码数据
+```
+
+### 1.2 分类目录结构
+
+每个分类（Category）在 `02_interview_outline_dir` 下都有独立的目录结构：
+
+```
+📁 02_interview_outline_dir/
+├── 📁 用户特征/                          # Category 示例
+│   ├── 📁 question_data_dir/            # 问题数据
+│   ├── 📁 codebook_data_dir/            # 编码本数据
+│   └── 📁 meta_data_dir/                # 元数据
+└── 📁 [其他 Category]/                   # 相同结构
+```
+
+## 2. 数据文件格式
+
+### 2.1 原始数据文件
+
+#### 2.1.1 用户访谈数据
+- 格式：CSV
+- 结构：每列为一个问题，每行为一位被访者的回答
+- 文件名：`{APP_NAME}.csv`
+- 保存位置：`.../00_rawdata_dir/`
+
+#### 2.1.2 调研大纲数据
+- 格式：CSV
+- 结构：三列数据
+  - 问题题号(q_n)
+  - 大纲类别(category)
+  - 访谈问题(question)
+- 文件名：`{APP_NAME}-outline.csv`
+- 注意：按列顺序识别信息，列名可能因用户定义而异
+- 保存位置：`.../00_rawdata_dir/`
+
+### 2.2 预处理数据文件
+
+#### 2.2.1 横向数据文件
+- 格式：TXT
+- 内容：按问题组织的所有被访者回答
+- 文件名：`{APP_NAME}_question.txt`
+- 保存位置：`.../01_preprocessed_for_llm_dir/`
+- 结构示例：
+```txt
+您什么时候开始玩这个游戏的？  // 问题1
+
+2014年左右                   // 被访者1回答
+
+三年级                      // 被访者2回答
+
+...                        // 更多回答
+
+--- // 使用横线分割
+
+您平时都玩什么游戏？         // 问题2
+
+射击游戏                    // 被访者1回答
+
+原神                       // 被访者2回答
+
+...                       // 更多回答
+```
+
+#### 2.2.2 纵向数据文件
+- 格式：TXT
+- 内容：按被访者组织的所有问题回答
+- 文件名：`{APP_NAME}_user.txt`
+- 保存位置：`.../01_preprocessed_for_llm_dir/`
+- 结构示例：
+```txt
+被访者：1
+
+问题1：您什么时候开始玩这个游戏的？
+回答：2014年左右
+
+问题2：您平时都玩什么游戏？
+回答：射击游戏
+...
+--- // 使用横线分割
+
+被访者：2
+
+问题1：您什么时候开始玩这个游戏的？
+回答：三年级
+...
+```
+
+#### 2.2.3 横向分类数据文件
+- 格式：TXT
+- 内容：按分类拆分的横向数据
+- 文件名：`{APP_NAME}_question_{category_name}.txt`
+- 来源：基于横向数据文件按分类拆分
+- 保存位置：对应category文件夹下的 `.../question_data_dir/`
+
+### 2.3 编码数据文件
+
+#### 2.3.1 问题编码JSON
+- 格式：JSON
+- 文件名：`inductive_question[0-9]*.json`
+- 保存位置：`.../03_inductive_coding_dir/`
+- 结构：
+```json
+[
+  { // 第一个问题的分析结果
+    "question_text": "这里是第一个问题的完整文本",
+    "initial_codes": [ // 该问题下的所有初始编码
+      {
+        "respondent_id": "被访者ID",
+        "original_answer_segment": "被访者对该问题的完整回答",
+        "code_name": [
+            "初始编码1的名称1",
+            "初始编码1的名称2",
+            //更多编码名称
+        ],
+        "supporting_quote": [
+            "支持初始编码1的引文",
+            "支持初始编码2的引文",
+            //更多引文
+        ],
+        "pairs": [
+          "1-1", "2-2"
+          // ..由连接符相连的两个数字表示编码与引文之间的对应关系。
+          // 连接符前面的数字表示code_name中的第几个编码，连接符后面的数据表示supporting_quote中第几个引文
+          // 如果编码与引文数量不对应，要以编码数量优先。例如：
+          // "code_name": [ "生存挑战", "合作与社交"]
+          // "supporting_quote": [ "生存模式吧，以前觉得和朋友一起打怪的时候很刺激。"]
+          // 那么 "pairs": [ "1-1", "2-1"]
+        ]
+      },
+      {
+        "respondent_id": "被访者ID",
+        "original_answer_segment": "被访者对该问题的完整回答",
+        "code_name": [
+            "初始编码1的名称1",
+            "初始编码1的名称2",
+            //更多编码名称
+        ],
+        "supporting_quote": [
+            "支持初始编码1的引文",
+            "支持初始编码2的引文",
+            //更多引文
+        ],
+        "pairs": [
+          "1-1", "2-2"
+          // ..由连接符相连的两个数字表示编码与引文之间的对应关系。
+          // 连接符前面的数字表示code_name中的第几个编码，连接符后面的数据表示supporting_quote中第几个引文
+          // 如果编码与引文数量不对应，要以编码数量优先。例如：
+          // "code_name": [ "自由创造", "资源获取", "成就感"]
+          // "supporting_quote": [ "能自己创造，然后就在生存模式里能自己获取资源啥的","有一个地方能发挥我的创造力，有成就感"]
+          // 那么 "pairs": [ "1-2", "2-1", "3-2"] <--这个对应关系要能够真实反映编码与引文意义上的一致性。
+        ]
+      },
+      // ... 更多该被访者回答的其他初始编码
+      // ... 更多其他被访者对该问题的初始编码
+    ],
+    "codes": [ // 编码汇总
+        {
+          "code_name": "识别出的第一个初始编码",
+          "code_definition": "编码定义",
+        },
+        {
+          "code_name": "识别出的第二个初始编码",
+          "code_definition": "编码定义",
+        },
+        // ... 更多初始编码
+    ],
+    "themes": [ // 从上述初始编码中提炼出的主题编码
+      {
+        "theme_name": "主题编码A的名称",
+        "theme_definition": "对主题编码A的简要定义",
+        "included_initial_codes": ["初始编码1的名称", "初始编码X的名称", ...] // 构成此主题的初始编码名称列表
+      },
+      {
+        "theme_name": "主题编码B的名称",
+        "theme_definition": "对主题编码B的简要定义",
+        "included_initial_codes": ["初始编码2的名称", "初始编码Y的名称", ...]
+      }
+      // ... 更多为该问题提炼的主题编码
+    ]
+  },
+  { // 第二个问题的分析结果
+    "question_text": "这里是第二个问题的完整文本",
+    "initial_codes": [ /* ... */ ],
+    "themes": [ /* ... */ ]
+  }
+  // ... 批次内其他问题的分析结果
+]
+```
+
+#### 2.3.2 合并编码JSON
+- 格式：JSON
+- 文件名：`{APP_NAME}_inductive_codes.json`
+- 内容：所有问题编码JSON的合并结果
+- 结构：同问题编码JSON
+- 保存位置：`.../03_inductive_coding_dir/`
+
+#### 2.3.3 MAXQDA结构文本
+- 格式：TXT
+- 文件名：`{APP_NAME}_inductive_maxqda_themecode.txt`
+- 来源：基于合并编码JSON生成
+- 用途：用于导入MAXQDA软件进行进一步分析
+- 保存位置：`.../03_inductive_coding_dir/`
+
+## 3. 分类系统
+
+### 3.1 分类定义
+
+Category（分类）是访谈大纲的顶层组织单位，代表访谈内容的主要主题或方面。每个Category包含一组相关的访谈问题。主要包括：
+
+- 用户特征：基本人口统计学信息（年龄、职业等）
+- 用户体验：产品使用体验和感受
+- 产品特征：对产品功能和特性的评价
+- 创造性体验：使用产品时的创造性活动
+- 游戏体验：游戏相关的体验和行为
+
+### 3.2 分类数据存储
+
+分类信息存储在项目根目录的 `{APP_NAME}-outline.csv` 文件中，结构如下：
+
+```csv
+问题编号,分类名称,问题内容
+1,用户特征,您的年龄是？
+2,用户特征,您的职业是？
+6,用户体验,您最常使用产品的哪些功能？
+7,用户体验,使用过程中遇到过什么问题？
+```
+
+### 3.3 分类数据访问
+
+parameters.py 提供了以下方式访问分类相关数据：
+
+1. **获取分类列表**：
+```python
+from parameters import UNIQUE_CATEGORIES
+
+# UNIQUE_CATEGORIES 包含所有分类名称
+for category in UNIQUE_CATEGORIES:
+    print(f"处理分类: {category}")
+```
+
+2. **获取分类-问题映射**：
+```python
+from parameters import OUTLINE
+
+# OUTLINE 是一个字典，键为分类名称，值为该分类下的问题编号列表
+for category, question_numbers in OUTLINE.items():
+    print(f"分类 {category} 包含问题: {question_numbers}")
+```
+
+3. **访问分类特定目录**：
+```python
+from parameters import (
+    get_category_specific_path,
+    SDIR_GROUP_QDATA,
+)
+
+# 获取特定分类的问题数据目录
+category_path = get_category_specific_path("用户体验", SDIR_GROUP_QDATA)
+```
+
+## 4. 路径系统
+
+### 4.1 单个路径键值
+使用 `get_path(key)` 获取单个文件或目录路径：
+
+| 键名 | 说明 | 示例路径 |
+|---|---|----|
+| 'APP_PATH' | 应用根目录 | `.../data_dir/myworld_dir/` |
+| 'UI' | 原始数据文件 | `.../00_rawdata_dir/myworld.csv` |
+| 'UI_ol' | 原始大纲文件 | `.../00_rawdata_dir/myworld-outline.csv` |
+| 'UI_path' | 原始数据目录 | `.../00_rawdata_dir/` |
+| 'UI_utxt' | 预处理用户文本 | `.../01_preprocessed_for_llm_dir/myworld_user.txt` |
+| 'UI_qtxt' | 预处理问题文本 | `.../01_preprocessed_for_llm_dir/myworld_question.txt` |
+| 'UI_utxt_path' | 预处理数据目录 | `.../01_preprocessed_for_llm_dir/` |
+| 'inductive_global_dir' | 归纳编码目录 | `.../03_inductive_coding_dir/` |
+| 'deductive_global_dir' | 演绎编码目录 | `.../04_deductive_coding_dir/` |
+
+### 4.2 路径列表键值
+使用 `get_path_list(key)` 获取文件路径列表：
+
+| 键名 | 说明 | 返回类型 |
+|---|---|----|
+| 'grouped_qdata_category_dirs' | 分类问题数据目录 | List[str] |
+| 'grouped_user_g_txts' | 用户回答文本 | List[str] |
+| 'grouped_inductive_q_jsons' | 归纳编码JSON | List[List[str]] |
+| 'grouped_deductive_llm_jsons_in_group' | 演绎编码输出 | List[str] |
+| 'grouped_meta_data_files' | 分类元数据文件 | List[str] |
+
+### 4.3 文件名模式
+用于文件匹配的模式字符串：
+
+| 键名 | 说明 | 模式 |
+|---|---|---|
+| 'pattern_inductive_q_json' | 归纳编码问题JSON | `'inductive_question[0-9]*.json'` |
+| 'pattern_inductive_q_cbook_json' | 归纳编码本JSON | `'inductive_question[0-9]*_codebook.json'` |
+| 'pattern_deductive_llm_in_group' | 演绎编码LLM输出 | `'deductive_code_by_LLM.json'` |
+
+
+
+
+
+
+
+

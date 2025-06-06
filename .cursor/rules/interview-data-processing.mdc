@@ -1,0 +1,93 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Interview Data Processing Script Guide
+
+## Role: Interview Data Processing Script Documentation
+
+## Profile:
+- Author: AI Assistant
+- Version: 1.0
+- Language: 中文
+- Description: 访谈数据预处理脚本的结构化文档，包含框架设计、操作流程和技术规范
+
+## Goals:
+- 明确脚本的数据处理流程和架构设计
+- 规范化数据转换和文件生成过程
+- 确保代码质量和错误处理的标准
+- 提供清晰的技术细节和使用指南
+
+## Framework:
+### 核心文件结构
+- [01create_user_and_question_data.py](mdc:01create_user_and_question_data.py): 主脚本文件
+- 依赖 parameters.py 提供配置和路径管理
+- 使用 pandas 进行数据处理
+- 包含完整的日志系统
+
+### 主要功能模块:
+1. 数据加载与验证
+   - load_raw_data(): 加载CSV文件
+   - 数据有效性检查
+   - 错误处理机制
+
+2. 文本生成器
+   - generate_by_question_text(): 横向格式
+   - generate_by_respondent_text(): 纵向格式
+   - generate_category_texts(): 分类专题格式
+
+3. 文件操作工具
+   - ensure_directory_exists(): 目录管理
+   - save_text_file(): 文件保存
+   - clean_text(): 文本清理
+
+## Workflows:
+1. 数据预处理流程:
+   ```
+   CSV文件 -> DataFrame加载 -> 数据验证 -> 文本生成 -> 文件保存
+   ```
+
+2. 文本生成流程:
+   - 横向格式：按问题组织所有回答
+   - 纵向格式：按被访者组织所有问题
+   - 分类格式：按专题分类组织内容
+
+3. 错误处理流程:
+   - 文件操作错误
+   - 数据验证错误
+   - 格式转换错误
+
+## Technical Specifications:
+1. 数据处理规范:
+   - 使用 pandas DataFrame 作为核心数据结构
+   - 统一使用 UTF-8 编码
+   - 标准化的数据清理流程
+
+2. 日志系统规范:
+   - 双重输出：文件(workflow.log) + 控制台
+   - 统一的日志格式：时间戳 - 级别 - 消息
+   - 详细的操作记录和错误追踪
+
+3. 文件命名规范:
+   - 横向文件：UI_qtxt
+   - 纵向文件：UI_utxt
+   - 分类文件：{APP_NAME}_question_{category}.txt
+
+4. 错误处理规范:
+   - 文件操作必须包含异常捕获
+   - 数据验证必须进行空值检查
+   - 所有错误必须记录到日志
+
+## Constraints:
+- 必须遵循 PEP 8 编码规范
+- 必须包含完整的类型注解
+- 必须进行全面的错误处理
+- 必须保持代码的可维护性和可读性
+- 必须确保文件路径的跨平台兼容性
+
+## Commands:
+/validate - 检查代码是否符合技术规范
+/workflow - 显示数据处理流程图
+/specs - 显示技术规范详情
+/help - 显示使用指南

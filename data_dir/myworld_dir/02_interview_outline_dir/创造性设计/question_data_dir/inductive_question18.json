@@ -1,0 +1,416 @@
+[
+    {
+        "question_text": "有没有遇到技术或设计难题？你是如何解决的？",
+        "initial_codes": [
+            {
+                "respondent_id": "被访者1",
+                "original_answer_segment": "可能就是红十系统那个部分我一直没太弄明白他们是怎么弄出来的，我只会拿一些很简单的部分解决的话",
+                "code_name": [
+                    "自我尝试"
+                ],
+                "supporting_quote": [
+                    "我只会拿一些很简单的部分解决"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者2",
+                "original_answer_segment": "比如说创造完之后，比如说我用红石创造那种资源的刷怪的东西就是效果不好。没有达到预期效果，就需要去改善。刚开始是先自己改进一下，动一动就是改一改，这改一改如果还是没有效果，那就去网上求助。",
+                "code_name": [
+                    "自我尝试",
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "刚开始是先自己改进一下，动一动就是改一改",
+                    "如果还是没有效果，那就去网上求助"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者3",
+                "original_answer_segment": "比如说感觉就是合成那些就合成一些材料之类的，或就是打造他们的什么保健之类的，好像我感觉就是不知道是有用哪些材料建造上网查资料",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "不知道是有用哪些材料建造上网查资料"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者4",
+                "original_answer_segment": "如有那个石头挖不动，还有那个沙子，它是堆叠起来的，你要挖下面，它上面就掉下来了，其实我觉得这些算是难题。你像挖石头挖不动那就不挖了，换一条路完了要是挖沙子那啥有耐心，有恒心，把沙子都挖光。",
+                "code_name": [
+                    "自我尝试"
+                ],
+                "supporting_quote": [
+                    "挖石头挖不动那就不挖了，换一条路",
+                    "有耐心，有恒心，把沙子都挖光"
+                ],
+                "pairs": [
+                    "1-1",
+                    "1-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者5",
+                "original_answer_segment": "有时候一些东西不知道怎么合成在生存模式中。我一般都是搜攻略，上网去搜。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "我一般都是搜攻略，上网去搜"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者6",
+                "original_answer_segment": "上网查。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "上网查"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者7",
+                "original_answer_segment": "查攻略嘿嘿。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "查攻略嘿嘿"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者8",
+                "original_answer_segment": "有碰到过，一般都是上网查找。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "一般都是上网查找"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者9",
+                "original_answer_segment": "当然有啊。比如红石装置就非常难搞，我一直都整不明白。后来我就去小红书上搜教程，跟着教程一步一步地学，终于掌握了一些基本的红石技巧。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "去小红书上搜教程，跟着教程一步一步地学"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者10",
+                "original_answer_segment": "做机关的时候，比如有个叫卧槽小屋的东西，一按开关这个房子里东西就出来了，需要到处搭红石挺复杂的，就去B站跟着教程一步一步慢慢来吧。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "去B站跟着教程一步一步慢慢来吧"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者11",
+                "original_answer_segment": "之前想尝试过红石机关去搭建那种全自动化农场之类的，也是从游戏博主那里看到的，但是好像最后失败了，因为版本还是什么原因，到最后就是又看了几遍教程想解决它，最后不记得了大概率是没成功",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "又看了几遍教程想解决它"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者12",
+                "original_answer_segment": "药水的炼制过程和红石科技，找教程，分析原理",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "找教程，分析原理"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者13",
+                "original_answer_segment": "在《我的世界》里创作海族馆时，确实会碰到不少技术和设计上的难题。比如在技术方面，想让水族馆里的水流看起来更真实，就会遇到难题。水流的方向和速度不太好控制，有时候还会出现方块被水流冲乱的情况。为了解决这个问题，可以查游戏里关于水流机制的资料，也可以在游戏里反复尝试不同的方块摆放和水流引导方式。",
+                "code_name": [
+                    "寻求帮助",
+                    "自我尝试"
+                ],
+                "supporting_quote": [
+                    "查游戏里关于水流机制的资料",
+                    "反复尝试不同的方块摆放和水流引导方式"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者14",
+                "original_answer_segment": "网上找教程，我没有什么设计难题，就是因为我玩这个游戏比较自由，所以我一般是想到哪儿建到哪儿，好像没有遇到过设计难题。",
+                "code_name": [
+                    "无难题"
+                ],
+                "supporting_quote": [
+                    "好像没有遇到过设计难题"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者15",
+                "original_answer_segment": "技术难题我不知道怎么弄的时候，我就是去查百度啊，或者说小红书什么的反正就是一些。网上搜搜，然后设计难题，没啥设计难题。",
+                "code_name": [
+                    "寻求帮助",
+                    "无难题"
+                ],
+                "supporting_quote": [
+                    "去查百度啊",
+                    "设计难题，没啥设计难题"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者16",
+                "original_answer_segment": "最近卡最久的是想给空中别墅做瀑布电梯，但水会把我冲飞。我问了社区，但是目前还没有解决，希望之后能解决吧。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "我问了社区，但是目前还没有解决"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者17",
+                "original_answer_segment": "设计难题的话，就是对细节的拿捏。可以去网上查一查关于这些的细节。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "可以去网上查一查关于这些的细节"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者18",
+                "original_answer_segment": "会遇到很多建筑细节上难题，但是和朋友一起研讨后就能顺利解决",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "和朋友一起研讨后就能顺利解决"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者19",
+                "original_answer_segment": "有啊 比如建筑无法呈现出现实生活中的建筑的感觉 一般就是上网查相关视频参考一下获取灵感",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "上网查相关视频参考一下获取灵感"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者20",
+                "original_answer_segment": "有啊，如果我创造的建筑在联机的时候被其他玩家破坏，导致资源分配不均匀，我就很挫败了，可能就自己一个人玩了或者只和认识的人玩",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "就自己一个人玩了或者只和认识的人玩"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者21",
+                "original_answer_segment": "盖高楼时总摔死，然后同学教我 “落地水” 技巧，就是快摔死时放桶水，亲测有效！现在盖楼都会随身带水桶，就是怕摔残血。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "同学教我 “落地水” 技巧"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者22",
+                "original_answer_segment": "一般情况下没有，要不然就放弃哦",
+                "code_name": [
+                    "无难题"
+                ],
+                "supporting_quote": [
+                    "一般情况下没有，要不然就放弃哦"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者23",
+                "original_answer_segment": "生存模式建房子收集材料挺耗时间的，但找的过程也很有意思的",
+                "code_name": [
+                    "无难题"
+                ],
+                "supporting_quote": [
+                    "建房子收集材料挺耗时间的，但找的过程也很有意思的"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者24",
+                "original_answer_segment": "看网上的教程，看别人怎么玩，要不就自己摸索",
+                "code_name": [
+                    "寻求帮助",
+                    "自我尝试"
+                ],
+                "supporting_quote": [
+                    "看网上的教程",
+                    "自己摸索"
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": "被访者25",
+                "original_answer_segment": "去找一些攻略或者去找其他人的参考，然后就参考他们的搭建一下",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "去找其他人的参考，然后就参考他们的搭建"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者26",
+                "original_answer_segment": "一般情况下没有，要不然就放弃哦",
+                "code_name": [
+                    "无难题"
+                ],
+                "supporting_quote": [
+                    "一般情况下没有，要不然就放弃哦"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者27",
+                "original_answer_segment": "搭螺旋楼梯时卡了很久，然后在贴吧搜了教程，用楼梯方块和半砖错位摆放，虽然花了 1 小时，但最后做出来了，就是成就感爆棚。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "在贴吧搜了教程，用楼梯方块和半砖错位摆放"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": "被访者28",
+                "original_answer_segment": "做自动收菜装置时，怎么都搞不懂，然后找我哥帮忙，他远程教我，折腾半天才弄好，中间差点放弃了，想不起来怎么弄的，反正最后弄好了。",
+                "code_name": [
+                    "寻求帮助"
+                ],
+                "supporting_quote": [
+                    "找我哥帮忙，他远程教我"
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "寻求帮助",
+                "code_definition": "通过网络、朋友或社区寻求解决方案"
+            },
+            {
+                "code_name": "自我尝试",
+                "code_definition": "尝试独立探索或修改解决问题"
+            },
+            {
+                "code_name": "无难题",
+                "code_definition": "未感知到明显技术或设计难点"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "问题解决策略",
+                "theme_definition": "玩家面对技术或设计难题时采取的行动路径",
+                "included_initial_codes": [
+                    "寻求帮助",
+                    "自我尝试"
+                ]
+            },
+            {
+                "theme_name": "缺乏挑战感",
+                "theme_definition": "玩家认为游戏中未遇到真正的难题",
+                "included_initial_codes": [
+                    "无难题"
+                ]
+            }
+        ]
+    }
+]

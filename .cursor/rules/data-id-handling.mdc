@@ -1,0 +1,132 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 数据ID处理指南
+
+## 概述
+本规则为数据处理脚本中的用户/受访者ID处理提供指导方针，旨在避免硬编码并确保处理方式的灵活性。
+
+## 问题说明
+在代码中硬编码ID列名和格式会导致代码脆弱，在以下情况下容易失败：
+- ID列名称多样化（如"序号"、"id"、"respondent_id"、"用户序号"等）
+- ID格式多样化（如纯数字、"P1"、"被访者1"、"张小明"等）
+- 数据源改变了ID的命名规范
+
+## 指导方针
+
+### 1. ID列配置
+- 禁止在代码中硬编码ID列名
+- 在配置中定义可能的ID列名列表：
+```python
+ID_COLUMN_CANDIDATES = [
+    '序号', 'id', 'respondent_id', '用户序号',
+    '用户id', 'user_id', 'name', 'user_name',
+    '被访者编号', '编号', '受访者编号'
+]
+```
+
+### 2. ID列检测
+- 实现灵活的ID列检测逻辑：
+```python
+def find_id_column(df_columns):
+    # 首先尝试精确匹配
+    for col in df_columns:
+        if col.lower() in [c.lower() for c in ID_COLUMN_CANDIDATES]:
+            return col
+            
+    # 如果没有精确匹配，使用第一列作为后备方案
+    return df_columns[0]
+```
+
+### 3. ID格式处理
+- 支持多种ID格式：
+```python
+def normalize_id(raw_id):
+    if not raw_id:
+        return None
+        
+    # 尝试不同的标准化策略
+    strategies = [
+        lambda x: x if str(x).isdigit() else None,  # 纯数字
+        lambda x: re.findall(r'\d+', str(x))[0] if re.findall(r'\d+', str(x)) else None,  # 提取数字
+        lambda x: str(x).strip(),  # 如果其他策略失败，保持原样
+    ]
+    
+    for strategy in strategies:
+        try:
+            result = strategy(raw_id)
+            if result:
+                return result
+        except:
+            continue
+            
+    return str(raw_id).strip()  # 最后的备选方案：返回原始值
+```
+
+### 4. 配置优先于约定
+- 使用配置文件或环境变量来设置ID处理偏好
+- 允许覆盖默认行为：
+```python
+config = {
+    'FORCE_NUMERIC_IDS': False,  # 是否强制ID为数字格式
+    'ID_COLUMN_NAME': None,      # 覆盖自动检测的列名
+    'ID_FORMAT_REGEX': None,     # 自定义ID提取的正则表达式
+}
+```
+
+### 5. 验证和日志记录
+- 实现健壮的验证机制：
+```python
+def validate_id(id_value, config):
+    if not id_value:
+        logger.warning(f"ID值为空")
+        return False
+        
+    if config['FORCE_NUMERIC_IDS'] and not str(id_value).isdigit():
+        logger.warning(f"非数字ID: {id_value}")
+        return False
+        
+    return True
+```
+
+### 6. 错误恢复
+- 为ID处理失败提供备选机制
+- 记录所有ID处理决策以便调试
+- 允许在自动处理失败时进行手动干预
+
+## 代码示例
+
+### 不良实践（来自 [03inductive_create_maxqda_themecode.py](mdc:03inductive_create_maxqda_themecode.py)）：
+```python
+# 硬编码假设ID必须是数字
+if str(respondent_id).isdigit():
+    return str(respondent_id)
+```
+
+### 良好实践（灵活方法）：
+```python
+def process_id(raw_id, config):
+    # 首先尝试配置的格式
+    if config['ID_FORMAT_REGEX']:
+        match = re.match(config['ID_FORMAT_REGEX'], str(raw_id))
+        if match:
+            return match.group(1)
+    
+    # 如果失败，回退到标准化处理
+    return normalize_id(raw_id)
+```
+
+## 实施检查清单
+1. [ ] 移除硬编码的ID列名
+2. [ ] 实现灵活的ID列检测
+3. [ ] 支持多种ID格式
+4. [ ] 添加配置选项
+5. [ ] 实现验证和日志记录
+6. [ ] 添加错误恢复机制
+7. [ ] 文档化ID处理方法
+
+## 参考文件
+- [01create_user_and_question_data.py](mdc:01create_user_and_question_data.py)
+- [03inductive_create_maxqda_themecode.py](mdc:03inductive_create_maxqda_themecode.py)

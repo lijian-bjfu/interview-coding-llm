@@ -1,212 +1,574 @@
-import csv
-import re
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+访谈数据预处理脚本
+
+本脚本用于将原始访谈数据转换为以下三种格式：
+1. 横向数据：按问题组织的所有被访者回答
+2. 纵向数据：按被访者组织的所有问题回答
+3. 分类数据：按分类组织的问题及回答
+
+数据流程：
+1. 从原始CSV文件加载数据
+2. 生成横向格式文本
+3. 生成纵向格式文本
+4. 按分类生成专题文本
+5. 保存所有生成的文件到指定位置
+
+依赖说明：
+- pandas: 用于数据处理
+- parameters.py: 项目配置和路径管理
+"""
+
 import os
-from parameters import file_dir, app
+import logging
+import pandas as pd
+from collections import defaultdict
+from typing import Dict, List, Optional
+from parameters import (
+    get_path,                    # 获取单个文件或目录路径
+    get_category_specific_path,  # 获取特定分类的路径
+    OUTLINE,                     # 分类-问题映射字典
+    UNIQUE_CATEGORIES,          # 所有分类名称列表
+    SDIR_GROUP_QDATA,          # 分类问题数据目录常量
+    APP_NAME,                   # 应用名称
+    QUESTION_MAP,              # 问题编号到问题文本的映射
+)
 
-# --- 辅助函数：查找ID列索引 (供格式二使用) ---
-def find_respondent_id_column_index(header_list, id_column_name="序号"):
-    if not header_list:
-        print("错误: 表头列表为空，无法查找ID列。")
-        return -1
-    try:
-        return header_list.index(id_column_name)
-    except ValueError:
-        print(f"警告: 在表头中未找到指定的ID列 '{id_column_name}'。将默认使用第一列 (索引 0) 作为ID。")
-        return 0
+# 配置日志系统
+# 同时输出到文件和控制台
+# 文件输出：workflow.log
+# 格式：时间戳 - 日志级别 - 消息
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('workflow.log', encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
-# --- 格式一：按被访者组织数据的转换函数 ---
-def convert_to_respondent_format(csv_filepath, txt_filepath):
+def ensure_directory_exists(file_path: str) -> None:
     """
-    将CSV格式的用户访谈数据转换为TXT格式 (按被访者组织)。
-    问题放在【】中，回答紧跟其后。不同被访者数据用---分隔。
-    回答中的多行会合并为一行，并处理多余空白。
-    """
-    try:
-        all_data_rows = []
-        header = []
-        with open(csv_filepath, 'r', encoding='utf-8-sig') as csvfile:
-            reader = csv.reader(csvfile)
-            try:
-                header = next(reader)
-                if not header:
-                    print(f"错误 (格式一): CSV文件 {csv_filepath} 的表头为空行。")
-                    return False
-            except StopIteration:
-                print(f"错误 (格式一): CSV文件 {csv_filepath} 为空或无法读取表头。")
-                return False
-            
-            for row in reader:
-                if any(field.strip() for field in row):
-                    all_data_rows.append(row)
-
-        if not all_data_rows:
-            print(f"提示 (格式一): CSV文件 {csv_filepath} 中没有数据行 (在表头之后)。")
-            # 即使没有数据行，也可能希望生成一个包含表头（如果适用）的空文件或特定标记的文件
-            # 此处我们选择不生成文件或生成空文件，取决于后续写入逻辑
-
-        with open(txt_filepath, 'w', encoding='utf-8') as txtfile:
-            total_data_rows = len(all_data_rows)
-            for row_index, row_data in enumerate(all_data_rows):
-                if row_index > 0:
-                    txtfile.write("---\n")
-
-                for col_index, question in enumerate(header):
-                    answer_raw = ""
-                    if col_index < len(row_data):
-                        answer_raw = row_data[col_index]
-                    
-                    temp_answer = answer_raw.replace('\n', '').replace('\r', '')
-                    temp_answer = temp_answer.replace('\\n', '').replace('\\r', '')
-                    processed_answer = re.sub(r'\s+', ' ', temp_answer).strip()
-
-                    txtfile.write(f"【{question}】\n")
-                    txtfile.write(f"{processed_answer}\n")
-
-                if row_index < total_data_rows - 1: # 在每个被访者数据块后加空行，使得---更突出
-                     txtfile.write("\n")
-
-
-        print(f"格式一：数据已成功按被访者聚合格式导出到: {txt_filepath}")
-        return True
-
-    except FileNotFoundError:
-        print(f"错误 (格式一): CSV文件 {csv_filepath} 未找到，请检查路径。")
-        return False
-    except Exception as e:
-        print(f"处理过程中发生未预料的错误 (格式一): {e}")
-        # import traceback
-        # traceback.print_exc()
-        return False
-
-# --- 格式二：按问题组织数据的转换函数 ---
-def find_respondent_id_column_index(header_list, id_column_name="序号"):
-    """
-    在表头列表中查找指定ID列的索引。
-    """
-    if not header_list:
-        print(f"错误: 表头列表为空，无法查找ID列 '{id_column_name}'。")
-        return -1
-    try:
-        return header_list.index(id_column_name)
-    except ValueError:
-        print(f"警告: 在表头中未找到指定的ID列 '{id_column_name}'。将默认使用第一列 (索引 0) 作为ID。")
-        return 0
-
-def convert_to_question_format(csv_filepath, txt_filepath, id_column_name="序号"):
-    """
-    将CSV数据转换为TXT格式 (按问题组织 - 方案B)。
-    格式为：
-    问题：【问题文本】
-
-    被访者 {ID} 说：
-    {回答}
-
-    ...
-    同时处理回答文本中多余的空白。
-    """
-    try:
-        all_data_rows = []
-        header = []
-        # 使用 'utf-8-sig' 来处理可能由Excel等软件保存时添加的BOM (Byte Order Mark)
-        with open(csv_filepath, 'r', encoding='utf-8-sig') as csvfile:
-            reader = csv.reader(csvfile)
-            try:
-                header = next(reader) # 获取表头
-                if not header: # 处理表头是空行的情况
-                    print(f"错误 (方案B格式): CSV文件 {csv_filepath} 的表头为空行。")
-                    return False
-            except StopIteration: # CSV文件为空或只有BOM
-                print(f"错误 (方案B格式): CSV文件 {csv_filepath} 为空或无法读取表头。")
-                return False
-            
-            # 读取所有有效数据行
-            for row in reader:
-                # 跳过数据区域中的空行（如果一行所有字段都为空或只含空格）
-                if any(field.strip() for field in row):
-                    all_data_rows.append(row)
-
-        id_col_idx = find_respondent_id_column_index(header, id_column_name)
-        if id_col_idx == -1: # 错误信息已在辅助函数中打印
-            return False
-
-        with open(txt_filepath, 'w', encoding='utf-8') as txtfile:
-            # 遍历表头中的每一个问题 (每一列)
-            for q_col_idx, question_text in enumerate(header):
-                # 写入问题标题，并增加一个空行
-                txtfile.write(f"问题：【{question_text}】\n\n")
-
-                # 对于当前问题，遍历所有被访者 (每一行数据)
-                for row_data in all_data_rows:
-                    respondent_id_str = "UNKNOWN_ID" # 默认ID
-                    if id_col_idx < len(row_data): # 确保行长度足够获取ID列
-                        raw_id = row_data[id_col_idx].strip()
-                        if raw_id: # 如果ID不是空字符串
-                            respondent_id_str = raw_id
-                        else:
-                            respondent_id_str = "EMPTY_ID" # ID单元格为空
-                    else:
-                        # 此情况表示行数据比预期的ID列索引还要短
-                        # 可以选择记录日志或忽略
-                        pass 
-
-                    current_answer_raw = ""
-                    if q_col_idx < len(row_data): # 确保行长度足够获取当前问题的答案
-                        current_answer_raw = row_data[q_col_idx]
-                    
-                    # 清理回答文本：移除内部换行符，确保为单行，并处理多余空白
-                    temp_answer = current_answer_raw.replace('\n', '').replace('\r', '')
-                    temp_answer = temp_answer.replace('\\n', '').replace('\\r', '')
-                    processed_answer = re.sub(r'\s+', ' ', temp_answer).strip()
-
-                    # 写入被访者标识和回答
-                    txtfile.write(f"被访者 {respondent_id_str} 说：\n")
-                    txtfile.write(f"{processed_answer}\n")
-                    
-                    # 在每个被访者的回答后添加一个空行，以分隔下一个被访者的回答
-                    txtfile.write("\n")
-
-                # 在一个问题的所有回答结束后，如果不是最后一个问题，则再添加一个空行
-                # 这使得不同【问题】模块之间有两个空行（一个来自上面回答后的空行，一个来自这里）
-                # 如果只需要一个空行分隔问题，可以移除这里的 if 语句，或者调整上面回答后的空行
-                if q_col_idx < len(header) - 1:
-                    txtfile.write("\n") 
-
-        print(f"方案B格式：数据已成功按问题聚合（自然语言格式）导出到: {txt_filepath}")
-        return True
-
-    except FileNotFoundError:
-        print(f"错误 (方案B格式): CSV文件 {csv_filepath} 未找到，请检查路径。")
-        return False
-    except Exception as e:
-        print(f"处理过程中发生未预料的错误 (方案B格式): {e}")
-        # 如果需要更详细的错误追踪，可以取消下面两行的注释
-        # import traceback
-        # traceback.print_exc()
-        return False
-
-# --- 主程序执行 ---
-if __name__ == "__main__":
-    input_csv_file = file_dir['UI']  # <--- 请替换为您的CSV文件名
-
-    # 为两种格式定义不同的输出文件名
-    output_format1_file = file_dir['UI_utxt']
-    output_format2_file = file_dir['UI_qtxt']
+    确保文件路径的目录存在，如不存在则创建
     
-    id_column_name_for_format2 = '序号'  # “格式二”中用于提取被访者ID的列名
+    参数:
+        file_path: 文件完整路径
+        
+    注意:
+        - 会创建多级目录
+        - 会记录目录创建日志
+    """
+    directory = os.path.dirname(file_path)
+    if directory and not os.path.exists(directory):
+        os.makedirs(directory)
+        logger.info(f"创建目录: {directory}")
 
-    print(f"开始处理文件: {input_csv_file}")
-    print("-" * 30)
+def clean_text(text: str) -> str:
+    """
+    清理文本中的无效字符，包括换行符、制表符和多余的空格
+    
+    参数:
+        text: 需要清理的原始文本
+        
+    返回:
+        str: 清理后的文本
+        
+    处理内容:
+        - 移除换行符 (\n, \r, \\n, \\r)
+        - 移除制表符 (\t, \\t)
+        - 将多个连续空格替换为单个空格
+        - 移除首尾空格
+    """
+    if not isinstance(text, str):
+        text = str(text)
+        
+    # 处理换行符和制表符
+    replacements = {
+        '\n': '', '\r': '', '\\n': '', '\\r': '',
+        '\t': ' ', '\\t': ' '
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+        
+    # 处理多余的空格
+    text = ' '.join(text.split())
+    
+    return text
 
-    success1 = convert_to_respondent_format(input_csv_file, output_format1_file)
-    print("-" * 30)
-    success2 = convert_to_question_format(input_csv_file, output_format2_file, id_column_name_for_format2)
-    print("-" * 30)
+def save_text_file(content: str, file_path: str) -> bool:
+    """
+    安全地将文本内容保存到文件
+    
+    参数:
+        content: 要保存的文本内容
+        file_path: 目标文件路径
+        
+    返回:
+        bool: 保存成功返回True，失败返回False
+        
+    处理流程:
+        1. 确保目录存在
+        2. 以UTF-8编码写入文件
+        3. 记录操作日志
+        4. 捕获并记录可能的错误
+    """
+    try:
+        ensure_directory_exists(file_path)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        logger.info(f"成功保存文件: {file_path}")
+        return True
+    except Exception as e:
+        logger.error(f"保存文件失败 {file_path}: {e}")
+        return False
 
-    if success1 and success2:
-        print("所有转换任务完成！")
-    elif success1:
-        print("格式一转换完成，但格式二转换失败。")
-    elif success2:
-        print("格式二转换完成，但格式一转换失败。")
+def get_all_question_numbers() -> List[int]:
+    """
+    从OUTLINE中获取所有问题编号，并按顺序排序
+    
+    返回:
+        List[int]: 排序后的问题编号列表
+    """
+    # 收集所有问题编号
+    all_numbers = set()
+    for questions in OUTLINE.values():
+        all_numbers.update(questions)
+    
+    # 转换为列表并排序
+    return sorted(list(all_numbers))
+
+def find_best_match_column(target_text: str, columns: List[str]) -> str:
+    """
+    在DataFrame的列名中找到与目标问题文本最匹配的列名
+    
+    参数:
+        target_text: 标准问题文本
+        columns: DataFrame中的列名列表
+        
+    返回:
+        str: 最匹配的列名
+    """
+    # 移除标点符号和空格后比较
+    def normalize_text(text: str) -> str:
+        return ''.join(char for char in text if char.isalnum())
+    
+    target_normalized = normalize_text(target_text)
+    
+    # 计算每个列名与目标文本的相似度
+    best_match = None
+    best_similarity = 0
+    
+    for col in columns:
+        col_normalized = normalize_text(col)
+        # 计算两个标准化文本之间的相似度
+        # 这里使用一个简单的包含关系检查
+        if target_normalized in col_normalized or col_normalized in target_normalized:
+            similarity = len(set(target_normalized) & set(col_normalized)) / len(set(target_normalized) | set(col_normalized))
+            if similarity > best_similarity:
+                best_similarity = similarity
+                best_match = col
+    
+    return best_match if best_match else columns[0]  # 如果没有找到匹配，返回第一个列名
+
+def load_raw_data() -> Optional[tuple[pd.DataFrame, Dict[int, str]]]:
+    """
+    加载并验证原始访谈数据，同时为问题建立题号映射
+    
+    返回:
+        Optional[tuple[pd.DataFrame, Dict[int, str]]]: 
+            成功返回(DataFrame, 题号到列名的映射字典)，失败返回None
+        
+    处理流程:
+        1. 从parameters获取CSV文件路径
+        2. 读取CSV文件到DataFrame，保留所有原始列
+        3. 根据问题文本相似度建立题号到列名的映射
+        4. 验证数据有效性
+        5. 记录数据加载状态
+    """
+    try:
+        # 从parameters获取文件路径
+        csv_path = get_path('UI')
+        logger.info(f"开始加载原始数据: {csv_path}")
+        
+        # 读取CSV文件，不做任何预处理
+        df = pd.read_csv(csv_path)
+        
+        # 基础数据验证
+        if df.empty:
+            logger.error("CSV文件为空")
+            return None
+        
+        # 获取OUTLINE中的所有题号，并按顺序排序
+        ordered_question_numbers = get_all_question_numbers()
+        
+        # 建立题号到列名的映射
+        question_map = {}
+        
+        # 处理序号（题号0）- 使用常见ID列名列表进行匹配
+        id_column_names = ['序号', 'id', 'respondent_id', '用户序号', '用户id', 'user_id', 'name', 'user_name', '用户']
+        id_column = None
+        
+        # 尝试从常见ID列名中匹配
+        for col_name in id_column_names:
+            if col_name.lower() in [col.lower() for col in df.columns]:
+                id_column = next(col for col in df.columns if col.lower() == col_name.lower())
+                question_map[0] = id_column
+                logger.info(f"找到ID列 '{id_column}'，映射到题号 0")
+                break
+                
+        # 如果没有找到匹配的ID列名，使用第一列
+        if not id_column:
+            first_column = df.columns[0]
+            question_map[0] = first_column
+            logger.info(f"未找到标准ID列名，使用第一列 '{first_column}' 映射到题号 0")
+        
+        # 获取所有问题列（现在不排除ID列，因为它可能是有效的问题列）
+        all_columns = list(df.columns)
+        
+        # 遍历每个题号，根据QUESTION_MAP中的标准问题文本找到对应的列名
+        for q_num in ordered_question_numbers:
+            # 跳过已处理的序号列
+            if q_num == 0 and question_map.get(0) in df.columns:
+                continue
+                
+            standard_question = QUESTION_MAP.get(q_num)
+            if standard_question:
+                # 在所有列中找到最匹配的列名
+                matched_column = find_best_match_column(standard_question, all_columns)
+                question_map[q_num] = matched_column
+                # 从可用列中移除已匹配的列名，避免重复使用
+                if matched_column in all_columns:
+                    all_columns.remove(matched_column)
+                logger.info(f"映射题号 {q_num} 到列 '{matched_column}'")
+            else:
+                logger.warning(f"题号 {q_num} 在 QUESTION_MAP 中未找到对应的标准问题")
+        
+        # 检查是否所有必需的题号都有映射
+        missing_numbers = set(ordered_question_numbers) - set(question_map.keys())
+        if missing_numbers:
+            logger.warning(f"以下题号未找到对应的列: {missing_numbers}")
+        
+        # 检查是否有未使用的列
+        used_columns = set(question_map.values())
+        unused_columns = set(df.columns) - used_columns
+        if unused_columns:
+            logger.warning(f"以下列未被映射到任何题号: {unused_columns}")
+        
+        logger.info(f"成功加载数据，形状: {df.shape}")
+        logger.info(f"建立了 {len(question_map)} 个题号映射")
+        
+        return df, question_map
+        
+    except Exception as e:
+        logger.error(f"加载原始数据失败: {e}")
+        return None
+
+def generate_by_question_text(df: pd.DataFrame) -> str:
+    """
+    生成横向格式文本，按问题组织数据
+    
+    参数:
+        df: 包含访谈数据的DataFrame
+        
+    返回:
+        str: 格式化的文本，包含所有问题及其回答
+        
+    格式示例:
+        问题1
+
+        回答1
+
+        回答2
+        ...
+        
+        ---
+        
+        问题2
+
+        回答1
+
+        回答2
+        ...
+    """
+    logger.info("开始生成横向（按问题）格式文本")
+    
+    output_lines = []
+    first_question = True
+    
+    for column in df.columns:
+        # 跳过ID类列
+        if column.lower() in ['序号', 'id', 'respondent_id']:
+            continue
+            
+        # 除第一个问题外，其他问题前添加分隔线
+        if not first_question:
+            output_lines.append("---")
+            output_lines.append("")
+        else:
+            first_question = False
+            
+        # 添加问题
+        output_lines.append(f"{column}")
+        output_lines.append("")  # 问题和第一个回答之间空一行
+        
+        # 添加该问题的所有回答（排除空值）
+        responses = df[column].dropna()
+        # 清理每个回答中的无效字符
+        cleaned_responses = [clean_text(response) for response in responses]
+        
+        # 添加回答，每个回答之间空一行
+        for response in cleaned_responses:
+            output_lines.append(response)
+            output_lines.append("")  # 回答之间空一行
+    
+    logger.info("成功生成横向格式文本")
+    return "\n".join(output_lines)
+
+def generate_by_respondent_text(df: pd.DataFrame) -> str:
+    """
+    生成纵向格式文本，按被访者组织数据
+    
+    参数:
+        df: 包含访谈数据的DataFrame
+        
+    返回:
+        str: 格式化的文本，包含所有被访者及其回答
+        
+    格式示例:
+        被访者：1
+        
+        问题1：您什么时候开始玩这个游戏的？
+        回答：2014年左右
+        
+        问题2：您平时都玩什么游戏？
+        回答：射击游戏
+        ...
+        
+        ---
+        
+        被访者：2
+        ...
+    """
+    logger.info("开始生成纵向（按被访者）格式文本")
+    
+    output_lines = []
+    first_respondent = True
+    
+    for idx, row in df.iterrows():
+        # 除第一个被访者外，其他被访者前添加分隔线
+        if not first_respondent:
+            output_lines.append("---")
+            output_lines.append("")
+        else:
+            first_respondent = False
+        
+        # 添加被访者标题（使用1开始的编号）
+        respondent_id = idx + 1
+        output_lines.append(f"被访者：{respondent_id}")
+        output_lines.append("")  # 被访者标题后空一行
+        
+        # 添加每个问题和回答
+        first_question = True
+        for column in df.columns:
+            # 跳过ID类列
+            if column.lower() in ['序号', 'id', 'respondent_id']:
+                continue
+            
+            # 问题之间空一行（除第一个问题外）
+            if not first_question:
+                output_lines.append("")
+            else:
+                first_question = False
+                
+            # 处理空值情况并清理文本
+            answer = str(row[column]) if pd.notna(row[column]) else "未回答"
+            cleaned_answer = clean_text(answer)
+            
+            output_lines.append(f"问题：{column}")
+            output_lines.append(f"回答：{cleaned_answer}")
+    
+    logger.info("成功生成纵向格式文本")
+    return "\n".join(output_lines)
+
+def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str]) -> Dict[str, str]:
+    """
+    从DataFrame生成分类专题文本
+    
+    参数:
+        df: 包含访谈数据的DataFrame
+        column_question_map: 题号到列名的映射字典
+        
+    返回:
+        Dict[str, str]: 字典，键为分类名称，值为该分类的文本内容
+    """
+    logger.info("=== 开始生成分类专题文本 ===")
+    logger.info(f"DataFrame信息: 形状{df.shape}")
+    
+    category_texts = defaultdict(list)
+    
+    # 遍历OUTLINE，处理每个分类下的问题
+    for category, question_numbers in OUTLINE.items():
+        logger.info(f"\n处理分类: '{category}'")
+        questions_processed = 0
+        questions_found = 0
+        first_question = True
+        
+        # 处理该分类下的每个问题编号
+        for q_num in question_numbers:
+            questions_processed += 1
+            # 使用column_question_map获取对应的列名
+            column_name = column_question_map.get(q_num)
+            
+            if column_name is None:
+                logger.warning(f"  题号 {q_num} 在数据中未找到对应的列名")
+                continue
+                
+            logger.info(f"  处理题号 {q_num}: {column_name}")
+            
+            if column_name in df.columns:
+                questions_found += 1
+                # 构建问题文本块
+                question_block_lines = []
+                
+                # 除第一个问题外，其他问题前添加分隔线
+                if not first_question:
+                    question_block_lines.append("---")
+                    question_block_lines.append("")
+                else:
+                    first_question = False
+                
+                # 添加问题标题（使用QUESTION_MAP中的标准问题文本）
+                question_text = QUESTION_MAP.get(q_num, column_name)
+                question_block_lines.append(question_text)
+                question_block_lines.append("")  # 问题和第一个回答之间空一行
+                
+                # 获取并添加所有非空回答，同时清理文本
+                responses = df[column_name].dropna()
+                logger.info(f"    - 找到 {len(responses)} 个非空回答")
+                
+                # 添加回答，每个回答之间空一行
+                cleaned_responses = [clean_text(str(response)) for response in responses]
+                for response in cleaned_responses:
+                    question_block_lines.append(response)
+                    question_block_lines.append("")  # 回答之间空一行
+                
+                # 将问题块添加到对应分类的列表中
+                block_text = "\n".join(question_block_lines)
+                category_texts[category].append(block_text)
+                logger.info(f"    √ 成功处理题号 {q_num}")
+            else:
+                logger.warning(f"    × 列名 '{column_name}' 未在DataFrame的列中找到")
+        
+        # 打印分类处理总结
+        logger.info(f"  分类 '{category}' 处理完成:")
+        logger.info(f"  - 总问题数: {len(question_numbers)}")
+        logger.info(f"  - 处理的问题数: {questions_processed}")
+        logger.info(f"  - 成功找到的问题数: {questions_found}")
+    
+    # 将每个分类的问题块组合成最终文本
+    final_category_texts = {
+        cat: "\n".join(blocks) 
+        for cat, blocks in category_texts.items()
+    }
+    
+    logger.info("\n=== 分类专题文本生成总结 ===")
+    logger.info(f"- 处理的分类总数: {len(OUTLINE)}")
+    logger.info(f"- 成功生成文本的分类数: {len(final_category_texts)}")
+    for cat, text in final_category_texts.items():
+        logger.info(f"- 分类 '{cat}' 的文本长度: {len(text)} 字符")
+    logger.info("=============================\n")
+    
+    return final_category_texts
+
+def main() -> None:
+    """
+    主函数：协调整个数据转换流程
+    """
+    logger.info("开始数据转换流程")
+    
+    # 用于收集生成的文件信息
+    horizontal_file = None
+    vertical_file = None
+    category_files = []
+    
+    # 加载原始数据
+    result = load_raw_data()
+    if result is None:
+        logger.error("加载原始数据失败，退出程序")
+        return
+        
+    df, column_question_map = result
+    
+    # 生成横向格式文本
+    horizontal_text = generate_by_question_text(df)
+    horizontal_path = get_path('UI_qtxt')
+    if save_text_file(horizontal_text, horizontal_path):
+        horizontal_file = {
+            "name": os.path.basename(horizontal_path),
+            "path": os.path.dirname(horizontal_path)
+        }
     else:
-        print("两个转换任务均失败。请检查错误信息。")
+        logger.error("保存横向格式文本失败，退出程序")
+        return
+    
+    # 生成纵向格式文本
+    vertical_text = generate_by_respondent_text(df)
+    vertical_path = get_path('UI_utxt')
+    if save_text_file(vertical_text, vertical_path):
+        vertical_file = {
+            "name": os.path.basename(vertical_path),
+            "path": os.path.dirname(vertical_path)
+        }
+    else:
+        logger.error("保存纵向格式文本失败，退出程序")
+        return
+    
+    # 生成并保存分类专题文本
+    category_texts = generate_category_texts(df, column_question_map)
+    
+    for category, text in category_texts.items():
+        category_path = get_category_specific_path(category, SDIR_GROUP_QDATA)
+        file_name = f"{APP_NAME}_question_{category}.txt"
+        file_path = os.path.join(category_path, file_name)
+        if save_text_file(text, file_path):
+            category_files.append({
+                "name": file_name,
+                "path": category_path
+            })
+        else:
+            logger.error(f"保存分类 '{category}' 的文本失败")
+    
+    # 打印生成文件的总结报告
+    logger.info("\n=== 文件生成报告 ===")
+    
+    # 打印横向文本信息
+    logger.info("横向文本：")
+    if horizontal_file:
+        logger.info(f"名称：{horizontal_file['name']}")
+        logger.info(f"横向文本路径：{horizontal_file['path']}")
+    logger.info("")
+    
+    # 打印纵向文本信息
+    logger.info("纵向文本：")
+    if vertical_file:
+        logger.info(f"名称：{vertical_file['name']}")
+        logger.info(f"纵向文本路径：{vertical_file['path']}")
+    logger.info("")
+    
+    # 打印分类文本信息
+    logger.info("横向category文本：")
+    category_count = len(category_files)
+    logger.info(f"个数：{category_count}")
+    
+    if category_count > 0:
+        for i, file_info in enumerate(category_files, 1):
+            full_path = os.path.join(file_info['path'], file_info['name'])
+            logger.info(f"文件{i}: {full_path}")
+    
+    logger.info("\n数据转换流程成功完成")
+
+if __name__ == "__main__":
+    main()
