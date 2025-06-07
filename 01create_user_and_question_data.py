@@ -36,10 +36,7 @@ from parameters import (
     QUESTION_MAP,              # 问题编号到问题文本的映射
 )
 
-# 配置日志系统
-# 同时输出到文件和控制台
-# 文件输出：workflow.log
-# 格式：时间戳 - 日志级别 - 消息
+# 暂时注释掉日志配置
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -97,6 +94,31 @@ def clean_text(text: str) -> str:
     text = ' '.join(text.split())
     
     return text
+
+def format_answer_with_id(id_: int, answer: str) -> str:
+    """
+    格式化带ID的回答文本
+    
+    参数:
+        id_: 内部ID
+        answer: 回答内容
+        
+    返回:
+        str: 格式化后的文本，格式为 "[ID:X] 回答内容"
+    """
+    return f"[ID:{id_}] {answer}"
+
+def format_respondent_header(id_: int) -> str:
+    """
+    格式化被访者标题
+    
+    参数:
+        id_: 内部ID
+        
+    返回:
+        str: 格式化后的标题，格式为 "被访者：[ID:X]"
+    """
+    return f"被访者：[ID:{id_}]"
 
 def save_text_file(content: str, file_path: str) -> bool:
     """
@@ -180,80 +202,48 @@ def load_raw_data() -> Optional[tuple[pd.DataFrame, Dict[int, str]]]:
     返回:
         Optional[tuple[pd.DataFrame, Dict[int, str]]]: 
             成功返回(DataFrame, 题号到列名的映射字典)，失败返回None
-        
-    处理流程:
-        1. 从parameters获取CSV文件路径
-        2. 读取CSV文件到DataFrame，保留所有原始列
-        3. 根据问题文本相似度建立题号到列名的映射
-        4. 验证数据有效性
-        5. 记录数据加载状态
     """
     try:
-        # 从parameters获取文件路径
-        csv_path = get_path('UI')
-        logger.info(f"开始加载原始数据: {csv_path}")
-        
-        # 读取CSV文件，不做任何预处理
+        csv_path = get_path('UI_id')
         df = pd.read_csv(csv_path)
         
-        # 基础数据验证
         if df.empty:
             logger.error("CSV文件为空")
             return None
-        
-        # 获取OUTLINE中的所有题号，并按顺序排序
+            
+        if '_id' not in df.columns:
+            logger.error("未找到内部ID列 '_id'")
+            return None
+            
         ordered_question_numbers = get_all_question_numbers()
-        
-        # 建立题号到列名的映射
         question_map = {}
+        question_map[0] = '_id'
+        logger.info("使用内部ID列 '_id' 映射到题号 0")
         
-        # 处理序号（题号0）- 使用常见ID列名列表进行匹配
-        id_column_names = ['序号', 'id', 'respondent_id', '用户序号', '用户id', 'user_id', 'name', 'user_name', '用户']
-        id_column = None
+        all_columns = [col for col in df.columns if col != '_id']
         
-        # 尝试从常见ID列名中匹配
-        for col_name in id_column_names:
-            if col_name.lower() in [col.lower() for col in df.columns]:
-                id_column = next(col for col in df.columns if col.lower() == col_name.lower())
-                question_map[0] = id_column
-                logger.info(f"找到ID列 '{id_column}'，映射到题号 0")
-                break
-                
-        # 如果没有找到匹配的ID列名，使用第一列
-        if not id_column:
-            first_column = df.columns[0]
-            question_map[0] = first_column
-            logger.info(f"未找到标准ID列名，使用第一列 '{first_column}' 映射到题号 0")
-        
-        # 获取所有问题列（现在不排除ID列，因为它可能是有效的问题列）
-        all_columns = list(df.columns)
-        
-        # 遍历每个题号，根据QUESTION_MAP中的标准问题文本找到对应的列名
         for q_num in ordered_question_numbers:
-            # 跳过已处理的序号列
-            if q_num == 0 and question_map.get(0) in df.columns:
+            if q_num == 0:
                 continue
                 
             standard_question = QUESTION_MAP.get(q_num)
             if standard_question:
-                # 在所有列中找到最匹配的列名
                 matched_column = find_best_match_column(standard_question, all_columns)
                 question_map[q_num] = matched_column
-                # 从可用列中移除已匹配的列名，避免重复使用
                 if matched_column in all_columns:
                     all_columns.remove(matched_column)
                 logger.info(f"映射题号 {q_num} 到列 '{matched_column}'")
             else:
                 logger.warning(f"题号 {q_num} 在 QUESTION_MAP 中未找到对应的标准问题")
         
-        # 检查是否所有必需的题号都有映射
         missing_numbers = set(ordered_question_numbers) - set(question_map.keys())
         if missing_numbers:
             logger.warning(f"以下题号未找到对应的列: {missing_numbers}")
         
-        # 检查是否有未使用的列
         used_columns = set(question_map.values())
         unused_columns = set(df.columns) - used_columns
+        if unused_columns and '_id' in unused_columns:
+            unused_columns.remove('_id')
         if unused_columns:
             logger.warning(f"以下列未被映射到任何题号: {unused_columns}")
         
@@ -279,30 +269,29 @@ def generate_by_question_text(df: pd.DataFrame) -> str:
     格式示例:
         问题1
 
-        回答1
+        [ID:0] 回答1
 
-        回答2
+        [ID:1] 回答2
         ...
         
         ---
         
         问题2
 
-        回答1
+        [ID:0] 回答1
 
-        回答2
+        [ID:1] 回答2
         ...
     """
-    logger.info("开始生成横向（按问题）格式文本")
+    # logger.info("开始生成横向（按问题）格式文本")
     
     output_lines = []
     first_question = True
     
-    for column in df.columns:
-        # 跳过ID类列
-        if column.lower() in ['序号', 'id', 'respondent_id']:
-            continue
-            
+    # 获取所有非ID列
+    question_columns = [col for col in df.columns if col != '_id']
+    
+    for column in question_columns:
         # 除第一个问题外，其他问题前添加分隔线
         if not first_question:
             output_lines.append("---")
@@ -314,17 +303,17 @@ def generate_by_question_text(df: pd.DataFrame) -> str:
         output_lines.append(f"{column}")
         output_lines.append("")  # 问题和第一个回答之间空一行
         
-        # 添加该问题的所有回答（排除空值）
-        responses = df[column].dropna()
-        # 清理每个回答中的无效字符
-        cleaned_responses = [clean_text(response) for response in responses]
+        # 获取该问题的所有非空回答及对应的ID
+        valid_responses = df[['_id', column]].dropna(subset=[column])
         
-        # 添加回答，每个回答之间空一行
-        for response in cleaned_responses:
-            output_lines.append(response)
+        # 添加带ID的回答，每个回答之间空一行
+        for _, row in valid_responses.iterrows():
+            response = clean_text(str(row[column]))
+            formatted_response = format_answer_with_id(row['_id'], response)
+            output_lines.append(formatted_response)
             output_lines.append("")  # 回答之间空一行
     
-    logger.info("成功生成横向格式文本")
+    # logger.info("成功生成横向格式文本")
     return "\n".join(output_lines)
 
 def generate_by_respondent_text(df: pd.DataFrame) -> str:
@@ -338,7 +327,7 @@ def generate_by_respondent_text(df: pd.DataFrame) -> str:
         str: 格式化的文本，包含所有被访者及其回答
         
     格式示例:
-        被访者：1
+        被访者：[ID:0]
         
         问题1：您什么时候开始玩这个游戏的？
         回答：2014年左右
@@ -349,15 +338,18 @@ def generate_by_respondent_text(df: pd.DataFrame) -> str:
         
         ---
         
-        被访者：2
+        被访者：[ID:1]
         ...
     """
-    logger.info("开始生成纵向（按被访者）格式文本")
+    # logger.info("开始生成纵向（按被访者）格式文本")
     
     output_lines = []
     first_respondent = True
     
-    for idx, row in df.iterrows():
+    # 获取所有非ID列作为问题列
+    question_columns = [col for col in df.columns if col != '_id']
+    
+    for _, row in df.iterrows():
         # 除第一个被访者外，其他被访者前添加分隔线
         if not first_respondent:
             output_lines.append("---")
@@ -365,18 +357,14 @@ def generate_by_respondent_text(df: pd.DataFrame) -> str:
         else:
             first_respondent = False
         
-        # 添加被访者标题（使用1开始的编号）
-        respondent_id = idx + 1
-        output_lines.append(f"被访者：{respondent_id}")
+        # 添加被访者标题（使用内部ID）
+        respondent_id = int(row['_id'])
+        output_lines.append(format_respondent_header(respondent_id))
         output_lines.append("")  # 被访者标题后空一行
         
         # 添加每个问题和回答
         first_question = True
-        for column in df.columns:
-            # 跳过ID类列
-            if column.lower() in ['序号', 'id', 'respondent_id']:
-                continue
-            
+        for column in question_columns:
             # 问题之间空一行（除第一个问题外）
             if not first_question:
                 output_lines.append("")
@@ -390,7 +378,7 @@ def generate_by_respondent_text(df: pd.DataFrame) -> str:
             output_lines.append(f"问题：{column}")
             output_lines.append(f"回答：{cleaned_answer}")
     
-    logger.info("成功生成纵向格式文本")
+    # logger.info("成功生成纵向格式文本")
     return "\n".join(output_lines)
 
 def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str]) -> Dict[str, str]:
@@ -403,15 +391,21 @@ def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str
         
     返回:
         Dict[str, str]: 字典，键为分类名称，值为该分类的文本内容
+        
+    格式示例:
+        {
+            "分类1": "问题1\n\n[ID:0] 回答1\n\n[ID:1] 回答2\n\n---\n\n问题2...",
+            "分类2": "..."
+        }
     """
-    logger.info("=== 开始生成分类专题文本 ===")
-    logger.info(f"DataFrame信息: 形状{df.shape}")
+    # logger.info("=== 开始生成分类专题文本 ===")
+    # logger.info(f"DataFrame信息: 形状{df.shape}")
     
     category_texts = defaultdict(list)
     
     # 遍历OUTLINE，处理每个分类下的问题
     for category, question_numbers in OUTLINE.items():
-        logger.info(f"\n处理分类: '{category}'")
+        # logger.info(f"\n处理分类: '{category}'")
         questions_processed = 0
         questions_found = 0
         first_question = True
@@ -423,10 +417,10 @@ def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str
             column_name = column_question_map.get(q_num)
             
             if column_name is None:
-                logger.warning(f"  题号 {q_num} 在数据中未找到对应的列名")
+                # logger.warning(f"  题号 {q_num} 在数据中未找到对应的列名")
                 continue
                 
-            logger.info(f"  处理题号 {q_num}: {column_name}")
+            # logger.info(f"  处理题号 {q_num}: {column_name}")
             
             if column_name in df.columns:
                 questions_found += 1
@@ -446,27 +440,28 @@ def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str
                 question_block_lines.append("")  # 问题和第一个回答之间空一行
                 
                 # 获取并添加所有非空回答，同时清理文本
-                responses = df[column_name].dropna()
-                logger.info(f"    - 找到 {len(responses)} 个非空回答")
+                valid_responses = df[['_id', column_name]].dropna(subset=[column_name])
+                # logger.info(f"    - 找到 {len(valid_responses)} 个非空回答")
                 
-                # 添加回答，每个回答之间空一行
-                cleaned_responses = [clean_text(str(response)) for response in responses]
-                for response in cleaned_responses:
-                    question_block_lines.append(response)
+                # 添加带ID的回答，每个回答之间空一行
+                for _, row in valid_responses.iterrows():
+                    response = clean_text(str(row[column_name]))
+                    formatted_response = format_answer_with_id(row['_id'], response)
+                    question_block_lines.append(formatted_response)
                     question_block_lines.append("")  # 回答之间空一行
                 
                 # 将问题块添加到对应分类的列表中
                 block_text = "\n".join(question_block_lines)
                 category_texts[category].append(block_text)
-                logger.info(f"    √ 成功处理题号 {q_num}")
+                # logger.info(f"    √ 成功处理题号 {q_num}")
             else:
-                logger.warning(f"    × 列名 '{column_name}' 未在DataFrame的列中找到")
+                # logger.warning(f"    × 列名 '{column_name}' 未在DataFrame的列中找到")
+                pass
         
-        # 打印分类处理总结
-        logger.info(f"  分类 '{category}' 处理完成:")
-        logger.info(f"  - 总问题数: {len(question_numbers)}")
-        logger.info(f"  - 处理的问题数: {questions_processed}")
-        logger.info(f"  - 成功找到的问题数: {questions_found}")
+        # logger.info(f"  分类 '{category}' 处理完成:")
+        # logger.info(f"  - 总问题数: {len(question_numbers)}")
+        # logger.info(f"  - 处理的问题数: {questions_processed}")
+        # logger.info(f"  - 成功找到的问题数: {questions_found}")
     
     # 将每个分类的问题块组合成最终文本
     final_category_texts = {
@@ -474,14 +469,16 @@ def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str
         for cat, blocks in category_texts.items()
     }
     
-    logger.info("\n=== 分类专题文本生成总结 ===")
-    logger.info(f"- 处理的分类总数: {len(OUTLINE)}")
-    logger.info(f"- 成功生成文本的分类数: {len(final_category_texts)}")
-    for cat, text in final_category_texts.items():
-        logger.info(f"- 分类 '{cat}' 的文本长度: {len(text)} 字符")
-    logger.info("=============================\n")
+    # logger.info("\n=== 分类专题文本生成总结 ===")
+    # logger.info(f"- 处理的分类总数: {len(OUTLINE)}")
+    # logger.info(f"- 成功生成文本的分类数: {len(final_category_texts)}")
+    # for cat, text in final_category_texts.items():
+    #     logger.info(f"- 分类 '{cat}' 的文本长度: {len(text)} 字符")
+    # logger.info("=============================\n")
     
     return final_category_texts
+
+# TODO: 添加函数，例如 generate_category_user_text, 该函数用于生成分类专题文本，按被访者组织数据
 
 def main() -> None:
     """
@@ -545,22 +542,20 @@ def main() -> None:
     logger.info("\n=== 文件生成报告 ===")
     
     # 打印横向文本信息
-    logger.info("横向文本：")
     if horizontal_file:
+        logger.info(f"横向文本：")
         logger.info(f"名称：{horizontal_file['name']}")
-        logger.info(f"横向文本路径：{horizontal_file['path']}")
-    logger.info("")
+        logger.info(f"路径：{horizontal_file['path']}")
     
     # 打印纵向文本信息
-    logger.info("纵向文本：")
     if vertical_file:
+        logger.info(f"纵向文本：")
         logger.info(f"名称：{vertical_file['name']}")
-        logger.info(f"纵向文本路径：{vertical_file['path']}")
-    logger.info("")
+        logger.info(f"路径：{vertical_file['path']}")
     
     # 打印分类文本信息
-    logger.info("横向category文本：")
     category_count = len(category_files)
+    logger.info(f"横向category文本：")
     logger.info(f"个数：{category_count}")
     
     if category_count > 0:

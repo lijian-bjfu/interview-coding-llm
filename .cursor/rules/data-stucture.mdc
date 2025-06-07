@@ -7,6 +7,17 @@ alwaysApply: false
 
 本文档定义了项目的目录结构、文件格式以及数据组织方式。
 
+⚠️ **重要规则：目录修改限制**
+
+> **严格禁止未经确认的目录修改！**
+> 1. 禁止擅自添加新目录
+> 2. 禁止擅自删除现有目录
+> 3. 禁止擅自重命名目录
+> 4. 所有涉及目录结构的修改必须：
+>    - 与用户明确确认
+>    - 以醒目和清晰的方式展示修改内容
+>    - 获得用户明确的许可后才能执行
+
 ## 1. 目录结构
 
 ### 1.1 基本目录结构
@@ -65,9 +76,9 @@ alwaysApply: false
 ```txt
 您什么时候开始玩这个游戏的？  // 问题1
 
-2014年左右                   // 被访者1回答
+[ID:1] 2014年左右                   // 被访者1回答 
 
-三年级                      // 被访者2回答
+[ID:2] 三年级                      // 被访者2回答
 
 ...                        // 更多回答
 
@@ -75,9 +86,9 @@ alwaysApply: false
 
 您平时都玩什么游戏？         // 问题2
 
-射击游戏                    // 被访者1回答
+[ID:1] 射击游戏                    // 被访者1回答
 
-原神                       // 被访者2回答
+[ID:2] 原神                       // 被访者2回答
 
 ...                       // 更多回答
 ```
@@ -126,7 +137,7 @@ alwaysApply: false
     "question_text": "这里是第一个问题的完整文本",
     "initial_codes": [ // 该问题下的所有初始编码
       {
-        "respondent_id": "被访者ID",
+        "respondent_id": X, // 使用 [ID:X] 中的被访者标识 X（一个整数）
         "original_answer_segment": "被访者对该问题的完整回答",
         "code_name": [
             "初始编码1的名称1",
@@ -137,6 +148,11 @@ alwaysApply: false
             "支持初始编码1的引文",
             "支持初始编码2的引文",
             //更多引文
+        ],
+        "quote_range": [
+          [start index, end index], // 第一个引文在文本中的起始索引位置
+          [start index, end index], // 第一个引文在文本中的结束索引位置
+          // 其他引文的索引位置
         ],
         "pairs": [
           "1-1", "2-2"
@@ -149,8 +165,8 @@ alwaysApply: false
         ]
       },
       {
-        "respondent_id": "被访者ID",
-        "original_answer_segment": "被访者对该问题的完整回答",
+        "respondent_id": Y, // 使用 [ID:Y] 中的被访者标识 Y（一个整数）
+        "original_answer_segment": "[ID:Y] 被访者对该问题的完整回答",
         "code_name": [
             "初始编码1的名称1",
             "初始编码1的名称2",
@@ -160,6 +176,11 @@ alwaysApply: false
             "支持初始编码1的引文",
             "支持初始编码2的引文",
             //更多引文
+        ],
+        "quote_range": [
+          [start index, end index], // 第一个引文在文本中的起始索引位置
+          [start index, end index], // 第一个引文在文本中的结束索引位置
+          // 其他引文的索引位置
         ],
         "pairs": [
           "1-1", "2-2"
@@ -288,6 +309,7 @@ category_path = get_category_specific_path("用户体验", SDIR_GROUP_QDATA)
 |---|---|----|
 | 'APP_PATH' | 应用根目录 | `.../data_dir/myworld_dir/` |
 | 'UI' | 原始数据文件 | `.../00_rawdata_dir/myworld.csv` |
+| 'UI_id' | 原始数据文件增加了_id信息 | `.../00_rawdata_dir/myworld-id.csv` |
 | 'UI_ol' | 原始大纲文件 | `.../00_rawdata_dir/myworld-outline.csv` |
 | 'UI_path' | 原始数据目录 | `.../00_rawdata_dir/` |
 | 'UI_utxt' | 预处理用户文本 | `.../01_preprocessed_for_llm_dir/myworld_user.txt` |

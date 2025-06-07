@@ -13,6 +13,7 @@ import os
 import json
 import re
 import csv
+import pandas as pd
 from fuzzywuzzy import process, fuzz
 import logging
 from datetime import datetime
@@ -38,7 +39,8 @@ try:
     from parameters import (
         get_path,
         P_DBUG_RESPONDENT_ID,
-        P_DBUG_QUESTION_TEXT_RAW
+        P_DBUG_QUESTION_TEXT_RAW,
+        get_id_manager
     )
     logger.info("成功从 parameters.py 导入配置")
 except ImportError as e:
@@ -48,6 +50,7 @@ except ImportError as e:
 # 全局调试控制
 PRINT_CURRENT_ITEM_DETAILS = False
 
+# TODO: 未来的被访者ID可能全部转换为标准的内部_id, 该函数可能需要修改为直接返回内部_id
 def normalize_respondent_id(respondent_id: str) -> Optional[str]:
     """
     将不同格式的respondent_id标准化为数字格式
@@ -470,6 +473,7 @@ def load_data(merged_json_path: str, original_csv_path: str, respondent_id_col: 
         logger.error("数据加载失败")
         return None, None, None
 
+# --- 将JSON信息转换为MAXQDA结构文本的方法 ---
 def get_segments_and_codes_for_answer(
     original_answer_processed: str,
     current_respondent_id: str,
@@ -481,6 +485,7 @@ def get_segments_and_codes_for_answer(
     aggregated_segments_map = {}
     
     # 标准化当前被访者ID
+    # TODO: 这里需要获取world-id.csv的 _id
     normalized_current_id = normalize_respondent_id(current_respondent_id)
     if not normalized_current_id:
         return []
@@ -488,7 +493,10 @@ def get_segments_and_codes_for_answer(
     # 处理每个编码条目
     for llm_entry in llm_initial_code_entries_for_respondent:
         # 标准化编码条目中的被访者ID
+
+        # TODO: 合并的JSON文件已经在 02inductive_merge_json.py 中验证过，无需再次验证了，直接获取respondent_id即可
         entry_id = normalize_respondent_id(llm_entry.get('respondent_id'))
+        #TODO: 这里直接比较 _id 与 respondent_id 是否一致即可
         if entry_id != normalized_current_id:
             continue
             
@@ -668,10 +676,9 @@ def run_maxqda_conversion(
     loaded_llm_data_map: Dict[str, Any],
     loaded_original_interviews: List[Dict[str, str]],
     loaded_csv_headers: List[str],
-    output_maxqda_filepath: str,
     respondent_id_csv_column: str,
     questions_to_skip_coding: List[str] = None
-) -> bool:
+) -> str:
     """
     执行MaxQDA转换流程，将LLM分析数据转换为MaxQDA格式。
     
@@ -679,18 +686,13 @@ def run_maxqda_conversion(
         loaded_llm_data_map: 问题到LLM分析数据的映射
         loaded_original_interviews: 原始访谈数据列表
         loaded_csv_headers: CSV文件的列标题列表
-        output_maxqda_filepath: MaxQDA输出文件路径
         respondent_id_csv_column: 受访者ID列名
         questions_to_skip_coding: 需要跳过编码的问题列表
         
     返回:
-        bool: 转换是否成功
+        str: MaxQDA格式的文本内容
     """
     logger.info("开始MaxQDA格式转换")
-    
-    # 设置默认跳过的问题
-    if questions_to_skip_coding is None:
-        questions_to_skip_coding = ["序号"]
     
     # 获取调试目标
     target_id_for_debug = str(P_DBUG_RESPONDENT_ID).strip() if P_DBUG_RESPONDENT_ID is not None else None
@@ -704,103 +706,128 @@ def run_maxqda_conversion(
     # 验证输入数据
     if not all([loaded_llm_data_map, loaded_original_interviews, loaded_csv_headers]):
         logger.error("核心数据不完整，无法继续")
-        return False
+        return ""
     
-    # 确保输出目录存在
-    output_dir = os.path.dirname(output_maxqda_filepath)
-    if output_dir and not os.path.exists(output_dir):
-        try:
-            os.makedirs(output_dir)
-        except Exception as e:
-            logger.error(f"创建输出目录失败: {e}")
-            return False
+    structured_text_parts = []
     
     try:
-        with open(output_maxqda_filepath, 'w', encoding='utf-8') as f_out:
-            # 处理每个受访者的数据
-            for i, respondent_dict_data in enumerate(loaded_original_interviews):
-                current_respondent_id = respondent_dict_data.get(respondent_id_csv_column, "").strip()
-                
-                # 标准化当前受访者ID
-                normalized_id = normalize_respondent_id(current_respondent_id)
-                if not normalized_id:
+        # 处理每个受访者的数据
+        for i, respondent_dict_data in enumerate(loaded_original_interviews):
+            current_respondent_id = respondent_dict_data.get(respondent_id_csv_column, "").strip()
+            
+            # 标准化当前受访者ID
+            normalized_id = normalize_respondent_id(current_respondent_id)
+            if not normalized_id:
+                continue
+            
+            # 检查是否匹配调试目标
+            respondent_matches_target = (target_id_for_debug is None or 
+                                      normalized_id == target_id_for_debug)
+            
+            # 写入受访者标题
+            structured_text_parts.append(f"#TEXT {normalized_id}\n\n")
+            
+            # 处理每个问题
+            for question_header_from_csv in loaded_csv_headers:
+                # 跳过ID列
+                if question_header_from_csv == respondent_id_csv_column:
                     continue
                 
-                # 检查是否匹配调试目标
-                respondent_matches_target = (target_id_for_debug is None or 
-                                          normalized_id == target_id_for_debug)
+                # 获取原始回答并清理
+                original_answer_raw = respondent_dict_data.get(question_header_from_csv, "")
+                current_parent_code_q_cleaned = clean_text_for_maxqda(
+                    question_header_from_csv, 
+                    is_for_code_name=True
+                )
                 
-                # 写入受访者标题
-                f_out.write(f"#TEXT {normalized_id}\n\n")
+                # 设置调试标志
+                global PRINT_CURRENT_ITEM_DETAILS
+                PRINT_CURRENT_ITEM_DETAILS = (
+                    respondent_matches_target and
+                    (target_q_cleaned_for_debug is None or 
+                     current_parent_code_q_cleaned == target_q_cleaned_for_debug)
+                )
                 
-                # 处理每个问题
-                for question_header_from_csv in loaded_csv_headers:
-                    # 跳过ID列
-                    if question_header_from_csv == respondent_id_csv_column:
-                        continue
+                # 跳过排除列表中的问题
+                if question_header_from_csv in questions_to_skip_coding:
+                    continue
+                
+                # 清理和验证回答文本
+                original_answer_processed = clean_text_for_maxqda(original_answer_raw)
+                if not original_answer_processed:
+                    continue
+                
+                # 查找问题的LLM分析数据
+                if current_parent_code_q_cleaned in loaded_llm_data_map:
+                    llm_data = loaded_llm_data_map[current_parent_code_q_cleaned]
                     
-                    # 获取原始回答并清理
-                    original_answer_raw = respondent_dict_data.get(question_header_from_csv, "")
-                    current_parent_code_q_cleaned = clean_text_for_maxqda(
-                        question_header_from_csv, 
-                        is_for_code_name=True
+                    # 获取问题的编码数据
+                    all_initial_codes = llm_data.get('all_initial_code_entries_for_question', [])
+                    themes_for_question = llm_data.get('themes_for_this_question', [])
+                    
+                    # 处理编码并生成分段
+                    located_segments = get_segments_and_codes_for_answer(
+                        original_answer_processed,
+                        normalized_id,
+                        all_initial_codes,
+                        themes_for_question,
+                        current_parent_code_q_cleaned
                     )
                     
-                    # 设置调试标志
-                    global PRINT_CURRENT_ITEM_DETAILS
-                    PRINT_CURRENT_ITEM_DETAILS = (
-                        respondent_matches_target and
-                        (target_q_cleaned_for_debug is None or 
-                         current_parent_code_q_cleaned == target_q_cleaned_for_debug)
-                    )
-                    
-                    # 跳过排除列表中的问题
-                    if question_header_from_csv in questions_to_skip_coding:
-                        continue
-                    
-                    # 清理和验证回答文本
-                    original_answer_processed = clean_text_for_maxqda(original_answer_raw)
-                    if not original_answer_processed:
-                        continue
-                    
-                    # 查找问题的LLM分析数据
-                    if current_parent_code_q_cleaned in loaded_llm_data_map:
-                        llm_data = loaded_llm_data_map[current_parent_code_q_cleaned]
-                        
-                        # 获取问题的编码数据
-                        all_initial_codes = llm_data.get('all_initial_code_entries_for_question', [])
-                        themes_for_question = llm_data.get('themes_for_this_question', [])
-                        
-                        # 处理编码并生成分段
-                        located_segments = get_segments_and_codes_for_answer(
-                            original_answer_processed,
-                            normalized_id,
-                            all_initial_codes,
-                            themes_for_question,
-                            current_parent_code_q_cleaned
+                    # 只有当有编码时才输出
+                    if located_segments:
+                        # 解决重叠并构建最终输出
+                        non_overlapping = resolve_overlaps_and_aggregate_codes(
+                            located_segments,
+                            original_answer_processed
                         )
-                        
-                        # 只有当有编码时才输出
-                        if located_segments:
-                            # 解决重叠并构建最终输出
-                            non_overlapping = resolve_overlaps_and_aggregate_codes(
-                                located_segments,
-                                original_answer_processed
-                            )
-                            tagged_line = build_tagged_line_from_segments(
-                                original_answer_processed,
-                                non_overlapping
-                            )
-                            f_out.write(f"{tagged_line}\n\n")
-                
-                # 受访者之间添加空行
-                f_out.write("\n")
-                
-        logger.info(f"成功生成MaxQDA输出文件: {output_maxqda_filepath}")
-        return True
+                        tagged_line = build_tagged_line_from_segments(
+                            original_answer_processed,
+                            non_overlapping
+                        )
+                        structured_text_parts.append(f"{tagged_line}\n\n")
+            
+            # 受访者之间添加空行
+            structured_text_parts.append("\n")
+            
+        logger.info("成功生成MaxQDA格式文本")
+        return "".join(structured_text_parts)
         
     except Exception as e:
         logger.error(f"生成MaxQDA输出时出错: {e}")
+        return ""
+
+def get_original_id_and_save_maxqda(structured_txt: str, output_maxqda_filepath: str) -> bool:
+    """
+    将生成的MaxQDA结构化文本保存到文件。
+    
+    参数:
+        structured_txt: MaxQDA格式的结构化文本
+        output_maxqda_filepath: 输出文件路径
+        
+    返回:
+        bool: 保存成功返回True，否则返回False
+    """
+    # TODO: 使用ID转换工具获取原始csv序号
+    
+    if not structured_txt:
+        logger.error("结构化文本为空，无法保存")
+        return False
+        
+    try:
+        # 确保输出目录存在
+        os.makedirs(os.path.dirname(output_maxqda_filepath), exist_ok=True)
+        
+        # 写入文件
+        with open(output_maxqda_filepath, 'w', encoding='utf-8') as f:
+            f.write(structured_txt)
+            
+        logger.info(f"成功保存MaxQDA文件: {output_maxqda_filepath}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"保存MaxQDA文件时出错: {e}")
+        logger.debug("错误堆栈:", exc_info=True)
         return False
 
 # ======================================================================
@@ -830,7 +857,7 @@ def main() -> None:
         original_csv_path = get_path('UI')
         output_maxqda_path = get_path('inductive_maxqda_themecode')
         
-        # 配置参数 - 使用第一列作为ID列，同时也作为跳过编码的列
+
         logger.info("文件路径配置:")
         logger.info(f"  - 合并JSON: '{merged_json_path}'")
         logger.info(f"  - 原始CSV: '{original_csv_path}'")
@@ -849,41 +876,34 @@ def main() -> None:
 
         logger.info("所有源数据加载成功！")
         
-        # 获取第一列作为ID列
-        id_column = csv_headers[0]
+        # 获取原始ID列（第一列）为ID列
+        original_file = get_path('UI')
+        df = pd.read_csv(original_file)
+        id_column = df.columns[0]
         questions_to_skip = [id_column]  # 使用ID列作为要跳过编码的列
-        logger.info(f"使用第一列 '{id_column}' 作为ID列")
+        logger.info(f"使用第一列 '{questions_to_skip}' 作为ID列")
 
         # 步骤3: 执行核心转换流程
         logger.info("\n步骤3: 执行核心转换流程...")
-        success = run_maxqda_conversion(
+        
+        structured_text = run_maxqda_conversion(
             llm_data,
             original_data,
             csv_headers,
-            output_maxqda_path,
             id_column,  # 使用第一列作为ID列
             questions_to_skip_coding=questions_to_skip
         )
         
-        if success:
-            logger.info("任务执行成功！")
-        else:
-            logger.error("任务执行失败")
-
-    except KeyError as e:
-        logger.critical(f"配置错误: 在 parameters.py 中未找到必需的键: {e}")
-        logger.critical("任务终止")
-    except FileNotFoundError as e:
-        logger.critical(f"文件未找到: {e}")
-        logger.critical("请检查路径配置和文件是否存在")
-    except Exception as e:
-        logger.critical(f"执行过程中发生意外错误: {e}")
-        logger.debug("错误堆栈:", exc_info=True)
+        # 保存结果
+        if not get_original_id_and_save_maxqda(structured_text, output_maxqda_path):
+            logger.error("MAXQDA文本保存失败")
+            return
+            
+        logger.info("MAXQDA主题编码生成完成")
         
-    finally:
-        logger.info("="*80)
-        logger.info("任务执行完毕")
-        logger.info("="*80)
+    except Exception as e:
+        logger.error(f"处理过程中发生错误: {str(e)}")
+        raise
 
 if __name__ == "__main__":
     main()

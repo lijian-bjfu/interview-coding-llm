@@ -1,57 +1,113 @@
 序号
 
-1.0
+[ID:_id    1
+_id    1
+Name: 0, dtype: int64] _id 1_id 1Name: 0, dtype: int64
 
-2.0
+[ID:_id    2
+_id    2
+Name: 1, dtype: int64] _id 2_id 2Name: 1, dtype: int64
 
-3.0
+[ID:_id    3
+_id    3
+Name: 2, dtype: int64] _id 3_id 3Name: 2, dtype: int64
 
-4.0
+[ID:_id    4
+_id    4
+Name: 3, dtype: int64] _id 4_id 4Name: 3, dtype: int64
 
-5.0
+[ID:_id    5
+_id    5
+Name: 4, dtype: int64] _id 5_id 5Name: 4, dtype: int64
 
-6.0
+[ID:_id    6
+_id    6
+Name: 5, dtype: int64] _id 6_id 6Name: 5, dtype: int64
 
-7.0
+[ID:_id    7
+_id    7
+Name: 6, dtype: int64] _id 7_id 7Name: 6, dtype: int64
 
-8.0
+[ID:_id    8
+_id    8
+Name: 7, dtype: int64] _id 8_id 8Name: 7, dtype: int64
 
-9.0
+[ID:_id    9
+_id    9
+Name: 8, dtype: int64] _id 9_id 9Name: 8, dtype: int64
 
-10.0
+[ID:_id    10
+_id    10
+Name: 9, dtype: int64] _id 10_id 10Name: 9, dtype: int64
 
-11.0
+[ID:_id    11
+_id    11
+Name: 10, dtype: int64] _id 11_id 11Name: 10, dtype: int64
 
-12.0
+[ID:_id    12
+_id    12
+Name: 11, dtype: int64] _id 12_id 12Name: 11, dtype: int64
 
-13.0
+[ID:_id    13
+_id    13
+Name: 12, dtype: int64] _id 13_id 13Name: 12, dtype: int64
 
-14.0
+[ID:_id    14
+_id    14
+Name: 13, dtype: int64] _id 14_id 14Name: 13, dtype: int64
 
-15.0
+[ID:_id    15
+_id    15
+Name: 14, dtype: int64] _id 15_id 15Name: 14, dtype: int64
 
-16.0
+[ID:_id    16
+_id    16
+Name: 15, dtype: int64] _id 16_id 16Name: 15, dtype: int64
 
-17.0
+[ID:_id    17
+_id    17
+Name: 16, dtype: int64] _id 17_id 17Name: 16, dtype: int64
 
-18.0
+[ID:_id    18
+_id    18
+Name: 17, dtype: int64] _id 18_id 18Name: 17, dtype: int64
 
-19.0
+[ID:_id    19
+_id    19
+Name: 18, dtype: int64] _id 19_id 19Name: 18, dtype: int64
 
-20.0
+[ID:_id    20
+_id    20
+Name: 19, dtype: int64] _id 20_id 20Name: 19, dtype: int64
 
-21.0
+[ID:_id    21
+_id    21
+Name: 20, dtype: int64] _id 21_id 21Name: 20, dtype: int64
 
-22.0
+[ID:_id    22
+_id    22
+Name: 21, dtype: int64] _id 22_id 22Name: 21, dtype: int64
 
-23.0
+[ID:_id    23
+_id    23
+Name: 22, dtype: int64] _id 23_id 23Name: 22, dtype: int64
 
-24.0
+[ID:_id    24
+_id    24
+Name: 23, dtype: int64] _id 24_id 24Name: 23, dtype: int64
 
-25.0
+[ID:_id    25
+_id    25
+Name: 24, dtype: int64] _id 25_id 25Name: 24, dtype: int64
 
-26.0
+[ID:_id    26
+_id    26
+Name: 25, dtype: int64] _id 26_id 26Name: 25, dtype: int64
 
-27.0
+[ID:_id    27
+_id    27
+Name: 26, dtype: int64] _id 27_id 27Name: 26, dtype: int64
 
-28.0
+[ID:_id    28
+_id    28
+Name: 27, dtype: int64] _id 28_id 28Name: 27, dtype: int64

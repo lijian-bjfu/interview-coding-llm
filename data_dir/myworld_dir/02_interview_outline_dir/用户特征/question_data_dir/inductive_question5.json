@@ -1,433 +1,649 @@
+  
 [
-    {
-        "question_text": "你觉得你对这个游戏的熟悉程度/游戏等级如何",
-        "initial_codes": [
-            {
-                "respondent_id": "P1",
-                "original_answer_segment": "只能说是熟练，因为我主要玩就是会玩生存模式，然后因为它里面有一个系统是红十系统，我一直不是很弄得不是很懂。就基本上就是在玩儿生存，然后在生存模式里面大房子，所以可能算是熟练吧",
-                "code_name": [
-                    "中等熟练玩家",
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "只能说是熟练",
-                    "红十系统，我一直不是很弄得不是很懂"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "P2",
-                "original_answer_segment": "比较熟悉，算是高手",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "比较熟悉，算是高手"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P3",
-                "original_answer_segment": "菜鸟",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "菜鸟"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P4",
-                "original_answer_segment": "我觉得就是刚入门吧，玩儿的时间挺长的，但是一直都是最浅的，玩儿的都比较浅，没有深入探究",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "我觉得就是刚入门吧",
-                    "一直都是最浅的，玩儿的都比较浅，没有深入探究"
-                ],
-                "pairs": [
-                    "1-1",
-                    "1-2"
-                ]
-            },
-            {
-                "respondent_id": "P5",
-                "original_answer_segment": "对这个游戏算比较熟悉吧，但它现在更新的那些模组我就不是很熟悉了，原版的还是比较熟悉的。",
-                "code_name": [
-                    "中等熟练玩家",
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "对这个游戏算比较熟悉吧",
-                    "它现在更新的那些模组我就不是很熟悉了"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "P6",
-                "original_answer_segment": "还行，这个游戏玩法也没什么难的，就是一个很自由的游戏，想咋玩咋玩。",
-                "code_name": [
-                    "中等熟练玩家"
-                ],
-                "supporting_quote": [
-                    "还行"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P7",
-                "original_answer_segment": "打四分，十分打四分。",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "打四分，十分打四分。"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P8",
-                "original_answer_segment": "熟悉程度一般般，就是新手水平。",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "熟悉程度一般般，就是新手水平。"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P9",
-                "original_answer_segment": "我对《我的世界》可以说是非常熟悉了，自称生存类大师也不为过。在游戏里，我简直就是无敌的存在，各种生存技巧、建造方法都了如指掌。",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "非常熟悉了，自称生存类大师也不为过",
-                    "在游戏里，我简直就是无敌的存在，各种生存技巧、建造方法都了如指掌"
-                ],
-                "pairs": [
-                    "1-1",
-                    "1-2"
-                ]
-            },
-            {
-                "respondent_id": "P10",
-                "original_answer_segment": "还行（？），但是手机上的有游戏等级吗？没注意过",
-                "code_name": [
-                    "中等熟练玩家"
-                ],
-                "supporting_quote": [
-                    "还行（？）"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P11",
-                "original_answer_segment": "非常熟悉，相当特别",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "非常熟悉，相当特别"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P12",
-                "original_answer_segment": "5级满级，3",
-                "code_name": [
-                    "中等熟练玩家"
-                ],
-                "supporting_quote": [
-                    "5级满级，3"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P13",
-                "original_answer_segment": "我对我的世界这款游戏的熟悉度不是很高，主要喜欢在《我的世界》中喜欢造房子和开采升级。制作并使用更高级的挖掘工具，如钻石镐、附魔工具等",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "我对我的世界这款游戏的熟悉度不是很高"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P14",
-                "original_answer_segment": "自己觉得是一个小白，那你给我按骨灰级算吧，我还挺爽的，虽然我记得很烂吧，但是我也是从小睁眼就开始玩的。",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "自己觉得是一个小白",
-                    "虽然我记得很烂吧"
-                ],
-                "pairs": [
-                    "1-1",
-                    "1-2"
-                ]
-            },
-            {
-                "respondent_id": "P15",
-                "original_answer_segment": "我对这个游戏比较熟悉，但不是特别熟悉，就是我创造创造模式是比较熟悉，但是生存模式的话，因为它要合成各种东西，但合成的就是怎么合成那个东西，我就不太知道了，得去百度上搜。",
-                "code_name": [
-                    "中等熟练玩家",
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "我对这个游戏比较熟悉，但不是特别熟悉",
-                    "生存模式的话，因为它要合成各种东西，但合成的就是怎么合成那个东西，我就不太知道了，得去百度上搜"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "P16",
-                "original_answer_segment": "我应该算是骨灰级吧，因为我确实一直在玩这个游戏，生存模式闭着眼睛都能速通末地，也很熟悉合成表，包括冷门物品像\"锁链盔甲\"这种",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "我应该算是骨灰级吧",
-                    "生存模式闭着眼睛都能速通末地，也很熟悉合成表"
-                ],
-                "pairs": [
-                    "1-1",
-                    "1-2"
-                ]
-            },
-            {
-                "respondent_id": "P17",
-                "original_answer_segment": "熟的不能再熟了",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "熟的不能再熟了"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P18",
-                "original_answer_segment": "我其实对这个游戏的了解程度不是很高",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "我其实对这个游戏的了解程度不是很高"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P19",
-                "original_answer_segment": "基础的还挺了解的，后来更新换代的东西就不了解了",
-                "code_name": [
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "基础的还挺了解的，后来更新换代的东西就不了解了"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P20",
-                "original_answer_segment": "上手了就容易，我挺了解游戏玩法的",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "上手了就容易，我挺了解游戏玩法的"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P21",
-                "original_answer_segment": "生存模式挺熟的，能自己盖房子、挖矿、养动物。额，红石电路试过几次，想做自动门，但是没成功，感觉太复杂了，就是看不懂那些教程，所以现在只玩简单的。",
-                "code_name": [
-                    "中等熟练玩家",
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "生存模式挺熟的",
-                    "红石电路试过几次，想做自动门，但是没成功，感觉太复杂了"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "P22",
-                "original_answer_segment": "一般",
-                "code_name": [
-                    "中等熟练玩家"
-                ],
-                "supporting_quote": [
-                    "一般"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P23",
-                "original_answer_segment": "我对这个游戏的熟悉程度可能没有太熟悉吧，",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "我对这个游戏的熟悉程度可能没有太熟悉吧"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P24",
-                "original_answer_segment": "很熟悉，通关关卡，成就什么的比较了解，视频也看了很多",
-                "code_name": [
-                    "高水平玩家"
-                ],
-                "supporting_quote": [
-                    "很熟悉，通关关卡，成就什么的比较了解"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P25",
-                "original_answer_segment": "不太行，需要靠一些攻略",
-                "code_name": [
-                    "新手或初级玩家"
-                ],
-                "supporting_quote": [
-                    "不太行，需要靠一些攻略"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P26",
-                "original_answer_segment": "一般",
-                "code_name": [
-                    "中等熟练玩家"
-                ],
-                "supporting_quote": [
-                    "一般"
-                ],
-                "pairs": [
-                    "1-1"
-                ]
-            },
-            {
-                "respondent_id": "P27",
-                "original_answer_segment": "生存模式挺熟的，能自己盖房子、挖矿、养动物。额，红石电路试过几次，想做自动门，但是没成功，感觉太复杂了，就是看不懂那些教程，所以现在只玩简单的。",
-                "code_name": [
-                    "中等熟练玩家",
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "生存模式挺熟的",
-                    "红石电路试过几次...没成功，感觉太复杂了"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            },
-            {
-                "respondent_id": "P28",
-                "original_answer_segment": "生存模式玩得挺溜的，就是那个红…什么电路的东西，一直没搞懂，感觉像数学题，太复杂了，所以我一直没碰过。",
-                "code_name": [
-                    "中等熟练玩家",
-                    "特定知识领域短板"
-                ],
-                "supporting_quote": [
-                    "生存模式玩得挺溜的",
-                    "那个红…什么电路的东西，一直没搞懂"
-                ],
-                "pairs": [
-                    "1-1",
-                    "2-2"
-                ]
-            }
+  {
+    "question_text": "你觉得你对这个游戏的熟悉程度/游戏等级如何",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "只能说是熟练，因为我主要玩就是会玩生存模式，然后因为它里面有一个系统是红十系统，我一直不是很弄得不是很懂。就基本上就是在玩儿生存，然后在生存模式里面大房子，所以可能算是熟练吧",
+        "code_name": [
+          "自我评估 (中/熟练)",
+          "知识领域 (精通生存)",
+          "知识领域 (红石短板)"
         ],
-        "codes": [
-            {
-                "code_name": "高水平玩家",
-                "code_definition": "玩家自我评价为高手、大师或骨灰级，对游戏内容和玩法非常熟悉。"
-            },
-            {
-                "code_name": "中等熟练玩家",
-                "code_definition": "玩家自我评价为熟练、还行或一般，掌握了游戏的核心玩法但未精通全部。"
-            },
-            {
-                "code_name": "新手或初级玩家",
-                "code_definition": "玩家自我评价为菜鸟、刚入门或不熟悉，对游戏玩法了解有限。"
-            },
-            {
-                "code_name": "特定知识领域短板",
-                "code_definition": "玩家明确指出自己在某些特定领域（如红石、新模组、合成）知识不足。"
-            }
+        "supporting_quote": [
+          "只能说是熟练",
+          "我主要玩就是会玩生存模式",
+          "红十系统，我一直不是很弄得不是很懂"
         ],
-        "themes": [
-            {
-                "theme_name": "熟练度自我定位",
-                "theme_definition": "该主题捕获了玩家对自己游戏技巧的总体评估，将自身定位在从新手到专家的广谱范围中的某一点。",
-                "included_initial_codes": [
-                    "高水平玩家",
-                    "中等熟练玩家",
-                    "新手或初级玩家"
-                ]
-            },
-            {
-                "theme_name": "知识结构的完整性",
-                "theme_definition": "该主题探讨了玩家如何看待自身知识的广度与深度，通常会突出某些复杂或新颖的系统（如红石电路、新模组）作为已知的弱点。",
-                "included_initial_codes": [
-                    "特定知识领域短板"
-                ]
-            }
+        "quote_range": [
+          [0, 6],
+          [10, 24],
+          [34, 55]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
         ]
-    }
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "比较熟悉，算是高手",
+        "code_name": [
+          "自我评估 (高)"
+        ],
+        "supporting_quote": [
+          "比较熟悉，算是高手"
+        ],
+        "quote_range": [
+          [0, 9]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "菜鸟",
+        "code_name": [
+          "自我评估 (低)"
+        ],
+        "supporting_quote": [
+          "菜鸟"
+        ],
+        "quote_range": [
+          [0, 2]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "我觉得就是刚入门吧，玩儿的时间挺长的，但是一直都是最浅的，玩儿的都比较浅，没有深入探究",
+        "code_name": [
+          "自我评估 (低)",
+          "时长与技能分离",
+          "探索深度不足"
+        ],
+        "supporting_quote": [
+          "刚入门吧",
+          "玩儿的时间挺长的，但是一直都是最浅的",
+          "没有深入探究"
+        ],
+        "quote_range": [
+          [4, 8],
+          [10, 28],
+          [36, 42]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "对这个游戏算比较熟悉吧，但它现在更新的那些模组我就不是很熟悉了，原版的还是比较熟悉的。",
+        "code_name": [
+          "自我评估 (中/熟练)",
+          "知识领域 (不熟新内容)"
+        ],
+        "supporting_quote": [
+          "对这个游戏算比较熟悉吧",
+          "但它现在更新的那些模组我就不是很熟悉了"
+        ],
+        "quote_range": [
+          [0, 12],
+          [13, 35]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "还行，这个游戏玩法也没什么难的，就是一个很自由的游戏，想咋玩咋玩。",
+        "code_name": [
+          "自我评估 (中/还行)",
+          "低难度感知"
+        ],
+        "supporting_quote": [
+          "还行",
+          "这个游戏玩法也没什么难的"
+        ],
+        "quote_range": [
+          [0, 2],
+          [3, 16]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "打四分，十分打四分。",
+        "code_name": [
+          "自我评估 (量化中低)"
+        ],
+        "supporting_quote": [
+          "打四分，十分打四分"
+        ],
+        "quote_range": [
+          [0, 10]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "熟悉程度一般般，就是新手水平。",
+        "code_name": [
+          "自我评估 (低)"
+        ],
+        "supporting_quote": [
+          "熟悉程度一般般，就是新手水平"
+        ],
+        "quote_range": [
+          [0, 15]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "我对《我的世界》可以说是非常熟悉了，自称生存类大师也不为过。在游戏里，我简直就是无敌的存在，各种生存技巧、建造方法都了如指掌。",
+        "code_name": [
+          "自我评估 (高)",
+          "知识领域 (精通生存)"
+        ],
+        "supporting_quote": [
+          "非常熟悉了，自称生存类大师也不为过",
+          "各种生存技巧、建造方法都了如指掌"
+        ],
+        "quote_range": [
+          [11, 29],
+          [41, 60]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "还行（？），但是手机上的有游戏等级吗？没注意过",
+        "code_name": [
+          "自我评估 (中/还行)",
+          "游戏等级概念模糊"
+        ],
+        "supporting_quote": [
+          "还行",
+          "手机上的有游戏等级吗？没注意过"
+        ],
+        "quote_range": [
+          [0, 2],
+          [8, 24]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "非常熟悉，相当特别",
+        "code_name": [
+          "自我评估 (高)"
+        ],
+        "supporting_quote": [
+          "非常熟悉，相当特别"
+        ],
+        "quote_range": [
+          [0, 9]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "5级满级，3",
+        "code_name": [
+          "自我评估 (量化中等)"
+        ],
+        "supporting_quote": [
+          "5级满级，3"
+        ],
+        "quote_range": [
+          [0, 7]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "我对我的世界这款游戏的熟悉度不是很高，主要喜欢在《我的世界》中喜欢造房子和开采升级。制作并使用更高级的挖掘工具，如钻石镐、附魔工具等",
+        "code_name": [
+          "自我评估 (低)",
+          "聚焦特定玩法 (建造/开采)"
+        ],
+        "supporting_quote": [
+          "熟悉度不是很高",
+          "主要喜欢在《我的世界》中喜欢造房子和开采升级"
+        ],
+        "quote_range": [
+          [12, 19],
+          [20, 43]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "自己觉得是一个小白，那你给我按骨灰级算吧，我还挺爽的，虽然我记得很烂吧，但是我也是从小睁眼就开始玩的。",
+        "code_name": [
+          "矛盾的自我评估",
+          "时长与技能分离"
+        ],
+        "supporting_quote": [
+          "自己觉得是一个小白，那你给我按骨灰级算吧",
+          "虽然我记得很烂吧，但是我也是从小睁眼就开始玩的"
+        ],
+        "quote_range": [
+          [0, 22],
+          [27, 51]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "我对这个游戏比较熟悉，但不是特别熟悉，就是我创造创造模式是比较熟悉，但是生存模式的话，因为它要合成各种东西，但合成的就是怎么合成那个东西，我就不太知道了，得去百度上搜。",
+        "code_name": [
+          "自我评估 (中/熟练)",
+          "知识领域 (精通创造)",
+          "知识领域 (生存短板/依赖攻略)"
+        ],
+        "supporting_quote": [
+          "比较熟悉，但不是特别熟悉",
+          "我创造创造模式是比较熟悉",
+          "生存模式的话...我就不太知道了，得去百度上搜"
+        ],
+        "quote_range": [
+          [6, 19],
+          [23, 36],
+          [37, 76]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "我应该算是骨灰级吧，因为我确实一直在玩这个游戏，生存模式闭着眼睛都能速通末地，也很熟悉合成表，包括冷门物品像\"锁链盔甲\"这种",
+        "code_name": [
+          "自我评估 (高/骨灰级)",
+          "技能佐证 (精通游戏机制)"
+        ],
+        "supporting_quote": [
+          "我应该算是骨灰级吧",
+          "生存模式闭着眼睛都能速通末地，也很熟悉合成表，包括冷门物品像\"锁链盔甲\"这种"
+        ],
+        "quote_range": [
+          [0, 10],
+          [22, 79]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "熟的不能再熟了",
+        "code_name": [
+          "自我评估 (高)"
+        ],
+        "supporting_quote": [
+          "熟的不能再熟了"
+        ],
+        "quote_range": [
+          [0, 7]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "我其实对这个游戏的了解程度不是很高",
+        "code_name": [
+          "自我评估 (低)"
+        ],
+        "supporting_quote": [
+          "我其实对这个游戏的了解程度不是很高"
+        ],
+        "quote_range": [
+          [0, 18]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 19,
+        "original_answer_segment": "基础的还挺了解的，后来更新换代的东西就不了解了",
+        "code_name": [
+          "自我评估 (中/熟练)",
+          "知识领域 (不熟新内容)"
+        ],
+        "supporting_quote": [
+          "基础的还挺了解的",
+          "后来更新换代的东西就不了解了"
+        ],
+        "quote_range": [
+          [0, 9],
+          [10, 24]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 20,
+        "original_answer_segment": "上手了就容易，我挺了解游戏玩法的",
+        "code_name": [
+          "自我评估 (中/熟练)",
+          "低难度感知"
+        ],
+        "supporting_quote": [
+          "上手了就容易",
+          "我挺了解游戏玩法的"
+        ],
+        "quote_range": [
+          [0, 6],
+          [7, 16]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 21,
+        "original_answer_segment": "生存模式挺熟的，能自己盖房子、挖矿、养动物。额，红石电路试过几次，想做自动门，但是没成功，感觉太复杂了，就是看不懂那些教程，所以现在只玩简单的。",
+        "code_name": [
+          "知识领域 (精通生存)",
+          "知识领域 (红石短板)",
+          "技能佐证 (依赖攻略失败)"
+        ],
+        "supporting_quote": [
+          "生存模式挺熟的，能自己盖房子、挖矿、养动物",
+          "红石电路试过几次，想做自动门，但是没成功",
+          "看不懂那些教程"
+        ],
+        "quote_range": [
+          [0, 27],
+          [31, 56],
+          [65, 72]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 22,
+        "original_answer_segment": "一般",
+        "code_name": [
+          "自我评估 (中/一般)"
+        ],
+        "supporting_quote": [
+          "一般"
+        ],
+        "quote_range": [
+          [0, 2]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 23,
+        "original_answer_segment": "我对这个游戏的熟悉程度可能没有太熟悉吧，",
+        "code_name": [
+          "自我评估 (低)"
+        ],
+        "supporting_quote": [
+          "可能没有太熟悉吧"
+        ],
+        "quote_range": [
+          [12, 20]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 24,
+        "original_answer_segment": "很熟悉，通关关卡，成就什么的比较了解，视频也看了很多",
+        "code_name": [
+          "自我评估 (高)",
+          "技能佐证 (了解游戏机制)",
+          "外部学习"
+        ],
+        "supporting_quote": [
+          "很熟悉",
+          "通关关卡，成就什么的比较了解",
+          "视频也看了很多"
+        ],
+        "quote_range": [
+          [0, 3],
+          [4, 20],
+          [21, 29]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 25,
+        "original_answer_segment": "不太行，需要靠一些攻略",
+        "code_name": [
+          "自我评估 (低)",
+          "技能佐证 (依赖攻略)"
+        ],
+        "supporting_quote": [
+          "不太行",
+          "需要靠一些攻略"
+        ],
+        "quote_range": [
+          [0, 3],
+          [4, 11]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 26,
+        "original_answer_segment": "一般",
+        "code_name": [
+          "自我评估 (中/一般)"
+        ],
+        "supporting_quote": [
+          "一般"
+        ],
+        "quote_range": [
+          [0, 2]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 27,
+        "original_answer_segment": "生存模式挺熟的，能自己盖房子、挖矿、养动物。额，红石电路试过几次，想做自动门，但是没成功，感觉太复杂了，就是看不懂那些教程，所以现在只玩简单的。",
+        "code_name": [
+          "知识领域 (精通生存)",
+          "知识领域 (红石短板)",
+          "技能佐证 (依赖攻略失败)"
+        ],
+        "supporting_quote": [
+          "生存模式挺熟的，能自己盖房子、挖矿、养动物",
+          "红石电路试过几次，想做自动门，但是没成功",
+          "看不懂那些教程"
+        ],
+        "quote_range": [
+          [0, 27],
+          [31, 56],
+          [65, 72]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 28,
+        "original_answer_segment": "生存模式玩得挺溜的，就是那个红…什么电路的东西，一直没搞懂，感觉像数学题，太复杂了，所以我一直没碰过。",
+        "code_name": [
+          "知识领域 (精通生存)",
+          "知识领域 (红石短板)",
+          "高难度感知"
+        ],
+        "supporting_quote": [
+          "生存模式玩得挺溜的",
+          "那个红…什么电路的东西，一直没搞懂",
+          "感觉像数学题，太复杂了"
+        ],
+        "quote_range": [
+          [0, 11],
+          [15, 33],
+          [34, 46]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "自我评估 (高)",
+        "code_definition": "玩家使用“高手”、“非常熟悉”、“骨灰级”等词语，或通过具体成就，明确表达对自己游戏水平的高度自信。"
+      },
+      {
+        "code_name": "自我评估 (中)",
+        "code_definition": "玩家使用“熟练”、“还行”、“一般”等中性词汇来评价自己的游戏水平。"
+      },
+      {
+        "code_name": "自我评估 (低)",
+        "code_definition": "玩家使用“菜鸟”、“刚入门”、“小白”、“新手”等词语，明确表示自己的游戏水平不高。"
+      },
+      {
+        "code_name": "自我评估 (量化)",
+        "code_definition": "玩家使用具体的数字或分数来量化自己的游戏水平。"
+      },
+      {
+        "code_name": "矛盾的自我评估",
+        "code_definition": "玩家的自我评估包含冲突信息，如自认为是“小白”但又接受“骨灰级”的称号。"
+      },
+      {
+        "code_name": "知识领域 (精通生存)",
+        "code_definition": "玩家明确表示自己对生存模式的玩法（如建造、挖矿、打怪）非常熟悉。"
+      },
+      {
+        "code_name": "知识领域 (精通创造)",
+        "code_definition": "玩家明确表示自己对创造模式的玩法非常熟悉。"
+      },
+      {
+        "code_name": "知识领域 (红石短板)",
+        "code_definition": "玩家明确指出红石电路是自己的知识盲区或弱点，尽管可能精通其他方面。"
+      },
+      {
+        "code_name": "知识领域 (不熟新内容)",
+        "code_definition": "玩家的知识局限于游戏的基础或早期版本，对后续更新的内容不了解。"
+      },
+      {
+        "code_name": "时长与技能分离",
+        "code_definition": "玩家意识到或表达出“玩得久”不等于“玩得好”的观点。"
+      },
+      {
+        "code_name": "技能佐证 (依赖攻略)",
+        "code_definition": "玩家需要依靠外部攻略或教程来进行游戏，以此作为自己水平不高的证明。"
+      },
+      {
+        "code_name": "技能佐证 (精通游戏机制)",
+        "code_definition": "玩家通过列举具体的高阶能力（如速通、熟悉合成表、了解冷门知识）来证明自己的高水平。"
+      },
+      {
+        "code_name": "探索深度不足",
+        "code_definition": "玩家认为自己虽然玩了很久，但对游戏的探索仅停留在浅层，没有深入研究。"
+      },
+      {
+          "code_name": "低难度感知",
+          "code_definition": "玩家认为游戏本身玩法不难，容易上手。"
+      },
+      {
+          "code_name": "高难度感知",
+          "code_definition": "玩家认为游戏的某些方面（特指红石）难度非常高，如同做数学题。"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "玩家技能的自我定位",
+        "theme_definition": "玩家根据自身经验对游戏熟练程度进行的主观划分，通常分为高、中、低三个层次，部分玩家会采用量化方式或表现出矛盾心态。",
+        "included_initial_codes": [
+          "自我评估 (高)",
+          "自我评估 (中)",
+          "自我评估 (低)",
+          "自我评估 (量化)",
+          "矛盾的自我评估"
+        ]
+      },
+      {
+        "theme_name": "技能掌握的领域化差异",
+        "theme_definition": "玩家的技能并非全面发展，而是集中在特定领域。最显著的差异体现在“生存/建造”与“红石技术”两大块，前者是大众熟练区，后者是高阶技术区。",
+        "included_initial_codes": [
+          "知识领域 (精通生存)",
+          "知识领域 (精通创造)",
+          "知识领域 (红石短板)"
+        ]
+      },
+      {
+        "theme_name": "认知深度与知识时效性",
+        "theme_definition": "玩家对自身水平的判断不仅基于操作，还基于认知深度和知识的更新速度。这体现在对“玩得久不等于玩得好”的认知，以及对新版本内容的不熟悉感。",
+        "included_initial_codes": [
+          "知识领域 (不熟新内容)",
+          "时长与技能分离",
+          "探索深度不足",
+          "技能佐证 (依赖攻略)",
+          "技能佐证 (精通游戏机制)",
+          "低难度感知",
+          "高难度感知"
+        ]
+      }
+    ]
+  }
 ]

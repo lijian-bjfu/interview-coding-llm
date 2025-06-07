@@ -47,6 +47,7 @@ except ImportError as e:
     logger.critical(f"无法从 parameters.py 导入配置: {e}")
     raise
 
+
 # ======================================================================
 # 1. 输入机制模块 (@ds-n1-load)
 # ======================================================================
@@ -98,7 +99,7 @@ def get_all_inductive_json_paths() -> Optional[List[str]]:
     严格通过 get_path_list 获取所有待处理的 inductive_questionN.json 文件路径。
     并确保返回一个扁平化的路径字符串列表。
     """
-    logger.info("[DS-N1-LOAD]: 准备通过 get_path_list 获取所有输入文件路径...")
+    logger.info("准备通过 get_path_list 获取所有输入文件路径...")
     
     try:
         key_for_all_jsons = 'grouped_inductive_q_jsons' 
@@ -118,17 +119,17 @@ def get_all_inductive_json_paths() -> Optional[List[str]]:
                 logger.info(f"  {i+1}. 文件名: {file_name}")
                 logger.info(f"     路径: {path}")
                 
-        logger.info("[DS-N1-LOAD]: 文件路径获取和处理完成")
+        logger.info("文件路径获取和处理完成")
         return all_json_paths
         
     except KeyError as e:
-        logger.critical(f"[DS-N1-LOAD] 失败: 在 parameters.py 中未找到预定义的 key: '{key_for_all_jsons}'")
+        logger.critical(f"失败: 在 parameters.py 中未找到预定义的 key: '{key_for_all_jsons}'")
         return None 
     except TypeError as e:
-        logger.critical(f"[DS-N1-LOAD] 失败: get_path_list('{key_for_all_jsons}') 返回的不是一个列表的列表")
+        logger.critical(f"失败: get_path_list('{key_for_all_jsons}') 返回的不是一个列表的列表")
         return None
     except Exception as e:
-        logger.critical(f"[DS-N1-LOAD] 失败: 意外错误 {e}")
+        logger.critical(f"失败: 意外错误 {e}")
         return None
 
 # ======================================================================
@@ -259,6 +260,71 @@ def merge_all_inductive_jsons(file_paths_list: List[str]) -> List[Dict[str, Any]
     
     return aggregated_question_objects
 
+def validate_respondent_id(merged_data: List[Dict[str, Any]]) -> bool:
+    """
+    验证合并后的数据中respondent_id是否符合要求：
+    每个问题下的respondent_id应该是从1到n的完整序列
+    
+    参数:
+        merged_data: 合并后的问题对象列表
+        
+    返回:
+        bool: 验证通过返回True，否则返回False
+    """
+    if not merged_data:
+        logger.warning("验证ID: 数据为空")
+        return False
+        
+    try:
+        all_valid = True
+        for question in merged_data:
+            question_text = question.get('question_text', 'Unknown Question')
+            
+            # 获取该问题下的所有ID
+            question_ids = [response['respondent_id'] for response in question['initial_codes']]
+            unique_ids = sorted(set(question_ids))
+            
+            # 计算期望的ID序列
+            expected_ids = list(range(1, len(unique_ids) + 1))
+            
+            # 检查该问题下的ID是否完整
+            if unique_ids != expected_ids:
+                logger.error(f"\n验证ID: 问题 '{question_text}' 的ID序列不完整")
+                logger.error(f"期望ID序列: {expected_ids}")
+                logger.error(f"实际ID序列: {unique_ids}")
+                # 找出缺失的ID
+                missing_ids = set(expected_ids) - set(unique_ids)
+                if missing_ids:
+                    logger.error(f"缺失的ID: {sorted(missing_ids)}")
+                # 找出多余的ID
+                extra_ids = set(unique_ids) - set(expected_ids)
+                if extra_ids:
+                    logger.error(f"多余的ID: {sorted(extra_ids)}")
+                all_valid = False
+                
+            # 检查该问题下是否有重复ID
+            if len(unique_ids) != len(question_ids):
+                logger.error(f"\n验证ID: 问题 '{question_text}' 存在重复ID")
+                # 统计重复的ID
+                from collections import Counter
+                id_counts = Counter(question_ids)
+                duplicate_ids = {id_: count for id_, count in id_counts.items() if count > 1}
+                for id_, count in duplicate_ids.items():
+                    logger.error(f"ID {id_} 在该问题中重复出现 {count} 次")
+                all_valid = False
+                
+        if all_valid:
+            logger.info("验证ID: 所有问题的ID序列都符合要求")
+            return True
+        return False
+        
+    except KeyError as e:
+        logger.error(f"验证ID: 数据结构错误，缺少必要字段: {e}")
+        return False
+    except Exception as e:
+        logger.error(f"验证ID: 意外错误 {e}")
+        return False
+
 # ======================================================================
 # 3. 输出机制模块 (@ds-n1-save)
 # ======================================================================
@@ -275,10 +341,10 @@ def save_merged_json(data_to_save: List[Dict[str, Any]], output_filepath: str) -
         bool: 保存成功返回True，失败返回False
     """
     if not data_to_save:
-        logger.warning("[DS-N1-SAVE]: 待保存的数据为空，不生成输出文件")
+        logger.warning("待保存的数据为空，不生成输出文件")
         return False
 
-    logger.info(f"[DS-N1-SAVE]: 准备保存合并后的JSON文件到: {output_filepath}")
+    logger.info(f"准备保存合并后的JSON文件到: {output_filepath}")
     
     try:
         # 确保输出目录存在
@@ -294,15 +360,126 @@ def save_merged_json(data_to_save: List[Dict[str, Any]], output_filepath: str) -
         # 验证保存的文件
         is_valid, _ = validate_json_file(output_filepath)
         if not is_valid:
-            logger.error("[DS-N1-SAVE]: 保存的文件验证失败")
+            logger.error("保存的文件验证失败")
             return False
             
-        logger.info("[DS-N1-SAVE]: 数据已成功保存并验证")
+        logger.info("数据已成功保存并验证")
         return True
         
     except Exception as e:
-        logger.error(f"[DS-N1-SAVE]: 保存文件时发生错误: {e}")
+        logger.error(f"保存文件时发生错误: {e}")
         return False
+
+def generate_issue_report(file_paths_list: List[str], merged_data: List[Dict[str, Any]]) -> None:
+    """
+    生成问题汇总报告，包括：
+    1. JSON结构问题
+    2. 缺少字段问题
+    3. 问题编码重复问题
+    4. 其他问题
+    
+    参数:
+        file_paths_list: 所有JSON文件路径
+        merged_data: 合并后的数据
+    """
+    logger.info("\n" + "="*50)
+    logger.info("问题汇总报告")
+    logger.info("="*50)
+    
+    # 1. 检查每个文件的结构问题
+    logger.info("\n1. JSON结构问题:")
+    logger.info("-" * 30)
+    structure_issues = []
+    field_issues = []
+    
+    for file_path in file_paths_list:
+        filename = os.path.basename(file_path)
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                
+            if not isinstance(data, list):
+                structure_issues.append(f"  - {filename}: 根结构不是列表")
+                continue
+                
+            # 检查必需字段
+            for item in data:
+                if not isinstance(item, dict):
+                    structure_issues.append(f"  - {filename}: 包含非字典类型的元素")
+                    continue
+                    
+                missing_fields = []
+                for field in ['question_text', 'initial_codes', 'codes', 'themes']:
+                    if field not in item:
+                        missing_fields.append(field)
+                
+                if missing_fields:
+                    field_issues.append(f"  - {filename}: 缺少字段 {', '.join(missing_fields)}")
+                    
+        except json.JSONDecodeError:
+            structure_issues.append(f"  - {filename}: JSON解析失败")
+        except Exception as e:
+            structure_issues.append(f"  - {filename}: 其他错误 - {str(e)}")
+            
+    if structure_issues:
+        for issue in structure_issues:
+            logger.error(issue)
+    else:
+        logger.info("  √ 未发现JSON结构问题")
+        
+    # 2. 缺少字段问题
+    logger.info("\n2. 缺少字段问题:")
+    logger.info("-" * 30)
+    if field_issues:
+        for issue in field_issues:
+            logger.error(issue)
+    else:
+        logger.info("  √ 未发现字段缺失问题")
+        
+    # 3. 问题编码重复问题
+    logger.info("\n3. 问题编码重复问题:")
+    logger.info("-" * 30)
+    question_counts = {}
+    for file_path in file_paths_list:
+        filename = os.path.basename(file_path)
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    count = len(data)
+                    if count > 1:
+                        question_counts[filename] = count
+        except:
+            continue
+            
+    if question_counts:
+        for filename, count in question_counts.items():
+            logger.warning(f"  - {filename}: 包含 {count} 个问题对象")
+    else:
+        logger.info("  √ 未发现问题编码重复问题")
+        
+    # 4. 问题编号连续性检查
+    logger.info("\n4. 问题编号连续性检查:")
+    logger.info("-" * 30)
+    
+    # 提取所有问题编号
+    question_numbers = []
+    for file_path in file_paths_list:
+        match = re.search(r'question(\d+)', os.path.basename(file_path))
+        if match:
+            question_numbers.append(int(match.group(1)))
+            
+    if question_numbers:
+        question_numbers.sort()
+        expected_numbers = list(range(min(question_numbers), max(question_numbers) + 1))
+        missing_numbers = set(expected_numbers) - set(question_numbers)
+        
+        if missing_numbers:
+            logger.warning(f"  - 问题编号不连续，缺少编号: {sorted(missing_numbers)}")
+        else:
+            logger.info("  √ 问题编号连续")
+    
+    logger.info("\n" + "="*50)
 
 # ======================================================================
 # 任务流程编排 (Main Execution)
@@ -328,6 +505,11 @@ def main() -> None:
         if not merged_data:
             logger.error("合并过程未产生有效数据。任务终止。")
             return
+            
+        # 2.1 验证respondent_id
+        if not validate_respondent_id(merged_data):
+            logger.error("respondent_id验证失败。任务终止。")
+            return
 
         # 3. 保存合并结果
         try:
@@ -343,6 +525,9 @@ def main() -> None:
         except KeyError:
             logger.critical("无法获取输出目录路径。请确保 'inductive_global_dir' key 在 parameters.py 中已定义")
             return
+            
+        # 4. 生成问题汇总报告
+        generate_issue_report(input_paths, merged_data)
             
     except Exception as e:
         logger.critical(f"执行过程中发生未预期的错误: {e}")

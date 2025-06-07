@@ -1,0 +1,271 @@
+---
+description: ID系统改造计划
+globs: 
+alwaysApply: false
+---
+# ID系统改造计划
+
+本文档定义了项目ID系统的改造计划，包括工作流程、任务目标和最佳实践。
+
+## 1. 工作流程概述
+
+```mermaid
+graph TD
+    A[原始CSV] --> B[建立_id系统]
+    B --> C[置入内部数据]
+    C --> D[更新LLM提示词]
+    D --> E[验证JSON数据]
+    E --> F[生成MAXQDA文本]
+```
+
+## 2. 具体任务分解
+
+### 2.1 建立_id系统
+
+**目标**：在[parameters.py](mdc:parameters.py)中建立统一的内部ID系统
+
+**任务内容**：
+- 使用CSV文件第一列作为原始ID
+- 为每条数据生成连续的数字型内部ID（_id）
+- 在内存中维护原始ID与内部ID的映射关系
+
+**具体实现计划**：
+
+1. **文件结构更新**
+```
+00_rawdata_dir/
+├── myworld.csv    # 原始文件
+└── myworld_id.csv # 添加了_id的文件
+```
+
+2. **路径配置更新**
+```python
+# 在_build_project_file_dir_internal中添加
+file_dir['UI_with_id'] = os.path.join(raw_data_dir, f"{current_app_name}_id.csv")
+```
+
+3. **核心功能实现**
+```python
+class IDManager:
+    """ID管理器：处理内部ID和原始ID的转换"""
+    def __init__(self, id_mapping: Dict[str, int]):
+        self._original_to_internal = id_mapping
+        self._internal_to_original = {v: k for k, v in id_mapping.items()}
+        
+    def to_internal_id(self, original_id) -> int:
+        """原始ID转内部ID"""
+        return self._original_to_internal[str(original_id)]
+        
+    def to_original_id(self, internal_id) -> str:
+        """内部ID转原始ID"""
+        return self._internal_to_original[internal_id]
+
+# 全局单例
+_ID_MANAGER: Optional[IDManager] = None
+
+def setup_internal_id_system(original_df: pd.DataFrame) -> pd.DataFrame:
+    """建立内部ID系统
+    
+    Args:
+        original_df: 原始数据DataFrame
+        
+    Returns:
+        DataFrame: 添加了_id的DataFrame
+    """
+    global _ID_MANAGER
+    
+    df_with_id = original_df.copy()
+    df_with_id['_id'] = range(len(df_with_id))
+    
+    # 创建映射关系并初始化IDManager
+    id_mapping = dict(zip(
+        df_with_id.iloc[:, 0].astype(str), 
+        df_with_id['_id']
+    ))
+    _ID_MANAGER = IDManager(id_mapping)
+    
+    return df_with_id
+
+def get_id_manager() -> IDManager:
+    """获取ID管理器实例"""
+    if _ID_MANAGER is None:
+        raise RuntimeError("ID系统尚未初始化")
+    return _ID_MANAGER
+```
+
+4. **工作流程集成**
+```python
+def setup_id_system(file_dir: Dict[str, str]) -> bool:
+    """设置ID系统的完整流程"""
+    logger.log("ID系统", "开始", "开始建立内部ID系统...")
+    
+    try:
+        # 读取原始数据
+        df = pd.read_csv(file_dir['UI'])
+        
+        # 建立ID系统并获取带ID的数据
+        df_with_id = setup_internal_id_system(df)
+        
+        # 保存处理后的文件
+        df_with_id.to_csv(file_dir['UI_with_id'], index=False)
+        
+        logger.log("ID系统", "成功", "ID系统建立完成")
+        return True
+        
+    except Exception as e:
+        logger.log("ID系统", "错误", f"ID系统建立失败: {str(e)}")
+        return False
+```
+
+5. **执行时机**
+- 在`move_original_data`函数执行完成后立即执行
+- 修改`manage_project_workflow`函数的执行顺序：
+```python
+def manage_project_workflow():
+    # 1. 移动原始文件
+    if not move_original_data(...):
+        return False
+    
+    # 2. 建立ID系统
+    if not setup_id_system(file_dir):
+        return False
+    
+    # 3. 继续其他工作流程
+    ...
+```
+
+**期望效果**：
+- 生成可靠的内部ID系统
+- 在内存中维护完整的ID映射关系
+- 确保数据完整性
+- 提供高效的ID转换工具
+
+**最佳实践**：
+1. 保持原始数据文件不变
+2. 在processed目录下生成新的带ID的文件
+3. 通过`get_id_manager()`获取ID转换工具
+4. 使用类型提示和异常处理确保ID转换的可靠性
+
+### 2.2 置入内部数据
+
+**目标**：更新[01create_user_and_question_data.py](mdc:01create_user_and_question_data.py)中的数据生成逻辑
+
+**任务内容**：
+- 修改横向数据生成逻辑，在每个答案前添加内部ID标识
+- 修改纵向数据生成逻辑，使用内部ID作为被访者标识
+- 更新调试配置中的ID引用
+
+**期望效果**：
+- 横向数据格式：`[ID:0] 答案内容`
+- 纵向数据格式：`被访者：[ID:0]`
+- 所有生成的数据使用统一的内部ID
+
+**最佳实践**：
+```python
+# 横向数据生成
+def format_answer_with_id(id_, answer):
+    return f"[ID:{id_}] {answer}"
+
+# 纵向数据生成
+def format_respondent_header(id_):
+    return f"被访者：[ID:{id_}]"
+```
+
+### 2.3 更新LLM提示词
+
+**目标**：修改提示语，确保LLM使用正确的ID格式
+
+**任务内容**：
+- 更新prompts_inductive_coding.txt中的提示语
+- 在示例中明确使用[ID:X]格式
+- 确保LLM理解ID的重要性
+
+**期望效果**：
+- LLM输出的JSON直接使用内部ID
+- 减少后续ID转换的工作量
+
+**最佳实践**：
+```json
+{
+    "respondent_id": "[ID:0]",
+    "original_answer_segment": "答案内容",
+    "code_name": ["编码1", "编码2"]
+}
+```
+
+### 2.4 验证JSON数据
+
+**目标**：确保所有JSON文件中的ID与内部ID系统一致
+
+**任务内容**：
+- 验证JSON中respondent_id的顺序和值
+- 必要时进行ID修正
+- 记录所有ID不一致的情况
+
+**期望效果**：
+- 所有JSON文件使用统一的内部ID
+- 保持数据的完整性和一致性
+
+**最佳实践**：
+```python
+def verify_json_ids(json_data, expected_ids):
+    """验证JSON中的ID是否符合预期"""
+    for item, expected_id in zip(json_data, expected_ids):
+        if item['respondent_id'] != f"[ID:{expected_id}]":
+            logger.warning(f"ID不匹配: 预期[ID:{expected_id}], 实际{item['respondent_id']}")
+            item['respondent_id'] = f"[ID:{expected_id}]"
+```
+
+### 2.5 生成MAXQDA文本
+
+**目标**：生成使用原始ID的MAXQDA结构文本
+
+**任务内容**：
+- 在内部处理中使用_id
+- 输出时将内部ID转换回原始ID
+- 保证数据的原真性
+
+**期望效果**：
+- MAXQDA文本使用原始ID
+- 便于与原始访谈资料对照
+- 保持数据分析的连贯性
+
+**最佳实践**：
+```python
+def convert_to_original_id(internal_id, mapping_df):
+    """将内部ID转换为原始ID"""
+    return mapping_df[
+        mapping_df['_id'] == internal_id
+    ]['original_id'].iloc[0]
+
+def generate_maxqda_text(data, mapping_df):
+    """生成MAXQDA文本，使用原始ID"""
+    for item in data:
+        internal_id = item['respondent_id']
+        original_id = convert_to_original_id(internal_id, mapping_df)
+        # 使用原始ID生成文本
+```
+
+## 3. 注意事项
+
+1. **数据完整性**
+   - 每个转换步骤都需要验证数据完整性
+   - 保存ID映射关系以便追溯
+   - 记录所有异常情况
+
+2. **错误处理**
+   - 添加适当的错误处理机制
+   - 对异常情况进行日志记录
+   - 提供数据恢复方案
+
+3. **文档更新**
+   - 更新workflow.log记录改动
+   - 在代码中添加清晰的注释
+   - 保持文档的及时更新
+
+## 4. 相关文件
+
+- [parameters.py](mdc:parameters.py)：ID系统配置和工具函数
+- [01create_user_and_question_data.py](mdc:01create_user_and_question_data.py)：数据生成脚本
+- [02inductive_merge_json.py](mdc:02inductive_merge_json.py)：JSON处理脚本
+- [03inductive_create_maxqda_themecode.py](mdc:03inductive_create_maxqda_themecode.py)：MAXQDA文本生成
