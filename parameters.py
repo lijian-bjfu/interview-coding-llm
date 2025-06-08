@@ -48,7 +48,7 @@
     获取特定分类下的路径
     参数:
         category_name: 分类名称
-        sub_dir_type: 子目录类型（SDIR_GROUP_QDATA/CBOOK/META）
+        sub_dir_type: 子目录类型（SDIR_GROUP_QDATA/UDATA/CBOOK/META）
         file_name: 可选的文件名
     返回:
         完整的文件或目录路径
@@ -74,6 +74,7 @@
 
 常量定义:
 - SDIR_GROUP_QDATA: str = "question_data_dir"
+- SDIR_GROUP_UDATA: str = "user_data_dir"
 - SDIR_GROUP_CBOOK: str = "codebook_data_dir"
 - SDIR_GROUP_META: str = "meta_data_dir"
     分组内部功能性子文件夹名称常量
@@ -139,6 +140,7 @@ SDIR_04_DEDUCTIVE = "04_deductive_coding_dir"
 
 # 分组内部功能性子文件夹名称
 SDIR_GROUP_QDATA = "question_data_dir"
+SDIR_GROUP_UDATA = "user_data_dir"
 SDIR_GROUP_CBOOK = "codebook_data_dir"
 SDIR_GROUP_META = "meta_data_dir"
 
@@ -193,10 +195,11 @@ def get_category_specific_path(category_name: str, sub_dir_type_constant: str, f
     if _PROJECT_FILE_DIR is None or not isinstance(_PROJECT_FILE_DIR, dict):
          raise RuntimeError("项目路径配置 _PROJECT_FILE_DIR 未能成功初始化或类型不正确。")
 
-    valid_sub_dir_keys = {SDIR_GROUP_QDATA, SDIR_GROUP_CBOOK, SDIR_GROUP_META}
+    valid_sub_dir_keys = {SDIR_GROUP_QDATA, SDIR_GROUP_UDATA, SDIR_GROUP_CBOOK, SDIR_GROUP_META}
     if sub_dir_type_constant not in valid_sub_dir_keys:
         raise ValueError(f"无效的 sub_dir_type_constant: '{sub_dir_type_constant}'. "
                          f"必须是 SDIR_GROUP_QDATA ('{SDIR_GROUP_QDATA}'), "
+                         f"SDIR_GROUP_UDATA ('{SDIR_GROUP_UDATA}'), "
                          f"SDIR_GROUP_CBOOK ('{SDIR_GROUP_CBOOK}'), "
                          f"或 SDIR_GROUP_META ('{SDIR_GROUP_META}') 之一。")
 
@@ -353,6 +356,7 @@ def _build_project_file_dir_internal(
                             {
                                 "原始Category1名": {
                                     SDIR_GROUP_QDATA: ".../Category1_safe/question_data_dir/",
+                                    SDIR_GROUP_UDATA: ".../Category1_safe/user_data_dir/",
                                     SDIR_GROUP_CBOOK: ".../Category1_safe/codebook_data_dir/",
                                     SDIR_GROUP_META:  ".../Category1_safe/meta_data_dir/"
                                 }, ...
@@ -415,36 +419,36 @@ def _build_project_file_dir_internal(
         'grouped_user_g_txts', 'grouped_inductive_q_jsons',
         'grouped_deductive_llm_jsons_in_group', 'grouped_inductive_q_cbook_jsons',
         'grouped_raw_codebook_txts', 'grouped_final_codebooks_txts',
-        'grouped_meta_data_files'
+        'grouped_meta_data_files', 'grouped_user_data_dirs'  # 添加新的键
     ]
     for key in grouped_keys:
         file_dir[key] = []
 
     # --- 新增：为 get_path_list 测试准备的列表 ---
     all_qdata_category_dirs: List[str] = []
+    all_udata_category_dirs: List[str] = []  # 新增：收集所有 user_data_dir 路径
 
-    # 确保按照大纲文件中的顺序处理分类
-    expected_categories = ['用户身份', '用户特征', '游戏体验', '创造性体验', '创造性设计']
+    # 设置所有分类的目录路径
     for original_category_name in categories_list:
-        if original_category_name not in expected_categories:
-            print(f"警告: 发现未预期的分类名称: {original_category_name}")
-            continue
             
         safe_category_folder_name = sanitize_folder_name(original_category_name) # 使用中文名需要安全处理
         group_main_abs_dir = os.path.join(outline_parent_abs_dir, safe_category_folder_name)
         
         qdata_abs_dir = os.path.join(group_main_abs_dir, SDIR_GROUP_QDATA, '') # 目录路径
+        udata_abs_dir = os.path.join(group_main_abs_dir, SDIR_GROUP_UDATA, '') # 目录路径
         cbook_abs_dir = os.path.join(group_main_abs_dir, SDIR_GROUP_CBOOK, '') # 目录路径
         meta_abs_dir = os.path.join(group_main_abs_dir, SDIR_GROUP_META, '')   # 目录路径
 
         # 填充 _category_base_paths (使用原始 category 名称作为键)
         file_dir['_category_base_paths'][original_category_name] = {
             SDIR_GROUP_QDATA: qdata_abs_dir,
+            SDIR_GROUP_UDATA: udata_abs_dir,
             SDIR_GROUP_CBOOK: cbook_abs_dir,
             SDIR_GROUP_META:  meta_abs_dir
         }
 
-        all_qdata_category_dirs.append(qdata_abs_dir) # <--- 新增：收集 qdata 目录路径
+        all_qdata_category_dirs.append(qdata_abs_dir)
+        all_udata_category_dirs.append(udata_abs_dir)  # 新增：收集 user_data_dir 路径
 
         # 填充 grouped_ lists (确保路径的文件部分不含尾部斜杠)
         file_dir['grouped_user_g_txts'].append(os.path.join(qdata_abs_dir.rstrip(os.sep), "user_g.txt"))
@@ -476,7 +480,8 @@ def _build_project_file_dir_internal(
         file_dir['grouped_final_codebooks_txts'].append(os.path.join(cbook_abs_dir.rstrip(os.sep), "codebook.txt"))
         file_dir['grouped_meta_data_files'].append(os.path.join(meta_abs_dir.rstrip(os.sep), f"{safe_category_folder_name}_metadata.json"))
 
-    file_dir['grouped_qdata_category_dirs'] = all_qdata_category_dirs # <--- 新增：将收集的列表存入 file_dir
+    file_dir['grouped_qdata_category_dirs'] = all_qdata_category_dirs
+    file_dir['grouped_user_data_dirs'] = all_udata_category_dirs  # 新增：存储收集的 user_data_dir 路径
     
     # validate_file_dir 可以在 _ensure_file_dir_initialized 中调用，或由调用者负责
     return file_dir

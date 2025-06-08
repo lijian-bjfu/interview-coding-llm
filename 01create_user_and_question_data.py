@@ -32,6 +32,7 @@ from parameters import (
     OUTLINE,                     # 分类-问题映射字典
     UNIQUE_CATEGORIES,          # 所有分类名称列表
     SDIR_GROUP_QDATA,          # 分类问题数据目录常量
+    SDIR_GROUP_UDATA,          # 分类用户数据目录常量
     APP_NAME,                   # 应用名称
     QUESTION_MAP,              # 问题编号到问题文本的映射
 )
@@ -381,7 +382,7 @@ def generate_by_respondent_text(df: pd.DataFrame) -> str:
     # logger.info("成功生成纵向格式文本")
     return "\n".join(output_lines)
 
-def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str]) -> Dict[str, str]:
+def generate_category_question_texts(df: pd.DataFrame, column_question_map: Dict[int, str]) -> Dict[str, str]:
     """
     从DataFrame生成分类专题文本
     
@@ -478,7 +479,86 @@ def generate_category_texts(df: pd.DataFrame, column_question_map: Dict[int, str
     
     return final_category_texts
 
-# TODO: 添加函数，例如 generate_category_user_text, 该函数用于生成分类专题文本，按被访者组织数据
+from collections import defaultdict
+import pandas as pd
+from typing import Dict
+
+# 假设以下变量从您的项目中导入
+# from parameters import OUTLINE, QUESTION_MAP, APP_NAME, get_category_specific_path, SDIR_GROUP_UDATA
+# from utils import clean_text, save_text_file
+
+def generate_category_user_text(df: pd.DataFrame, column_question_map: Dict[int, str]) -> Dict[str, str]:
+    """
+    从DataFrame为每个分类生成纵向（按用户组织）的文本。
+
+    参数:
+        df: 包含访谈数据的DataFrame，必须包含 '_id' 列。
+        column_question_map: 题号到列名的映射字典。
+
+    返回:
+        Dict[str, str]: 字典，键为分类名称，值为该分类的纵向文本内容。
+
+    格式示例:
+        {
+            "分类1": "被访者：[ID:1]\n\n问题：问题A\n回答：回答A\n\n问题：问题B\n回答：回答B\n\n---\n\n被访者：[ID:2]...",
+            "分类2": "..."
+        }
+    """
+    # logger.info("=== 开始为每个分类生成纵向用户文本 ===")
+    
+    # 初始化一个字典来存储每个分类的最终文本
+    final_category_texts = {}
+
+    # 遍历OUTLINE，为每个分类生成一个独立的文本文件内容
+    for category, question_numbers in OUTLINE.items():
+        # logger.info(f"\n处理分类: '{category}'")
+        
+        user_blocks = [] # 用于存储当前分类下所有用户的数据块
+        
+        # 遍历DataFrame中的每一行（即每一个被访者）
+        for index, user_row in df.iterrows():
+            user_id = user_row['_id']
+            user_qa_block_lines = [] # 存储单个用户在该分类下的所有问答
+            
+            # 添加被访者ID作为数据块的开头
+            user_qa_block_lines.append(f"被访者：[ID:{user_id}]")
+            user_qa_block_lines.append("") # ID和第一个问题之间空一行
+
+            # 遍历该分类下的每个问题编号
+            for q_num in question_numbers:
+                column_name = column_question_map.get(q_num)
+                
+                if column_name and column_name in df.columns:
+                    answer = user_row[column_name]
+                    
+                    # 仅当回答不为空时才处理
+                    if pd.notna(answer) and str(answer).strip() != "":
+                        question_text = QUESTION_MAP.get(q_num, column_name)
+                        cleaned_answer = clean_text(str(answer))
+                        
+                        user_qa_block_lines.append(f"问题：{question_text}")
+                        user_qa_block_lines.append(f"回答：{cleaned_answer}")
+                        user_qa_block_lines.append("") # 每个问答对之间空一行
+
+            # 只有当用户在该分类下有有效回答时，才创建该用户的数据块
+            # （检查 > 2 是因为块至少包含ID行和空行）
+            if len(user_qa_block_lines) > 2:
+                # 移除最后一个多余的空行
+                if user_qa_block_lines[-1] == "":
+                    user_qa_block_lines.pop()
+
+                user_blocks.append("\n".join(user_qa_block_lines))
+
+        # 将所有用户的数据块用分隔符连接起来，形成该分类的最终文本
+        if user_blocks:
+            final_category_texts[category] = "\n\n---\n\n".join(user_blocks)
+            # logger.info(f"  √ 分类 '{category}' 的纵向文本已生成")
+        else:
+            # logger.warning(f"  - 分类 '{category}' 未生成纵向文本（可能所有用户在该分类下均无有效回答）")
+            pass
+
+    # logger.info("\n=== 分类纵向用户文本生成完成 ===")
+    return final_category_texts
 
 def main() -> None:
     """
@@ -489,7 +569,8 @@ def main() -> None:
     # 用于收集生成的文件信息
     horizontal_file = None
     vertical_file = None
-    category_files = []
+    category_q_files = []
+    category_u_files = []
     
     # 加载原始数据
     result = load_raw_data()
@@ -524,19 +605,36 @@ def main() -> None:
         return
     
     # 生成并保存分类专题文本
-    category_texts = generate_category_texts(df, column_question_map)
+    category_texts = generate_category_question_texts(df, column_question_map)
     
     for category, text in category_texts.items():
         category_path = get_category_specific_path(category, SDIR_GROUP_QDATA)
         file_name = f"{APP_NAME}_question_{category}.txt"
         file_path = os.path.join(category_path, file_name)
         if save_text_file(text, file_path):
-            category_files.append({
+            category_q_files.append({
                 "name": file_name,
                 "path": category_path
             })
         else:
             logger.error(f"保存分类 '{category}' 的文本失败")
+
+    # --- 开始纵向分类文本处理 (新增部分) ---
+    logger.info("开始生成纵向(按用户)分类文本...")
+    category_user_texts = generate_category_user_text(df, column_question_map)
+
+    for category, text in category_user_texts.items():
+        # 使用新的 SDIR_GROUP_UDATA
+        category_path = get_category_specific_path(category, SDIR_GROUP_UDATA) 
+        file_name = f"{APP_NAME}_user_{category}.txt"
+        file_path = os.path.join(category_path, file_name)
+        if save_text_file(text, file_path):
+            category_u_files.append({
+                "name": file_name,
+                "path": category_path
+            })
+        else:
+            logger.error(f"保存纵向分类 '{category}' 的文本失败")
     
     # 打印生成文件的总结报告
     logger.info("\n=== 文件生成报告 ===")
@@ -554,12 +652,12 @@ def main() -> None:
         logger.info(f"路径：{vertical_file['path']}")
     
     # 打印分类文本信息
-    category_count = len(category_files)
+    category_count = len(category_q_files)
     logger.info(f"横向category文本：")
     logger.info(f"个数：{category_count}")
     
     if category_count > 0:
-        for i, file_info in enumerate(category_files, 1):
+        for i, file_info in enumerate(category_q_files, 1):
             full_path = os.path.join(file_info['path'], file_info['name'])
             logger.info(f"文件{i}: {full_path}")
     

@@ -16488,3 +16488,348 @@ ID 28 重复出现 21 次，出现在以下问题中:
 2025-06-08 01:40:36,139 - __main__ - INFO - 成功生成MaxQDA格式文本
 2025-06-08 01:40:36,142 - __main__ - INFO - 成功保存MaxQDA文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/03_inductive_coding_dir/myworld_inductive_maxqda_themecode.txt
 2025-06-08 01:40:36,142 - __main__ - INFO - MAXQDA主题编码生成完成
+2025-06-08 11:03:23,039 - INFO - 开始：为每个分类生成编码本。
+2025-06-08 11:03:23,048 - INFO - --- 开始处理分类: '创造性体验' ---
+2025-06-08 11:03:23,049 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 11:03:23,049 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 11:03:23,050 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/
+2025-06-08 11:03:23,050 - INFO - 分类 '创造性体验' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 11:03:23,050 - INFO -   > 正在处理问题: inductive_question11.json - '对你来说，“创造力”是什么?...'
+2025-06-08 11:03:23,051 - INFO -   > 正在处理问题: inductive_question12.json - '你觉得创造性在这个游戏中重要吗？为什么？...'
+2025-06-08 11:03:23,051 - INFO -   > 正在处理问题: inductive_question13.json - '你是否有在游戏中建造或创作什么东西？能描述一下最近让你印象深...'
+2025-06-08 11:03:23,051 - INFO -   > 正在处理问题: inductive_question14.json - '创作这个作品的灵感来自哪里？...'
+2025-06-08 11:03:23,052 - INFO -   > 正在处理问题: inductive_question15.json - '你一般是主动去创作一些东西，还是在必要的时候去创作东西？...'
+2025-06-08 11:03:23,052 - INFO -   > 正在处理问题: inductive_question16.json - '你更享受创作过程的那个部分（构思、搭建、完善、展示，还是其他...'
+2025-06-08 11:03:23,052 - INFO -   > 正在处理问题: inductive_question24.json - '在自由创造的过程中是否有一些时刻会引发你的深思？能描述一下吗...'
+2025-06-08 11:03:23,052 - INFO - --- 完成处理分类: '创造性体验' ---
+
+2025-06-08 11:03:23,052 - INFO - --- 开始处理分类: '创造性设计' ---
+2025-06-08 11:03:23,052 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/
+2025-06-08 11:03:23,052 - INFO - 分类 '创造性设计' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 11:03:23,053 - INFO -   > 正在处理问题: inductive_question17.json - '在你看来，游戏中有哪些机制或特点让你更有动力去创作？...'
+2025-06-08 11:03:23,053 - INFO -   > 正在处理问题: inductive_question18.json - '有没有遇到技术或设计难题？你是如何解决的？...'
+2025-06-08 11:03:23,053 - INFO -   > 正在处理问题: inductive_question19.json - '你觉得游戏中哪些玩法/机制会干扰你的创造...'
+2025-06-08 11:03:23,054 - INFO -   > 正在处理问题: inductive_question20.json - '如果你要向一个没玩过的人介绍它的“创造性”，你会怎么说？...'
+2025-06-08 11:03:23,054 - INFO -   > 正在处理问题: inductive_question21.json - '你觉得《我的世界》帮助你更理解它了吗?为什么?...'
+2025-06-08 11:03:23,054 - INFO -   > 正在处理问题: inductive_question22.json - '你通常在《我的世界》联机模式中做什么？这种体验和单机游戏有什...'
+2025-06-08 11:03:23,055 - INFO -   > 正在处理问题: inductive_question23.json - '在与他人合作创造时，哪些时刻让你感受到联机的快乐？...'
+2025-06-08 11:03:23,055 - INFO - --- 完成处理分类: '创造性设计' ---
+
+2025-06-08 11:03:23,055 - INFO - --- 开始处理分类: '用户特征' ---
+2025-06-08 11:03:23,055 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/
+2025-06-08 11:03:23,055 - INFO - 分类 '用户特征' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 11:03:23,055 - INFO -   > 正在处理问题: inductive_question1.json - '什么时候开始玩我的世界的...'
+2025-06-08 11:03:23,055 - INFO -   > 正在处理问题: inductive_question2.json - '多久玩一次...'
+2025-06-08 11:03:23,056 - INFO -   > 正在处理问题: inductive_question3.json - '你平时都玩哪些游戏...'
+2025-06-08 11:03:23,056 - INFO -   > 正在处理问题: inductive_question4.json - '在什么情况下会选择玩我的世界...'
+2025-06-08 11:03:23,056 - INFO -   > 正在处理问题: inductive_question5.json - '你觉得你对这个游戏的熟悉程度/游戏等级如何...'
+2025-06-08 11:03:23,056 - INFO - --- 完成处理分类: '用户特征' ---
+
+2025-06-08 11:03:23,056 - INFO - --- 开始处理分类: '用户身份' ---
+2025-06-08 11:03:23,056 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/
+2025-06-08 11:03:23,056 - ERROR - 分类 '用户身份' 文件验证失败! 缺失的问题编号: {0}. 
+2025-06-08 11:03:23,056 - WARNING - --- 跳过分类: '用户身份' ---
+2025-06-08 11:03:23,056 - INFO - --- 开始处理分类: '游戏体验' ---
+2025-06-08 11:03:23,056 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/
+2025-06-08 11:03:23,056 - INFO - 分类 '游戏体验' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 11:03:23,057 - INFO -   > 正在处理问题: inductive_question10.json - '这个游戏给正面体验体验/情绪都有哪些...'
+2025-06-08 11:03:23,057 - INFO -   > 正在处理问题: inductive_question25.json - '《我的世界》给你带来了哪些情绪？为什么？...'
+2025-06-08 11:03:23,057 - INFO -   > 正在处理问题: inductive_question7.json - '最吸引你的玩法是什么/为什么喜欢这种玩法...'
+2025-06-08 11:03:23,058 - INFO -   > 正在处理问题: inductive_question8.json - '这个游戏最不喜欢/不满意的玩法是什么？为什么...'
+2025-06-08 11:03:23,058 - INFO -   > 正在处理问题: inductive_question9.json - '你在这个游戏中主要想达成的目标是什么？...'
+2025-06-08 11:03:23,058 - INFO - --- 完成处理分类: '游戏体验' ---
+
+2025-06-08 11:03:23,058 - INFO - 任务 @codebook-sturct 已完成框架搭建。
+2025-06-08 12:32:42,105 - INFO - 开始：为每个分类生成编码本。
+2025-06-08 12:32:42,118 - INFO - --- 开始处理分类: '游戏体验' ---
+2025-06-08 12:32:42,118 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 12:32:42,119 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 12:32:42,119 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/
+2025-06-08 12:32:42,119 - INFO - 分类 '游戏体验' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 12:32:42,120 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/inductive_question10.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,120 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/inductive_question25.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,121 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/inductive_question7.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,121 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/inductive_question8.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,121 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/inductive_question9.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,123 - INFO - 分类 '游戏体验' 编码本生成完毕，共包含 0 个编码条目。
+2025-06-08 12:32:42,123 - INFO - --- 完成处理分类: '游戏体验' ---
+
+2025-06-08 12:32:42,123 - INFO - --- 开始处理分类: '用户特征' ---
+2025-06-08 12:32:42,123 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/
+2025-06-08 12:32:42,123 - INFO - 分类 '用户特征' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 12:32:42,123 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/inductive_question1.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,124 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/inductive_question2.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,124 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/inductive_question3.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,125 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/inductive_question4.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,125 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/inductive_question5.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,126 - INFO - 分类 '用户特征' 编码本生成完毕，共包含 0 个编码条目。
+2025-06-08 12:32:42,126 - INFO - --- 完成处理分类: '用户特征' ---
+
+2025-06-08 12:32:42,126 - INFO - --- 开始处理分类: '创造性体验' ---
+2025-06-08 12:32:42,126 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/
+2025-06-08 12:32:42,126 - INFO - 分类 '创造性体验' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 12:32:42,126 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question11.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,127 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question12.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,127 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question13.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,127 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question14.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,128 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question15.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,128 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question16.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,128 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/inductive_question24.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,129 - INFO - 分类 '创造性体验' 编码本生成完毕，共包含 0 个编码条目。
+2025-06-08 12:32:42,129 - INFO - --- 完成处理分类: '创造性体验' ---
+
+2025-06-08 12:32:42,129 - INFO - --- 开始处理分类: '用户身份' ---
+2025-06-08 12:32:42,129 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/
+2025-06-08 12:32:42,129 - ERROR - 分类 '用户身份' 文件验证失败! 缺失的问题编号: {0}. 
+2025-06-08 12:32:42,129 - WARNING - --- 跳过分类: '用户身份' ---
+2025-06-08 12:32:42,129 - INFO - --- 开始处理分类: '创造性设计' ---
+2025-06-08 12:32:42,129 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/
+2025-06-08 12:32:42,129 - INFO - 分类 '创造性设计' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 12:32:42,129 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question17.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,130 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question18.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,130 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question19.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,131 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question20.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,131 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question21.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,131 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question22.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,132 - ERROR - 处理文件 /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/inductive_question23.json 时出错: extract_code_details() takes 1 positional argument but 2 were given
+2025-06-08 12:32:42,132 - INFO - 分类 '创造性设计' 编码本生成完毕，共包含 0 个编码条目。
+2025-06-08 12:32:42,132 - INFO - --- 完成处理分类: '创造性设计' ---
+
+2025-06-08 12:32:42,132 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-08 12:36:18,359 - INFO - 开始：为每个分类生成编码本。
+2025-06-08 12:36:18,372 - INFO - --- 开始处理分类: '用户身份' ---
+2025-06-08 12:36:18,372 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 12:36:18,372 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 12:36:18,372 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/
+2025-06-08 12:36:18,372 - ERROR - 分类 '用户身份' 文件验证失败! 缺失的问题编号: {0}. 
+2025-06-08 12:36:18,373 - WARNING - --- 跳过分类: '用户身份' ---
+2025-06-08 12:36:18,373 - INFO - --- 开始处理分类: '游戏体验' ---
+2025-06-08 12:36:18,373 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/
+2025-06-08 12:36:18,373 - INFO - 分类 '游戏体验' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 12:36:18,377 - INFO - 分类 '游戏体验' 编码本生成完毕，共包含 79 个编码条目。
+2025-06-08 12:36:18,377 - INFO - --- 完成处理分类: '游戏体验' ---
+
+2025-06-08 12:36:18,377 - INFO - --- 开始处理分类: '创造性体验' ---
+2025-06-08 12:36:18,377 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/
+2025-06-08 12:36:18,377 - INFO - 分类 '创造性体验' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 12:36:18,380 - INFO - 分类 '创造性体验' 编码本生成完毕，共包含 85 个编码条目。
+2025-06-08 12:36:18,380 - INFO - --- 完成处理分类: '创造性体验' ---
+
+2025-06-08 12:36:18,380 - INFO - --- 开始处理分类: '创造性设计' ---
+2025-06-08 12:36:18,380 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/
+2025-06-08 12:36:18,380 - INFO - 分类 '创造性设计' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 12:36:18,383 - INFO - 分类 '创造性设计' 编码本生成完毕，共包含 179 个编码条目。
+2025-06-08 12:36:18,383 - INFO - --- 完成处理分类: '创造性设计' ---
+
+2025-06-08 12:36:18,383 - INFO - --- 开始处理分类: '用户特征' ---
+2025-06-08 12:36:18,383 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/
+2025-06-08 12:36:18,383 - INFO - 分类 '用户特征' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 12:36:18,385 - INFO - 分类 '用户特征' 编码本生成完毕，共包含 97 个编码条目。
+2025-06-08 12:36:18,385 - INFO - --- 完成处理分类: '用户特征' ---
+
+2025-06-08 12:36:18,385 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-08 13:10:47,240 - INFO - 开始：为每个分类生成编码本。
+2025-06-08 13:10:47,252 - INFO - --- 开始处理分类: '游戏体验' ---
+2025-06-08 13:10:47,252 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 13:10:47,253 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 13:10:47,253 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/
+2025-06-08 13:10:47,253 - INFO - 分类 '游戏体验' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 13:10:47,258 - INFO - 分类 '游戏体验' 编码本生成完毕，共包含 79 个编码条目。
+2025-06-08 13:10:47,258 - INFO - --- 完成处理分类: '游戏体验' ---
+
+2025-06-08 13:10:47,258 - INFO - --- 开始处理分类: '用户身份' ---
+2025-06-08 13:10:47,258 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/
+2025-06-08 13:10:47,258 - ERROR - 分类 '用户身份' 文件验证失败! 缺失的问题编号: {0}. 
+2025-06-08 13:10:47,258 - WARNING - --- 跳过分类: '用户身份' ---
+2025-06-08 13:10:47,258 - INFO - --- 开始处理分类: '创造性体验' ---
+2025-06-08 13:10:47,258 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/
+2025-06-08 13:10:47,258 - INFO - 分类 '创造性体验' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 13:10:47,261 - INFO - 分类 '创造性体验' 编码本生成完毕，共包含 85 个编码条目。
+2025-06-08 13:10:47,261 - INFO - --- 完成处理分类: '创造性体验' ---
+
+2025-06-08 13:10:47,261 - INFO - --- 开始处理分类: '创造性设计' ---
+2025-06-08 13:10:47,261 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/
+2025-06-08 13:10:47,261 - INFO - 分类 '创造性设计' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 13:10:47,265 - INFO - 分类 '创造性设计' 编码本生成完毕，共包含 179 个编码条目。
+2025-06-08 13:10:47,265 - INFO - --- 完成处理分类: '创造性设计' ---
+
+2025-06-08 13:10:47,265 - INFO - --- 开始处理分类: '用户特征' ---
+2025-06-08 13:10:47,265 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/
+2025-06-08 13:10:47,265 - INFO - 分类 '用户特征' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 13:10:47,268 - INFO - 分类 '用户特征' 编码本生成完毕，共包含 97 个编码条目。
+2025-06-08 13:10:47,268 - INFO - --- 完成处理分类: '用户特征' ---
+
+2025-06-08 13:10:47,268 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-08 13:10:47,268 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-08 13:10:47,271 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/codebook_data_dir/codebook_游戏体验.csv
+2025-06-08 13:10:47,272 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/codebook_data_dir/codebook_创造性体验.csv
+2025-06-08 13:10:47,273 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/codebook_data_dir/codebook_创造性设计.csv
+2025-06-08 13:10:47,273 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/codebook_data_dir/codebook_用户特征.csv
+2025-06-08 13:10:47,273 - INFO - 任务 @codebook-save 完成。
+2025-06-08 13:13:50,348 - INFO - 开始：为每个分类生成编码本。
+2025-06-08 13:13:50,349 - INFO - --- 开始处理分类: '创造性设计' ---
+2025-06-08 13:13:50,349 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 13:13:50,350 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 13:13:50,350 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/
+2025-06-08 13:13:50,350 - INFO - 分类 '创造性设计' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 13:13:50,356 - INFO - 分类 '创造性设计' 编码本生成完毕，共包含 179 个编码条目。
+2025-06-08 13:13:50,356 - INFO - --- 完成处理分类: '创造性设计' ---
+
+2025-06-08 13:13:50,356 - INFO - --- 开始处理分类: '创造性体验' ---
+2025-06-08 13:13:50,356 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/
+2025-06-08 13:13:50,356 - INFO - 分类 '创造性体验' 文件验证通过，将处理 7 个JSON文件。
+2025-06-08 13:13:50,358 - INFO - 分类 '创造性体验' 编码本生成完毕，共包含 85 个编码条目。
+2025-06-08 13:13:50,358 - INFO - --- 完成处理分类: '创造性体验' ---
+
+2025-06-08 13:13:50,358 - INFO - --- 开始处理分类: '游戏体验' ---
+2025-06-08 13:13:50,358 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/
+2025-06-08 13:13:50,358 - INFO - 分类 '游戏体验' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 13:13:50,360 - INFO - 分类 '游戏体验' 编码本生成完毕，共包含 79 个编码条目。
+2025-06-08 13:13:50,360 - INFO - --- 完成处理分类: '游戏体验' ---
+
+2025-06-08 13:13:50,360 - INFO - --- 开始处理分类: '用户特征' ---
+2025-06-08 13:13:50,360 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/
+2025-06-08 13:13:50,361 - INFO - 分类 '用户特征' 文件验证通过，将处理 5 个JSON文件。
+2025-06-08 13:13:50,363 - INFO - 分类 '用户特征' 编码本生成完毕，共包含 97 个编码条目。
+2025-06-08 13:13:50,363 - INFO - --- 完成处理分类: '用户特征' ---
+
+2025-06-08 13:13:50,363 - INFO - --- 开始处理分类: '用户身份' ---
+2025-06-08 13:13:50,363 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/
+2025-06-08 13:13:50,363 - ERROR - 分类 '用户身份' 文件验证失败! 缺失的问题编号: {0}. 
+2025-06-08 13:13:50,363 - WARNING - --- 跳过分类: '用户身份' ---
+2025-06-08 13:13:50,363 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-08 13:13:50,363 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-08 13:13:50,365 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/codebook_data_dir/raw_codebook_创造性设计.csv
+2025-06-08 13:13:50,365 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/codebook_data_dir/raw_codebook_创造性体验.csv
+2025-06-08 13:13:50,366 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/codebook_data_dir/raw_codebook_游戏体验.csv
+2025-06-08 13:13:50,366 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/codebook_data_dir/raw_codebook_用户特征.csv
+2025-06-08 13:13:50,366 - INFO - 任务 @codebook-save 完成。
+2025-06-08 14:48:46,949 - INFO - 开始执行项目设置...
+2025-06-08 14:48:46,966 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-08 14:48:46,966 - INFO - 验证配置 (1/3)
+2025-06-08 14:48:46,967 - INFO - 创建目录结构 (2/3)
+2025-06-08 14:48:46,968 - INFO - 正在检查并按需创建项目目录...
+2025-06-08 14:48:46,968 - INFO - 所有必需的目录已创建完成
+2025-06-08 14:48:46,968 - INFO - 移动文件 (3/3)
+2025-06-08 14:48:46,968 - INFO - 准备移动初始数据文件...
+2025-06-08 14:48:46,968 - INFO - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-08 14:48:46,968 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-08 14:48:46,968 - INFO - 所有文件移动操作已完成
+2025-06-08 14:48:46,968 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-08 14:48:46,968 - INFO - 项目环境已准备就绪
+2025-06-08 14:48:46,968 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-08 14:48:46,968 - INFO - 开始建立内部ID系统...
+2025-06-08 14:48:46,968 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 14:48:46,969 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 14:48:46,973 - INFO - 成功读取原始数据，共 28 条记录
+2025-06-08 14:48:46,973 - INFO - 成功生成内部ID，ID范围: 1-28
+2025-06-08 14:48:46,975 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-id.csv
+2025-06-08 14:48:46,976 - INFO - ID系统建立完成
+2025-06-08 14:55:02,321 - INFO - 开始执行项目设置...
+2025-06-08 14:55:02,337 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-08 14:55:02,337 - INFO - 验证配置 (1/3)
+2025-06-08 14:55:02,337 - INFO - 创建目录结构 (2/3)
+2025-06-08 14:55:02,338 - INFO - 正在检查并按需创建项目目录...
+2025-06-08 14:55:02,339 - INFO - 所有必需的目录已创建完成
+2025-06-08 14:55:02,339 - INFO - 移动文件 (3/3)
+2025-06-08 14:55:02,339 - INFO - 准备移动初始数据文件...
+2025-06-08 14:55:02,339 - INFO - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-08 14:55:02,339 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-08 14:55:02,339 - INFO - 所有文件移动操作已完成
+2025-06-08 14:55:02,339 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-08 14:55:02,339 - INFO - 项目环境已准备就绪
+2025-06-08 14:55:02,339 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-08 14:55:02,339 - INFO - 开始建立内部ID系统...
+2025-06-08 14:55:02,339 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 14:55:02,340 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 14:55:02,344 - INFO - 成功读取原始数据，共 28 条记录
+2025-06-08 14:55:02,345 - INFO - 成功生成内部ID，ID范围: 1-28
+2025-06-08 14:55:02,347 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-id.csv
+2025-06-08 14:55:02,348 - INFO - ID系统建立完成
+2025-06-08 14:57:47,042 - INFO - 开始执行项目设置...
+2025-06-08 14:57:47,044 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-08 14:57:47,044 - INFO - 验证配置 (1/3)
+2025-06-08 14:57:47,044 - INFO - 创建目录结构 (2/3)
+2025-06-08 14:57:47,044 - INFO - 正在检查并按需创建项目目录...
+2025-06-08 14:57:47,045 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/user_data_dir
+2025-06-08 14:57:47,045 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/user_data_dir
+2025-06-08 14:57:47,045 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/user_data_dir
+2025-06-08 14:57:47,045 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/user_data_dir
+2025-06-08 14:57:47,045 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/user_data_dir
+2025-06-08 14:57:47,045 - INFO - 所有必需的目录已创建完成
+2025-06-08 14:57:47,045 - INFO - 移动文件 (3/3)
+2025-06-08 14:57:47,045 - INFO - 准备移动初始数据文件...
+2025-06-08 14:57:47,045 - INFO - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv'
+2025-06-08 14:57:47,045 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-outline.csv'
+2025-06-08 14:57:47,045 - INFO - 所有文件移动操作已完成
+2025-06-08 14:57:47,045 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-08 14:57:47,045 - INFO - 项目环境已准备就绪
+2025-06-08 14:57:47,045 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-08 14:57:47,045 - INFO - 开始建立内部ID系统...
+2025-06-08 14:57:47,045 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 14:57:47,046 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 14:57:47,050 - INFO - 成功读取原始数据，共 28 条记录
+2025-06-08 14:57:47,051 - INFO - 成功生成内部ID，ID范围: 1-28
+2025-06-08 14:57:47,052 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-id.csv
+2025-06-08 14:57:47,052 - INFO - ID系统建立完成
+2025-06-08 15:16:11,094 - INFO - 开始数据转换流程
+2025-06-08 15:16:11,108 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-08 15:16:11,110 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-08 15:16:11,114 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-08 15:16:11,115 - INFO - 映射题号 1 到列 '什么时候开始玩我的世界的'
+2025-06-08 15:16:11,115 - INFO - 映射题号 2 到列 '多久玩一次？'
+2025-06-08 15:16:11,115 - INFO - 映射题号 3 到列 '平时都玩哪些游戏？'
+2025-06-08 15:16:11,115 - INFO - 映射题号 4 到列 '在什么情况下会选择玩我的世界'
+2025-06-08 15:16:11,115 - INFO - 映射题号 5 到列 '你觉得你对这个游戏的熟悉程度/游戏等级如何'
+2025-06-08 15:16:11,115 - INFO - 映射题号 7 到列 '最吸引你的玩法是什么/为什么喜欢这种玩法?'
+2025-06-08 15:16:11,115 - INFO - 映射题号 8 到列 '这个游戏最不喜欢/不满意的玩法是什么?为什么'
+2025-06-08 15:16:11,115 - INFO - 映射题号 9 到列 '你在这个游戏中主要想达成的目标是什么'
+2025-06-08 15:16:11,115 - INFO - 映射题号 10 到列 '这个游戏给正面体验体验/情绪都有哪些'
+2025-06-08 15:16:11,115 - INFO - 映射题号 11 到列 '对你来说，“创造力”是什么?'
+2025-06-08 15:16:11,115 - INFO - 映射题号 12 到列 '你觉得创造性在这个游戏中重要吗/为什么'
+2025-06-08 15:16:11,115 - INFO - 映射题号 13 到列 '你是否有在游戏中建造或创作什么东西?能描述一下最近让你印象深刻的一个创作吗'
+2025-06-08 15:16:11,115 - INFO - 映射题号 14 到列 '创作这个作品的灵感来自哪里?'
+2025-06-08 15:16:11,115 - INFO - 映射题号 15 到列 '你一般是主动去创作一些东西，还是在必要的时候去创作东西?'
+2025-06-08 15:16:11,115 - INFO - 映射题号 16 到列 '你更享受创作过程的那个部分(构思、搭建、完善、展示，还是其他?)'
+2025-06-08 15:16:11,115 - INFO - 映射题号 17 到列 '在你看来，游戏中有哪些机制或特点让你更有动力去创作?'
+2025-06-08 15:16:11,115 - INFO - 映射题号 18 到列 '有没有遇到技术或设计难题?你是如何解决的?'
+2025-06-08 15:16:11,115 - INFO - 映射题号 19 到列 '你觉得游戏中哪些玩法/机制会干扰你的创造'
+2025-06-08 15:16:11,116 - INFO - 映射题号 20 到列 '如果你要向一个没玩过的人介绍它的“创造性”，你会怎么说?'
+2025-06-08 15:16:11,116 - INFO - 映射题号 21 到列 '你觉得《我的世界》帮助你更理解它了吗?为什么?'
+2025-06-08 15:16:11,116 - INFO - 映射题号 22 到列 '你通常在《我的世界》联机模式中做什么？这种体验和单机游戏有什么不同？'
+2025-06-08 15:16:11,116 - INFO - 映射题号 23 到列 '在与他人合作创造时，哪些时刻让你感受到联机的快乐？'
+2025-06-08 15:16:11,116 - INFO - 映射题号 24 到列 '在自由创造的过程中是否有一些时刻会引发你的深思？能描述一下吗？'
+2025-06-08 15:16:11,116 - INFO - 映射题号 25 到列 '《我的世界》给你带来了哪些情绪？为什么？'
+2025-06-08 15:16:11,116 - WARNING - 以下列未被映射到任何题号: {'序号'}
+2025-06-08 15:16:11,116 - INFO - 成功加载数据，形状: (28, 26)
+2025-06-08 15:16:11,116 - INFO - 建立了 25 个题号映射
+2025-06-08 15:16:11,134 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir/myworld_question.txt
+2025-06-08 15:16:11,138 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir/myworld_user.txt
+2025-06-08 15:16:11,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/myworld_question_用户身份.txt
+2025-06-08 15:16:11,160 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/myworld_question_用户特征.txt
+2025-06-08 15:16:11,160 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/myworld_question_游戏体验.txt
+2025-06-08 15:16:11,161 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/myworld_question_创造性体验.txt
+2025-06-08 15:16:11,161 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/myworld_question_创造性设计.txt
+2025-06-08 15:16:11,161 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-08 15:16:11,165 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/user_data_dir/myworld_user_用户身份.txt
+2025-06-08 15:16:11,165 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/user_data_dir/myworld_user_用户特征.txt
+2025-06-08 15:16:11,165 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/user_data_dir/myworld_user_游戏体验.txt
+2025-06-08 15:16:11,165 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/user_data_dir/myworld_user_创造性体验.txt
+2025-06-08 15:16:11,165 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/user_data_dir/myworld_user_创造性设计.txt
+2025-06-08 15:16:11,165 - INFO - 
+=== 文件生成报告 ===
+2025-06-08 15:16:11,165 - INFO - 横向文本：
+2025-06-08 15:16:11,165 - INFO - 名称：myworld_question.txt
+2025-06-08 15:16:11,165 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir
+2025-06-08 15:16:11,165 - INFO - 纵向文本：
+2025-06-08 15:16:11,165 - INFO - 名称：myworld_user.txt
+2025-06-08 15:16:11,165 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir
+2025-06-08 15:16:11,165 - INFO - 横向category文本：
+2025-06-08 15:16:11,165 - INFO - 个数：5
+2025-06-08 15:16:11,165 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/myworld_question_用户身份.txt
+2025-06-08 15:16:11,166 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/myworld_question_用户特征.txt
+2025-06-08 15:16:11,166 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/myworld_question_游戏体验.txt
+2025-06-08 15:16:11,166 - INFO - 文件4: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/myworld_question_创造性体验.txt
+2025-06-08 15:16:11,166 - INFO - 文件5: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/myworld_question_创造性设计.txt
+2025-06-08 15:16:11,166 - INFO - 
+数据转换流程成功完成

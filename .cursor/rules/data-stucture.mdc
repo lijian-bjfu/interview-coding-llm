@@ -40,6 +40,7 @@ alwaysApply: false
 📁 02_interview_outline_dir/
 ├── 📁 用户特征/                          # Category 示例
 │   ├── 📁 question_data_dir/            # 问题数据
+│   ├── 📁 user_data_dir/                # 用户数据
 │   ├── 📁 codebook_data_dir/            # 编码本数据
 │   └── 📁 meta_data_dir/                # 元数据
 └── 📁 [其他 Category]/                   # 相同结构
@@ -128,8 +129,10 @@ alwaysApply: false
 
 #### 2.3.1 问题编码JSON
 - 格式：JSON
-- 文件名：`inductive_question[0-9]*.json`
-- 保存位置：`.../03_inductive_coding_dir/`
+- 每个问题JSON保存位置：`.../02_interview_outline_dir/{category}/question_data_dir`
+- 每个问题JSON文件名：`inductive_question[0-9]*.json`
+- 合并后JSON保存位置：`.../03_inductive_coding_dir/`
+- 合并后JSON文件名：`{APP_NAME}_indecrive_dodes*.json`
 - 结构：
 ```json
 [
@@ -247,13 +250,14 @@ alwaysApply: false
 
 ### 3.1 分类定义
 
-Category（分类）是访谈大纲的顶层组织单位，代表访谈内容的主要主题或方面。每个Category包含一组相关的访谈问题。主要包括：
+Category（分类）是访谈大纲的顶层组织单位，代表访谈内容的主要主题或方面。每个Category包含一组相关的访谈问题。
+例如下面是对一款游戏的访谈大纲，大纲将问题分为4组，分成包括：
 
-- 用户特征：基本人口统计学信息（年龄、职业等）
-- 用户体验：产品使用体验和感受
-- 产品特征：对产品功能和特性的评价
-- 创造性体验：使用产品时的创造性活动
-- 游戏体验：游戏相关的体验和行为
+- 用户特征：包括Q1-Q3基本人口统计学信息（年龄、职业等）相关的访谈问题
+- 游戏体验：包括Q4-Q7与游戏相关的体验和行为相关的访谈问题
+- 产品特征：包括Q8-Q15对产品功能和特性的评价相关的访谈问题
+- 创造性体验：包括Q16-Q22使用产品时的创造性活动相关的访谈问题
+
 
 ### 3.2 分类数据存储
 
@@ -293,11 +297,16 @@ for category, question_numbers in OUTLINE.items():
 ```python
 from parameters import (
     get_category_specific_path,
-    SDIR_GROUP_QDATA,
+    # category下固定目录的专用标签
+    SDIR_GROUP_QDATA, # `...{category}/question_data_dir/`
+    SDIR_GROUP_UDATA, # `...{category}/user_data_dir/`
+    SDIR_GROUP_CBOOK， # `...{category}/codebook_data_dir/`
+    SDIR_GROUP_META # `...{category}/meta_data_dir/`
 )
 
-# 获取特定分类的问题数据目录
+# 获取特定分类的问题数据目录的方法
 category_path = get_category_specific_path("用户体验", SDIR_GROUP_QDATA)
+# category_path 将返回目录：`...02_interview_outline_dir/用户体验/question_data_dir/`
 ```
 
 ## 4. 路径系统
@@ -316,7 +325,7 @@ category_path = get_category_specific_path("用户体验", SDIR_GROUP_QDATA)
 | 'UI_qtxt' | 预处理问题文本 | `.../01_preprocessed_for_llm_dir/myworld_question.txt` |
 | 'UI_utxt_path' | 预处理数据目录 | `.../01_preprocessed_for_llm_dir/` |
 | 'inductive_global_dir' | 归纳编码目录 | `.../03_inductive_coding_dir/` |
-| 'deductive_global_dir' | 演绎编码目录 | `.../04_deductive_coding_dir/` |
+| 'deductive_global_dir' | 演绎编码目录SDIR_GROUP_QDATA, SDIR_GROUP_CBOOK, SDIR_GROUP_META
 
 ### 4.2 路径列表键值
 使用 `get_path_list(key)` 获取文件路径列表：
