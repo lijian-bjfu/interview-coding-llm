@@ -94,7 +94,6 @@ Theme,Code_Name,Merged_Original_Codes,Total_Original_Frequency,Definition,Applic
 
 以下为[待分析数据]
 
-question_text
 
 
 ***** 结果输出 *****
