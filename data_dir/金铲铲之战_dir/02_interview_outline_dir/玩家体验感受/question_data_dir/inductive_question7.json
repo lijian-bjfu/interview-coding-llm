@@ -1,0 +1,473 @@
+[
+    {
+        "question_text": "你觉得金铲铲游戏中的氛围如何?",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "低分段环境较友好，开局常见“加油”表情互动，喷子较少见，遇到恶意言论直接屏蔽",
+                "code_name": [
+                    "友好氛围",
+                    "段位差异"
+                ],
+                "supporting_quote": [
+                    "低分段环境较友好，开局常见“加油”表情互动，喷子较少见",
+                    "低分段环境较友好"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        24
+                    ],
+                    [
+                        0,
+                        9
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "游戏氛围活跃，玩家都很和谐，大家也会有相互干扰抢牌的行为，但大家都默认这是正常的游戏行为，大部分玩家面对这种正常冲突只会发送游戏内的设定好的一键语音，比较友好。",
+                "code_name": [
+                    "友好氛围",
+                    "活跃互动"
+                ],
+                "supporting_quote": [
+                    "游戏氛围活跃，玩家都很和谐",
+                    "游戏氛围活跃"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        12
+                    ],
+                    [
+                        0,
+                        7
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "女性玩家社群特别友好，有专属微信群分享阵容攻略，遇到困难时总有人耐心解答",
+                "code_name": [
+                    "友好氛围"
+                ],
+                "supporting_quote": [
+                    "女性玩家社群特别友好，有专属微信群分享阵容攻略，遇到困难时总有人耐心解答"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        38
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "学生玩家社群整体活跃友好，但凌晨常遇外放抖音或刷屏的干扰者，影响沉浸式体验",
+                "code_name": [
+                    "活跃互动",
+                    "消极行为"
+                ],
+                "supporting_quote": [
+                    "学生玩家社群整体活跃友好",
+                    "凌晨常遇外放抖音或刷屏的干扰者，影响沉浸式体验"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        11
+                    ],
+                    [
+                        16,
+                        36
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "黄金分段普遍佛系，但深夜易遇开麦骂人玩家，通常直接屏蔽语音保清净",
+                "code_name": [
+                    "消极行为"
+                ],
+                "supporting_quote": [
+                    "深夜易遇开麦骂人玩家，通常直接屏蔽语音保清净"
+                ],
+                "quote_range": [
+                    [
+                        12,
+                        30
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "高分段戾气较重，冷门阵容获胜易被举报开挂，低分段反而更包容创意玩法",
+                "code_name": [
+                    "消极行为",
+                    "段位差异"
+                ],
+                "supporting_quote": [
+                    "高分段戾气较重，冷门阵容获胜易被举报开挂",
+                    "高分段戾气较重...低分段反而更包容创意玩法"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        21
+                    ],
+                    [
+                        0,
+                        38
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "低分段氛围友好，遇到喷子直接屏蔽，多数人开局发一起加油表情",
+                "code_name": [
+                    "友好氛围"
+                ],
+                "supporting_quote": [
+                    "低分段氛围友好，遇到喷子直接屏蔽，多数人开局发一起加油表情"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        36
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "低分段啥人都有，遇到喷子就装掉线，反正没人认识我",
+                "code_name": [
+                    "消极行为"
+                ],
+                "supporting_quote": [
+                    "遇到喷子就装掉线"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "整体氛围还可以，大部分玩家都比较友好。虽然偶尔会遇到一些脾气不好的，但还是少数",
+                "code_name": [
+                    "友好氛围"
+                ],
+                "supporting_quote": [
+                    "整体氛围还可以，大部分玩家都比较友好"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "比较冷淡 每个人好像都是只顾着自己的棋盘 其实也很正常 打字交流比较麻烦 除非是自己开黑的朋友会连麦聊天",
+                "code_name": [
+                    "冷淡氛围"
+                ],
+                "supporting_quote": [
+                    "比较冷淡 每个人好像都是只顾着自己的棋盘"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "这个游戏给我的感觉一直都是里面的人有啥就说啥但是态度都还可以氛围一直都是这样的",
+                "code_name": [
+                    "友好氛围"
+                ],
+                "supporting_quote": [
+                    "里面的人有啥就说啥但是态度都还可以氛围一直都是这样的"
+                ],
+                "quote_range": [
+                    [
+                        12,
+                        36
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "氛围还行，基本上是遇到不说话的，但和朋友一起玩很热闹，也没遇到过太恶劣的。",
+                "code_name": [
+                    "友好氛围",
+                    "冷淡氛围"
+                ],
+                "supporting_quote": [
+                    "但和朋友一起玩很热闹，也没遇到过太恶劣的",
+                    "基本上是遇到不说话的"
+                ],
+                "quote_range": [
+                    [
+                        16,
+                        34
+                    ],
+                    [
+                        7,
+                        16
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "氛围中等，没啥人说话，说话的还比较友好。",
+                "code_name": [
+                    "冷淡氛围"
+                ],
+                "supporting_quote": [
+                    "没啥人说话"
+                ],
+                "quote_range": [
+                    [
+                        6,
+                        11
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "整体感觉还行吧，比较单机，交流少，但偶尔会遇到嘲讽或挂机，有点烦。",
+                "code_name": [
+                    "冷淡氛围",
+                    "消极行为"
+                ],
+                "supporting_quote": [
+                    "比较单机，交流少",
+                    "偶尔会遇到嘲讽或挂机，有点烦"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        17
+                    ],
+                    [
+                        20,
+                        31
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "氛围挺好的，人机也很少8个人都是玩家，然后也会在局内聊天，有时候氛围很好，或者最后卡牌求一下也都会卖牌成人之美。不过偶尔会有恶意空城断其他人的连败。",
+                "code_name": [
+                    "友好氛围",
+                    "活跃互动",
+                    "消极行为"
+                ],
+                "supporting_quote": [
+                    "氛围挺好的，人机也很少8个人都是玩家，然后也会在局内聊天，有时候氛围很好，或者最后卡牌求一下也都会卖牌成人之美",
+                    "也会在局内聊天，有时候氛围很好",
+                    "偶尔会有恶意空城断其他人的连败"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        56
+                    ],
+                    [
+                        21,
+                        34
+                    ],
+                    [
+                        65,
+                        76
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "整体氛围挺好的，8个人都是真人玩家，局内聊天也很活跃。有时候最后关头求别人让卡，大家都会成人之美。不过偶尔会遇到恶意空城断连败的玩家，有点影响体验。",
+                "code_name": [
+                    "友好氛围",
+                    "活跃互动",
+                    "消极行为"
+                ],
+                "supporting_quote": [
+                    "整体氛围挺好的，8个人都是真人玩家，局内聊天也很活跃。有时候最后关头求别人让卡，大家都会成人之美",
+                    "局内聊天也很活跃",
+                    "偶尔会遇到恶意空城断连败的玩家，有点影响体验"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        54
+                    ],
+                    [
+                        21,
+                        29
+                    ],
+                    [
+                        65,
+                        82
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "整体比较佛系，但段位越高火药味越浓。宗师局经常能看到玩家互相卡牌，公屏嘲讽，感觉完全背离了游戏休闲的初衷。",
+                "code_name": [
+                    "活跃互动",
+                    "段位差异"
+                ],
+                "supporting_quote": [
+                    "宗师局经常能看到玩家互相卡牌，公屏嘲讽",
+                    "段位越高火药味越浓"
+                ],
+                "quote_range": [
+                    [
+                        20,
+                        37
+                    ],
+                    [
+                        10,
+                        19
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "整体来说还是比较友好，但是不排除有恶劣的路人，当然这是不可避免的",
+                "code_name": [
+                    "友好氛围"
+                ],
+                "supporting_quote": [
+                    "整体来说还是比较友好"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        11
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "友好氛围",
+                "code_definition": "玩家互动友好，支持性强"
+            },
+            {
+                "code_name": "活跃互动",
+                "code_definition": "玩家互动频繁，氛围活跃"
+            },
+            {
+                "code_name": "消极行为",
+                "code_definition": "玩家表现出消极或恶意行为"
+            },
+            {
+                "code_name": "冷淡氛围",
+                "code_definition": "玩家互动少，氛围冷淡"
+            },
+            {
+                "code_name": "段位差异",
+                "code_definition": "不同段位玩家氛围差异明显"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "积极的玩家互动",
+                "theme_definition": "玩家之间的互动友好且频繁，支持性强，氛围活跃",
+                "included_initial_codes": [
+                    "友好氛围",
+                    "活跃互动"
+                ]
+            },
+            {
+                "theme_name": "消极的玩家行为",
+                "theme_definition": "玩家表现出消极或恶意行为，或互动冷淡，影响游戏体验",
+                "included_initial_codes": [
+                    "消极行为",
+                    "冷淡氛围"
+                ]
+            },
+            {
+                "theme_name": "段位对氛围的影响",
+                "theme_definition": "不同段位的玩家氛围差异明显，低分段更友好，高分段更紧张",
+                "included_initial_codes": [
+                    "段位差异"
+                ]
+            }
+        ]
+    }
+]

@@ -119,11 +119,11 @@ logger = logging.getLogger(__name__)
 # --- 全局变量 ---
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR_BASE_NAME = "data_dir"
-APP_NAME = 'myworld'
+APP_NAME = '金铲铲之战'
 
 # --- 调试配置 ---
-P_DBUG_RESPONDENT_ID = None  # 调试目标受访者ID
-P_DBUG_QUESTION_TEXT_RAW = None  # 调试目标问题文本
+P_DBUG_RESPONDENT_ID = 10  # 调试目标受访者ID
+P_DBUG_QUESTION_TEXT_RAW = 7  # 调试目标问题文本
 
 # --- 全局数据结构 ---
 OUTLINE: Dict[str, List[int]] = {}  # {"中文Category名称": [问题号列表]}
@@ -858,6 +858,36 @@ def move_original_data_back(target_project_root: str, app_name: str, source_file
         logger.info("初始文件移回操作检查完成。")
     return files_moved_back_successfully
 
+# --- 处理原始数据 ---
+
+def process_raw_data(raw_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    处理DataFrame中的多行文本
+    
+    Args:
+        raw_df (pd.DataFrame): 原始数据DataFrame
+        
+    Returns:
+        pd.DataFrame: 处理后的DataFrame
+    """
+    # 创建一个新的DataFrame来存储处理后的数据
+    processed_df = raw_df.copy()
+    
+    # 对每一列进行处理
+    replacements = {
+            '\n': ' ', '\r': ' ', '\\n': ' ', '\\r': ' ',
+            '\t': ' ', '\\t': ' '
+        }
+        
+    # 对所有文本列应用清理
+    for col in processed_df.columns:
+        if processed_df[col].dtype == 'object':  # 只处理文本列
+            processed_df[col] = processed_df[col].astype(str).replace(replacements, regex=True)
+            # 移除多余的空格
+            processed_df[col] = processed_df[col].str.strip()
+    
+    return processed_df
+
 # --- 设置项目 ---
 def validate_workflow_config(
     mode: str,
@@ -901,7 +931,6 @@ def validate_workflow_config(
         return False, f"目录权限验证失败: {str(e)}"
         
     return True, ""
-
 
 def manage_project_workflow(
     mode: str,
@@ -980,6 +1009,9 @@ def setup_id_system() -> bool:
         # 读取原始数据
         df = pd.read_csv(original_file)
         logger.info(f"成功读取原始数据，共 {len(df)} 条记录")
+
+        # 处理原始数据中多行文本可能导致的行错乱问题
+        df = process_raw_data(df)
         
         # 建立ID系统并获取带ID的数据
         df_with_id = df.copy()
@@ -998,6 +1030,10 @@ def setup_id_system() -> bool:
         # 保存处理后的文件
         df_with_id.to_csv(id_file, index=False)
         logger.info(f"成功保存带ID的文件到: {id_file}")
+
+        # 保存修改多行问题的原始文件
+        df.to_csv(original_file, index=False)
+        logger.info(f"修改了可能存在格式问题的原始文件: {original_file}")
         
         # 验证ID映射
         sample_id = str(df.iloc[0, 0])  # 取第一个原始ID做测试

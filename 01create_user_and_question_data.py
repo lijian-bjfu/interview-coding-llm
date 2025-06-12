@@ -215,6 +215,19 @@ def load_raw_data() -> Optional[tuple[pd.DataFrame, Dict[int, str]]]:
         if '_id' not in df.columns:
             logger.error("未找到内部ID列 '_id'")
             return None
+
+        # 清理文本数据，处理换行符和其他特殊字符
+        replacements = {
+            '\n': ' ', '\r': ' ', '\\n': ' ', '\\r': ' ',
+            '\t': ' ', '\\t': ' '
+        }
+        
+        # 对所有文本列应用清理
+        for col in df.columns:
+            if df[col].dtype == 'object':  # 只处理文本列
+                df[col] = df[col].astype(str).replace(replacements, regex=True)
+                # 移除多余的空格
+                df[col] = df[col].str.strip()
             
         ordered_question_numbers = get_all_question_numbers()
         question_map = {}
@@ -479,9 +492,7 @@ def generate_category_question_texts(df: pd.DataFrame, column_question_map: Dict
     
     return final_category_texts
 
-from collections import defaultdict
-import pandas as pd
-from typing import Dict
+
 
 # 假设以下变量从您的项目中导入
 # from parameters import OUTLINE, QUESTION_MAP, APP_NAME, get_category_specific_path, SDIR_GROUP_UDATA
