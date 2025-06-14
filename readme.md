@@ -47,6 +47,9 @@
 - 让LLM对所有访谈题目数据编码后，将编码结果（多个json）文件合并为整体数据（json格式）
 - 根据maxqda的结构文本的格式要求，将合并数据转换为带编码格式的txt文件，导入maxqda
 - 根据大纲生成初步编码本raw_codebook_{大纲分类}
+- 引导LLM生成完善编码本
+- 将编码本作为词典调入maxqda，生成演绎编码（deductive coding）
+- 结合maxqda的可视化功能与原始数据引导LLM分析
 
 
 # 开放编码
