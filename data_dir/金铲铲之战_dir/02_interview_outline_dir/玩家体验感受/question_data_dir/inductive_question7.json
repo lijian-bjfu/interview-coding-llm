@@ -1,6 +1,6 @@
 [
     {
-        "question_text": "你觉得金铲铲游戏中的氛围如何?",
+        "question_text": "你觉得金铲铲游戏中的氛围如何?(如果回答内容较少，可以提醒友好、恶劣、孤立、活跃、冷淡等）",
         "initial_codes": [
             {
                 "respondent_id": 1,

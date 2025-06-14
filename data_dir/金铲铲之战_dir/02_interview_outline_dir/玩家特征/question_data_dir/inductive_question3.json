@@ -1,0 +1,376 @@
+[
+    {
+        "question_text": "你玩过MOBA类游戏吗(如LOL、王者荣耀)?",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "尝试过《王者荣耀》但最高只到白金段位，手速跟不上高强度操作，更偏好策略类游戏的慢节奏思考空间",
+                "code_name": [
+                    "偏好策略游戏",
+                    "操作压力大"
+                ],
+                "supporting_quote": [
+                    "更偏好策略类游戏的慢节奏思考空间",
+                    "手速跟不上高强度操作"
+                ],
+                "quote_range": [
+                    [
+                        30,
+                        45
+                    ],
+                    [
+                        15,
+                        29
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "玩过，王者荣耀和LOL都玩过。",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "玩过LOL但更喜欢金铲铲的策略性。",
+                "code_name": [
+                    "偏好策略游戏"
+                ],
+                "supporting_quote": [
+                    "更喜欢金铲铲的策略性"
+                ],
+                "quote_range": [
+                    [
+                        8,
+                        19
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "从未接触过LOL或王者荣耀等MOBA游戏，因手速不足无法适应操作要求，更适合策略深度高的自走棋类项目",
+                "code_name": [
+                    "偏好策略游戏",
+                    "操作压力大"
+                ],
+                "supporting_quote": [
+                    "更适合策略深度高的自走棋类项目",
+                    "因手速不足无法适应操作要求"
+                ],
+                "quote_range": [
+                    [
+                        30,
+                        45
+                    ],
+                    [
+                        15,
+                        29
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "十年前短暂玩过DOTA但手速跟不上，现专注策略型游戏，操作压力更小且适合碎片化时间",
+                "code_name": [
+                    "偏好策略游戏",
+                    "操作压力大"
+                ],
+                "supporting_quote": [
+                    "现专注策略型游戏，操作压力更小且适合碎片化时间",
+                    "手速跟不上"
+                ],
+                "quote_range": [
+                    [
+                        20,
+                        45
+                    ],
+                    [
+                        10,
+                        19
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "曾为《DOTA2》超凡分段玩家，但因厌恶团队甩锅文化转战策略游戏，享受独立决策掌控感",
+                "code_name": [
+                    "偏好策略游戏",
+                    "团队文化厌恶"
+                ],
+                "supporting_quote": [
+                    "转战策略游戏，享受独立决策掌控感",
+                    "厌恶团队甩锅文化"
+                ],
+                "quote_range": [
+                    [
+                        25,
+                        45
+                    ],
+                    [
+                        15,
+                        24
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "玩过《王者荣耀》但止步钻石，手速跟不上竞技节奏，更喜欢策略类游戏的思考空间",
+                "code_name": [
+                    "偏好策略游戏",
+                    "操作压力大"
+                ],
+                "supporting_quote": [
+                    "更喜欢策略类游戏的思考空间",
+                    "手速跟不上竞技节奏"
+                ],
+                "quote_range": [
+                    [
+                        30,
+                        45
+                    ],
+                    [
+                        15,
+                        29
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "王者荣耀卡在星耀上不去，手残总被骂，转玩这个因为输了不用背锅",
+                "code_name": [
+                    "操作压力大",
+                    "团队文化厌恶"
+                ],
+                "supporting_quote": [
+                    "手残总被骂",
+                    "转玩这个因为输了不用背锅"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        19
+                    ],
+                    [
+                        20,
+                        35
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "玩过，王者荣耀和LOL都有玩过一段时间。",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "都接触过 英雄联盟玩的多 王者荣耀比较少",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "接触过，英雄联盟和王者荣耀都接触过，英雄联盟接触的时间最长从小学一直玩到了现在已经大学了",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "玩过王者荣耀",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "玩过王者荣耀。",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "玩过，王者荣耀玩了三年多，现在玩得少了，主要玩金铲铲。",
+                "code_name": [
+                    "偏好策略游戏"
+                ],
+                "supporting_quote": [
+                    "主要玩金铲铲"
+                ],
+                "quote_range": [
+                    [
+                        25,
+                        35
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "玩过，lol没玩过，王者荣耀太火了玩过，小学就开始玩了，断断续续玩了好多年了，最近半年玩的少，一般和好朋友一起开黑玩。",
+                "code_name": [
+                    "社交游戏体验"
+                ],
+                "supporting_quote": [
+                    "一般和好朋友一起开黑玩"
+                ],
+                "quote_range": [
+                    [
+                        60,
+                        75
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "玩过《王者荣耀》，从小学就开始断断续续地玩，最近半年玩得比较少，一般只和朋友开黑。LOL没玩过，感觉金铲铲更轻松，适合休闲娱乐。",
+                "code_name": [
+                    "休闲娱乐偏好",
+                    "社交游戏体验"
+                ],
+                "supporting_quote": [
+                    "感觉金铲铲更轻松，适合休闲娱乐",
+                    "一般只和朋友开黑"
+                ],
+                "quote_range": [
+                    [
+                        60,
+                        80
+                    ],
+                    [
+                        40,
+                        55
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "尝试过王者荣耀，但实在受不了那种紧张感。金铲铲这种回合制的节奏更适合我，可以边追剧边玩，完全不影响操作。",
+                "code_name": [
+                    "偏好策略游戏",
+                    "休闲娱乐偏好"
+                ],
+                "supporting_quote": [
+                    "金铲铲这种回合制的节奏更适合我",
+                    "可以边追剧边玩，完全不影响操作"
+                ],
+                "quote_range": [
+                    [
+                        30,
+                        50
+                    ],
+                    [
+                        50,
+                        70
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "玩过",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            }
+        ],
+            "codes": [
+                {
+                    "code_name": "偏好策略游戏",
+                    "code_definition": "玩家更倾向于选择策略类游戏"
+                },
+                {
+                    "code_name": "操作压力大",
+                    "code_definition": "玩家因手速或操作压力放弃MOBA游戏"
+                },
+                {
+                    "code_name": "团队文化厌恶",
+                    "code_definition": "玩家因团队负面文化转战其他游戏"
+                },
+                {
+                    "code_name": "休闲娱乐偏好",
+                    "code_definition": "玩家偏好轻松、休闲的游戏方式"
+                },
+                {
+                    "code_name": "社交游戏体验",
+                    "code_definition": "玩家因社交需求玩MOBA游戏"
+                }
+            ],
+            "themes": [
+                {
+                    "theme_name": "游戏类型偏好",
+                    "theme_definition": "玩家更倾向于选择策略类或休闲类游戏",
+                    "included_initial_codes": [
+                        "偏好策略游戏",
+                        "休闲娱乐偏好"
+                    ]
+                },
+                {
+                    "theme_name": "MOBA游戏挑战",
+                    "theme_definition": "玩家因操作压力或团队负面文化放弃MOBA游戏",
+                    "included_initial_codes": [
+                        "操作压力大",
+                        "团队文化厌恶"
+                    ]
+                },
+                {
+                    "theme_name": "社交需求",
+                    "theme_definition": "玩家因社交需求参与MOBA游戏",
+                    "included_initial_codes": [
+                        "社交游戏体验"
+                    ]
+                }
+            ]
+        }
+    ]
+

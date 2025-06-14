@@ -3,10 +3,6 @@
 
 """
 02inductive_merge_json.py
-任务: @ds-n1-sample (多取一存)
-描述: 严格通过 parameters.py 的接口，聚合所有初步归纳编码的JSON文件。
-作者: Gemini & User
-版本: 2.3 (优化日志系统和数据管理规范)
 
 数据流程：
 1. 通过 parameters.py 接口获取所有归纳编码JSON文件路径

@@ -19003,3 +19003,326 @@ ID 28 重复出现 21 次，出现在以下问题中:
 2025-06-13 01:49:06,961 - __main__ - INFO - 成功生成MaxQDA格式文本
 2025-06-13 01:49:06,962 - __main__ - INFO - 成功保存MaxQDA文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_maxqda_themecode.txt
 2025-06-13 01:49:06,962 - __main__ - INFO - MAXQDA主题编码生成完成
+2025-06-14 22:57:56,638 - INFO - 成功从 parameters.py 导入配置
+2025-06-14 22:57:56,655 - INFO - ==================================================
+2025-06-14 22:57:56,655 - INFO - 开始执行 @ds-n1-sample 任务: 合并初步归纳编码JSON文件
+2025-06-14 22:57:56,655 - INFO - 脚本: 02inductive_merge_json.py | 版本: 2.3
+2025-06-14 22:57:56,655 - INFO - 时间: 2025-06-14 22:57:56
+2025-06-14 22:57:56,655 - INFO - ==================================================
+2025-06-14 22:57:56,656 - INFO - 准备通过 get_path_list 获取所有输入文件路径...
+2025-06-14 22:57:56,656 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-14 22:57:56,656 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-14 22:57:56,656 - INFO - 通过 get_path_list('grouped_inductive_q_jsons') 获取并扁平化后，共找到 9 个文件路径
+2025-06-14 22:57:56,656 - INFO - 详细文件列表:
+2025-06-14 22:57:56,656 - INFO -   1. 文件名: inductive_question5.json
+2025-06-14 22:57:56,656 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/inductive_question5.json
+2025-06-14 22:57:56,656 - INFO -   2. 文件名: inductive_question6.json
+2025-06-14 22:57:56,656 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/inductive_question6.json
+2025-06-14 22:57:56,656 - INFO -   3. 文件名: inductive_question7.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/inductive_question7.json
+2025-06-14 22:57:56,657 - INFO -   4. 文件名: inductive_question8.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/inductive_question8.json
+2025-06-14 22:57:56,657 - INFO -   5. 文件名: inductive_question10.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/inductive_question10.json
+2025-06-14 22:57:56,657 - INFO -   6. 文件名: inductive_question9.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/inductive_question9.json
+2025-06-14 22:57:56,657 - INFO -   7. 文件名: inductive_question2.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/inductive_question2.json
+2025-06-14 22:57:56,657 - INFO -   8. 文件名: inductive_question3.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/inductive_question3.json
+2025-06-14 22:57:56,657 - INFO -   9. 文件名: inductive_question4.json
+2025-06-14 22:57:56,657 - INFO -      路径: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/inductive_question4.json
+2025-06-14 22:57:56,657 - INFO - 文件路径获取和处理完成
+2025-06-14 22:57:56,657 - INFO - [JSON-MERGE]: 开始合并JSON文件内容...
+2025-06-14 22:57:56,657 - INFO - 
+[排序过程] 原始文件列表:
+2025-06-14 22:57:56,657 - INFO -   - inductive_question5.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question6.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question7.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question8.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question10.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question9.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question2.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question3.json
+2025-06-14 22:57:56,657 - INFO -   - inductive_question4.json
+2025-06-14 22:57:56,657 - INFO - 
+处理文件: inductive_question2.json
+2025-06-14 22:57:56,657 - INFO -   提取的排序信息: 序号=[2], 类型=question
+2025-06-14 22:57:56,657 - INFO -     问题 1: 分配序号 2
+2025-06-14 22:57:56,657 - INFO -   √ 成功读取文件: inductive_question2.json (包含 1 个问题对象)
+2025-06-14 22:57:56,658 - INFO - 
+处理文件: inductive_question3.json
+2025-06-14 22:57:56,658 - INFO -   提取的排序信息: 序号=[3], 类型=question
+2025-06-14 22:57:56,658 - INFO -     问题 1: 分配序号 3
+2025-06-14 22:57:56,658 - INFO -   √ 成功读取文件: inductive_question3.json (包含 1 个问题对象)
+2025-06-14 22:57:56,658 - INFO - 
+处理文件: inductive_question4.json
+2025-06-14 22:57:56,658 - INFO -   提取的排序信息: 序号=[4], 类型=question
+2025-06-14 22:57:56,658 - INFO -     问题 1: 分配序号 4
+2025-06-14 22:57:56,658 - INFO -   √ 成功读取文件: inductive_question4.json (包含 1 个问题对象)
+2025-06-14 22:57:56,658 - INFO - 
+处理文件: inductive_question5.json
+2025-06-14 22:57:56,658 - INFO -   提取的排序信息: 序号=[5], 类型=question
+2025-06-14 22:57:56,659 - INFO -     问题 1: 分配序号 5
+2025-06-14 22:57:56,659 - INFO -   √ 成功读取文件: inductive_question5.json (包含 1 个问题对象)
+2025-06-14 22:57:56,659 - INFO - 
+处理文件: inductive_question6.json
+2025-06-14 22:57:56,659 - INFO -   提取的排序信息: 序号=[6], 类型=question
+2025-06-14 22:57:56,659 - INFO -     问题 1: 分配序号 6
+2025-06-14 22:57:56,659 - INFO -   √ 成功读取文件: inductive_question6.json (包含 1 个问题对象)
+2025-06-14 22:57:56,659 - INFO - 
+处理文件: inductive_question7.json
+2025-06-14 22:57:56,659 - INFO -   提取的排序信息: 序号=[7], 类型=question
+2025-06-14 22:57:56,659 - INFO -     问题 1: 分配序号 7
+2025-06-14 22:57:56,659 - INFO -   √ 成功读取文件: inductive_question7.json (包含 1 个问题对象)
+2025-06-14 22:57:56,659 - INFO - 
+处理文件: inductive_question8.json
+2025-06-14 22:57:56,659 - INFO -   提取的排序信息: 序号=[8], 类型=question
+2025-06-14 22:57:56,660 - INFO -     问题 1: 分配序号 8
+2025-06-14 22:57:56,660 - INFO -   √ 成功读取文件: inductive_question8.json (包含 1 个问题对象)
+2025-06-14 22:57:56,660 - INFO - 
+处理文件: inductive_question9.json
+2025-06-14 22:57:56,660 - INFO -   提取的排序信息: 序号=[9], 类型=question
+2025-06-14 22:57:56,660 - INFO -     问题 1: 分配序号 9
+2025-06-14 22:57:56,660 - INFO -   √ 成功读取文件: inductive_question9.json (包含 1 个问题对象)
+2025-06-14 22:57:56,660 - INFO - 
+处理文件: inductive_question10.json
+2025-06-14 22:57:56,660 - INFO -   提取的排序信息: 序号=[10], 类型=question
+2025-06-14 22:57:56,660 - INFO -     问题 1: 分配序号 10
+2025-06-14 22:57:56,660 - INFO -   √ 成功读取文件: inductive_question10.json (包含 1 个问题对象)
+2025-06-14 22:57:56,660 - INFO - 
+[排序结果] 问题排序后的顺序:
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question2.json, 序号: 2, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question3.json, 序号: 3, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question4.json, 序号: 4, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question5.json, 序号: 5, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question6.json, 序号: 6, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question7.json, 序号: 7, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question8.json, 序号: 8, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question9.json, 序号: 9, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO -   - 文件: inductive_question10.json, 序号: 10, 文件内位置: 0, 类型: question
+2025-06-14 22:57:56,660 - INFO - 
+[JSON-MERGE] 合并完成统计:
+2025-06-14 22:57:56,660 - INFO - - 总文件数: 9
+2025-06-14 22:57:56,660 - INFO - - 成功处理: 9
+2025-06-14 22:57:56,660 - INFO - - 处理失败: 0
+2025-06-14 22:57:56,660 - INFO - - 合并后的问题对象总数: 9
+2025-06-14 22:57:56,660 - INFO - 验证ID: 所有问题的ID序列都符合要求
+2025-06-14 22:57:56,661 - INFO - 准备保存合并后的JSON文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_codes.json
+2025-06-14 22:57:56,665 - INFO - 数据已成功保存并验证
+2025-06-14 22:57:56,665 - INFO - 任务成功完成，输出文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_codes.json
+2025-06-14 22:57:56,665 - INFO - 
+==================================================
+2025-06-14 22:57:56,665 - INFO - 问题汇总报告
+2025-06-14 22:57:56,665 - INFO - ==================================================
+2025-06-14 22:57:56,665 - INFO - 
+1. JSON结构问题:
+2025-06-14 22:57:56,665 - INFO - ------------------------------
+2025-06-14 22:57:56,666 - INFO -   √ 未发现JSON结构问题
+2025-06-14 22:57:56,666 - INFO - 
+2. 缺少字段问题:
+2025-06-14 22:57:56,666 - INFO - ------------------------------
+2025-06-14 22:57:56,666 - INFO -   √ 未发现字段缺失问题
+2025-06-14 22:57:56,666 - INFO - 
+3. 问题编码重复问题:
+2025-06-14 22:57:56,666 - INFO - ------------------------------
+2025-06-14 22:57:56,667 - INFO -   √ 未发现问题编码重复问题
+2025-06-14 22:57:56,667 - INFO - 
+4. 问题编号连续性检查:
+2025-06-14 22:57:56,667 - INFO - ------------------------------
+2025-06-14 22:57:56,667 - INFO -   √ 问题编号连续
+2025-06-14 22:57:56,667 - INFO - 
+==================================================
+2025-06-14 22:57:56,667 - INFO - ==================================================
+2025-06-14 22:57:56,667 - INFO - 任务执行完毕
+2025-06-14 22:57:56,667 - INFO - ==================================================
+2025-06-14 22:58:24,862 - __main__ - INFO - 成功从 parameters.py 导入配置
+2025-06-14 22:58:24,864 - __main__ - INFO - ================================================================================
+2025-06-14 22:58:24,864 - __main__ - INFO - 开始任务: 生成最终MaxQDA导入文件
+2025-06-14 22:58:24,864 - __main__ - INFO - 脚本: 03inductive_create_maxqda_themecode.py | 版本: 3.0
+2025-06-14 22:58:24,864 - __main__ - INFO - 执行时间: 2025-06-14 22:58:24
+2025-06-14 22:58:24,864 - __main__ - INFO - ================================================================================
+2025-06-14 22:58:24,864 - __main__ - INFO - 步骤1: 从 parameters.py 获取文件路径...
+2025-06-14 22:58:24,864 - parameters - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-14 22:58:24,864 - parameters - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-14 22:58:24,864 - __main__ - INFO - 文件路径配置:
+2025-06-14 22:58:24,864 - __main__ - INFO -   - 合并JSON: '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_codes.json'
+2025-06-14 22:58:24,864 - __main__ - INFO -   - 原始CSV: '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/00_rawdata_dir/金铲铲之战.csv'
+2025-06-14 22:58:24,864 - __main__ - INFO -   - 输出MaxQDA: '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_maxqda_themecode.txt'
+2025-06-14 22:58:24,864 - __main__ - INFO - 
+步骤2: 加载源数据...
+2025-06-14 22:58:24,864 - __main__ - INFO - 开始数据加载流程...
+2025-06-14 22:58:24,864 - __main__ - INFO - 开始加载LLM分析JSON文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_codes.json
+2025-06-14 22:58:24,865 - __main__ - INFO - 成功加载LLM JSON文件，包含 9 个问题的分析
+2025-06-14 22:58:24,865 - __main__ - INFO - 问题 '金铲铲的消戏时长(玩多久了、玩频率(每天)、每次玩几局)' 处理完成: 18 个初始编码, 2 个主题, 5 个编码定义
+2025-06-14 22:58:24,865 - __main__ - INFO - 问题 '你玩过MOBA类游戏吗(如LOL、王者荣耀)?' 处理完成: 18 个初始编码, 3 个主题, 5 个编码定义
+2025-06-14 22:58:24,865 - __main__ - INFO - 问题 '金铲铲的游戏等级' 处理完成: 18 个初始编码, 3 个主题, 5 个编码定义
+2025-06-14 22:58:24,865 - __main__ - INFO - 问题 '你玩金铲铲的目的是什么(打不出来可提醒，休闲、胜利、开黑等)' 处理完成: 18 个初始编码, 2 个主题, 4 个编码定义
+2025-06-14 22:58:24,865 - __main__ - INFO - 问题 '你在玩金铲铲时，什么时候是最快乐的?' 处理完成: 18 个初始编码, 3 个主题, 4 个编码定义
+2025-06-14 22:58:24,865 - __main__ - INFO - 问题 '你觉得金铲铲游戏中的氛围如何?(如果回答内容较少，可以提醒友好、恶劣、孤立、活跃、冷淡等）' 处理完成: 18 个初始编码, 3 个主题, 5 个编码定义
+2025-06-14 22:58:24,867 - __main__ - INFO - 问题 '(如果玩过moba)你觉得相比较moba类游戏，金铲铲的相互冲突或攻击的情况更多/更少?' 处理完成: 18 个初始编码, 3 个主题, 5 个编码定义
+2025-06-14 22:58:24,867 - __main__ - INFO - 问题 '能说一下尔在金铲铲中与其他玩家互动时遇到过特别糟心的情况吗?' 处理完成: 18 个初始编码, 3 个主题, 4 个编码定义
+2025-06-14 22:58:24,867 - __main__ - INFO - 问题 '能说一下你在金铲铲里遇到过特别暖心的情况吗?' 处理完成: 18 个初始编码, 2 个主题, 3 个编码定义
+2025-06-14 22:58:24,867 - __main__ - INFO - LLM编码数据已映射到 9 个问题
+2025-06-14 22:58:24,867 - __main__ - INFO - 开始加载原始CSV访谈数据: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/00_rawdata_dir/金铲铲之战.csv
+2025-06-14 22:58:24,867 - __main__ - INFO - CSV表头: ['序号', '性别/年龄', '金铲铲的消戏时长(玩多久了、玩频率(每天)、每次玩几局)', '你玩过MOBA类游戏吗(如LOL、王者荣耀)?', '金铲铲的游戏等级', '你玩金铲铲的目的是什么(打不出来可提醒，休闲、胜利、开黑等)', '你在玩金铲铲时，什么时候是最快乐的?', '你觉得金铲铲游戏中的氛围如何?(如果回答内容较少，可以提醒友好、恶劣、孤立、活跃、冷淡等）', '(如果玩过moba)你觉得相比较moba类游戏，金铲铲的相互冲突或攻击的情况更多/更少?', '能说一下尔在金铲铲中与其他玩家互动时遇到过特别糟心的情况吗?', '能说一下尔在金铲铲里遇到过特别暖心的情况吗?', '为什么那个时候让你感觉暖心/糟心?你当时是什么感受?', '你有经历过对手对你的不礼貌行为吗?能具体说有哪些行为吗?为什么你觉得不礼貌?', '你和队友动时，在什么情况下会感觉被冒犯或让你不舒服，他/她如何让你不舒服的?', '在金铲铲，你在哪些情况下会有“绷不住”想攻击他人的意图?为什么这些情况会刺激你?', '在金铲铲你会在意别人对你的看法吗?为什么在意/不在意?', '遇到他人让你不爽的情况，你会如何处理?为什么选择这种处理方式?', '你是否曾经因游戏氛围影响了你继续游戏的意愿?']
+2025-06-14 22:58:24,867 - __main__ - INFO - 使用 '序号' 作为ID列
+2025-06-14 22:58:24,867 - __main__ - INFO - 成功加载CSV数据，共 18 条有效被访者记录
+2025-06-14 22:58:24,867 - __main__ - INFO - 所有源数据加载成功！
+2025-06-14 22:58:24,869 - __main__ - INFO - 使用第一列 '['序号']' 作为ID列
+2025-06-14 22:58:24,869 - __main__ - INFO - 
+步骤3: 执行核心转换流程...
+2025-06-14 22:58:24,869 - __main__ - INFO - 开始MaxQDA格式转换
+2025-06-14 22:58:24,882 - __main__ - INFO - 成功生成MaxQDA格式文本
+2025-06-14 22:58:24,882 - __main__ - INFO - 成功保存MaxQDA文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/03_inductive_coding_dir/金铲铲之战_inductive_maxqda_themecode.txt
+2025-06-14 22:58:24,883 - __main__ - INFO - MAXQDA主题编码生成完成
+2025-06-14 23:51:03,887 - INFO - 开始：为每个分类生成编码本。
+2025-06-14 23:51:03,905 - INFO - --- 开始处理分类: '玩家社交感受' ---
+2025-06-14 23:51:03,905 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-14 23:51:03,906 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-14 23:51:03,906 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/
+2025-06-14 23:51:03,906 - ERROR - 分类 '玩家社交感受' 文件验证失败! 缺失的问题编号: {11, 12, 13}. 
+2025-06-14 23:51:03,906 - WARNING - --- 跳过分类: '玩家社交感受' ---
+2025-06-14 23:51:03,906 - INFO - --- 开始处理分类: '玩家特征' ---
+2025-06-14 23:51:03,906 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/
+2025-06-14 23:51:03,906 - ERROR - 分类 '玩家特征' 文件验证失败! 缺失的问题编号: {1}. 
+2025-06-14 23:51:03,906 - WARNING - --- 跳过分类: '玩家特征' ---
+2025-06-14 23:51:03,906 - INFO - --- 开始处理分类: '玩家不友好行为' ---
+2025-06-14 23:51:03,906 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家不友好行为/question_data_dir/
+2025-06-14 23:51:03,906 - ERROR - 分类 '玩家不友好行为' 文件验证失败! 缺失的问题编号: {16, 17, 14, 15}. 
+2025-06-14 23:51:03,906 - WARNING - --- 跳过分类: '玩家不友好行为' ---
+2025-06-14 23:51:03,906 - INFO - --- 开始处理分类: '玩家体验感受' ---
+2025-06-14 23:51:03,906 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/
+2025-06-14 23:51:03,906 - INFO - 分类 '玩家体验感受' 文件验证通过，将处理 4 个JSON文件。
+2025-06-14 23:51:03,911 - INFO - 分类 '玩家体验感受' 编码本生成完毕，共包含 18 个编码条目。
+2025-06-14 23:51:03,911 - INFO - --- 完成处理分类: '玩家体验感受' ---
+
+2025-06-14 23:51:03,911 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-14 23:51:03,911 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-14 23:51:03,912 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/codebook_data_dir/raw_codebook_玩家体验感受.csv
+2025-06-14 23:51:03,912 - INFO - 任务 @codebook-save 完成。
+2025-06-14 23:52:16,585 - INFO - 开始：为每个分类生成编码本。
+2025-06-14 23:52:16,587 - INFO - --- 开始处理分类: '玩家不友好行为' ---
+2025-06-14 23:52:16,587 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-14 23:52:16,588 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-14 23:52:16,588 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家不友好行为/question_data_dir/
+2025-06-14 23:52:16,588 - ERROR - 分类 '玩家不友好行为' 文件验证失败! 缺失的问题编号: {16, 17, 14, 15}. 
+2025-06-14 23:52:16,588 - WARNING - --- 跳过分类: '玩家不友好行为' ---
+2025-06-14 23:52:16,588 - INFO - --- 开始处理分类: '玩家特征' ---
+2025-06-14 23:52:16,588 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/
+2025-06-14 23:52:16,588 - ERROR - 分类 '玩家特征' 文件验证失败! 缺失的问题编号: {1}. 
+2025-06-14 23:52:16,588 - WARNING - --- 跳过分类: '玩家特征' ---
+2025-06-14 23:52:16,588 - INFO - --- 开始处理分类: '玩家体验感受' ---
+2025-06-14 23:52:16,588 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/
+2025-06-14 23:52:16,588 - INFO - 分类 '玩家体验感受' 文件验证通过，将处理 4 个JSON文件。
+2025-06-14 23:52:16,593 - INFO - 分类 '玩家体验感受' 编码本生成完毕，共包含 18 个编码条目。
+2025-06-14 23:52:16,593 - INFO - --- 完成处理分类: '玩家体验感受' ---
+
+2025-06-14 23:52:16,593 - INFO - --- 开始处理分类: '玩家社交感受' ---
+2025-06-14 23:52:16,593 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/
+2025-06-14 23:52:16,593 - ERROR - 分类 '玩家社交感受' 文件验证失败! 缺失的问题编号: {11, 12, 13}. 
+2025-06-14 23:52:16,593 - WARNING - --- 跳过分类: '玩家社交感受' ---
+2025-06-14 23:52:16,593 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-14 23:52:16,593 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-14 23:52:16,594 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/codebook_data_dir/raw_codebook_玩家体验感受.csv
+2025-06-14 23:52:16,594 - INFO - 任务 @codebook-save 完成。
+2025-06-15 00:44:17,228 - INFO - 开始：为每个分类生成编码本。
+2025-06-15 00:44:17,248 - INFO - --- 开始处理分类: '玩家社交感受' ---
+2025-06-15 00:44:17,248 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-15 00:44:17,249 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-15 00:44:17,249 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/
+2025-06-15 00:44:17,249 - ERROR - 分类 '玩家社交感受' 文件验证失败! 缺失的问题编号: {11, 12, 13}. 
+2025-06-15 00:44:17,249 - WARNING - --- 跳过分类: '玩家社交感受' ---
+2025-06-15 00:44:17,249 - INFO - --- 开始处理分类: '玩家特征' ---
+2025-06-15 00:44:17,249 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/
+2025-06-15 00:44:17,250 - ERROR - 分类 '玩家特征' 文件验证失败! 缺失的问题编号: {1}. 
+2025-06-15 00:44:17,250 - WARNING - --- 跳过分类: '玩家特征' ---
+2025-06-15 00:44:17,250 - INFO - --- 开始处理分类: '玩家不友好行为' ---
+2025-06-15 00:44:17,250 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家不友好行为/question_data_dir/
+2025-06-15 00:44:17,250 - ERROR - 分类 '玩家不友好行为' 文件验证失败! 缺失的问题编号: {16, 17, 14, 15}. 
+2025-06-15 00:44:17,250 - WARNING - --- 跳过分类: '玩家不友好行为' ---
+2025-06-15 00:44:17,250 - INFO - --- 开始处理分类: '玩家体验感受' ---
+2025-06-15 00:44:17,250 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/
+2025-06-15 00:44:17,250 - INFO - 分类 '玩家体验感受' 文件验证通过，将处理 4 个JSON文件。
+2025-06-15 00:44:17,252 - INFO - 分类 '玩家体验感受' 编码本生成完毕，共包含 18 个编码条目。
+2025-06-15 00:44:17,252 - INFO - --- 完成处理分类: '玩家体验感受' ---
+
+2025-06-15 00:44:17,252 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-15 00:44:17,252 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-15 00:44:17,254 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/codebook_data_dir/raw_codebook_玩家体验感受.csv
+2025-06-15 00:44:17,254 - INFO - 任务 @codebook-save 完成。
+2025-06-15 00:46:57,560 - INFO - 开始：为每个分类生成编码本。
+2025-06-15 00:46:57,581 - INFO - --- 开始处理分类: '玩家社交感受' ---
+2025-06-15 00:46:57,581 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-15 00:46:57,581 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-15 00:46:57,581 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/
+2025-06-15 00:46:57,581 - ERROR - 分类 '玩家社交感受' 文件验证失败! 缺失的问题编号: {11, 12, 13}. 
+2025-06-15 00:46:57,581 - WARNING - --- 跳过分类: '玩家社交感受' ---
+2025-06-15 00:46:57,581 - INFO - --- 开始处理分类: '玩家特征' ---
+2025-06-15 00:46:57,582 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/
+2025-06-15 00:46:57,582 - ERROR - 分类 '玩家特征' 文件验证失败! 缺失的问题编号: {1}. 
+2025-06-15 00:46:57,582 - WARNING - --- 跳过分类: '玩家特征' ---
+2025-06-15 00:46:57,582 - INFO - --- 开始处理分类: '玩家体验感受' ---
+2025-06-15 00:46:57,582 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/
+2025-06-15 00:46:57,582 - INFO - 分类 '玩家体验感受' 文件验证通过，将处理 4 个JSON文件。
+2025-06-15 00:46:57,586 - INFO - 分类 '玩家体验感受' 编码本生成完毕，共包含 18 个编码条目。
+2025-06-15 00:46:57,586 - INFO - --- 完成处理分类: '玩家体验感受' ---
+
+2025-06-15 00:46:57,586 - INFO - --- 开始处理分类: '玩家不友好行为' ---
+2025-06-15 00:46:57,586 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家不友好行为/question_data_dir/
+2025-06-15 00:46:57,586 - ERROR - 分类 '玩家不友好行为' 文件验证失败! 缺失的问题编号: {16, 17, 14, 15}. 
+2025-06-15 00:46:57,586 - WARNING - --- 跳过分类: '玩家不友好行为' ---
+2025-06-15 00:46:57,586 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-15 00:46:57,586 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-15 00:46:57,587 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/codebook_data_dir/raw_codebook_玩家体验感受.csv
+2025-06-15 00:46:57,587 - INFO - 任务 @codebook-save 完成。
+2025-06-15 00:47:29,992 - INFO - 开始：为每个分类生成编码本。
+2025-06-15 00:47:29,993 - INFO - --- 开始处理分类: '玩家不友好行为' ---
+2025-06-15 00:47:29,993 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-15 00:47:29,994 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-15 00:47:29,994 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家不友好行为/question_data_dir/
+2025-06-15 00:47:29,994 - ERROR - 分类 '玩家不友好行为' 文件验证失败! 缺失的问题编号: {16, 17, 14, 15}. 
+2025-06-15 00:47:29,994 - WARNING - --- 跳过分类: '玩家不友好行为' ---
+2025-06-15 00:47:29,994 - INFO - --- 开始处理分类: '玩家特征' ---
+2025-06-15 00:47:29,994 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/
+2025-06-15 00:47:29,994 - ERROR - 分类 '玩家特征' 文件验证失败! 缺失的问题编号: {1}. 
+2025-06-15 00:47:29,994 - WARNING - --- 跳过分类: '玩家特征' ---
+2025-06-15 00:47:29,994 - INFO - --- 开始处理分类: '玩家社交感受' ---
+2025-06-15 00:47:29,994 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/
+2025-06-15 00:47:29,994 - ERROR - 分类 '玩家社交感受' 文件验证失败! 缺失的问题编号: {11, 12, 13}. 
+2025-06-15 00:47:29,994 - WARNING - --- 跳过分类: '玩家社交感受' ---
+2025-06-15 00:47:29,994 - INFO - --- 开始处理分类: '玩家体验感受' ---
+2025-06-15 00:47:29,994 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/
+2025-06-15 00:47:29,994 - INFO - 分类 '玩家体验感受' 文件验证通过，将处理 4 个JSON文件。
+2025-06-15 00:47:29,999 - INFO - 分类 '玩家体验感受' 编码本生成完毕，共包含 18 个编码条目。
+2025-06-15 00:47:29,999 - INFO - --- 完成处理分类: '玩家体验感受' ---
+
+2025-06-15 00:47:29,999 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-15 00:47:29,999 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-15 00:47:30,000 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/codebook_data_dir/raw_codebook_玩家体验感受.csv
+2025-06-15 00:47:30,000 - INFO - 任务 @codebook-save 完成。
+2025-06-15 00:51:00,385 - INFO - 开始：为每个分类生成编码本。
+2025-06-15 00:51:00,387 - INFO - --- 开始处理分类: '玩家特征' ---
+2025-06-15 00:51:00,387 - INFO - 首次调用路径获取函数，正在为应用 '金铲铲之战' 初始化项目路径配置...
+2025-06-15 00:51:00,388 - INFO - 应用 '金铲铲之战' 的路径配置已成功初始化。
+2025-06-15 00:51:00,388 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家特征/question_data_dir/
+2025-06-15 00:51:00,388 - ERROR - 分类 '玩家特征' 文件验证失败! 缺失的问题编号: {1}. 
+2025-06-15 00:51:00,388 - WARNING - --- 跳过分类: '玩家特征' ---
+2025-06-15 00:51:00,388 - INFO - --- 开始处理分类: '玩家不友好行为' ---
+2025-06-15 00:51:00,388 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家不友好行为/question_data_dir/
+2025-06-15 00:51:00,388 - ERROR - 分类 '玩家不友好行为' 文件验证失败! 缺失的问题编号: {16, 17, 14, 15}. 
+2025-06-15 00:51:00,388 - WARNING - --- 跳过分类: '玩家不友好行为' ---
+2025-06-15 00:51:00,388 - INFO - --- 开始处理分类: '玩家社交感受' ---
+2025-06-15 00:51:00,388 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家社交感受/question_data_dir/
+2025-06-15 00:51:00,388 - ERROR - 分类 '玩家社交感受' 文件验证失败! 缺失的问题编号: {11, 12, 13}. 
+2025-06-15 00:51:00,388 - WARNING - --- 跳过分类: '玩家社交感受' ---
+2025-06-15 00:51:00,388 - INFO - --- 开始处理分类: '玩家体验感受' ---
+2025-06-15 00:51:00,388 - INFO - 正在检查目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/question_data_dir/
+2025-06-15 00:51:00,388 - INFO - 分类 '玩家体验感受' 文件验证通过，将处理 4 个JSON文件。
+2025-06-15 00:51:00,392 - INFO - 分类 '玩家体验感受' 编码本生成完毕，共包含 18 个编码条目。
+2025-06-15 00:51:00,392 - INFO - --- 完成处理分类: '玩家体验感受' ---
+
+2025-06-15 00:51:00,392 - INFO - 任务 @codebook 已完成所有数据处理和转换。
+2025-06-15 00:51:00,392 - INFO - 任务 @codebook-save 开始：保存编码本到CSV文件。
+2025-06-15 00:51:00,393 - INFO - 成功保存编码本到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/金铲铲之战_dir/02_interview_outline_dir/玩家体验感受/codebook_data_dir/raw_codebook_玩家体验感受.csv
+2025-06-15 00:51:00,393 - INFO - 任务 @codebook-save 完成。

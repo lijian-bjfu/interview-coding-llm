@@ -1,0 +1,418 @@
+[
+    {
+        "question_text": "能说一下你在金铲铲里遇到过特别暖心的情况吗?",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "卡关时陌生人私信分享简易阵容搭配，还赠送游戏内道具，后来成了固定玩伴",
+                "code_name": [
+                    "互助行为",
+                    "社交连接"
+                ],
+                "supporting_quote": [
+                    "陌生人私信分享简易阵容搭配，还赠送游戏内道具",
+                    "后来成了固定玩伴"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        19
+                    ],
+                    [
+                        20,
+                        27
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "有次我凑齐三星五费卡时，对手突然发来\"恭喜\"表情，还主动让棋子站着给我打。最后他发\"享受你的高光时刻\"，这种竞技精神让人感动",
+                "code_name": [
+                    "互助行为",
+                    "竞技精神"
+                ],
+                "supporting_quote": [
+                    "对手突然发来\"恭喜\"表情，还主动让棋子站着给我打",
+                    "\"享受你的高光时刻\""
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        30
+                    ],
+                    [
+                        35,
+                        44
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "今年3月连败时，陌生对手送了我月卡并留言\"姐妹加油\"，这张月卡现在还没用完",
+                "code_name": [
+                    "互助行为",
+                    "社交连接"
+                ],
+                "supporting_quote": [
+                    "陌生对手送了我月卡并留言\"姐妹加油\"",
+                    "这张月卡现在还没用完"
+                ],
+                "quote_range": [
+                    [
+                        8,
+                        24
+                    ],
+                    [
+                        25,
+                        34
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "考试周室友主动帮我代打保段位，回归时收到他们准备的\"连胜惊喜\"礼包",
+                "code_name": [
+                    "互助行为",
+                    "社交连接"
+                ],
+                "supporting_quote": [
+                    "室友主动帮我代打保段位",
+                    "收到他们准备的\"连胜惊喜\"礼包"
+                ],
+                "quote_range": [
+                    [
+                        5,
+                        15
+                    ],
+                    [
+                        20,
+                        33
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "公屏询问装备合成公式，对手暂停倒计时一步步教学，还推荐了新手攻略站",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "对手暂停倒计时一步步教学，还推荐了新手攻略站"
+                ],
+                "quote_range": [
+                    [
+                        12,
+                        31
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "匿名发布阵容攻略获百人留言实测反馈，有玩家专程修改ID\"致敬套路发明者\"",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "有玩家专程修改ID\"致敬套路发明者\""
+                ],
+                "quote_range": [
+                    [
+                        18,
+                        33
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "卡关时陌生人私信分享简易攻略，还送了几套新手适用阵容",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "陌生人私信分享简易攻略，还送了几套新手适用阵容"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        22
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "无",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "有一回我差一张牌就能三星五费卡了，对面玩家知道后，没有卡我牌，还说让我追出来，最后我成功三星，很感谢他，感觉特别暖心。",
+                "code_name": [
+                    "互助行为",
+                    "竞技精神"
+                ],
+                "supporting_quote": [
+                    "对面玩家知道后，没有卡我牌，还说让我追出来",
+                    "让我追出来"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        35
+                    ],
+                    [
+                        30,
+                        35
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "我的牌被卡了 我交流过后让给了我 让我合成了想要的三星",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "让给了我 让我合成了想要的三星"
+                ],
+                "quote_range": [
+                    [
+                        12,
+                        24
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "剩我们两个的时候会主动问我想要什么牌的人，他会给我卖掉让我追出来",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "主动问我想要什么牌的人，他会给我卖掉让我追出来"
+                ],
+                "quote_range": [
+                    [
+                        8,
+                        28
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "有次随机匹配，队友看我缺装备主动卖血让给我，最后一起进前四，他说\"女生优先\"，挺暖心的。",
+                "code_name": [
+                    "互助行为",
+                    "竞技精神"
+                ],
+                "supporting_quote": [
+                    "队友看我缺装备主动卖血让给我",
+                    "\"女生优先\""
+                ],
+                "quote_range": [
+                    [
+                        11,
+                        22
+                    ],
+                    [
+                        33,
+                        38
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "队友主动让装备，鼓励我翻盘。",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "队友主动让装备，鼓励我翻盘"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        11
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "有啊，双排时队友看我快没了，主动把关键装备或英雄让给我，或者劣势时互相鼓励\"稳住能翻\"。",
+                "code_name": [
+                    "互助行为",
+                    "竞技精神"
+                ],
+                "supporting_quote": [
+                    "队友看我快没了，主动把关键装备或英雄让给我",
+                    "\"稳住能翻\""
+                ],
+                "quote_range": [
+                    [
+                        9,
+                        26
+                    ],
+                    [
+                        37,
+                        42
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "就是自己特别胡或者运营成功了有了很多条件可以去追更多的三星五费，然后对面不卡五费卡让自己追八皇鼎立。",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "对面不卡五费卡让自己追八皇鼎立"
+                ],
+                "quote_range": [
+                    [
+                        33,
+                        46
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "暖心的时候也不少，比如自己运营特别顺，对手不仅不卡牌，还主动让卡让我追三星五费，这种默契和善意让人很感动。",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "对手不仅不卡牌，还主动让卡让我追三星五费"
+                ],
+                "quote_range": [
+                    [
+                        20,
+                        38
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "有次在测试服遇到个大佬，看我不会玩新版本，特意教我阵容搭配，还送了我几个关键棋子，这种无私的帮助真的很暖心。",
+                "code_name": [
+                    "互助行为"
+                ],
+                "supporting_quote": [
+                    "特意教我阵容搭配，还送了我几个关键棋子"
+                ],
+                "quote_range": [
+                    [
+                        16,
+                        34
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "比较暖心的是有时候决赛圈了，我追出三星五费了，我也不去卡他的五费卡了，他最终也追出一个比我更强劲的三星五费，在我以为自己要老二的时候，他直接让鸡投降了",
+                "code_name": [
+                    "竞技精神"
+                ],
+                "supporting_quote": [
+                    "他直接让鸡投降了"
+                ],
+                "quote_range": [
+                    [
+                        66,
+                        73
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "互助行为",
+                "code_definition": "玩家间的主动帮助行为"
+            },
+            {
+                "code_name": "竞技精神",
+                "code_definition": "展现良好竞技风范"
+            },
+            {
+                "code_name": "社交连接",
+                "code_definition": "建立游戏外社交关系"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "游戏社区温暖",
+                "theme_definition": "游戏内展现的人性温暖",
+                "included_initial_codes": [
+                    "互助行为",
+                    "竞技精神"
+                ]
+            },
+            {
+                "theme_name": "社交延伸",
+                "theme_definition": "游戏关系延伸到现实",
+                "included_initial_codes": [
+                    "社交连接"
+                ]
+            }
+        ]
+    }
+]

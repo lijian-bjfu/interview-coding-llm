@@ -133,9 +133,10 @@ def rename_duplicate_codes(codes_list: List[Dict[str, Any]]) -> List[Dict[str, A
     return codes_list
 
 # 从当前编码的引文中提取引文
-def select_excerpts_quote(quotes: List[str], n: int = 2) -> List[str]:
+def select_excerpts_quote(quotes: List[str], n: int = -1) -> List[str]:
     """
     从引文列表中，选取 n 个最长的引文作为代表。
+    如果n为-1，则返回所有引文。
 
     参数:
         quotes (List[str]): 原始引文列表。
@@ -144,8 +145,11 @@ def select_excerpts_quote(quotes: List[str], n: int = 2) -> List[str]:
     返回:
         List[str]: 最长的 n 个引文组成的列表。
     """
-    if not quotes or n <= 0:
+    if not quotes:
         return []
+    
+    if n < 0:
+        return quotes
     
     # 按字符串长度降序排序，然后选取前n个
     return sorted(quotes, key=len, reverse=True)[:n]
@@ -290,7 +294,7 @@ def generate_category_codebook() -> Dict[str, pd.DataFrame]:
         
         # 调用函数3: 为每个编码实例筛选代表性引文
         for code_entry in unique_named_codes:
-            code_entry['representative_quotes'] = select_excerpts_quote(code_entry['all_quotes'], n=2)
+            code_entry['representative_quotes'] = select_excerpts_quote(code_entry['all_quotes'], n=-1)
             # 删除原始的长引文列表以节省空间
             del code_entry['all_quotes'] 
 

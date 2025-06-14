@@ -1,0 +1,532 @@
+[
+    {
+        "question_text": "你玩金铲铲的目的是什么(打不出来可提醒，休闲、胜利、开黑等)",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "工作后解压，为的是是和朋友语音聊天；输赢不影响心情，纯粹享受操作角色的过程",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动",
+                    "游戏乐趣"
+                ],
+                "supporting_quote": [
+                    "工作后解压",
+                    "为的是是和朋友语音聊天",
+                    "纯粹享受操作角色的过程"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        5
+                    ],
+                    [
+                        6,
+                        18
+                    ],
+                    [
+                        31,
+                        41
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "主要为了和朋友一起开黑，这个游戏玩起来也没有什么竞技压力 ，比较轻松休闲，空闲的时候玩。",
+                "code_name": [
+                    "社交互动",
+                    "休闲放松"
+                ],
+                "supporting_quote": [
+                    "主要为了和朋友一起开黑",
+                    "比较轻松休闲"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        11
+                    ],
+                    [
+                        31,
+                        37
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "主要作为减压工具，每晚和闺蜜组队语音游玩，游戏内社交占体验比重较大",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "主要作为减压工具",
+                    "每晚和闺蜜组队语音游玩"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        7
+                    ],
+                    [
+                        8,
+                        19
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "主要服务于宿舍社交，也进行个人竞技挑战，验证新阵容可行性",
+                "code_name": [
+                    "社交互动",
+                    "竞技挑战"
+                ],
+                "supporting_quote": [
+                    "主要服务于宿舍社交",
+                    "进行个人竞技挑战"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        9
+                    ],
+                    [
+                        10,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "为工作减压，通勤消遣；胜负不重要，关键享受华丽技能特效的视觉放松感",
+                "code_name": [
+                    "休闲放松",
+                    "游戏乐趣"
+                ],
+                "supporting_quote": [
+                    "为工作减压",
+                    "享受华丽技能特效的视觉放松感"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        5
+                    ],
+                    [
+                        20,
+                        33
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "验证自研阵容强度，同时享受对手公屏打问号的迷惑反应，胜负远不如战术创新重要",
+                "code_name": [
+                    "竞技挑战",
+                    "游戏乐趣"
+                ],
+                "supporting_quote": [
+                    "验证自研阵容强度",
+                    "享受对手公屏打问号的迷惑反应"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        8
+                    ],
+                    [
+                        9,
+                        21
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "纯粹放松心情，享受凑齐三星英雄的成就感，胜负完全不影响情绪",
+                "code_name": [
+                    "休闲放松",
+                    "游戏乐趣"
+                ],
+                "supporting_quote": [
+                    "纯粹放松心情",
+                    "享受凑齐三星英雄的成就感"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        7,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "缓解学习，月考压力，20%和暗恋女生组队时显摆新皮肤",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "缓解学习，月考压力",
+                    "和暗恋女生组队时显摆新皮肤"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        10
+                    ],
+                    [
+                        14,
+                        26
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "主要是为了休闲放松，平时工作学习比较忙，玩金铲铲可以让我在碎片时间里享受游戏乐趣，偶尔也会和朋友开黑，增进彼此感情。",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动",
+                    "游戏乐趣"
+                ],
+                "supporting_quote": [
+                    "主要是为了休闲放松",
+                    "偶尔也会和朋友开黑",
+                    "享受游戏乐趣"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        9
+                    ],
+                    [
+                        43,
+                        52
+                    ],
+                    [
+                        30,
+                        36
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "最开始玩是觉得好玩休闲 后来变成开黑陪朋友玩",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "觉得好玩休闲",
+                    "开黑陪朋友玩"
+                ],
+                "quote_range": [
+                    [
+                        7,
+                        13
+                    ],
+                    [
+                        18,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "主要目的是为了在上没有什么意义的课的时候来消磨时间的，其次也就是游戏做得不错是真心挺好玩的",
+                "code_name": [
+                    "休闲放松",
+                    "游戏乐趣"
+                ],
+                "supporting_quote": [
+                    "消磨时间的",
+                    "游戏做得不错是真心挺好玩的"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        20
+                    ],
+                    [
+                        28,
+                        40
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "主要为了和朋友开黑放松，输赢不太在意，一起聊天搞笑更开心。",
+                "code_name": [
+                    "社交互动",
+                    "休闲放松"
+                ],
+                "supporting_quote": [
+                    "主要为了和朋友开黑",
+                    "放松"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        11
+                    ],
+                    [
+                        12,
+                        14
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "主要为了放松和开黑。",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "放松",
+                    "开黑"
+                ],
+                "quote_range": [
+                    [
+                        4,
+                        6
+                    ],
+                    [
+                        7,
+                        9
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "主要是休闲放松，享受策略搭配的乐趣，偶尔和朋友开黑上分也挺有意思。",
+                "code_name": [
+                    "休闲放松",
+                    "游戏乐趣",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "主要是休闲放松",
+                    "享受策略搭配的乐趣",
+                    "偶尔和朋友开黑"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        8
+                    ],
+                    [
+                        9,
+                        18
+                    ],
+                    [
+                        19,
+                        27
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "作为大学生上水课必备的游戏，上手很简单也很方便，只需要动一根手指头就可以操作非常休闲，一把一节课，三把就下课了，特别休闲，然后朋友也都玩，晚上睡觉前可以和室友一起开黑打，很娱乐的项目/",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "非常休闲",
+                    "和室友一起开黑打"
+                ],
+                "quote_range": [
+                    [
+                        38,
+                        42
+                    ],
+                    [
+                        73,
+                        80
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "对我来说，金铲铲是大学生活的一部分，上课无聊时玩一把特别解压。操作简单，只需要动动手指，非常休闲。晚上睡觉前还能和室友开黑，既娱乐又增进感情。",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "特别解压",
+                    "和室友开黑"
+                ],
+                "quote_range": [
+                    [
+                        24,
+                        28
+                    ],
+                    [
+                        58,
+                        63
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "对我来说金铲铲更像是一个社交平台。通过游戏认识了很多志同道合的朋友，我们经常在群里讨论阵容，分享吃鸡截图，这种互动比游戏本身更有趣。",
+                "code_name": [
+                    "社交互动",
+                    "竞技挑战"
+                ],
+                "supporting_quote": [
+                    "社交平台",
+                    "分享吃鸡截图"
+                ],
+                "quote_range": [
+                    [
+                        8,
+                        12
+                    ],
+                    [
+                        39,
+                        45
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "休闲娱乐为主，有时候也与朋友一起玩。",
+                "code_name": [
+                    "休闲放松",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "休闲娱乐为主",
+                    "与朋友一起玩"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        11,
+                        17
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "休闲放松",
+                "code_definition": "以放松心情为主要目的"
+            },
+            {
+                "code_name": "社交互动",
+                "code_definition": "以社交为主要目的"
+            },
+            {
+                "code_name": "竞技挑战",
+                "code_definition": "以竞技或挑战为主要目的"
+            },
+            {
+                "code_name": "游戏乐趣",
+                "code_definition": "享受游戏本身的乐趣"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "游戏动机",
+                "theme_definition": "玩家玩游戏的主要目的和驱动力",
+                "included_initial_codes": [
+                    "休闲放松",
+                    "社交互动"
+                ]
+            },
+            {
+                "theme_name": "游戏体验",
+                "theme_definition": "玩家从游戏中获得的核心体验",
+                "included_initial_codes": [
+                    "竞技挑战",
+                    "游戏乐趣"
+                ]
+            }
+        ]
+    }
+]

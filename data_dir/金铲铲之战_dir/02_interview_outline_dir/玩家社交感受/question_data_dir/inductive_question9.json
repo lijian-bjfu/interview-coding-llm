@@ -1,0 +1,422 @@
+[
+    {
+        "question_text": "能说一下尔在金铲铲中与其他玩家互动时遇到过特别糟心的情况吗?",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "连续五局被同一套主流阵容碾压，气得摔手机下线追剧，半天不想碰游戏",
+                "code_name": [
+                    "挫败体验"
+                ],
+                "supporting_quote": [
+                    "气得摔手机下线追剧"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "最糟心的是遇到恶意嘲讽的玩家。比如有次我尝试新阵容连败时，对手全程用表情刷屏'弱爆了'，甚至在公屏打字'人机都比你强'。这种刻意羞辱新手的行爲完全破坏了游戏乐趣。",
+                "code_name": [
+                    "恶意行为"
+                ],
+                "supporting_quote": [
+                    "对手全程用表情刷屏'弱爆了'"
+                ],
+                "quote_range": [
+                    [
+                        30,
+                        45
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "曾因使用法师阵容吃鸡，被败方私信辱骂'女生只配玩无脑阵容'，举报后未收到处理反馈",
+                "code_name": [
+                    "恶意行为",
+                    "举报无效"
+                ],
+                "supporting_quote": [
+                    "被败方私信辱骂",
+                    "举报后未收到处理反馈"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        30
+                    ],
+                    [
+                        30,
+                        45
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "上月连续三局遇到脚本玩家自动操作，破坏公平性导致连败，挫败感强烈",
+                "code_name": [
+                    "游戏失衡"
+                ],
+                "supporting_quote": [
+                    "遇到脚本玩家自动操作"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        20
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "连遇三局挂机脚本导致掉段，举报后系统仅扣对方4分信誉分，惩罚力度过轻",
+                "code_name": [
+                    "游戏失衡",
+                    "举报无效"
+                ],
+                "supporting_quote": [
+                    "连遇三局挂机脚本",
+                    "举报后系统仅扣对方4分信誉分"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        10
+                    ],
+                    [
+                        15,
+                        30
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "开发出S级套路后被主播抄袭未署名，弹幕反诬我'偷师'，维权无门被迫弃用该阵容",
+                "code_name": [
+                    "游戏失衡",
+                    "举报无效"
+                ],
+                "supporting_quote": [
+                    "被主播抄袭未署名",
+                    "维权无门被迫弃用"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        20
+                    ],
+                    [
+                        30,
+                        40
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "连续三局被同一套主流阵容血虐，气得直接下线追剧",
+                "code_name": [
+                    "挫败体验"
+                ],
+                "supporting_quote": [
+                    "气得直接下线追剧"
+                ],
+                "quote_range": [
+                    [
+                        20,
+                        30
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "连败掉分吧",
+                "code_name": [
+                    "挫败体验"
+                ],
+                "supporting_quote": [
+                    "连败掉分"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        4
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "有一次遇到有人在公屏一直骂人，原因是他自己阵容没成型，就怪其他玩家卡他牌，还说一些很难听的话，影响了大家的游戏心情。",
+                "code_name": [
+                    "恶意行为"
+                ],
+                "supporting_quote": [
+                    "在公屏一直骂人"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        20
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "不多吧 基本上是被卡牌 没有出现过比较恶意的事情",
+                "code_name": [
+                    "游戏失衡"
+                ],
+                "supporting_quote": [
+                    "基本上是被卡牌"
+                ],
+                "quote_range": [
+                    [
+                        5,
+                        15
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "卡牌怎么说怎么求也不放出来，还要去嘲讽最后一直说让我点了吧点了吧的人",
+                "code_name": [
+                    "恶意行为"
+                ],
+                "supporting_quote": [
+                    "还要去嘲讽"
+                ],
+                "quote_range": [
+                    [
+                        20,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "遇到一直发'打得不错'嘲讽，我没凑出阵容他就一直发，感觉被针对，挺烦的。",
+                "code_name": [
+                    "恶意行为"
+                ],
+                "supporting_quote": [
+                    "一直发'打得不错'嘲讽"
+                ],
+                "quote_range": [
+                    [
+                        5,
+                        15
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "暂无太糟心事。",
+                "code_name": [],
+                "supporting_quote": [],
+                "quote_range": [],
+                "pairs": []
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "遇到过，快赢了对手疯狂发'弱爆了'表情刷屏，或者队友（双人模式）一言不合就挂机/开送，特别搞心态。",
+                "code_name": [
+                    "恶意行为",
+                    "挫败体验"
+                ],
+                "supporting_quote": [
+                    "疯狂发'弱爆了'表情刷屏",
+                    "特别搞心态"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        25
+                    ],
+                    [
+                        40,
+                        45
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "可能很少吧，就是会有玩家恶意空城断你连败会很难受，或者抢你装备，或者就是最后求其他玩家别卡牌让自己爽一下也没有回应，或者就是刚凑出来特别好的三星五费或者大羁绊对面就投降了不让自己爽。",
+                "code_name": [
+                    "恶意行为",
+                    "游戏失衡"
+                ],
+                "supporting_quote": [
+                    "玩家恶意空城断你连败",
+                    "抢你装备"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        25
+                    ],
+                    [
+                        30,
+                        35
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "最糟心的是遇到恶意断连败的玩家，或者抢装备的。好不容易运营一整局，最后追出三星五费卡，结果对手直接投降，连爽的机会都没有，特别影响游戏体验。",
+                "code_name": [
+                    "恶意行为",
+                    "挫败体验"
+                ],
+                "supporting_quote": [
+                    "遇到恶意断连败的玩家",
+                    "特别影响游戏体验"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        20
+                    ],
+                    [
+                        60,
+                        70
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "最烦的是'教学型'玩家，明明自己也不怎么样，非要指点江山。有次我玩赌狗阵容，一个路人一直发'这样不对'，结果最后我吃鸡了他还嘴硬。",
+                "code_name": [
+                    "恶意行为"
+                ],
+                "supporting_quote": [
+                    "一直发'这样不对'"
+                ],
+                "quote_range": [
+                    [
+                        40,
+                        45
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "就是有些人前期他赌错了，导致前期没运营好，他就想直接投降了，但是再投降之前还要恶意断一下别人的连败之类的。",
+                "code_name": [
+                    "恶意行为"
+                ],
+                "supporting_quote": [
+                    "恶意断一下别人的连败"
+                ],
+                "quote_range": [
+                    [
+                        40,
+                        50
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "恶意行为",
+                "code_definition": "玩家遭遇的恶意游戏行为"
+            },
+            {
+                "code_name": "游戏失衡",
+                "code_definition": "游戏机制或公平性问题"
+            },
+            {
+                "code_name": "挫败体验",
+                "code_definition": "游戏中的负面情绪体验"
+            },
+            {
+                "code_name": "举报无效",
+                "code_definition": "举报系统效果不佳"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "玩家冲突",
+                "theme_definition": "玩家之间的恶意互动行为",
+                "included_initial_codes": [
+                    "恶意行为"
+                ]
+            },
+            {
+                "theme_name": "游戏公平",
+                "theme_definition": "游戏机制和系统管理问题",
+                "included_initial_codes": [
+                    "游戏失衡",
+                    "举报无效"
+                ]
+            },
+            {
+                "theme_name": "负面体验",
+                "theme_definition": "游戏带来的负面情绪",
+                "included_initial_codes": [
+                    "挫败体验"
+                ]
+            }
+        ]
+    }
+]

@@ -1,5 +1,2473 @@
 [
   {
+    "question_text": "金铲铲的消戏时长(玩多久了、玩频率(每天)、每次玩几局)",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "工作日下班后玩2-3局约40分钟，周末偶尔陪朋友组队1-2小时，赛季总对局量约150场，主要利用碎片时间放松",
+        "code_name": [
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段",
+          "游戏动机"
+        ],
+        "supporting_quote": [
+          "工作日下班后玩2-3局约40分钟",
+          "周末偶尔陪朋友组队1-2小时",
+          "工作日下班后",
+          "主要利用碎片时间放松"
+        ],
+        "quote_range": [
+          [
+            0,
+            15
+          ],
+          [
+            16,
+            30
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            46,
+            56
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "玩了半年，每天都玩，每次打个两到三局。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "玩了半年",
+          "每天都玩",
+          "每次打个两到三局"
+        ],
+        "quote_range": [
+          [
+            0,
+            4
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            17
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "从去年12月开始接触游戏，平均每天下班后玩1小时约2局，周末会增加到3局，目前总对局量约360场",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段"
+        ],
+        "supporting_quote": [
+          "从去年12月开始接触游戏",
+          "平均每天下班后玩1小时约2局",
+          "周末会增加到3局",
+          "每天下班后"
+        ],
+        "quote_range": [
+          [
+            0,
+            11
+          ],
+          [
+            12,
+            27
+          ],
+          [
+            28,
+            35
+          ],
+          [
+            16,
+            20
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "作为宿舍日常活动，我们每晚固定开黑约2小时，平均完成3-4局游戏，赛季总量超600场，常在晚间10点后活跃以避开课程冲突",
+        "code_name": [
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段",
+          "游戏动机"
+        ],
+        "supporting_quote": [
+          "每晚固定开黑约2小时",
+          "平均完成3-4局游戏",
+          "晚间10点后活跃",
+          "作为宿舍日常活动"
+        ],
+        "quote_range": [
+          [
+            10,
+            19
+          ],
+          [
+            20,
+            29
+          ],
+          [
+            40,
+            47
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "工作日通勤玩2局（约40分钟），午休加1局（20分钟），日均1小时；周末陪家人基本不玩，赛季总对局约450场",
+        "code_name": [
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段",
+          "游戏动机"
+        ],
+        "supporting_quote": [
+          "日均1小时",
+          "工作日通勤玩2局",
+          "午休加1局",
+          "周末陪家人基本不玩"
+        ],
+        "quote_range": [
+          [
+            27,
+            31
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            10,
+            16
+          ],
+          [
+            32,
+            42
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "日均投入3小时以上专注阵容测试，夜间22:00-01:00为黄金研究时段，赛季总对局量突破800场",
+        "code_name": [
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段"
+        ],
+        "supporting_quote": [
+          "日均投入3小时以上",
+          "赛季总对局量突破800场",
+          "夜间22:00-01:00"
+        ],
+        "quote_range": [
+          [
+            0,
+            9
+          ],
+          [
+            35,
+            45
+          ],
+          [
+            17,
+            28
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "工作日下班后玩3-4局（约1小时），周末偶尔陪朋友组队，赛季总对局约200场",
+        "code_name": [
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段"
+        ],
+        "supporting_quote": [
+          "工作日下班后玩3-4局",
+          "约1小时",
+          "工作日下班后"
+        ],
+        "quote_range": [
+          [
+            0,
+            11
+          ],
+          [
+            12,
+            16
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "午休40分钟+放学躲房间玩1小时，周末能肝3小时",
+        "code_name": [
+          "游戏频率",
+          "游戏时段"
+        ],
+        "supporting_quote": [
+          "午休40分钟+放学躲房间玩1小时",
+          "周末能肝3小时"
+        ],
+        "quote_range": [
+          [
+            0,
+            17
+          ],
+          [
+            18,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "我玩金铲铲大概有一年了，平时工作日每天会玩1 - 2小时，大概玩3 - 4局，周末时间会多一些，每天能玩3 - 4小时，玩6 - 8局左右。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "玩金铲铲大概有一年了",
+          "平时工作日每天会玩1 - 2小时",
+          "大概玩3 - 4局"
+        ],
+        "quote_range": [
+          [
+            2,
+            11
+          ],
+          [
+            12,
+            25
+          ],
+          [
+            26,
+            34
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "两年 有时候每天玩 最近玩的少 每次5局左右",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "两年",
+          "有时候每天玩",
+          "每次5局左右"
+        ],
+        "quote_range": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            17,
+            23
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "玩了大概 1 年多 频率非常高，可以说是和上课时间成正比，一次至少得三局四局的，下节课依然是这样",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "玩了大概 1 年多",
+          "频率非常高",
+          "一次至少得三局四局的"
+        ],
+        "quote_range": [
+          [
+            0,
+            8
+          ],
+          [
+            9,
+            14
+          ],
+          [
+            30,
+            39
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "玩了1年左右，每天玩1-2次，每次2-3局（周末会多些）。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "玩了1年左右",
+          "每天玩1-2次",
+          "每次2-3局"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            7,
+            14
+          ],
+          [
+            15,
+            21
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "玩3个月，每天1次，每次2-3局。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "玩3个月",
+          "每天1次",
+          "每次2-3局"
+        ],
+        "quote_range": [
+          [
+            0,
+            4
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            10,
+            16
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "玩了一年多，基本每天都玩，下班/下课后打2-4局放松一下。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量",
+          "游戏动机"
+        ],
+        "supporting_quote": [
+          "玩了一年多",
+          "基本每天都玩",
+          "打2-4局",
+          "放松一下"
+        ],
+        "quote_range": [
+          [
+            0,
+            5
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            19,
+            23
+          ],
+          [
+            24,
+            28
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "玩了两年了，很好玩，一开始会每天玩很多，课多的时候每天玩十局都有可能，上水课时候玩，每天都会玩。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段"
+        ],
+        "supporting_quote": [
+          "玩了两年了",
+          "每天都会玩",
+          "每天玩十局",
+          "上水课时候玩"
+        ],
+        "quote_range": [
+          [
+            0,
+            5
+          ],
+          [
+            39,
+            44
+          ],
+          [
+            21,
+            27
+          ],
+          [
+            34,
+            39
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "玩金铲铲已经两年了，这款游戏真的非常吸引我。课多的时候每天能玩十局左右，尤其是上水课时，一节课玩一把，三把就下课了，特别适合打发时间。最近虽然玩得少了，但依然会每天抽空玩几局。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量",
+          "游戏时段",
+          "游戏动机"
+        ],
+        "supporting_quote": [
+          "玩金铲铲已经两年了",
+          "每天能玩十局左右",
+          "一节课玩一把",
+          "上水课时",
+          "特别适合打发时间"
+        ],
+        "quote_range": [
+          [
+            0,
+            9
+          ],
+          [
+            25,
+            34
+          ],
+          [
+            47,
+            52
+          ],
+          [
+            38,
+            42
+          ],
+          [
+            62,
+            68
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3",
+          "4-4",
+          "5-5"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "从S1赛季开始玩到现在，已经快3年了。虽然中间有过弃坑期，但每次版本更新都会回坑。现在每天固定玩3-5局，周末可能玩到10局以上。",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "从S1赛季开始玩到现在，已经快3年了",
+          "现在每天固定玩3-5局",
+          "周末可能玩到10局以上"
+        ],
+        "quote_range": [
+          [
+            0,
+            15
+          ],
+          [
+            37,
+            47
+          ],
+          [
+            48,
+            57
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "玩了两年了，基本每天都会玩，每天两把左右",
+        "code_name": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ],
+        "supporting_quote": [
+          "玩了两年了",
+          "基本每天都会玩",
+          "每天两把左右"
+        ],
+        "quote_range": [
+          [
+            0,
+            5
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            14,
+            20
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "游戏时长",
+        "code_definition": "玩家持续游戏的时间长度"
+      },
+      {
+        "code_name": "游戏频率",
+        "code_definition": "玩家玩游戏的频次"
+      },
+      {
+        "code_name": "单次游戏量",
+        "code_definition": "每次游戏的对局数量"
+      },
+      {
+        "code_name": "游戏时段",
+        "code_definition": "玩家偏好的游戏时间"
+      },
+      {
+        "code_name": "游戏动机",
+        "code_definition": "玩家玩游戏的目的"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "游戏习惯",
+        "theme_definition": "玩家的游戏行为模式特征",
+        "included_initial_codes": [
+          "游戏时长",
+          "游戏频率",
+          "单次游戏量"
+        ]
+      },
+      {
+        "theme_name": "时间管理",
+        "theme_definition": "玩家如何安排游戏时间及原因",
+        "included_initial_codes": [
+          "游戏时段",
+          "游戏动机"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "你玩过MOBA类游戏吗(如LOL、王者荣耀)?",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "尝试过《王者荣耀》但最高只到白金段位，手速跟不上高强度操作，更偏好策略类游戏的慢节奏思考空间",
+        "code_name": [
+          "偏好策略游戏",
+          "操作压力大"
+        ],
+        "supporting_quote": [
+          "更偏好策略类游戏的慢节奏思考空间",
+          "手速跟不上高强度操作"
+        ],
+        "quote_range": [
+          [
+            30,
+            45
+          ],
+          [
+            15,
+            29
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "玩过，王者荣耀和LOL都玩过。",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "玩过LOL但更喜欢金铲铲的策略性。",
+        "code_name": [
+          "偏好策略游戏"
+        ],
+        "supporting_quote": [
+          "更喜欢金铲铲的策略性"
+        ],
+        "quote_range": [
+          [
+            8,
+            19
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "从未接触过LOL或王者荣耀等MOBA游戏，因手速不足无法适应操作要求，更适合策略深度高的自走棋类项目",
+        "code_name": [
+          "偏好策略游戏",
+          "操作压力大"
+        ],
+        "supporting_quote": [
+          "更适合策略深度高的自走棋类项目",
+          "因手速不足无法适应操作要求"
+        ],
+        "quote_range": [
+          [
+            30,
+            45
+          ],
+          [
+            15,
+            29
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "十年前短暂玩过DOTA但手速跟不上，现专注策略型游戏，操作压力更小且适合碎片化时间",
+        "code_name": [
+          "偏好策略游戏",
+          "操作压力大"
+        ],
+        "supporting_quote": [
+          "现专注策略型游戏，操作压力更小且适合碎片化时间",
+          "手速跟不上"
+        ],
+        "quote_range": [
+          [
+            20,
+            45
+          ],
+          [
+            10,
+            19
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "曾为《DOTA2》超凡分段玩家，但因厌恶团队甩锅文化转战策略游戏，享受独立决策掌控感",
+        "code_name": [
+          "偏好策略游戏",
+          "团队文化厌恶"
+        ],
+        "supporting_quote": [
+          "转战策略游戏，享受独立决策掌控感",
+          "厌恶团队甩锅文化"
+        ],
+        "quote_range": [
+          [
+            25,
+            45
+          ],
+          [
+            15,
+            24
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "玩过《王者荣耀》但止步钻石，手速跟不上竞技节奏，更喜欢策略类游戏的思考空间",
+        "code_name": [
+          "偏好策略游戏",
+          "操作压力大"
+        ],
+        "supporting_quote": [
+          "更喜欢策略类游戏的思考空间",
+          "手速跟不上竞技节奏"
+        ],
+        "quote_range": [
+          [
+            30,
+            45
+          ],
+          [
+            15,
+            29
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "王者荣耀卡在星耀上不去，手残总被骂，转玩这个因为输了不用背锅",
+        "code_name": [
+          "操作压力大",
+          "团队文化厌恶"
+        ],
+        "supporting_quote": [
+          "手残总被骂",
+          "转玩这个因为输了不用背锅"
+        ],
+        "quote_range": [
+          [
+            10,
+            19
+          ],
+          [
+            20,
+            35
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "玩过，王者荣耀和LOL都有玩过一段时间。",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "都接触过 英雄联盟玩的多 王者荣耀比较少",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "接触过，英雄联盟和王者荣耀都接触过，英雄联盟接触的时间最长从小学一直玩到了现在已经大学了",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "玩过王者荣耀",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "玩过王者荣耀。",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "玩过，王者荣耀玩了三年多，现在玩得少了，主要玩金铲铲。",
+        "code_name": [
+          "偏好策略游戏"
+        ],
+        "supporting_quote": [
+          "主要玩金铲铲"
+        ],
+        "quote_range": [
+          [
+            25,
+            35
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "玩过，lol没玩过，王者荣耀太火了玩过，小学就开始玩了，断断续续玩了好多年了，最近半年玩的少，一般和好朋友一起开黑玩。",
+        "code_name": [
+          "社交游戏体验"
+        ],
+        "supporting_quote": [
+          "一般和好朋友一起开黑玩"
+        ],
+        "quote_range": [
+          [
+            60,
+            75
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "玩过《王者荣耀》，从小学就开始断断续续地玩，最近半年玩得比较少，一般只和朋友开黑。LOL没玩过，感觉金铲铲更轻松，适合休闲娱乐。",
+        "code_name": [
+          "休闲娱乐偏好",
+          "社交游戏体验"
+        ],
+        "supporting_quote": [
+          "感觉金铲铲更轻松，适合休闲娱乐",
+          "一般只和朋友开黑"
+        ],
+        "quote_range": [
+          [
+            60,
+            80
+          ],
+          [
+            40,
+            55
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "尝试过王者荣耀，但实在受不了那种紧张感。金铲铲这种回合制的节奏更适合我，可以边追剧边玩，完全不影响操作。",
+        "code_name": [
+          "偏好策略游戏",
+          "休闲娱乐偏好"
+        ],
+        "supporting_quote": [
+          "金铲铲这种回合制的节奏更适合我",
+          "可以边追剧边玩，完全不影响操作"
+        ],
+        "quote_range": [
+          [
+            30,
+            50
+          ],
+          [
+            50,
+            70
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "玩过",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "偏好策略游戏",
+        "code_definition": "玩家更倾向于选择策略类游戏"
+      },
+      {
+        "code_name": "操作压力大",
+        "code_definition": "玩家因手速或操作压力放弃MOBA游戏"
+      },
+      {
+        "code_name": "团队文化厌恶",
+        "code_definition": "玩家因团队负面文化转战其他游戏"
+      },
+      {
+        "code_name": "休闲娱乐偏好",
+        "code_definition": "玩家偏好轻松、休闲的游戏方式"
+      },
+      {
+        "code_name": "社交游戏体验",
+        "code_definition": "玩家因社交需求玩MOBA游戏"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "游戏类型偏好",
+        "theme_definition": "玩家更倾向于选择策略类或休闲类游戏",
+        "included_initial_codes": [
+          "偏好策略游戏",
+          "休闲娱乐偏好"
+        ]
+      },
+      {
+        "theme_name": "MOBA游戏挑战",
+        "theme_definition": "玩家因操作压力或团队负面文化放弃MOBA游戏",
+        "included_initial_codes": [
+          "操作压力大",
+          "团队文化厌恶"
+        ]
+      },
+      {
+        "theme_name": "社交需求",
+        "theme_definition": "玩家因社交需求参与MOBA游戏",
+        "included_initial_codes": [
+          "社交游戏体验"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "金铲铲的游戏等级",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "白银分段徘徊（如白银II-III），胜负随缘，偶尔看攻略但懒得练习，排位赛只为混奖励，三十级",
+        "code_name": [
+          "低竞技投入"
+        ],
+        "supporting_quote": [
+          "白银分段徘徊（如白银II-III），胜负随缘，偶尔看攻略但懒得练习，排位赛只为混奖励"
+        ],
+        "quote_range": [
+          [
+            0,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "三十级。",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "三十级",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "目前稳定在钻石II分段，与室友组队冲刺时最高达到钻石I，三十级",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "稳定黄金III段位，刻意控制不上分以避免竞技压力，专注尝试趣味阵容组合，三十级",
+        "code_name": [
+          "低竞技投入",
+          "策略性控分"
+        ],
+        "supporting_quote": [
+          "稳定黄金III段位，刻意控制不上分以避免竞技压力",
+          "专注尝试趣味阵容组合"
+        ],
+        "quote_range": [
+          [
+            0,
+            25
+          ],
+          [
+            25,
+            38
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "刻意维持在钻石IV分段，此段位玩家既有基础理解又易被冷门阵容突袭，三十级",
+        "code_name": [
+          "策略性控分"
+        ],
+        "supporting_quote": [
+          "刻意维持在钻石IV分段，此段位玩家既有基础理解又易被冷门阵容突袭"
+        ],
+        "quote_range": [
+          [
+            0,
+            38
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "白银I到黄金IV反复横跳，输赢随缘，偶尔研究攻略但懒得练习",
+        "code_name": [
+          "低竞技投入"
+        ],
+        "supporting_quote": [
+          "白银I到黄金IV反复横跳，输赢随缘，偶尔研究攻略但懒得练习"
+        ],
+        "quote_range": [
+          [
+            0,
+            35
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "白银III，同学里算中等，但班上学霸都钻石了不敢说真实段位",
+        "code_name": [
+          "低竞技投入",
+          "段位焦虑"
+        ],
+        "supporting_quote": [
+          "白银III，同学里算中等",
+          "班上学霸都钻石了不敢说真实段位"
+        ],
+        "quote_range": [
+          [
+            0,
+            12
+          ],
+          [
+            12,
+            29
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "目前游戏等级是铂金段位，还在努力往上冲分。",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "100级",
+        "code_name": [
+          "高游戏投入"
+        ],
+        "supporting_quote": [
+          "100级"
+        ],
+        "quote_range": [
+          [
+            0,
+            4
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "100多级了，因为上的水课实在是太多了，每次一上就要开始玩，一玩又好几局，所以接触的时间虽然不多但是等级还是不低",
+        "code_name": [
+          "高游戏投入"
+        ],
+        "supporting_quote": [
+          "100多级了，因为上的水课实在是太多了，每次一上就要开始玩，一玩又好几局"
+        ],
+        "quote_range": [
+          [
+            0,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "四十几级",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "30级。",
+        "code_name": [
+          "低竞技投入"
+        ],
+        "supporting_quote": [
+          "30级"
+        ],
+        "quote_range": [
+          [
+            0,
+            3
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "目前是钻石段位，感觉上大师有点难，需要更多时间和运气。",
+        "code_name": [
+          "策略性控分",
+          "段位焦虑"
+        ],
+        "supporting_quote": [
+          "感觉上大师有点难，需要更多时间和运气"
+        ],
+        "quote_range": [
+          [
+            12,
+            29
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-1"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "100多吧，大概玩了800局了，需要的时间还挺长的。",
+        "code_name": [
+          "高游戏投入"
+        ],
+        "supporting_quote": [
+          "100多吧，大概玩了800局了，需要的时间还挺长的"
+        ],
+        "quote_range": [
+          [
+            0,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "目前等级100多，大概玩了800局。升级需要的时间挺长的，但每一局都很有成就感，尤其是看到自己的段位慢慢提升时。",
+        "code_name": [
+          "高游戏投入",
+          "成就驱动"
+        ],
+        "supporting_quote": [
+          "目前等级100多，大概玩了800局。升级需要的时间挺长的",
+          "每一局都很有成就感，尤其是看到自己的段位慢慢提升时"
+        ],
+        "quote_range": [
+          [
+            0,
+            30
+          ],
+          [
+            30,
+            60
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "目前是大师段位，打了将近2000局。感觉上分最关键的还是版本理解，有时候一个阵容玩明白了就能连胜好几把。",
+        "code_name": [
+          "高游戏投入",
+          "成就驱动"
+        ],
+        "supporting_quote": [
+          "打了将近2000局",
+          "感觉上分最关键的还是版本理解，有时候一个阵容玩明白了就能连胜好几把"
+        ],
+        "quote_range": [
+          [
+            12,
+            24
+          ],
+          [
+            24,
+            60
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "100＋",
+        "code_name": [
+          "高游戏投入"
+        ],
+        "supporting_quote": [
+          "100＋"
+        ],
+        "quote_range": [
+          [
+            0,
+            4
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "低竞技投入",
+        "code_definition": "玩家对段位提升投入较少精力"
+      },
+      {
+        "code_name": "策略性控分",
+        "code_definition": "玩家主动控制段位以优化游戏体验"
+      },
+      {
+        "code_name": "高游戏投入",
+        "code_definition": "玩家投入大量时间进行游戏"
+      },
+      {
+        "code_name": "段位焦虑",
+        "code_definition": "玩家对段位差距感到压力"
+      },
+      {
+        "code_name": "成就驱动",
+        "code_definition": "玩家从段位提升中获得成就感"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "游戏投入度",
+        "theme_definition": "反映玩家在时间和精力上的不同投入程度",
+        "included_initial_codes": [
+          "低竞技投入",
+          "高游戏投入"
+        ]
+      },
+      {
+        "theme_name": "段位管理策略",
+        "theme_definition": "玩家对段位的主动管理和心理状态",
+        "included_initial_codes": [
+          "策略性控分",
+          "段位焦虑"
+        ]
+      },
+      {
+        "theme_name": "游戏成就感",
+        "theme_definition": "玩家从段位系统中获得的满足感",
+        "included_initial_codes": [
+          "成就驱动"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "你玩金铲铲的目的是什么(打不出来可提醒，休闲、胜利、开黑等)",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "工作后解压，为的是是和朋友语音聊天；输赢不影响心情，纯粹享受操作角色的过程",
+        "code_name": [
+          "休闲放松",
+          "社交互动",
+          "游戏乐趣"
+        ],
+        "supporting_quote": [
+          "工作后解压",
+          "为的是是和朋友语音聊天",
+          "纯粹享受操作角色的过程"
+        ],
+        "quote_range": [
+          [
+            0,
+            5
+          ],
+          [
+            6,
+            18
+          ],
+          [
+            31,
+            41
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "主要为了和朋友一起开黑，这个游戏玩起来也没有什么竞技压力 ，比较轻松休闲，空闲的时候玩。",
+        "code_name": [
+          "社交互动",
+          "休闲放松"
+        ],
+        "supporting_quote": [
+          "主要为了和朋友一起开黑",
+          "比较轻松休闲"
+        ],
+        "quote_range": [
+          [
+            0,
+            11
+          ],
+          [
+            31,
+            37
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "主要作为减压工具，每晚和闺蜜组队语音游玩，游戏内社交占体验比重较大",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "主要作为减压工具",
+          "每晚和闺蜜组队语音游玩"
+        ],
+        "quote_range": [
+          [
+            0,
+            7
+          ],
+          [
+            8,
+            19
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "主要服务于宿舍社交，也进行个人竞技挑战，验证新阵容可行性",
+        "code_name": [
+          "社交互动",
+          "竞技挑战"
+        ],
+        "supporting_quote": [
+          "主要服务于宿舍社交",
+          "进行个人竞技挑战"
+        ],
+        "quote_range": [
+          [
+            0,
+            9
+          ],
+          [
+            10,
+            18
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "为工作减压，通勤消遣；胜负不重要，关键享受华丽技能特效的视觉放松感",
+        "code_name": [
+          "休闲放松",
+          "游戏乐趣"
+        ],
+        "supporting_quote": [
+          "为工作减压",
+          "享受华丽技能特效的视觉放松感"
+        ],
+        "quote_range": [
+          [
+            0,
+            5
+          ],
+          [
+            20,
+            33
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "验证自研阵容强度，同时享受对手公屏打问号的迷惑反应，胜负远不如战术创新重要",
+        "code_name": [
+          "竞技挑战",
+          "游戏乐趣"
+        ],
+        "supporting_quote": [
+          "验证自研阵容强度",
+          "享受对手公屏打问号的迷惑反应"
+        ],
+        "quote_range": [
+          [
+            0,
+            8
+          ],
+          [
+            9,
+            21
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "纯粹放松心情，享受凑齐三星英雄的成就感，胜负完全不影响情绪",
+        "code_name": [
+          "休闲放松",
+          "游戏乐趣"
+        ],
+        "supporting_quote": [
+          "纯粹放松心情",
+          "享受凑齐三星英雄的成就感"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            7,
+            18
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "缓解学习，月考压力，20%和暗恋女生组队时显摆新皮肤",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "缓解学习，月考压力",
+          "和暗恋女生组队时显摆新皮肤"
+        ],
+        "quote_range": [
+          [
+            0,
+            10
+          ],
+          [
+            14,
+            26
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "主要是为了休闲放松，平时工作学习比较忙，玩金铲铲可以让我在碎片时间里享受游戏乐趣，偶尔也会和朋友开黑，增进彼此感情。",
+        "code_name": [
+          "休闲放松",
+          "社交互动",
+          "游戏乐趣"
+        ],
+        "supporting_quote": [
+          "主要是为了休闲放松",
+          "偶尔也会和朋友开黑",
+          "享受游戏乐趣"
+        ],
+        "quote_range": [
+          [
+            0,
+            9
+          ],
+          [
+            43,
+            52
+          ],
+          [
+            30,
+            36
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "最开始玩是觉得好玩休闲 后来变成开黑陪朋友玩",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "觉得好玩休闲",
+          "开黑陪朋友玩"
+        ],
+        "quote_range": [
+          [
+            7,
+            13
+          ],
+          [
+            18,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "主要目的是为了在上没有什么意义的课的时候来消磨时间的，其次也就是游戏做得不错是真心挺好玩的",
+        "code_name": [
+          "休闲放松",
+          "游戏乐趣"
+        ],
+        "supporting_quote": [
+          "消磨时间的",
+          "游戏做得不错是真心挺好玩的"
+        ],
+        "quote_range": [
+          [
+            15,
+            20
+          ],
+          [
+            28,
+            40
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "主要为了和朋友开黑放松，输赢不太在意，一起聊天搞笑更开心。",
+        "code_name": [
+          "社交互动",
+          "休闲放松"
+        ],
+        "supporting_quote": [
+          "主要为了和朋友开黑",
+          "放松"
+        ],
+        "quote_range": [
+          [
+            0,
+            11
+          ],
+          [
+            12,
+            14
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "主要为了放松和开黑。",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "放松",
+          "开黑"
+        ],
+        "quote_range": [
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "主要是休闲放松，享受策略搭配的乐趣，偶尔和朋友开黑上分也挺有意思。",
+        "code_name": [
+          "休闲放松",
+          "游戏乐趣",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "主要是休闲放松",
+          "享受策略搭配的乐趣",
+          "偶尔和朋友开黑"
+        ],
+        "quote_range": [
+          [
+            0,
+            8
+          ],
+          [
+            9,
+            18
+          ],
+          [
+            19,
+            27
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "作为大学生上水课必备的游戏，上手很简单也很方便，只需要动一根手指头就可以操作非常休闲，一把一节课，三把就下课了，特别休闲，然后朋友也都玩，晚上睡觉前可以和室友一起开黑打，很娱乐的项目/",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "非常休闲",
+          "和室友一起开黑打"
+        ],
+        "quote_range": [
+          [
+            38,
+            42
+          ],
+          [
+            73,
+            80
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "对我来说，金铲铲是大学生活的一部分，上课无聊时玩一把特别解压。操作简单，只需要动动手指，非常休闲。晚上睡觉前还能和室友开黑，既娱乐又增进感情。",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "特别解压",
+          "和室友开黑"
+        ],
+        "quote_range": [
+          [
+            24,
+            28
+          ],
+          [
+            58,
+            63
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "对我来说金铲铲更像是一个社交平台。通过游戏认识了很多志同道合的朋友，我们经常在群里讨论阵容，分享吃鸡截图，这种互动比游戏本身更有趣。",
+        "code_name": [
+          "社交互动",
+          "竞技挑战"
+        ],
+        "supporting_quote": [
+          "社交平台",
+          "分享吃鸡截图"
+        ],
+        "quote_range": [
+          [
+            8,
+            12
+          ],
+          [
+            39,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "休闲娱乐为主，有时候也与朋友一起玩。",
+        "code_name": [
+          "休闲放松",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "休闲娱乐为主",
+          "与朋友一起玩"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            11,
+            17
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "休闲放松",
+        "code_definition": "以放松心情为主要目的"
+      },
+      {
+        "code_name": "社交互动",
+        "code_definition": "以社交为主要目的"
+      },
+      {
+        "code_name": "竞技挑战",
+        "code_definition": "以竞技或挑战为主要目的"
+      },
+      {
+        "code_name": "游戏乐趣",
+        "code_definition": "享受游戏本身的乐趣"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "游戏动机",
+        "theme_definition": "玩家玩游戏的主要目的和驱动力",
+        "included_initial_codes": [
+          "休闲放松",
+          "社交互动"
+        ]
+      },
+      {
+        "theme_name": "游戏体验",
+        "theme_definition": "玩家从游戏中获得的核心体验",
+        "included_initial_codes": [
+          "竞技挑战",
+          "游戏乐趣"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "你在玩金铲铲时，什么时候是最快乐的?",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "用冷门英雄意外carry全场时，队友在公屏刷\"666\"或发点赞表情，瞬间成就感爆棚",
+        "code_name": [
+          "成就满足",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "用冷门英雄意外carry全场时",
+          "队友在公屏刷\"666\"或发点赞表情"
+        ],
+        "quote_range": [
+          [
+            0,
+            12
+          ],
+          [
+            13,
+            29
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "当自己追到三星五费，即这个游戏中的最强卡牌，三星的五费卡，三星是等级，三星需要九张一星的卡合成，五费是指卡牌的价值一张卡需要五个游戏金币也是消耗金币最高的卡牌，当追到三星五费卡牌的时候在游戏中就差不多等于无敌了。",
+        "code_name": [
+          "成就满足"
+        ],
+        "supporting_quote": [
+          "当自己追到三星五费"
+        ],
+        "quote_range": [
+          [
+            0,
+            8
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "最难忘是和闺蜜同一局内双双合成三星五费卡，当时两人在语音里尖叫了半分钟。",
+        "code_name": [
+          "成就满足",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "和闺蜜同一局内双双合成三星五费卡",
+          "两人在语音里尖叫了半分钟"
+        ],
+        "quote_range": [
+          [
+            4,
+            19
+          ],
+          [
+            20,
+            31
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "最难忘用冷门\"赌约德尔\"阵容逆袭主流套路时，全宿舍爆发出集体欢呼，类似推理游戏中协作破案的成就感",
+        "code_name": [
+          "成就满足",
+          "社交互动",
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "用冷门\"赌约德尔\"阵容逆袭主流套路时",
+          "全宿舍爆发出集体欢呼",
+          "用冷门\"赌约德尔\"阵容逆袭主流套路"
+        ],
+        "quote_range": [
+          [
+            4,
+            19
+          ],
+          [
+            20,
+            29
+          ],
+          [
+            4,
+            19
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "上周用三星五费卡极限翻盘时，在办公室忍不住鼓掌，同事误以为我中彩票了",
+        "code_name": [
+          "成就满足"
+        ],
+        "supporting_quote": [
+          "用三星五费卡极限翻盘时"
+        ],
+        "quote_range": [
+          [
+            3,
+            13
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "用全一费卡阵容逆袭主流九五体系时，对手赛后加好友追问套路细节，成就感碾压上分",
+        "code_name": [
+          "成就满足",
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "用全一费卡阵容逆袭主流九五体系时",
+          "对手赛后加好友追问套路细节"
+        ],
+        "quote_range": [
+          [
+            0,
+            14
+          ],
+          [
+            15,
+            27
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "用冷门阵容意外吃鸡时，朋友在语音里大喊这都能赢",
+        "code_name": [
+          "成就满足",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "用冷门阵容意外吃鸡时",
+          "朋友在语音里大喊这都能赢"
+        ],
+        "quote_range": [
+          [
+            0,
+            10
+          ],
+          [
+            11,
+            22
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "用省两周零花钱买的限定皮肤carry全场",
+        "code_name": [
+          "视觉享受"
+        ],
+        "supporting_quote": [
+          "用限定皮肤carry全场"
+        ],
+        "quote_range": [
+          [
+            10,
+            19
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "当自己精心运营的阵容成型，一路连胜最终吃鸡的时候最快乐，那种成就感很棒。还有就是和朋友一起开黑，互相调侃、交流阵容思路，即使没赢也觉得很开心。",
+        "code_name": [
+          "成就满足",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "精心运营的阵容成型，一路连胜最终吃鸡",
+          "和朋友一起开黑，互相调侃、交流阵容思路"
+        ],
+        "quote_range": [
+          [
+            3,
+            20
+          ],
+          [
+            34,
+            53
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "大多数是前四名可以拿到分的时候 再就是玩新研究的套路 哪怕不能打过所有对手 也觉得有趣",
+        "code_name": [
+          "成就满足",
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "前四名可以拿到分的时候",
+          "玩新研究的套路"
+        ],
+        "quote_range": [
+          [
+            4,
+            14
+          ],
+          [
+            18,
+            26
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "玩经济型羁绊成型的时候最快乐，比如九皮尔特沃夫，十心之钢，十福星这些高风险高回报的羁绊",
+        "code_name": [
+          "成就满足",
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "玩经济型羁绊成型的时候最快乐",
+          "九皮尔特沃夫，十心之钢，十福星这些高风险高回报的羁绊"
+        ],
+        "quote_range": [
+          [
+            0,
+            11
+          ],
+          [
+            16,
+            39
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "最开心是和朋友凑成三星五费卡，或者逆风翻盘",
+        "code_name": [
+          "成就满足",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "和朋友凑成三星五费卡",
+          "逆风翻盘"
+        ],
+        "quote_range": [
+          [
+            5,
+            16
+          ],
+          [
+            19,
+            23
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "凑出三星橙卡/和朋友互怼时最开心。",
+        "code_name": [
+          "成就满足",
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "凑出三星橙卡",
+          "和朋友互怼时"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            7,
+            13
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "最快乐是D到自己想要的阵容关键卡，或者用冷门阵容逆袭吃鸡，成就感满满！",
+        "code_name": [
+          "成就满足",
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "D到自己想要的阵容关键卡",
+          "用冷门阵容逆袭吃鸡"
+        ],
+        "quote_range": [
+          [
+            6,
+            17
+          ],
+          [
+            22,
+            31
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "吃鸡的时候，就是拿第一名，或者合成出三星五费很爽，或者就是凑齐了大羁绊，比如十福星、十心之刚等，可以特别爽。或者和室友一起开黑时候，力克千钧打败他们吃鸡会很有成就感。",
+        "code_name": [
+          "成就满足",
+          "社交互动",
+          "视觉享受"
+        ],
+        "supporting_quote": [
+          "合成出三星五费很爽",
+          "和室友一起开黑",
+          "凑齐了大羁绊，比如十福星、十心之刚"
+        ],
+        "quote_range": [
+          [
+            17,
+            26
+          ],
+          [
+            56,
+            62
+          ],
+          [
+            35,
+            50
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "最快乐的莫过于吃鸡的时候，尤其是用冷门阵容逆袭，或者合成三星五费卡，那种成就感无与伦比。和室友一起开黑打败他们吃鸡，更是爽上加爽！",
+        "code_name": [
+          "成就满足",
+          "社交互动",
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "用冷门阵容逆袭",
+          "和室友一起开黑",
+          "合成三星五费卡"
+        ],
+        "quote_range": [
+          [
+            18,
+            26
+          ],
+          [
+            42,
+            48
+          ],
+          [
+            27,
+            36
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "不是吃鸡的时候，而是开发出新套路的时候。比如用冷门阵容逆袭，或者在测试服尝试各种奇葩组合，这种探索的乐趣最吸引我。",
+        "code_name": [
+          "策略创新"
+        ],
+        "supporting_quote": [
+          "开发出新套路的时候",
+          "用冷门阵容逆袭"
+        ],
+        "quote_range": [
+          [
+            10,
+            17
+          ],
+          [
+            25,
+            33
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "最快乐的时候就是和朋友在宿舍一起玩的时候，一边口嗨一边玩",
+        "code_name": [
+          "社交互动"
+        ],
+        "supporting_quote": [
+          "和朋友在宿舍一起玩"
+        ],
+        "quote_range": [
+          [
+            9,
+            18
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "成就满足",
+        "code_definition": "达成游戏高难度目标时的成就感"
+      },
+      {
+        "code_name": "社交互动",
+        "code_definition": "与朋友共同游戏的快乐"
+      },
+      {
+        "code_name": "策略创新",
+        "code_definition": "尝试新玩法的乐趣"
+      },
+      {
+        "code_name": "视觉享受",
+        "code_definition": "游戏特效带来的愉悦"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "核心游戏体验",
+        "theme_definition": "游戏机制带来的主要乐趣",
+        "included_initial_codes": [
+          "成就满足",
+          "策略创新"
+        ]
+      },
+      {
+        "theme_name": "社交体验",
+        "theme_definition": "多人互动带来的附加乐趣",
+        "included_initial_codes": [
+          "社交互动"
+        ]
+      },
+      {
+        "theme_name": "感官体验",
+        "theme_definition": "视听效果带来的愉悦感",
+        "included_initial_codes": [
+          "视觉享受"
+        ]
+      }
+    ]
+  },
+  {
     "question_text": "你觉得金铲铲游戏中的氛围如何?(如果回答内容较少，可以提醒友好、恶劣、孤立、活跃、冷淡等）",
     "initial_codes": [
       {
@@ -466,6 +2934,1306 @@
         "theme_definition": "不同段位的玩家氛围差异明显，低分段更友好，高分段更紧张",
         "included_initial_codes": [
           "段位差异"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "(如果玩过moba)你觉得相比较moba类游戏，金铲铲的相互冲突或攻击的情况更多/更少?",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "压力小太多——失误不用背锅，没人追着骂，输了顶多自己嘟囔再来一局",
+        "code_name": [
+          "压力减轻",
+          "社交改善"
+        ],
+        "supporting_quote": [
+          "压力小太多",
+          "没人追着骂"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            15,
+            22
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "整体环境更好，比其他moba类游戏都要好，骂人的情况也更少，感觉玩家整体素质都更高。",
+        "code_name": [
+          "压力减轻",
+          "社交改善",
+          "玩家素质"
+        ],
+        "supporting_quote": [
+          "整体环境更好",
+          "骂人的情况也更少",
+          "感觉玩家整体素质都更高"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            20,
+            30
+          ],
+          [
+            35,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2",
+          "3-3"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "性别歧视现象减少，这里更看重阵容理解而非操作手速，女生不会被要求'只玩辅助'",
+        "code_name": [
+          "社交改善",
+          "策略导向"
+        ],
+        "supporting_quote": [
+          "性别歧视现象减少",
+          "更看重阵容理解而非操作手速"
+        ],
+        "quote_range": [
+          [
+            0,
+            8
+          ],
+          [
+            12,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "相比MOBA的实时操作压力，这里更注重大局观和资源计算，对'手残党'更包容，策略深度类似第三人称视角游戏的布局设计",
+        "code_name": [
+          "策略导向"
+        ],
+        "supporting_quote": [
+          "更注重大局观和资源计算"
+        ],
+        "quote_range": [
+          [
+            15,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "社交压力下降——无需背锅，即使失误也不会被队友追着指责半小时",
+        "code_name": [
+          "压力减轻",
+          "社交改善"
+        ],
+        "supporting_quote": [
+          "社交压力下降",
+          "不会被队友追着指责"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            15,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "策略深度堪比解谜游戏，一局博弈如同动态棋局，输赢全凭脑力而非队友配合，所以冲突较少，氛围也好一些",
+        "code_name": [
+          "策略导向"
+        ],
+        "supporting_quote": [
+          "策略深度堪比解谜游戏"
+        ],
+        "quote_range": [
+          [
+            0,
+            10
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "压力小太多——不用背锅，失误了顶多自己嘟囔两句，没人追着骂",
+        "code_name": [
+          "压力减轻",
+          "社交改善"
+        ],
+        "supporting_quote": [
+          "压力小太多",
+          "没人追着骂"
+        ],
+        "quote_range": [
+          [
+            0,
+            6
+          ],
+          [
+            25,
+            32
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "不用记连招！作业太多实在没精力",
+        "code_name": [
+          "压力减轻"
+        ],
+        "supporting_quote": [
+          "不用记连招"
+        ],
+        "quote_range": [
+          [
+            0,
+            5
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "相比MOBA类游戏，金铲铲的相互冲突或攻击的情况更少。MOBA游戏中因为队友配合、操作失误等问题很容易引发争吵，而金铲铲更多是各自运营，虽然也会有卡牌等情况，但直接冲突相对较少。",
+        "code_name": [
+          "压力减轻",
+          "独立游戏"
+        ],
+        "supporting_quote": [
+          "相互冲突或攻击的情况更少",
+          "更多是各自运营"
+        ],
+        "quote_range": [
+          [
+            15,
+            25
+          ],
+          [
+            60,
+            68
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "会更少一些 毕竟不需要有配合",
+        "code_name": [
+          "独立游戏"
+        ],
+        "supporting_quote": [
+          "不需要有配合"
+        ],
+        "quote_range": [
+          [
+            10,
+            16
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "还好，金铲铲的竞技性可能会比 moba 游戏要低，所以攻击性肯定是比不上那些竞技性高的游戏那些游戏你不小心坑了他们一下就跟在现实生活里面坑了他们一把一样让他们应激",
+        "code_name": [
+          "压力减轻"
+        ],
+        "supporting_quote": [
+          "竞技性可能会比 moba 游戏要低"
+        ],
+        "quote_range": [
+          [
+            5,
+            18
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "比王者少，可能因为金铲铲偏策略，大家各玩各的，冲突少一些。",
+        "code_name": [
+          "策略导向",
+          "独立游戏"
+        ],
+        "supporting_quote": [
+          "金铲铲偏策略",
+          "大家各玩各的"
+        ],
+        "quote_range": [
+          [
+            15,
+            22
+          ],
+          [
+            25,
+            33
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "矛盾更少，偏休闲。",
+        "code_name": [
+          "压力减轻"
+        ],
+        "supporting_quote": [
+          "矛盾更少"
+        ],
+        "quote_range": [
+          [
+            0,
+            4
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "比王者荣耀好多了！至少没人能直接追着你打骂，冲突主要是表情嘲讽或公屏打字，频率低不少。",
+        "code_name": [
+          "社交改善"
+        ],
+        "supporting_quote": [
+          "没人能直接追着你打骂"
+        ],
+        "quote_range": [
+          [
+            15,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "更少吧，金铲铲更多是大学生在玩，年龄段更偏高一些，然后moba游戏比如王者荣耀游戏玩家群体更复杂，也有很多的小学生初中生，综合素质方面不如金铲铲高，moba游戏毕竟是五个人团队合作游戏，需要的交流呢更多所以产生的矛盾更多，王者荣耀对抗性更强一些，所以金铲铲相互冲突更少。",
+        "code_name": [
+          "玩家素质",
+          "独立游戏"
+        ],
+        "supporting_quote": [
+          "综合素质方面不如金铲铲高",
+          "金铲铲更多是大学生在玩"
+        ],
+        "quote_range": [
+          [
+            60,
+            70
+          ],
+          [
+            10,
+            20
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "金铲铲的冲突比MOBA少很多，因为玩家群体以大学生为主，素质相对较高。MOBA游戏对抗性强，团队合作要求高，矛盾自然更多，而金铲铲更偏向个人策略，冲突较少。",
+        "code_name": [
+          "玩家素质",
+          "独立游戏"
+        ],
+        "supporting_quote": [
+          "玩家群体以大学生为主，素质相对较高",
+          "更偏向个人策略"
+        ],
+        "quote_range": [
+          [
+            25,
+            40
+          ],
+          [
+            70,
+            78
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "金铲铲的冲突更'优雅'。MOBA是直接对骂，这里是通过卡牌、发表情来'阴阳怪气'，某种程度上更需要'情商'。",
+        "code_name": [
+          "社交改善"
+        ],
+        "supporting_quote": [
+          "冲突更'优雅'"
+        ],
+        "quote_range": [
+          [
+            10,
+            15
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "金铲铲的冲突更少，因为金铲铲大多数还是和自己在玩，交流的途径比较少，冲突也会相应少一些。",
+        "code_name": [
+          "独立游戏"
+        ],
+        "supporting_quote": [
+          "大多数还是和自己在玩"
+        ],
+        "quote_range": [
+          [
+            25,
+            35
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "压力减轻",
+        "code_definition": "游戏压力显著降低"
+      },
+      {
+        "code_name": "策略导向",
+        "code_definition": "游戏更注重策略思考"
+      },
+      {
+        "code_name": "社交改善",
+        "code_definition": "游戏社交环境更好"
+      },
+      {
+        "code_name": "独立游戏",
+        "code_definition": "游戏更侧重个人体验"
+      },
+      {
+        "code_name": "玩家素质",
+        "code_definition": "玩家群体素质更高"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "游戏体验优化",
+        "theme_definition": "游戏带来的压力和社交冲突显著减少",
+        "included_initial_codes": [
+          "压力减轻",
+          "社交改善"
+        ]
+      },
+      {
+        "theme_name": "游戏机制特点",
+        "theme_definition": "游戏更注重策略和个人体验",
+        "included_initial_codes": [
+          "策略导向",
+          "独立游戏"
+        ]
+      },
+      {
+        "theme_name": "玩家群体特征",
+        "theme_definition": "游戏吸引更高素质的玩家群体",
+        "included_initial_codes": [
+          "玩家素质"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "能说一下尔在金铲铲中与其他玩家互动时遇到过特别糟心的情况吗?",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "连续五局被同一套主流阵容碾压，气得摔手机下线追剧，半天不想碰游戏",
+        "code_name": [
+          "挫败体验"
+        ],
+        "supporting_quote": [
+          "气得摔手机下线追剧"
+        ],
+        "quote_range": [
+          [
+            15,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "最糟心的是遇到恶意嘲讽的玩家。比如有次我尝试新阵容连败时，对手全程用表情刷屏'弱爆了'，甚至在公屏打字'人机都比你强'。这种刻意羞辱新手的行爲完全破坏了游戏乐趣。",
+        "code_name": [
+          "恶意行为"
+        ],
+        "supporting_quote": [
+          "对手全程用表情刷屏'弱爆了'"
+        ],
+        "quote_range": [
+          [
+            30,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "曾因使用法师阵容吃鸡，被败方私信辱骂'女生只配玩无脑阵容'，举报后未收到处理反馈",
+        "code_name": [
+          "恶意行为",
+          "举报无效"
+        ],
+        "supporting_quote": [
+          "被败方私信辱骂",
+          "举报后未收到处理反馈"
+        ],
+        "quote_range": [
+          [
+            15,
+            30
+          ],
+          [
+            30,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "上月连续三局遇到脚本玩家自动操作，破坏公平性导致连败，挫败感强烈",
+        "code_name": [
+          "游戏失衡"
+        ],
+        "supporting_quote": [
+          "遇到脚本玩家自动操作"
+        ],
+        "quote_range": [
+          [
+            10,
+            20
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "连遇三局挂机脚本导致掉段，举报后系统仅扣对方4分信誉分，惩罚力度过轻",
+        "code_name": [
+          "游戏失衡",
+          "举报无效"
+        ],
+        "supporting_quote": [
+          "连遇三局挂机脚本",
+          "举报后系统仅扣对方4分信誉分"
+        ],
+        "quote_range": [
+          [
+            0,
+            10
+          ],
+          [
+            15,
+            30
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "开发出S级套路后被主播抄袭未署名，弹幕反诬我'偷师'，维权无门被迫弃用该阵容",
+        "code_name": [
+          "游戏失衡",
+          "举报无效"
+        ],
+        "supporting_quote": [
+          "被主播抄袭未署名",
+          "维权无门被迫弃用"
+        ],
+        "quote_range": [
+          [
+            10,
+            20
+          ],
+          [
+            30,
+            40
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "连续三局被同一套主流阵容血虐，气得直接下线追剧",
+        "code_name": [
+          "挫败体验"
+        ],
+        "supporting_quote": [
+          "气得直接下线追剧"
+        ],
+        "quote_range": [
+          [
+            20,
+            30
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "连败掉分吧",
+        "code_name": [
+          "挫败体验"
+        ],
+        "supporting_quote": [
+          "连败掉分"
+        ],
+        "quote_range": [
+          [
+            0,
+            4
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "有一次遇到有人在公屏一直骂人，原因是他自己阵容没成型，就怪其他玩家卡他牌，还说一些很难听的话，影响了大家的游戏心情。",
+        "code_name": [
+          "恶意行为"
+        ],
+        "supporting_quote": [
+          "在公屏一直骂人"
+        ],
+        "quote_range": [
+          [
+            10,
+            20
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "不多吧 基本上是被卡牌 没有出现过比较恶意的事情",
+        "code_name": [
+          "游戏失衡"
+        ],
+        "supporting_quote": [
+          "基本上是被卡牌"
+        ],
+        "quote_range": [
+          [
+            5,
+            15
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "卡牌怎么说怎么求也不放出来，还要去嘲讽最后一直说让我点了吧点了吧的人",
+        "code_name": [
+          "恶意行为"
+        ],
+        "supporting_quote": [
+          "还要去嘲讽"
+        ],
+        "quote_range": [
+          [
+            20,
+            25
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "遇到一直发'打得不错'嘲讽，我没凑出阵容他就一直发，感觉被针对，挺烦的。",
+        "code_name": [
+          "恶意行为"
+        ],
+        "supporting_quote": [
+          "一直发'打得不错'嘲讽"
+        ],
+        "quote_range": [
+          [
+            5,
+            15
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "暂无太糟心事。",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "遇到过，快赢了对手疯狂发'弱爆了'表情刷屏，或者队友（双人模式）一言不合就挂机/开送，特别搞心态。",
+        "code_name": [
+          "恶意行为",
+          "挫败体验"
+        ],
+        "supporting_quote": [
+          "疯狂发'弱爆了'表情刷屏",
+          "特别搞心态"
+        ],
+        "quote_range": [
+          [
+            15,
+            25
+          ],
+          [
+            40,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "可能很少吧，就是会有玩家恶意空城断你连败会很难受，或者抢你装备，或者就是最后求其他玩家别卡牌让自己爽一下也没有回应，或者就是刚凑出来特别好的三星五费或者大羁绊对面就投降了不让自己爽。",
+        "code_name": [
+          "恶意行为",
+          "游戏失衡"
+        ],
+        "supporting_quote": [
+          "玩家恶意空城断你连败",
+          "抢你装备"
+        ],
+        "quote_range": [
+          [
+            15,
+            25
+          ],
+          [
+            30,
+            35
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "最糟心的是遇到恶意断连败的玩家，或者抢装备的。好不容易运营一整局，最后追出三星五费卡，结果对手直接投降，连爽的机会都没有，特别影响游戏体验。",
+        "code_name": [
+          "恶意行为",
+          "挫败体验"
+        ],
+        "supporting_quote": [
+          "遇到恶意断连败的玩家",
+          "特别影响游戏体验"
+        ],
+        "quote_range": [
+          [
+            10,
+            20
+          ],
+          [
+            60,
+            70
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "最烦的是'教学型'玩家，明明自己也不怎么样，非要指点江山。有次我玩赌狗阵容，一个路人一直发'这样不对'，结果最后我吃鸡了他还嘴硬。",
+        "code_name": [
+          "恶意行为"
+        ],
+        "supporting_quote": [
+          "一直发'这样不对'"
+        ],
+        "quote_range": [
+          [
+            40,
+            45
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "就是有些人前期他赌错了，导致前期没运营好，他就想直接投降了，但是再投降之前还要恶意断一下别人的连败之类的。",
+        "code_name": [
+          "恶意行为"
+        ],
+        "supporting_quote": [
+          "恶意断一下别人的连败"
+        ],
+        "quote_range": [
+          [
+            40,
+            50
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "恶意行为",
+        "code_definition": "玩家遭遇的恶意游戏行为"
+      },
+      {
+        "code_name": "游戏失衡",
+        "code_definition": "游戏机制或公平性问题"
+      },
+      {
+        "code_name": "挫败体验",
+        "code_definition": "游戏中的负面情绪体验"
+      },
+      {
+        "code_name": "举报无效",
+        "code_definition": "举报系统效果不佳"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "玩家冲突",
+        "theme_definition": "玩家之间的恶意互动行为",
+        "included_initial_codes": [
+          "恶意行为"
+        ]
+      },
+      {
+        "theme_name": "游戏公平",
+        "theme_definition": "游戏机制和系统管理问题",
+        "included_initial_codes": [
+          "游戏失衡",
+          "举报无效"
+        ]
+      },
+      {
+        "theme_name": "负面体验",
+        "theme_definition": "游戏带来的负面情绪",
+        "included_initial_codes": [
+          "挫败体验"
+        ]
+      }
+    ]
+  },
+  {
+    "question_text": "能说一下你在金铲铲里遇到过特别暖心的情况吗?",
+    "initial_codes": [
+      {
+        "respondent_id": 1,
+        "original_answer_segment": "卡关时陌生人私信分享简易阵容搭配，还赠送游戏内道具，后来成了固定玩伴",
+        "code_name": [
+          "互助行为",
+          "社交连接"
+        ],
+        "supporting_quote": [
+          "陌生人私信分享简易阵容搭配，还赠送游戏内道具",
+          "后来成了固定玩伴"
+        ],
+        "quote_range": [
+          [
+            0,
+            19
+          ],
+          [
+            20,
+            27
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 2,
+        "original_answer_segment": "有次我凑齐三星五费卡时，对手突然发来\"恭喜\"表情，还主动让棋子站着给我打。最后他发\"享受你的高光时刻\"，这种竞技精神让人感动",
+        "code_name": [
+          "互助行为",
+          "竞技精神"
+        ],
+        "supporting_quote": [
+          "对手突然发来\"恭喜\"表情，还主动让棋子站着给我打",
+          "\"享受你的高光时刻\""
+        ],
+        "quote_range": [
+          [
+            10,
+            30
+          ],
+          [
+            35,
+            44
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 3,
+        "original_answer_segment": "今年3月连败时，陌生对手送了我月卡并留言\"姐妹加油\"，这张月卡现在还没用完",
+        "code_name": [
+          "互助行为",
+          "社交连接"
+        ],
+        "supporting_quote": [
+          "陌生对手送了我月卡并留言\"姐妹加油\"",
+          "这张月卡现在还没用完"
+        ],
+        "quote_range": [
+          [
+            8,
+            24
+          ],
+          [
+            25,
+            34
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 4,
+        "original_answer_segment": "考试周室友主动帮我代打保段位，回归时收到他们准备的\"连胜惊喜\"礼包",
+        "code_name": [
+          "互助行为",
+          "社交连接"
+        ],
+        "supporting_quote": [
+          "室友主动帮我代打保段位",
+          "收到他们准备的\"连胜惊喜\"礼包"
+        ],
+        "quote_range": [
+          [
+            5,
+            15
+          ],
+          [
+            20,
+            33
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 5,
+        "original_answer_segment": "公屏询问装备合成公式，对手暂停倒计时一步步教学，还推荐了新手攻略站",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "对手暂停倒计时一步步教学，还推荐了新手攻略站"
+        ],
+        "quote_range": [
+          [
+            12,
+            31
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 6,
+        "original_answer_segment": "匿名发布阵容攻略获百人留言实测反馈，有玩家专程修改ID\"致敬套路发明者\"",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "有玩家专程修改ID\"致敬套路发明者\""
+        ],
+        "quote_range": [
+          [
+            18,
+            33
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 7,
+        "original_answer_segment": "卡关时陌生人私信分享简易攻略，还送了几套新手适用阵容",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "陌生人私信分享简易攻略，还送了几套新手适用阵容"
+        ],
+        "quote_range": [
+          [
+            0,
+            22
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 8,
+        "original_answer_segment": "无",
+        "code_name": [],
+        "supporting_quote": [],
+        "quote_range": [],
+        "pairs": []
+      },
+      {
+        "respondent_id": 9,
+        "original_answer_segment": "有一回我差一张牌就能三星五费卡了，对面玩家知道后，没有卡我牌，还说让我追出来，最后我成功三星，很感谢他，感觉特别暖心。",
+        "code_name": [
+          "互助行为",
+          "竞技精神"
+        ],
+        "supporting_quote": [
+          "对面玩家知道后，没有卡我牌，还说让我追出来",
+          "让我追出来"
+        ],
+        "quote_range": [
+          [
+            15,
+            35
+          ],
+          [
+            30,
+            35
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 10,
+        "original_answer_segment": "我的牌被卡了 我交流过后让给了我 让我合成了想要的三星",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "让给了我 让我合成了想要的三星"
+        ],
+        "quote_range": [
+          [
+            12,
+            24
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 11,
+        "original_answer_segment": "剩我们两个的时候会主动问我想要什么牌的人，他会给我卖掉让我追出来",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "主动问我想要什么牌的人，他会给我卖掉让我追出来"
+        ],
+        "quote_range": [
+          [
+            8,
+            28
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 12,
+        "original_answer_segment": "有次随机匹配，队友看我缺装备主动卖血让给我，最后一起进前四，他说\"女生优先\"，挺暖心的。",
+        "code_name": [
+          "互助行为",
+          "竞技精神"
+        ],
+        "supporting_quote": [
+          "队友看我缺装备主动卖血让给我",
+          "\"女生优先\""
+        ],
+        "quote_range": [
+          [
+            11,
+            22
+          ],
+          [
+            33,
+            38
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 13,
+        "original_answer_segment": "队友主动让装备，鼓励我翻盘。",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "队友主动让装备，鼓励我翻盘"
+        ],
+        "quote_range": [
+          [
+            0,
+            11
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 14,
+        "original_answer_segment": "有啊，双排时队友看我快没了，主动把关键装备或英雄让给我，或者劣势时互相鼓励\"稳住能翻\"。",
+        "code_name": [
+          "互助行为",
+          "竞技精神"
+        ],
+        "supporting_quote": [
+          "队友看我快没了，主动把关键装备或英雄让给我",
+          "\"稳住能翻\""
+        ],
+        "quote_range": [
+          [
+            9,
+            26
+          ],
+          [
+            37,
+            42
+          ]
+        ],
+        "pairs": [
+          "1-1",
+          "2-2"
+        ]
+      },
+      {
+        "respondent_id": 15,
+        "original_answer_segment": "就是自己特别胡或者运营成功了有了很多条件可以去追更多的三星五费，然后对面不卡五费卡让自己追八皇鼎立。",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "对面不卡五费卡让自己追八皇鼎立"
+        ],
+        "quote_range": [
+          [
+            33,
+            46
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 16,
+        "original_answer_segment": "暖心的时候也不少，比如自己运营特别顺，对手不仅不卡牌，还主动让卡让我追三星五费，这种默契和善意让人很感动。",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "对手不仅不卡牌，还主动让卡让我追三星五费"
+        ],
+        "quote_range": [
+          [
+            20,
+            38
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 17,
+        "original_answer_segment": "有次在测试服遇到个大佬，看我不会玩新版本，特意教我阵容搭配，还送了我几个关键棋子，这种无私的帮助真的很暖心。",
+        "code_name": [
+          "互助行为"
+        ],
+        "supporting_quote": [
+          "特意教我阵容搭配，还送了我几个关键棋子"
+        ],
+        "quote_range": [
+          [
+            16,
+            34
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      },
+      {
+        "respondent_id": 18,
+        "original_answer_segment": "比较暖心的是有时候决赛圈了，我追出三星五费了，我也不去卡他的五费卡了，他最终也追出一个比我更强劲的三星五费，在我以为自己要老二的时候，他直接让鸡投降了",
+        "code_name": [
+          "竞技精神"
+        ],
+        "supporting_quote": [
+          "他直接让鸡投降了"
+        ],
+        "quote_range": [
+          [
+            66,
+            73
+          ]
+        ],
+        "pairs": [
+          "1-1"
+        ]
+      }
+    ],
+    "codes": [
+      {
+        "code_name": "互助行为",
+        "code_definition": "玩家间的主动帮助行为"
+      },
+      {
+        "code_name": "竞技精神",
+        "code_definition": "展现良好竞技风范"
+      },
+      {
+        "code_name": "社交连接",
+        "code_definition": "建立游戏外社交关系"
+      }
+    ],
+    "themes": [
+      {
+        "theme_name": "游戏社区温暖",
+        "theme_definition": "游戏内展现的人性温暖",
+        "included_initial_codes": [
+          "互助行为",
+          "竞技精神"
+        ]
+      },
+      {
+        "theme_name": "社交延伸",
+        "theme_definition": "游戏关系延伸到现实",
+        "included_initial_codes": [
+          "社交连接"
         ]
       }
     ]

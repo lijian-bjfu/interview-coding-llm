@@ -1,0 +1,466 @@
+[
+    {
+        "question_text": "(如果玩过moba)你觉得相比较moba类游戏，金铲铲的相互冲突或攻击的情况更多/更少?",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "压力小太多——失误不用背锅，没人追着骂，输了顶多自己嘟囔再来一局",
+                "code_name": [
+                    "压力减轻",
+                    "社交改善"
+                ],
+                "supporting_quote": [
+                    "压力小太多",
+                    "没人追着骂"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        15,
+                        22
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "整体环境更好，比其他moba类游戏都要好，骂人的情况也更少，感觉玩家整体素质都更高。",
+                "code_name": [
+                    "压力减轻",
+                    "社交改善",
+                    "玩家素质"
+                ],
+                "supporting_quote": [
+                    "整体环境更好",
+                    "骂人的情况也更少",
+                    "感觉玩家整体素质都更高"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        20,
+                        30
+                    ],
+                    [
+                        35,
+                        45
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "性别歧视现象减少，这里更看重阵容理解而非操作手速，女生不会被要求'只玩辅助'",
+                "code_name": [
+                    "社交改善",
+                    "策略导向"
+                ],
+                "supporting_quote": [
+                    "性别歧视现象减少",
+                    "更看重阵容理解而非操作手速"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        8
+                    ],
+                    [
+                        12,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "相比MOBA的实时操作压力，这里更注重大局观和资源计算，对'手残党'更包容，策略深度类似第三人称视角游戏的布局设计",
+                "code_name": [
+                    "策略导向"
+                ],
+                "supporting_quote": [
+                    "更注重大局观和资源计算"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "社交压力下降——无需背锅，即使失误也不会被队友追着指责半小时",
+                "code_name": [
+                    "压力减轻",
+                    "社交改善"
+                ],
+                "supporting_quote": [
+                    "社交压力下降",
+                    "不会被队友追着指责"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        15,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "策略深度堪比解谜游戏，一局博弈如同动态棋局，输赢全凭脑力而非队友配合，所以冲突较少，氛围也好一些",
+                "code_name": [
+                    "策略导向"
+                ],
+                "supporting_quote": [
+                    "策略深度堪比解谜游戏"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        10
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "压力小太多——不用背锅，失误了顶多自己嘟囔两句，没人追着骂",
+                "code_name": [
+                    "压力减轻",
+                    "社交改善"
+                ],
+                "supporting_quote": [
+                    "压力小太多",
+                    "没人追着骂"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        25,
+                        32
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "不用记连招！作业太多实在没精力",
+                "code_name": [
+                    "压力减轻"
+                ],
+                "supporting_quote": [
+                    "不用记连招"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        5
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "相比MOBA类游戏，金铲铲的相互冲突或攻击的情况更少。MOBA游戏中因为队友配合、操作失误等问题很容易引发争吵，而金铲铲更多是各自运营，虽然也会有卡牌等情况，但直接冲突相对较少。",
+                "code_name": [
+                    "压力减轻",
+                    "独立游戏"
+                ],
+                "supporting_quote": [
+                    "相互冲突或攻击的情况更少",
+                    "更多是各自运营"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        25
+                    ],
+                    [
+                        60,
+                        68
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "会更少一些 毕竟不需要有配合",
+                "code_name": [
+                    "独立游戏"
+                ],
+                "supporting_quote": [
+                    "不需要有配合"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        16
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "还好，金铲铲的竞技性可能会比 moba 游戏要低，所以攻击性肯定是比不上那些竞技性高的游戏那些游戏你不小心坑了他们一下就跟在现实生活里面坑了他们一把一样让他们应激",
+                "code_name": [
+                    "压力减轻"
+                ],
+                "supporting_quote": [
+                    "竞技性可能会比 moba 游戏要低"
+                ],
+                "quote_range": [
+                    [
+                        5,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "比王者少，可能因为金铲铲偏策略，大家各玩各的，冲突少一些。",
+                "code_name": [
+                    "策略导向",
+                    "独立游戏"
+                ],
+                "supporting_quote": [
+                    "金铲铲偏策略",
+                    "大家各玩各的"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        22
+                    ],
+                    [
+                        25,
+                        33
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "矛盾更少，偏休闲。",
+                "code_name": [
+                    "压力减轻"
+                ],
+                "supporting_quote": [
+                    "矛盾更少"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        4
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "比王者荣耀好多了！至少没人能直接追着你打骂，冲突主要是表情嘲讽或公屏打字，频率低不少。",
+                "code_name": [
+                    "社交改善"
+                ],
+                "supporting_quote": [
+                    "没人能直接追着你打骂"
+                ],
+                "quote_range": [
+                    [
+                        15,
+                        25
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "更少吧，金铲铲更多是大学生在玩，年龄段更偏高一些，然后moba游戏比如王者荣耀游戏玩家群体更复杂，也有很多的小学生初中生，综合素质方面不如金铲铲高，moba游戏毕竟是五个人团队合作游戏，需要的交流呢更多所以产生的矛盾更多，王者荣耀对抗性更强一些，所以金铲铲相互冲突更少。",
+                "code_name": [
+                    "玩家素质",
+                    "独立游戏"
+                ],
+                "supporting_quote": [
+                    "综合素质方面不如金铲铲高",
+                    "金铲铲更多是大学生在玩"
+                ],
+                "quote_range": [
+                    [
+                        60,
+                        70
+                    ],
+                    [
+                        10,
+                        20
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "金铲铲的冲突比MOBA少很多，因为玩家群体以大学生为主，素质相对较高。MOBA游戏对抗性强，团队合作要求高，矛盾自然更多，而金铲铲更偏向个人策略，冲突较少。",
+                "code_name": [
+                    "玩家素质",
+                    "独立游戏"
+                ],
+                "supporting_quote": [
+                    "玩家群体以大学生为主，素质相对较高",
+                    "更偏向个人策略"
+                ],
+                "quote_range": [
+                    [
+                        25,
+                        40
+                    ],
+                    [
+                        70,
+                        78
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "金铲铲的冲突更'优雅'。MOBA是直接对骂，这里是通过卡牌、发表情来'阴阳怪气'，某种程度上更需要'情商'。",
+                "code_name": [
+                    "社交改善"
+                ],
+                "supporting_quote": [
+                    "冲突更'优雅'"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        15
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "金铲铲的冲突更少，因为金铲铲大多数还是和自己在玩，交流的途径比较少，冲突也会相应少一些。",
+                "code_name": [
+                    "独立游戏"
+                ],
+                "supporting_quote": [
+                    "大多数还是和自己在玩"
+                ],
+                "quote_range": [
+                    [
+                        25,
+                        35
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "压力减轻",
+                "code_definition": "游戏压力显著降低"
+            },
+            {
+                "code_name": "策略导向",
+                "code_definition": "游戏更注重策略思考"
+            },
+            {
+                "code_name": "社交改善",
+                "code_definition": "游戏社交环境更好"
+            },
+            {
+                "code_name": "独立游戏",
+                "code_definition": "游戏更侧重个人体验"
+            },
+            {
+                "code_name": "玩家素质",
+                "code_definition": "玩家群体素质更高"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "游戏体验优化",
+                "theme_definition": "游戏带来的压力和社交冲突显著减少",
+                "included_initial_codes": [
+                    "压力减轻",
+                    "社交改善"
+                ]
+            },
+            {
+                "theme_name": "游戏机制特点",
+                "theme_definition": "游戏更注重策略和个人体验",
+                "included_initial_codes": [
+                    "策略导向",
+                    "独立游戏"
+                ]
+            },
+            {
+                "theme_name": "玩家群体特征",
+                "theme_definition": "游戏吸引更高素质的玩家群体",
+                "included_initial_codes": [
+                    "玩家素质"
+                ]
+            }
+        ]
+    }
+]

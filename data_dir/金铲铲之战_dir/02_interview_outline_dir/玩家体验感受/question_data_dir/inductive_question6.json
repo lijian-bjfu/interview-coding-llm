@@ -1,0 +1,509 @@
+[
+    {
+        "question_text": "你在玩金铲铲时，什么时候是最快乐的?",
+        "initial_codes": [
+            {
+                "respondent_id": 1,
+                "original_answer_segment": "用冷门英雄意外carry全场时，队友在公屏刷\"666\"或发点赞表情，瞬间成就感爆棚",
+                "code_name": [
+                    "成就满足",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "用冷门英雄意外carry全场时",
+                    "队友在公屏刷\"666\"或发点赞表情"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        12
+                    ],
+                    [
+                        13,
+                        29
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 2,
+                "original_answer_segment": "当自己追到三星五费，即这个游戏中的最强卡牌，三星的五费卡，三星是等级，三星需要九张一星的卡合成，五费是指卡牌的价值一张卡需要五个游戏金币也是消耗金币最高的卡牌，当追到三星五费卡牌的时候在游戏中就差不多等于无敌了。",
+                "code_name": [
+                    "成就满足"
+                ],
+                "supporting_quote": [
+                    "当自己追到三星五费"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        8
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 3,
+                "original_answer_segment": "最难忘是和闺蜜同一局内双双合成三星五费卡，当时两人在语音里尖叫了半分钟。",
+                "code_name": [
+                    "成就满足",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "和闺蜜同一局内双双合成三星五费卡",
+                    "两人在语音里尖叫了半分钟"
+                ],
+                "quote_range": [
+                    [
+                        4,
+                        19
+                    ],
+                    [
+                        20,
+                        31
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 4,
+                "original_answer_segment": "最难忘用冷门\"赌约德尔\"阵容逆袭主流套路时，全宿舍爆发出集体欢呼，类似推理游戏中协作破案的成就感",
+                "code_name": [
+                    "成就满足",
+                    "社交互动",
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "用冷门\"赌约德尔\"阵容逆袭主流套路时",
+                    "全宿舍爆发出集体欢呼",
+                    "用冷门\"赌约德尔\"阵容逆袭主流套路"
+                ],
+                "quote_range": [
+                    [
+                        4,
+                        19
+                    ],
+                    [
+                        20,
+                        29
+                    ],
+                    [
+                        4,
+                        19
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 5,
+                "original_answer_segment": "上周用三星五费卡极限翻盘时，在办公室忍不住鼓掌，同事误以为我中彩票了",
+                "code_name": [
+                    "成就满足"
+                ],
+                "supporting_quote": [
+                    "用三星五费卡极限翻盘时"
+                ],
+                "quote_range": [
+                    [
+                        3,
+                        13
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 6,
+                "original_answer_segment": "用全一费卡阵容逆袭主流九五体系时，对手赛后加好友追问套路细节，成就感碾压上分",
+                "code_name": [
+                    "成就满足",
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "用全一费卡阵容逆袭主流九五体系时",
+                    "对手赛后加好友追问套路细节"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        14
+                    ],
+                    [
+                        15,
+                        27
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 7,
+                "original_answer_segment": "用冷门阵容意外吃鸡时，朋友在语音里大喊这都能赢",
+                "code_name": [
+                    "成就满足",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "用冷门阵容意外吃鸡时",
+                    "朋友在语音里大喊这都能赢"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        10
+                    ],
+                    [
+                        11,
+                        22
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 8,
+                "original_answer_segment": "用省两周零花钱买的限定皮肤carry全场",
+                "code_name": [
+                    "视觉享受"
+                ],
+                "supporting_quote": [
+                    "用限定皮肤carry全场"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        19
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            },
+            {
+                "respondent_id": 9,
+                "original_answer_segment": "当自己精心运营的阵容成型，一路连胜最终吃鸡的时候最快乐，那种成就感很棒。还有就是和朋友一起开黑，互相调侃、交流阵容思路，即使没赢也觉得很开心。",
+                "code_name": [
+                    "成就满足",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "精心运营的阵容成型，一路连胜最终吃鸡",
+                    "和朋友一起开黑，互相调侃、交流阵容思路"
+                ],
+                "quote_range": [
+                    [
+                        3,
+                        20
+                    ],
+                    [
+                        34,
+                        53
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 10,
+                "original_answer_segment": "大多数是前四名可以拿到分的时候 再就是玩新研究的套路 哪怕不能打过所有对手 也觉得有趣",
+                "code_name": [
+                    "成就满足",
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "前四名可以拿到分的时候",
+                    "玩新研究的套路"
+                ],
+                "quote_range": [
+                    [
+                        4,
+                        14
+                    ],
+                    [
+                        18,
+                        26
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 11,
+                "original_answer_segment": "玩经济型羁绊成型的时候最快乐，比如九皮尔特沃夫，十心之钢，十福星这些高风险高回报的羁绊",
+                "code_name": [
+                    "成就满足",
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "玩经济型羁绊成型的时候最快乐",
+                    "九皮尔特沃夫，十心之钢，十福星这些高风险高回报的羁绊"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        11
+                    ],
+                    [
+                        16,
+                        39
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 12,
+                "original_answer_segment": "最开心是和朋友凑成三星五费卡，或者逆风翻盘",
+                "code_name": [
+                    "成就满足",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "和朋友凑成三星五费卡",
+                    "逆风翻盘"
+                ],
+                "quote_range": [
+                    [
+                        5,
+                        16
+                    ],
+                    [
+                        19,
+                        23
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 13,
+                "original_answer_segment": "凑出三星橙卡/和朋友互怼时最开心。",
+                "code_name": [
+                    "成就满足",
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "凑出三星橙卡",
+                    "和朋友互怼时"
+                ],
+                "quote_range": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        7,
+                        13
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 14,
+                "original_answer_segment": "最快乐是D到自己想要的阵容关键卡，或者用冷门阵容逆袭吃鸡，成就感满满！",
+                "code_name": [
+                    "成就满足",
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "D到自己想要的阵容关键卡",
+                    "用冷门阵容逆袭吃鸡"
+                ],
+                "quote_range": [
+                    [
+                        6,
+                        17
+                    ],
+                    [
+                        22,
+                        31
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 15,
+                "original_answer_segment": "吃鸡的时候，就是拿第一名，或者合成出三星五费很爽，或者就是凑齐了大羁绊，比如十福星、十心之刚等，可以特别爽。或者和室友一起开黑时候，力克千钧打败他们吃鸡会很有成就感。",
+                "code_name": [
+                    "成就满足",
+                    "社交互动",
+                    "视觉享受"
+                ],
+                "supporting_quote": [
+                    "合成出三星五费很爽",
+                    "和室友一起开黑",
+                    "凑齐了大羁绊，比如十福星、十心之刚"
+                ],
+                "quote_range": [
+                    [
+                        17,
+                        26
+                    ],
+                    [
+                        56,
+                        62
+                    ],
+                    [
+                        35,
+                        50
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 16,
+                "original_answer_segment": "最快乐的莫过于吃鸡的时候，尤其是用冷门阵容逆袭，或者合成三星五费卡，那种成就感无与伦比。和室友一起开黑打败他们吃鸡，更是爽上加爽！",
+                "code_name": [
+                    "成就满足",
+                    "社交互动",
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "用冷门阵容逆袭",
+                    "和室友一起开黑",
+                    "合成三星五费卡"
+                ],
+                "quote_range": [
+                    [
+                        18,
+                        26
+                    ],
+                    [
+                        42,
+                        48
+                    ],
+                    [
+                        27,
+                        36
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2",
+                    "3-3"
+                ]
+            },
+            {
+                "respondent_id": 17,
+                "original_answer_segment": "不是吃鸡的时候，而是开发出新套路的时候。比如用冷门阵容逆袭，或者在测试服尝试各种奇葩组合，这种探索的乐趣最吸引我。",
+                "code_name": [
+                    "策略创新"
+                ],
+                "supporting_quote": [
+                    "开发出新套路的时候",
+                    "用冷门阵容逆袭"
+                ],
+                "quote_range": [
+                    [
+                        10,
+                        17
+                    ],
+                    [
+                        25,
+                        33
+                    ]
+                ],
+                "pairs": [
+                    "1-1",
+                    "2-2"
+                ]
+            },
+            {
+                "respondent_id": 18,
+                "original_answer_segment": "最快乐的时候就是和朋友在宿舍一起玩的时候，一边口嗨一边玩",
+                "code_name": [
+                    "社交互动"
+                ],
+                "supporting_quote": [
+                    "和朋友在宿舍一起玩"
+                ],
+                "quote_range": [
+                    [
+                        9,
+                        18
+                    ]
+                ],
+                "pairs": [
+                    "1-1"
+                ]
+            }
+        ],
+        "codes": [
+            {
+                "code_name": "成就满足",
+                "code_definition": "达成游戏高难度目标时的成就感"
+            },
+            {
+                "code_name": "社交互动",
+                "code_definition": "与朋友共同游戏的快乐"
+            },
+            {
+                "code_name": "策略创新",
+                "code_definition": "尝试新玩法的乐趣"
+            },
+            {
+                "code_name": "视觉享受",
+                "code_definition": "游戏特效带来的愉悦"
+            }
+        ],
+        "themes": [
+            {
+                "theme_name": "核心游戏体验",
+                "theme_definition": "游戏机制带来的主要乐趣",
+                "included_initial_codes": [
+                    "成就满足",
+                    "策略创新"
+                ]
+            },
+            {
+                "theme_name": "社交体验",
+                "theme_definition": "多人互动带来的附加乐趣",
+                "included_initial_codes": [
+                    "社交互动"
+                ]
+            },
+            {
+                "theme_name": "感官体验",
+                "theme_definition": "视听效果带来的愉悦感",
+                "included_initial_codes": [
+                    "视觉享受"
+                ]
+            }
+        ]
+    }
+]

@@ -13,7 +13,7 @@
 3. theme，基于访谈问题的初步主题提取，该编码所属的主题
 4. source_question，基于什么访谈问题进行编码的
 5. frequency_in_qestion，在当前问题数据中，该编码出现的次数
-6. representative_quotes, 该编码的典型引文两条
+6. representative_quotes, 该编码的典型引文
 
 二、核心概念
 
