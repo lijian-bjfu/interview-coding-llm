@@ -1,21 +1,21 @@
 # 项目文件夹结构
 ```
-📁 data_dir/
-├── 📁 myworld_dir/  
-│   ├── 📁 00_rawdata_dir/
-│   │   └── 📄 myworld.csv  -->key('UI')
-│   ├── 📁 01_preprocessed_for_llm_dir/
-│   │   ├── 📄 myworld_user.txt  -->key('UI_utxt')
-│   │   └── 📄 myworld_question.txt  -->key('UI_qtxt')
-│   ├── 📁 02_interview_outline_dir/  -->key('interview_outline_base_dir')
-│   │   ├── 📁 player_states/
-│   │   │   ├── 📁 question_data_dir/
+📁 data_dir/ (DATA_DIR_BASE_NAME)
+├── 📁 myworld_dir/ (APP_PATH，由 APP_FOLDER_NAME 如 "myworld_dir" 决定)
+│   ├── 📁 00_rawdata_dir/ (SDIR_00_RAW)
+│   │   └── 📄 myworld.csv  ('UI')
+│   ├── 📁 01_preprocessed_for_llm_dir/ (SDIR_01_PREPROC)
+│   │   ├── 📄 myworld_user.txt  ('UI_utxt')
+│   │   └── 📄 myworld_question.txt  ('UI_qtxt')
+│   ├── 📁 02_interview_outline_dir/ (SDIR_02_OUTLINE, outline_parent_abs_dir 指向此目录)
+│   │   ├── 📁 player_states/ (PROJECT_GROUP_FOLDERS 的一个)
+│   │   │   ├── 📁 question_data_dir/ (SDIR_GROUP_QDATA)
 │   │   │   │   ├── 📄 user_g.txt
 │   │   │   │   └── 📄 inductive_questionN.json
 │   │   │   │   └── 📄 deductive_code_by_LLM.json
-│   │   │   ├── 📁 codebook_data/
-│   │   │   │   ├── 📄 inductive_questionN_codebook.json  -->key('grouped_inductive_q_jsons')
-│   │   │   │   ├── 📄 raw_codebooks.txt  -->key('grouped_raw_codebook_txts')
+│   │   │   ├── 📁 codebook_data_dir/ (SDIR_GROUP_CBOOK)
+│   │   │   │   ├── 📄 inductive_questionN_codebook.json ('grouped_inductive_q_jsons')
+│   │   │   │   ├── 📄 raw_codebooks.txt  ('grouped_raw_codebook_txts')
 │   │   │   │   └── 📄 codebook.tx
 │   │   │   └── 📁 meta_data_dir/
 │   │   │       └── 📄 编码位置元数据.xx
@@ -25,14 +25,14 @@
 │   │   │   └── 📂 ... // 项目结构与player_states相同
 │   │   └── 📁 creativity_features/
 │   │       └── 📂 ... // 项目结构与player_states相同
-│   ├── 📁 03_inductive_coding_dir/  --> key('inductive_dir_path')
-│   │   ├── 📄 myworld_inductive_codes.json  -->key('inductive_codes_merged_json')
-│   │   ├── 📄 myworld_inductive_maxqda_opencode.txt  -->key('inductive_maxqda_opencode') 
-│   │   ├── 📄 myworld_inductive_maxqda_themecode.txt ）  -->key('inductive_maxqda_themecode')
-│   │   └── 📄 myworld_inductive_metadata.xx  -->key('inductive_metadata_file')  
-│   └── 📁 04_deductive_coding_dir/  --> key('deductive_dir_path') 
-│       ├── 📄 myworld_deductive_maxqda.txt  -->key('deductive_maxqda_text')
-│       └── 📄 myworld_deductive_metadata.xx  -->key('deductive_metadata_file')
+│   ├── 📁 03_inductive_coding_dir/ (SDIR_03_INDUCTIVE, file_dir['inductive_global_dir'])
+│   │   ├── 📄 myworld_inductive_codes.json  ('inductive_codes_merged_json')
+│   │   ├── 📄 myworld_inductive_maxqda_opencode.txt  ('inductive_maxqda_opencode') 
+│   │   ├── 📄 myworld_inductive_maxqda_themecode.txt ） ('inductive_maxqda_themecode')
+│   │   └── 📄 myworld_inductive_metadata.xx  ('inductive_metadata_file')  
+│   └── 📁 04_deductive_coding_dir/ (SDIR_04_DEDUCTIVE, file_dir['deductive_global_dir']) 
+│       ├── 📄 myworld_deductive_maxqda.txt  ('deductive_maxqda_text')
+│       └── 📄 myworld_deductive_metadata.xx  ('deductive_metadata_file')
 ├── 📁 lol_dir/
 │   └── 📂 ...
 └── 📂 python scripts
