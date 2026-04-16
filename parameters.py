@@ -116,10 +116,13 @@ logger = logging.getLogger(__name__)
 
 # ===================== 公开接口 (Public Interfaces) =====================
 
+# --- 项目名称 必填 ---
+APP_NAME = 'D5'
+
 # --- 全局变量 ---
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR_BASE_NAME = "data_dir"
-APP_NAME = '金铲铲之战'
+
 
 # --- 调试配置 ---
 P_DBUG_RESPONDENT_ID = 10  # 调试目标受访者ID

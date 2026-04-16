@@ -1,0 +1,1041 @@
+2025-06-16 23:13:38,715 - INFO - 开始执行项目设置...
+2025-06-16 23:13:38,715 - INFO - 开始执行工作流程: 模式 'SETUP' for app '王者荣耀'
+2025-06-16 23:13:38,715 - INFO - 验证配置 (1/3)
+2025-06-16 23:13:38,715 - INFO - 创建目录结构 (2/3)
+2025-06-16 23:13:38,715 - INFO - 正在检查并按需创建项目目录...
+2025-06-16 23:13:38,715 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir
+2025-06-16 23:13:38,715 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:13:38,715 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/03_inductive_coding_dir
+2025-06-16 23:13:38,715 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:13:38,715 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir
+2025-06-16 23:13:38,716 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/04_deductive_coding_dir
+2025-06-16 23:13:38,716 - INFO - 所有必需的目录已创建完成
+2025-06-16 23:13:38,716 - INFO - 移动文件 (3/3)
+2025-06-16 23:13:38,716 - INFO - 准备移动初始数据文件...
+2025-06-16 23:13:38,716 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:13:38,716 - INFO - 已移动 '王者荣耀.csv'
+2025-06-16 23:13:38,716 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:13:38,716 - INFO - 已移动 '王者荣耀-outline.csv'
+2025-06-16 23:13:38,716 - INFO - 所有文件移动操作已完成
+2025-06-16 23:13:38,716 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-16 23:13:38,716 - INFO - 项目环境已准备就绪
+2025-06-16 23:13:38,716 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:13:38,716 - INFO - 开始建立内部ID系统...
+2025-06-16 23:13:38,716 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-06-16 23:13:38,716 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-06-16 23:13:38,719 - INFO - 成功读取原始数据，共 27 条记录
+2025-06-16 23:13:38,729 - INFO - 成功生成内部ID，ID范围: 1-27
+2025-06-16 23:13:38,731 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀-id.csv
+2025-06-16 23:13:38,733 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀.csv
+2025-06-16 23:13:38,733 - INFO - ID系统建立完成
+2025-06-16 23:14:20,236 - INFO - 开始数据转换流程
+2025-06-16 23:14:20,236 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-06-16 23:14:20,236 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-06-16 23:14:20,252 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-16 23:14:20,253 - WARNING - 以下列未被映射到任何题号: {'你输了后会如何做?(追问，如果输的很厉害，例如影响到排名，会如何做?)暂停游戏、换模式/英雄、分析录像，继续硬打', '你通常是和朋友开黑，还是和不认识的人打，还是单排?为什么喜欢这种玩法？', '有没有一次“输得特别憋屈”的经历?能描述下当时具体发生了什么?', '你觉得一局打的爽不爽是否，多大程度上取决于输赢?', '你能回忆一下最近一次“赢得特别爽”的经历吗?当时发生了什么?', '你有什么特殊的方法能让你提高获胜率(或用一些方法“防止输”?)（特定时间玩游戏、特定英雄选择，控制游戏场次，组队情况？）', '序号', '相对于你认识的玩家，你觉得你对这个游戏掌握的如何?(以10为单位，估计一个具体的值)', '你一般会事后总结自己输赢结果吗?(会通过查看战绩数据/输出排行来为胜负找原因吗?)', '你觉得你在游戏中的失败主要是因为什么?(能提出3条吗)（团队合作，极端场景，游戏机制，玩家实力）', '请问你的年龄是？目前在上学还在工作？', '“你觉得哪些游戏玩法和机制会对你输赢起作用？”如果回答不上来再继续提醒匹配之类的。不能仅停留在会/不会。还要追问，某些机制、在什么时候、为什么会/不会起作用（原因）', '你玩《王者荣耀》是为了什么?（打发时间、提升排名、和朋友娱乐、或其他?排序哪个是第一位的?）', '你觉得你在游戏中能够获胜主要是因为什么?(能提出3条能够帮助你赢的条件吗)', '你经历过哪些典型的输赢情境?(如果难以回答，可以追问:你经历过连胜/连败、逆风翻盘、接近胜利突然输了等情况吗?)哪一个影响最大，为什么', '这些输赢情境分别给你带来了怎样的情绪或心理体验?', '你在游戏中的胜率如何(以10为单位，估计一个具体的比值)？', '请问你的性别是？', '你玩《王者荣耀》多久了?现在还在玩吗？', '总体上你觉得这个游戏给你的体验如何(以10为单位，估计一个具体的值)，分数的原因(得分的原因，不给分的原因?)', '如果您可以向《王者荣耀》官方提出一个切实可行的改进建议，您希望在哪方面做出改进？（比如匹配、惩罚、透明度提升等）', '每天都玩吗？一天大概玩多久?', '大概是什么段位?', '输赢对你是否继续游戏、或者是否保持热情有影响吗?', '你最喜欢哪一个模式？匹配，娱乐还是排位？为什么？', '有没有“输了也觉得很好玩”或者“赢了但不开心”的经历?', '会充钱吗？', '在深夜疲劳状态下游戏，与精力充沛时相比，输赢结果对您情绪的影响会放大还是减弱？请举例说明。（分析生理状态对胜负体验的调节作用）（原因）  '}
+2025-06-16 23:14:20,253 - INFO - 成功加载数据，形状: (27, 29)
+2025-06-16 23:14:20,253 - INFO - 建立了 1 个题号映射
+2025-06-16 23:14:20,274 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_question.txt
+2025-06-16 23:14:20,276 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_user.txt
+2025-06-16 23:14:20,276 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-16 23:14:20,276 - INFO - 
+=== 文件生成报告 ===
+2025-06-16 23:14:20,276 - INFO - 横向文本：
+2025-06-16 23:14:20,276 - INFO - 名称：王者荣耀_question.txt
+2025-06-16 23:14:20,276 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:14:20,277 - INFO - 纵向文本：
+2025-06-16 23:14:20,277 - INFO - 名称：王者荣耀_user.txt
+2025-06-16 23:14:20,277 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:14:20,277 - INFO - 横向category文本：
+2025-06-16 23:14:20,277 - INFO - 个数：0
+2025-06-16 23:14:20,277 - INFO - 
+数据转换流程成功完成
+2025-06-16 23:15:35,757 - INFO - 开始执行项目设置...
+2025-06-16 23:15:35,757 - INFO - 开始执行工作流程: 模式 'SETUP' for app '王者荣耀'
+2025-06-16 23:15:35,757 - INFO - 验证配置 (1/3)
+2025-06-16 23:15:35,757 - INFO - 创建目录结构 (2/3)
+2025-06-16 23:15:35,758 - INFO - 正在检查并按需创建项目目录...
+2025-06-16 23:15:35,758 - INFO - 所有必需的目录已创建完成
+2025-06-16 23:15:35,758 - INFO - 移动文件 (3/3)
+2025-06-16 23:15:35,758 - INFO - 准备移动初始数据文件...
+2025-06-16 23:15:35,758 - INFO - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀.csv'
+2025-06-16 23:15:35,758 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀-outline.csv'
+2025-06-16 23:15:35,758 - INFO - 所有文件移动操作已完成
+2025-06-16 23:15:35,758 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-16 23:15:35,758 - INFO - 项目环境已准备就绪
+2025-06-16 23:15:35,758 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:15:35,758 - INFO - 开始建立内部ID系统...
+2025-06-16 23:15:35,758 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-06-16 23:15:35,758 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-06-16 23:15:35,763 - INFO - 成功读取原始数据，共 27 条记录
+2025-06-16 23:15:35,776 - INFO - 成功生成内部ID，ID范围: 1-27
+2025-06-16 23:15:35,778 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀-id.csv
+2025-06-16 23:15:35,779 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀.csv
+2025-06-16 23:15:35,779 - INFO - ID系统建立完成
+2025-06-16 23:16:21,535 - INFO - 开始数据转换流程
+2025-06-16 23:16:21,535 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-06-16 23:16:21,535 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-06-16 23:16:21,552 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-16 23:16:21,552 - WARNING - 以下列未被映射到任何题号: {'你玩《王者荣耀》多久了?现在还在玩吗？', '你一般会事后总结自己输赢结果吗?(会通过查看战绩数据/输出排行来为胜负找原因吗?)', '你觉得你在游戏中能够获胜主要是因为什么?(能提出3条能够帮助你赢的条件吗)', '你输了后会如何做?(追问，如果输的很厉害，例如影响到排名，会如何做?)暂停游戏、换模式/英雄、分析录像，继续硬打', '请问你的性别是？', '“你觉得哪些游戏玩法和机制会对你输赢起作用？”如果回答不上来再继续提醒匹配之类的。不能仅停留在会/不会。还要追问，某些机制、在什么时候、为什么会/不会起作用（原因）', '你最喜欢哪一个模式？匹配，娱乐还是排位？为什么？', '这些输赢情境分别给你带来了怎样的情绪或心理体验?', '总体上你觉得这个游戏给你的体验如何(以10为单位，估计一个具体的值)，分数的原因(得分的原因，不给分的原因?)', '每天都玩吗？一天大概玩多久?', '相对于你认识的玩家，你觉得你对这个游戏掌握的如何?(以10为单位，估计一个具体的值)', '有没有“输了也觉得很好玩”或者“赢了但不开心”的经历?', '你经历过哪些典型的输赢情境?(如果难以回答，可以追问:你经历过连胜/连败、逆风翻盘、接近胜利突然输了等情况吗?)哪一个影响最大，为什么', '你玩《王者荣耀》是为了什么?（打发时间、提升排名、和朋友娱乐、或其他?排序哪个是第一位的?）', '如果您可以向《王者荣耀》官方提出一个切实可行的改进建议，您希望在哪方面做出改进？（比如匹配、惩罚、透明度提升等）', '你觉得你在游戏中的失败主要是因为什么?(能提出3条吗)（团队合作，极端场景，游戏机制，玩家实力）', '你在游戏中的胜率如何(以10为单位，估计一个具体的比值)？', '在深夜疲劳状态下游戏，与精力充沛时相比，输赢结果对您情绪的影响会放大还是减弱？请举例说明。（分析生理状态对胜负体验的调节作用）（原因）  ', '输赢对你是否继续游戏、或者是否保持热情有影响吗?', '你通常是和朋友开黑，还是和不认识的人打，还是单排?为什么喜欢这种玩法？', '你觉得一局打的爽不爽是否，多大程度上取决于输赢?', '会充钱吗？', '序号', '请问你的年龄是？目前在上学还在工作？', '你能回忆一下最近一次“赢得特别爽”的经历吗?当时发生了什么?', '大概是什么段位?', '有没有一次“输得特别憋屈”的经历?能描述下当时具体发生了什么?', '你有什么特殊的方法能让你提高获胜率(或用一些方法“防止输”?)（特定时间玩游戏、特定英雄选择，控制游戏场次，组队情况？）'}
+2025-06-16 23:16:21,552 - INFO - 成功加载数据，形状: (27, 29)
+2025-06-16 23:16:21,552 - INFO - 建立了 1 个题号映射
+2025-06-16 23:16:21,576 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_question.txt
+2025-06-16 23:16:21,580 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_user.txt
+2025-06-16 23:16:21,580 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-16 23:16:21,580 - INFO - 
+=== 文件生成报告 ===
+2025-06-16 23:16:21,580 - INFO - 横向文本：
+2025-06-16 23:16:21,580 - INFO - 名称：王者荣耀_question.txt
+2025-06-16 23:16:21,580 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:16:21,580 - INFO - 纵向文本：
+2025-06-16 23:16:21,580 - INFO - 名称：王者荣耀_user.txt
+2025-06-16 23:16:21,580 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:16:21,580 - INFO - 横向category文本：
+2025-06-16 23:16:21,580 - INFO - 个数：0
+2025-06-16 23:16:21,580 - INFO - 
+数据转换流程成功完成
+2025-06-16 23:18:45,301 - INFO - 开始执行项目设置...
+2025-06-16 23:18:45,302 - INFO - 开始执行工作流程: 模式 'SETUP' for app '王者荣耀'
+2025-06-16 23:18:45,302 - INFO - 验证配置 (1/3)
+2025-06-16 23:18:45,302 - INFO - 创建目录结构 (2/3)
+2025-06-16 23:18:45,302 - INFO - 正在检查并按需创建项目目录...
+2025-06-16 23:18:45,302 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/question_data_dir
+2025-06-16 23:18:45,302 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/user_data_dir
+2025-06-16 23:18:45,302 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/meta_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/user_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/question_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/codebook_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/meta_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/question_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/codebook_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/codebook_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/meta_data_dir
+2025-06-16 23:18:45,303 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/user_data_dir
+2025-06-16 23:18:45,303 - INFO - 所有必需的目录已创建完成
+2025-06-16 23:18:45,303 - INFO - 移动文件 (3/3)
+2025-06-16 23:18:45,303 - INFO - 准备移动初始数据文件...
+2025-06-16 23:18:45,303 - INFO - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀.csv'
+2025-06-16 23:18:45,303 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:18:45,303 - INFO - 已移动 '王者荣耀-outline.csv'
+2025-06-16 23:18:45,303 - INFO - 所有文件移动操作已完成
+2025-06-16 23:18:45,303 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-16 23:18:45,303 - INFO - 项目环境已准备就绪
+2025-06-16 23:18:45,303 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-06-16 23:18:45,303 - INFO - 开始建立内部ID系统...
+2025-06-16 23:18:45,303 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-06-16 23:18:45,304 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-06-16 23:18:45,309 - INFO - 成功读取原始数据，共 27 条记录
+2025-06-16 23:18:45,322 - INFO - 成功生成内部ID，ID范围: 1-27
+2025-06-16 23:18:45,324 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀-id.csv
+2025-06-16 23:18:45,325 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀.csv
+2025-06-16 23:18:45,325 - INFO - ID系统建立完成
+2025-06-16 23:35:31,517 - INFO - 开始数据转换流程
+2025-06-16 23:35:31,518 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-06-16 23:35:31,518 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-06-16 23:35:31,532 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-16 23:35:31,532 - INFO - 映射题号 1 到列 '你玩《王者荣耀》多久了?现在还在玩吗？'
+2025-06-16 23:35:31,532 - INFO - 映射题号 2 到列 '大概是什么段位?'
+2025-06-16 23:35:31,532 - INFO - 映射题号 3 到列 '请问你的性别是？'
+2025-06-16 23:35:31,532 - INFO - 映射题号 4 到列 '请问你的年龄是？目前在上学还在工作？'
+2025-06-16 23:35:31,532 - INFO - 映射题号 5 到列 '每天都玩吗？一天大概玩多久?'
+2025-06-16 23:35:31,532 - INFO - 映射题号 6 到列 '会充钱吗？'
+2025-06-16 23:35:31,532 - INFO - 映射题号 7 到列 '总体上你觉得这个游戏给你的体验如何(以10为单位，估计一个具体的值)，分数的原因(得分的原因，不给分的原因?)'
+2025-06-16 23:35:31,532 - INFO - 映射题号 8 到列 '你最喜欢哪一个模式？匹配，娱乐还是排位？为什么？'
+2025-06-16 23:35:31,532 - INFO - 映射题号 9 到列 '你通常是和朋友开黑，还是和不认识的人打，还是单排?为什么喜欢这种玩法？'
+2025-06-16 23:35:31,533 - INFO - 映射题号 10 到列 '你玩《王者荣耀》是为了什么?（打发时间、提升排名、和朋友娱乐、或其他?排序哪个是第一位的?）'
+2025-06-16 23:35:31,533 - INFO - 映射题号 11 到列 '你在游戏中的胜率如何(以10为单位，估计一个具体的比值)？'
+2025-06-16 23:35:31,533 - INFO - 映射题号 12 到列 '相对于你认识的玩家，你觉得你对这个游戏掌握的如何?(以10为单位，估计一个具体的值)'
+2025-06-16 23:35:31,533 - INFO - 映射题号 13 到列 '你能回忆一下最近一次“赢得特别爽”的经历吗?当时发生了什么?'
+2025-06-16 23:35:31,533 - INFO - 映射题号 14 到列 '有没有一次“输得特别憋屈”的经历?能描述下当时具体发生了什么?'
+2025-06-16 23:35:31,533 - INFO - 映射题号 15 到列 '你经历过哪些典型的输赢情境?(如果难以回答，可以追问:你经历过连胜/连败、逆风翻盘、接近胜利突然输了等情况吗?)哪一个影响最大，为什么'
+2025-06-16 23:35:31,533 - INFO - 映射题号 16 到列 '这些输赢情境分别给你带来了怎样的情绪或心理体验?'
+2025-06-16 23:35:31,533 - INFO - 映射题号 17 到列 '你一般会事后总结自己输赢结果吗?(会通过查看战绩数据/输出排行来为胜负找原因吗?)'
+2025-06-16 23:35:31,533 - INFO - 映射题号 18 到列 '你觉得你在游戏中能够获胜主要是因为什么?(能提出3条能够帮助你赢的条件吗)'
+2025-06-16 23:35:31,533 - INFO - 映射题号 19 到列 '你觉得你在游戏中的失败主要是因为什么?(能提出3条吗)（团队合作，极端场景，游戏机制，玩家实力）'
+2025-06-16 23:35:31,533 - INFO - 映射题号 20 到列 '序号'
+2025-06-16 23:35:31,533 - INFO - 映射题号 21 到列 '在深夜疲劳状态下游戏，与精力充沛时相比，输赢结果对您情绪的影响会放大还是减弱？请举例说明。（分析生理状态对胜负体验的调节作用）（原因）  '
+2025-06-16 23:35:31,533 - INFO - 映射题号 22 到列 '你输了后会如何做?(追问，如果输的很厉害，例如影响到排名，会如何做?)暂停游戏、换模式/英雄、分析录像，继续硬打'
+2025-06-16 23:35:31,533 - INFO - 映射题号 23 到列 '你有什么特殊的方法能让你提高获胜率(或用一些方法“防止输”?)（特定时间玩游戏、特定英雄选择，控制游戏场次，组队情况？）'
+2025-06-16 23:35:31,533 - INFO - 映射题号 24 到列 '你觉得一局打的爽不爽是否，多大程度上取决于输赢?'
+2025-06-16 23:35:31,534 - INFO - 映射题号 25 到列 '有没有“输了也觉得很好玩”或者“赢了但不开心”的经历?'
+2025-06-16 23:35:31,534 - INFO - 映射题号 26 到列 '输赢对你是否继续游戏、或者是否保持热情有影响吗?'
+2025-06-16 23:35:31,534 - INFO - 映射题号 27 到列 '如果您可以向《王者荣耀》官方提出一个切实可行的改进建议，您希望在哪方面做出改进？（比如匹配、惩罚、透明度提升等）'
+2025-06-16 23:35:31,534 - WARNING - 以下列未被映射到任何题号: {'“你觉得哪些游戏玩法和机制会对你输赢起作用？”如果回答不上来再继续提醒匹配之类的。不能仅停留在会/不会。还要追问，某些机制、在什么时候、为什么会/不会起作用（原因）'}
+2025-06-16 23:35:31,534 - INFO - 成功加载数据，形状: (27, 29)
+2025-06-16 23:35:31,534 - INFO - 建立了 28 个题号映射
+2025-06-16 23:35:31,554 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_question.txt
+2025-06-16 23:35:31,557 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_user.txt
+2025-06-16 23:35:31,598 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/question_data_dir/王者荣耀_question_用户信息.txt
+2025-06-16 23:35:31,599 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/question_data_dir/王者荣耀_question_总体感受.txt
+2025-06-16 23:35:31,599 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/question_data_dir/王者荣耀_question_竞技体验.txt
+2025-06-16 23:35:31,599 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-16 23:35:31,602 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/user_data_dir/王者荣耀_user_用户信息.txt
+2025-06-16 23:35:31,602 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/user_data_dir/王者荣耀_user_总体感受.txt
+2025-06-16 23:35:31,603 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/user_data_dir/王者荣耀_user_竞技体验.txt
+2025-06-16 23:35:31,603 - INFO - 
+=== 文件生成报告 ===
+2025-06-16 23:35:31,603 - INFO - 横向文本：
+2025-06-16 23:35:31,603 - INFO - 名称：王者荣耀_question.txt
+2025-06-16 23:35:31,603 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:35:31,603 - INFO - 纵向文本：
+2025-06-16 23:35:31,603 - INFO - 名称：王者荣耀_user.txt
+2025-06-16 23:35:31,603 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-06-16 23:35:31,603 - INFO - 横向category文本：
+2025-06-16 23:35:31,603 - INFO - 个数：3
+2025-06-16 23:35:31,603 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/question_data_dir/王者荣耀_question_用户信息.txt
+2025-06-16 23:35:31,603 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/question_data_dir/王者荣耀_question_总体感受.txt
+2025-06-16 23:35:31,603 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/question_data_dir/王者荣耀_question_竞技体验.txt
+2025-06-16 23:35:31,603 - INFO - 
+数据转换流程成功完成
+2025-06-20 17:24:12,338 - INFO - 开始执行项目设置...
+2025-06-20 17:24:12,339 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-20 17:24:12,339 - INFO - 验证配置 (1/3)
+2025-06-20 17:24:12,339 - INFO - 创建目录结构 (2/3)
+2025-06-20 17:24:12,339 - INFO - 正在检查并按需创建项目目录...
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/03_inductive_coding_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/04_deductive_coding_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/meta_data_dir
+2025-06-20 17:24:12,340 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/user_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/user_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/meta_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/meta_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/user_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/codebook_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/meta_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/user_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/user_data_dir
+2025-06-20 17:24:12,341 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/codebook_data_dir
+2025-06-20 17:24:12,342 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir
+2025-06-20 17:24:12,342 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir
+2025-06-20 17:24:12,342 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/codebook_data_dir
+2025-06-20 17:24:12,342 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/meta_data_dir
+2025-06-20 17:24:12,342 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/codebook_data_dir
+2025-06-20 17:24:12,342 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/codebook_data_dir
+2025-06-20 17:24:12,342 - INFO - 所有必需的目录已创建完成
+2025-06-20 17:24:12,342 - INFO - 移动文件 (3/3)
+2025-06-20 17:24:12,342 - INFO - 准备移动初始数据文件...
+2025-06-20 17:24:12,342 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:24:12,342 - INFO - 已移动 'myworld.csv'
+2025-06-20 17:24:12,342 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:24:12,342 - INFO - 已移动 'myworld-outline.csv'
+2025-06-20 17:24:12,342 - INFO - 所有文件移动操作已完成
+2025-06-20 17:24:12,342 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-20 17:24:12,342 - INFO - 项目环境已准备就绪
+2025-06-20 17:24:12,343 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:24:12,343 - INFO - 开始建立内部ID系统...
+2025-06-20 17:24:12,343 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-20 17:24:12,343 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-20 17:24:12,347 - INFO - 成功读取原始数据，共 46 条记录
+2025-06-20 17:24:12,357 - INFO - 成功生成内部ID，ID范围: 1-46
+2025-06-20 17:24:12,359 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-id.csv
+2025-06-20 17:24:12,360 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv
+2025-06-20 17:24:12,360 - INFO - ID系统建立完成
+2025-06-20 17:27:45,711 - INFO - 开始执行项目设置...
+2025-06-20 17:27:45,711 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'myworld'
+2025-06-20 17:27:45,711 - INFO - 验证配置 (1/3)
+2025-06-20 17:27:45,712 - INFO - 创建目录结构 (2/3)
+2025-06-20 17:27:45,712 - INFO - 正在检查并按需创建项目目录...
+2025-06-20 17:27:45,712 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir
+2025-06-20 17:27:45,712 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir
+2025-06-20 17:27:45,712 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/04_deductive_coding_dir
+2025-06-20 17:27:45,712 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/03_inductive_coding_dir
+2025-06-20 17:27:45,712 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/codebook_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/meta_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/meta_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/meta_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/codebook_data_dir
+2025-06-20 17:27:45,713 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/codebook_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/user_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/user_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/user_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/user_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/user_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/codebook_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/codebook_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/meta_data_dir
+2025-06-20 17:27:45,714 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/meta_data_dir
+2025-06-20 17:27:45,714 - INFO - 所有必需的目录已创建完成
+2025-06-20 17:27:45,714 - INFO - 移动文件 (3/3)
+2025-06-20 17:27:45,714 - INFO - 准备移动初始数据文件...
+2025-06-20 17:27:45,714 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:27:45,714 - INFO - 已移动 'myworld.csv'
+2025-06-20 17:27:45,714 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:27:45,715 - INFO - 已移动 'myworld-outline.csv'
+2025-06-20 17:27:45,715 - INFO - 所有文件移动操作已完成
+2025-06-20 17:27:45,715 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-20 17:27:45,715 - INFO - 项目环境已准备就绪
+2025-06-20 17:27:45,715 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir
+2025-06-20 17:27:45,715 - INFO - 开始建立内部ID系统...
+2025-06-20 17:27:45,715 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-20 17:27:45,715 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-20 17:27:45,720 - INFO - 成功读取原始数据，共 28 条记录
+2025-06-20 17:27:45,733 - INFO - 成功生成内部ID，ID范围: 1-28
+2025-06-20 17:27:45,735 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld-id.csv
+2025-06-20 17:27:45,736 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/00_rawdata_dir/myworld.csv
+2025-06-20 17:27:45,736 - INFO - ID系统建立完成
+2025-06-20 17:28:23,136 - INFO - 成功从 parameters.py 导入配置
+2025-06-20 17:28:23,136 - INFO - ==================================================
+2025-06-20 17:28:23,136 - INFO - 开始执行 @ds-n1-sample 任务: 合并初步归纳编码JSON文件
+2025-06-20 17:28:23,136 - INFO - 脚本: 02inductive_merge_json.py | 版本: 2.3
+2025-06-20 17:28:23,136 - INFO - 时间: 2025-06-20 17:28:23
+2025-06-20 17:28:23,136 - INFO - ==================================================
+2025-06-20 17:28:23,136 - INFO - 准备通过 get_path_list 获取所有输入文件路径...
+2025-06-20 17:28:23,136 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-20 17:28:23,137 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-20 17:28:23,137 - WARNING - 从 get_path_list('grouped_inductive_q_jsons') 获取并扁平化后，文件列表为空
+2025-06-20 17:28:23,137 - INFO - 文件路径获取和处理完成
+2025-06-20 17:28:23,137 - INFO - [JSON-MERGE]: 接收到的文件列表为空，无需合并
+2025-06-20 17:28:23,137 - ERROR - 合并过程未产生有效数据。任务终止。
+2025-06-20 17:28:23,137 - INFO - ==================================================
+2025-06-20 17:28:23,137 - INFO - 任务执行完毕
+2025-06-20 17:28:23,137 - INFO - ==================================================
+2025-06-20 17:28:38,509 - INFO - 开始数据转换流程
+2025-06-20 17:28:38,509 - INFO - 首次调用路径获取函数，正在为应用 'myworld' 初始化项目路径配置...
+2025-06-20 17:28:38,510 - INFO - 应用 'myworld' 的路径配置已成功初始化。
+2025-06-20 17:28:38,527 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-20 17:28:38,527 - INFO - 映射题号 1 到列 '什么时候开始玩我的世界的'
+2025-06-20 17:28:38,527 - INFO - 映射题号 2 到列 '多久玩一次'
+2025-06-20 17:28:38,527 - INFO - 映射题号 3 到列 '你平时都玩哪些游戏'
+2025-06-20 17:28:38,527 - INFO - 映射题号 4 到列 '在什么情况下会选择玩我的世界'
+2025-06-20 17:28:38,527 - INFO - 映射题号 5 到列 '你觉得你对这个游戏的熟悉程度/游戏等级如何'
+2025-06-20 17:28:38,527 - INFO - 映射题号 6 到列 '这个游戏最吸引你的玩法是什么？为什么喜欢这种玩法？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 7 到列 '这个游戏最不喜欢/不满意的玩法是什么？为什么'
+2025-06-20 17:28:38,527 - INFO - 映射题号 8 到列 '你在这个游戏中主要想达成的目标是什么？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 9 到列 '你在这个游戏中主要想达成的目标是什么？.1'
+2025-06-20 17:28:38,527 - INFO - 映射题号 10 到列 '对你来说“创造力”是什么?'
+2025-06-20 17:28:38,527 - INFO - 映射题号 11 到列 '你觉得创造性在这个游戏中重要吗？为什么？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 12 到列 '你是否有在游戏中建造或创作什么东西？能描述一下最近让你印象深刻的一个创作吗？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 13 到列 '创作这个作品的灵感来自哪里？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 14 到列 '你一般是主动去创作一些东西，还是在必要的时候去创作东西？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 15 到列 '你更享受创作过程的那个部分（构思、搭建、完善、展示，还是其他？）'
+2025-06-20 17:28:38,527 - INFO - 映射题号 16 到列 '在你看来，游戏中有哪些机制或特点让你更有动力去创作？'
+2025-06-20 17:28:38,527 - INFO - 映射题号 17 到列 '有没有遇到技术或设计难题？你是如何解决的？'
+2025-06-20 17:28:38,528 - INFO - 映射题号 18 到列 '你觉得游戏中哪些玩法/机制会干扰你的创造'
+2025-06-20 17:28:38,528 - INFO - 映射题号 19 到列 '如果你要向一个没玩过的人介绍它的“创造性”，你会怎么说？'
+2025-06-20 17:28:38,528 - INFO - 映射题号 20 到列 '你觉得《我的世界》帮助你更理解它了吗?为什么?'
+2025-06-20 17:28:38,528 - INFO - 映射题号 21 到列 '你通常在《我的世界》联机模式中做什么？这种体验和单机游戏有什么不同？'
+2025-06-20 17:28:38,528 - INFO - 映射题号 22 到列 '在与他人合作创造时，哪些时刻让你感受到联机的快乐？'
+2025-06-20 17:28:38,528 - INFO - 映射题号 23 到列 '在自由创造的过程中是否有一些时刻会引发你的深思？能描述一下吗？'
+2025-06-20 17:28:38,528 - INFO - 映射题号 24 到列 '《我的世界》给你带来了哪些情绪？为什么？'
+2025-06-20 17:28:38,528 - WARNING - 以下列未被映射到任何题号: {'序号'}
+2025-06-20 17:28:38,528 - INFO - 成功加载数据，形状: (28, 26)
+2025-06-20 17:28:38,528 - INFO - 建立了 25 个题号映射
+2025-06-20 17:28:38,547 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir/myworld_question.txt
+2025-06-20 17:28:38,549 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir/myworld_user.txt
+2025-06-20 17:28:38,571 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/myworld_question_用户身份.txt
+2025-06-20 17:28:38,571 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/myworld_question_用户特征.txt
+2025-06-20 17:28:38,571 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/myworld_question_游戏体验.txt
+2025-06-20 17:28:38,571 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/myworld_question_创造性体验.txt
+2025-06-20 17:28:38,571 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/myworld_question_创造性设计.txt
+2025-06-20 17:28:38,572 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-20 17:28:38,576 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/user_data_dir/myworld_user_用户身份.txt
+2025-06-20 17:28:38,576 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/user_data_dir/myworld_user_用户特征.txt
+2025-06-20 17:28:38,576 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/user_data_dir/myworld_user_游戏体验.txt
+2025-06-20 17:28:38,576 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/user_data_dir/myworld_user_创造性体验.txt
+2025-06-20 17:28:38,577 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/user_data_dir/myworld_user_创造性设计.txt
+2025-06-20 17:28:38,577 - INFO - 
+=== 文件生成报告 ===
+2025-06-20 17:28:38,577 - INFO - 横向文本：
+2025-06-20 17:28:38,577 - INFO - 名称：myworld_question.txt
+2025-06-20 17:28:38,577 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir
+2025-06-20 17:28:38,577 - INFO - 纵向文本：
+2025-06-20 17:28:38,577 - INFO - 名称：myworld_user.txt
+2025-06-20 17:28:38,577 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/01_preprocessed_for_llm_dir
+2025-06-20 17:28:38,577 - INFO - 横向category文本：
+2025-06-20 17:28:38,577 - INFO - 个数：5
+2025-06-20 17:28:38,577 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户身份/question_data_dir/myworld_question_用户身份.txt
+2025-06-20 17:28:38,577 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/用户特征/question_data_dir/myworld_question_用户特征.txt
+2025-06-20 17:28:38,577 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/游戏体验/question_data_dir/myworld_question_游戏体验.txt
+2025-06-20 17:28:38,577 - INFO - 文件4: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性体验/question_data_dir/myworld_question_创造性体验.txt
+2025-06-20 17:28:38,577 - INFO - 文件5: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/myworld_dir/02_interview_outline_dir/创造性设计/question_data_dir/myworld_question_创造性设计.txt
+2025-06-20 17:28:38,577 - INFO - 
+数据转换流程成功完成
+2025-06-22 01:17:10,354 - INFO - 开始执行项目设置...
+2025-06-22 01:17:10,355 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'keep'
+2025-06-22 01:17:10,355 - INFO - 验证配置 (1/3)
+2025-06-22 01:17:10,355 - INFO - 创建目录结构 (2/3)
+2025-06-22 01:17:10,355 - INFO - 正在检查并按需创建项目目录...
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/01_preprocessed_for_llm_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/03_inductive_coding_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/04_deductive_coding_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/meta_data_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/user_data_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/codebook_data_dir
+2025-06-22 01:17:10,356 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/question_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/question_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/user_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/codebook_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/user_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/codebook_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/question_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/question_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/codebook_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/question_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/meta_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/user_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/meta_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/meta_data_dir
+2025-06-22 01:17:10,357 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/meta_data_dir
+2025-06-22 01:17:10,358 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/codebook_data_dir
+2025-06-22 01:17:10,358 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/user_data_dir
+2025-06-22 01:17:10,358 - INFO - 所有必需的目录已创建完成
+2025-06-22 01:17:10,358 - INFO - 移动文件 (3/3)
+2025-06-22 01:17:10,358 - INFO - 准备移动初始数据文件...
+2025-06-22 01:17:10,358 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir
+2025-06-22 01:17:10,358 - INFO - 已移动 'keep.csv'
+2025-06-22 01:17:10,358 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir
+2025-06-22 01:17:10,358 - INFO - 已移动 'keep-outline.csv'
+2025-06-22 01:17:10,358 - INFO - 所有文件移动操作已完成
+2025-06-22 01:17:10,358 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-22 01:17:10,358 - INFO - 项目环境已准备就绪
+2025-06-22 01:17:10,358 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir
+2025-06-22 01:17:10,358 - INFO - 开始建立内部ID系统...
+2025-06-22 01:17:10,358 - INFO - 首次调用路径获取函数，正在为应用 'keep' 初始化项目路径配置...
+2025-06-22 01:17:10,359 - INFO - 应用 'keep' 的路径配置已成功初始化。
+2025-06-22 01:17:10,362 - INFO - 成功读取原始数据，共 22 条记录
+2025-06-22 01:17:10,372 - INFO - 成功生成内部ID，ID范围: 1-22
+2025-06-22 01:17:10,374 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir/keep-id.csv
+2025-06-22 01:17:10,378 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir/keep.csv
+2025-06-22 01:17:10,394 - INFO - ID系统建立完成
+2025-06-22 01:50:45,971 - INFO - 开始数据转换流程
+2025-06-22 01:50:45,972 - INFO - 首次调用路径获取函数，正在为应用 'keep' 初始化项目路径配置...
+2025-06-22 01:50:45,973 - INFO - 应用 'keep' 的路径配置已成功初始化。
+2025-06-22 01:50:45,987 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-22 01:50:45,988 - INFO - 映射题号 1 到列 '你平时有哪些健身方式？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 2 到列 '你健身的频率(每周几次)'
+2025-06-22 01:50:45,988 - INFO - 映射题号 3 到列 '你健身的目的是什么？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 4 到列 '序号'
+2025-06-22 01:50:45,988 - INFO - 映射题号 5 到列 '您近期是否有在健身
+/有健身计划吗？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 6 到列 '您对自己的健身计划
+有信心执行吗？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 7 到列 '您觉得阻碍您开始一项运动的最大因素是什么？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 8 到列 '您觉得阻碍您长期坚持
+运动的最大因素是什么？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 9 到列 '您能克服这些障碍吗？
+为什么？'
+2025-06-22 01:50:45,988 - INFO - 映射题号 10 到列 '运动过程的愉悦和运动最终取得的成效哪个对你来说更重要？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 11 到列 '你用过哪些健身软件？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 12 到列 '你觉得对你来说重要吗？重要到什么程度？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 13 到列 '(被访者必须使用Keep)
+你有使用Keep多久了？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 14 到列 '(如果用户只强调内容/课程等)功能上，
+你觉得keep和XX软件的最大区别在哪里'
+2025-06-22 01:50:45,989 - INFO - 映射题号 15 到列 '你觉得Keep对你健身
+有帮助吗？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 16 到列 '(如果使用过其他软件)和其它软件比起来，
+你觉得keep的优势在哪里？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 17 到列 '你觉得keep能否帮助克服阻碍你健身的一些障碍？
+为什么能/不能'
+2025-06-22 01:50:45,989 - INFO - 映射题号 18 到列 '你觉得keep哪些方式/什么功能对你健身
+/运动最有价值？它们如何帮到你'
+2025-06-22 01:50:45,989 - INFO - 映射题号 19 到列 '你一般会用keep记录
+哪些与健身锻炼相关的信息？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 20 到列 '对于keep上所记录和提供的信息与数据，
+你相信它们吗？(为什么相信/不相信)/依赖他们吗？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 21 到列 '你在健身中如何使用这些信息/数据？用它们来做什么？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 22 到列 '锻炼前，锻炼中，锻炼后，与非锻炼时间你分别看哪些信息或数据'
+2025-06-22 01:50:45,989 - INFO - 映射题号 23 到列 'keep能够为你健身
+提供哪信息'
+2025-06-22 01:50:45,989 - INFO - 映射题号 24 到列 'keep中哪些信息/数据
+对你做重要？为什么'
+2025-06-22 01:50:45,989 - INFO - 映射题号 25 到列 '在使用keep健身时，在什么些时候你会产生
+“我有信心能长期坚持”的感觉？'
+2025-06-22 01:50:45,989 - INFO - 映射题号 26 到列 '在使用keep健身时，
+什么时候你有很强的成就感?'
+2025-06-22 01:50:45,989 - WARNING - 以下列未被映射到任何题号: {'Keep是否在某些时候能让你在健身中产生\n“我能做到”的感觉？或者愿意咬牙坚持下来\n的情况,能具体说一说吗？'}
+2025-06-22 01:50:45,989 - INFO - 成功加载数据，形状: (22, 28)
+2025-06-22 01:50:45,989 - INFO - 建立了 27 个题号映射
+2025-06-22 01:50:46,008 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/01_preprocessed_for_llm_dir/keep_question.txt
+2025-06-22 01:50:46,011 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/01_preprocessed_for_llm_dir/keep_user.txt
+2025-06-22 01:50:46,027 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/question_data_dir/keep_question_用户的运动特征.txt
+2025-06-22 01:50:46,028 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/question_data_dir/keep_question_用户的运动动机.txt
+2025-06-22 01:50:46,029 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/question_data_dir/keep_question_keep总体经历.txt
+2025-06-22 01:50:46,029 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/question_data_dir/keep_question_keep数据经验.txt
+2025-06-22 01:50:46,029 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/question_data_dir/keep_question_keep促进.txt
+2025-06-22 01:50:46,029 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-22 01:50:46,032 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/user_data_dir/keep_user_用户的运动特征.txt
+2025-06-22 01:50:46,032 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/user_data_dir/keep_user_用户的运动动机.txt
+2025-06-22 01:50:46,033 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/user_data_dir/keep_user_keep总体经历.txt
+2025-06-22 01:50:46,033 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/user_data_dir/keep_user_keep数据经验.txt
+2025-06-22 01:50:46,033 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/user_data_dir/keep_user_keep促进.txt
+2025-06-22 01:50:46,033 - INFO - 
+=== 文件生成报告 ===
+2025-06-22 01:50:46,033 - INFO - 横向文本：
+2025-06-22 01:50:46,033 - INFO - 名称：keep_question.txt
+2025-06-22 01:50:46,033 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/01_preprocessed_for_llm_dir
+2025-06-22 01:50:46,033 - INFO - 纵向文本：
+2025-06-22 01:50:46,033 - INFO - 名称：keep_user.txt
+2025-06-22 01:50:46,033 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/01_preprocessed_for_llm_dir
+2025-06-22 01:50:46,033 - INFO - 横向category文本：
+2025-06-22 01:50:46,034 - INFO - 个数：5
+2025-06-22 01:50:46,034 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动特征/question_data_dir/keep_question_用户的运动特征.txt
+2025-06-22 01:50:46,034 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/用户的运动动机/question_data_dir/keep_question_用户的运动动机.txt
+2025-06-22 01:50:46,034 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep总体经历/question_data_dir/keep_question_keep总体经历.txt
+2025-06-22 01:50:46,034 - INFO - 文件4: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep数据经验/question_data_dir/keep_question_keep数据经验.txt
+2025-06-22 01:50:46,034 - INFO - 文件5: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/02_interview_outline_dir/keep促进/question_data_dir/keep_question_keep促进.txt
+2025-06-22 01:50:46,034 - INFO - 
+数据转换流程成功完成
+2025-06-22 03:07:20,366 - INFO - 开始数据转换流程
+2025-06-22 03:07:20,367 - INFO - 首次调用路径获取函数，正在为应用 'bilibili' 初始化项目路径配置...
+2025-06-22 03:07:20,368 - INFO - 应用 'bilibili' 的路径配置已成功初始化。
+2025-06-22 03:07:20,379 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-06-22 03:07:20,379 - INFO - 映射题号 1 到列 '您平时的学习任务是否繁重'
+2025-06-22 03:07:20,379 - INFO - 映射题号 2 到列 '在日常学习过程（不限于 B 站），您通常习惯或偏好通过哪些方式或渠道来获取新知识、学习新技能'
+2025-06-22 03:07:20,379 - INFO - 映射题号 3 到列 '为什么偏好这种方式'
+2025-06-22 03:07:20,379 - INFO - 映射题号 4 到列 ' 您对学习新事物通常抱有什么样的态度？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 5 到列 '您是什么时候开始使用 B 站的？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 6 到列 '最初主要是用它来做什么呢？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 7 到列 '现在您每天大概会花多长时间在 B 站上'
+2025-06-22 03:07:20,379 - INFO - 映射题号 8 到列 ' 主要会看哪些方面的内容呢？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 9 到列 '相对于其他内容，学习的内容占比例有多少'
+2025-06-22 03:07:20,379 - INFO - 映射题号 10 到列 '您是什么时候开始有意识地使用 B 站进行学习的？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 11 到列 '您通常会在 B 站上学习哪些类型的知识或技能？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 12 到列 '您一般在什么情况下会选择使用 B 站来学习？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 13 到列 '能描述一个您最近使用 B 站学习的具体场景吗？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 14 到列 '当您想在 B 站学习某个主题时，您通常是如何找到相关的视频或 UP 主的？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 15 到列 '哪些因素对您的选择视频影响最大'
+2025-06-22 03:07:20,379 - INFO - 映射题号 16 到列 '在 B 站学习时，您有哪些常用的功能或习惯？'
+2025-06-22 03:07:20,379 - INFO - 映射题号 17 到列 '与其他学习途径（如学校课堂、教材、MOOC、专业教育平台、其他视频网站等）相比，您为什么会选择 B 站进行学习？'
+2025-06-22 03:07:20,380 - INFO - 映射题号 18 到列 ' 对于不同类型的学习内容或学习目标，什么时候会首选 B 站，什么时候会选择其他途径'
+2025-06-22 03:07:20,380 - INFO - 映射题号 19 到列 '在您的整体学习过程中，B 站扮演着一个什么样的角色？'
+2025-06-22 03:07:20,380 - INFO - 映射题号 20 到列 'B 站的学习内容对您的理解力、知识面或思维方式等有带来什么积极影响吗'
+2025-06-22 03:07:20,380 - INFO - 映射题号 21 到列 '在 B 站学习通常会给您带来什么样的感受？'
+2025-06-22 03:07:20,380 - INFO - 映射题号 22 到列 '用几个关键词概括B站学习的价值'
+2025-06-22 03:07:20,380 - INFO - 映射题号 23 到列 '困扰'
+2025-06-22 03:07:20,380 - INFO - 映射题号 24 到列 '对于 B 站作为学习平台，您有什么期望或建议吗？（比如希望增加哪些功能，或者内容方面有什么期待 ）'
+2025-06-22 03:07:20,380 - WARNING - 以下列未被映射到任何题号: {'序号'}
+2025-06-22 03:07:20,380 - INFO - 成功加载数据，形状: (25, 26)
+2025-06-22 03:07:20,380 - INFO - 建立了 25 个题号映射
+2025-06-22 03:07:20,397 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/01_preprocessed_for_llm_dir/bilibili_question.txt
+2025-06-22 03:07:20,404 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/01_preprocessed_for_llm_dir/bilibili_user.txt
+2025-06-22 03:07:20,441 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/用户的学习经验/question_data_dir/bilibili_question_用户的学习经验.txt
+2025-06-22 03:07:20,442 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili基本经验/question_data_dir/bilibili_question_bilibili基本经验.txt
+2025-06-22 03:07:20,443 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili学习经历/question_data_dir/bilibili_question_bilibili学习经历.txt
+2025-06-22 03:07:20,443 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili选择动机/question_data_dir/bilibili_question_bilibili选择动机.txt
+2025-06-22 03:07:20,444 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili学习价值/question_data_dir/bilibili_question_bilibili学习价值.txt
+2025-06-22 03:07:20,444 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili使用总结/question_data_dir/bilibili_question_bilibili使用总结.txt
+2025-06-22 03:07:20,444 - INFO - 开始生成纵向(按用户)分类文本...
+2025-06-22 03:07:20,448 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/用户的学习经验/user_data_dir/bilibili_user_用户的学习经验.txt
+2025-06-22 03:07:20,448 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili基本经验/user_data_dir/bilibili_user_bilibili基本经验.txt
+2025-06-22 03:07:20,448 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili学习经历/user_data_dir/bilibili_user_bilibili学习经历.txt
+2025-06-22 03:07:20,448 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili选择动机/user_data_dir/bilibili_user_bilibili选择动机.txt
+2025-06-22 03:07:20,449 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili学习价值/user_data_dir/bilibili_user_bilibili学习价值.txt
+2025-06-22 03:07:20,449 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili使用总结/user_data_dir/bilibili_user_bilibili使用总结.txt
+2025-06-22 03:07:20,449 - INFO - 
+=== 文件生成报告 ===
+2025-06-22 03:07:20,449 - INFO - 横向文本：
+2025-06-22 03:07:20,449 - INFO - 名称：bilibili_question.txt
+2025-06-22 03:07:20,449 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/01_preprocessed_for_llm_dir
+2025-06-22 03:07:20,449 - INFO - 纵向文本：
+2025-06-22 03:07:20,449 - INFO - 名称：bilibili_user.txt
+2025-06-22 03:07:20,449 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/01_preprocessed_for_llm_dir
+2025-06-22 03:07:20,449 - INFO - 横向category文本：
+2025-06-22 03:07:20,449 - INFO - 个数：6
+2025-06-22 03:07:20,449 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/用户的学习经验/question_data_dir/bilibili_question_用户的学习经验.txt
+2025-06-22 03:07:20,449 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili基本经验/question_data_dir/bilibili_question_bilibili基本经验.txt
+2025-06-22 03:07:20,449 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili学习经历/question_data_dir/bilibili_question_bilibili学习经历.txt
+2025-06-22 03:07:20,449 - INFO - 文件4: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili选择动机/question_data_dir/bilibili_question_bilibili选择动机.txt
+2025-06-22 03:07:20,449 - INFO - 文件5: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili学习价值/question_data_dir/bilibili_question_bilibili学习价值.txt
+2025-06-22 03:07:20,449 - INFO - 文件6: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/bilibili_dir/02_interview_outline_dir/bilibili使用总结/question_data_dir/bilibili_question_bilibili使用总结.txt
+2025-06-22 03:07:20,449 - INFO - 
+数据转换流程成功完成
+2025-06-24 13:02:17,123 - INFO - 开始执行项目设置...
+2025-06-24 13:02:17,125 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'keep'
+2025-06-24 13:02:17,125 - INFO - 验证配置 (1/3)
+2025-06-24 13:02:17,125 - INFO - 创建目录结构 (2/3)
+2025-06-24 13:02:17,126 - INFO - 正在检查并按需创建项目目录...
+2025-06-24 13:02:17,126 - INFO - 所有必需的目录已创建完成
+2025-06-24 13:02:17,126 - INFO - 移动文件 (3/3)
+2025-06-24 13:02:17,126 - INFO - 准备移动初始数据文件...
+2025-06-24 13:02:17,126 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir
+2025-06-24 13:02:17,126 - INFO - 已移动 'keep.csv'
+2025-06-24 13:02:17,126 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir/keep-outline.csv'
+2025-06-24 13:02:17,126 - INFO - 所有文件移动操作已完成
+2025-06-24 13:02:17,127 - INFO - 工作流程 'SETUP' 执行成功
+2025-06-24 13:02:17,127 - INFO - 项目环境已准备就绪
+2025-06-24 13:02:17,127 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir
+2025-06-24 13:02:17,127 - INFO - 开始建立内部ID系统...
+2025-06-24 13:02:17,127 - INFO - 首次调用路径获取函数，正在为应用 'keep' 初始化项目路径配置...
+2025-06-24 13:02:17,127 - INFO - 应用 'keep' 的路径配置已成功初始化。
+2025-06-24 13:02:17,130 - INFO - 成功读取原始数据，共 21 条记录
+2025-06-24 13:02:17,140 - INFO - 成功生成内部ID，ID范围: 1-21
+2025-06-24 13:02:17,143 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir/keep-id.csv
+2025-06-24 13:02:17,144 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/keep_dir/00_rawdata_dir/keep.csv
+2025-06-24 13:02:17,144 - INFO - ID系统建立完成
+2025-07-02 19:42:08,680 - INFO - 开始执行项目设置...
+2025-07-02 19:42:08,683 - INFO - 开始执行工作流程: 模式 'SETUP' for app '王者荣耀'
+2025-07-02 19:42:08,683 - INFO - 验证配置 (1/3)
+2025-07-02 19:42:08,684 - INFO - 创建目录结构 (2/3)
+2025-07-02 19:42:08,684 - INFO - 正在检查并按需创建项目目录...
+2025-07-02 19:42:08,684 - INFO - 所有必需的目录已创建完成
+2025-07-02 19:42:08,685 - INFO - 移动文件 (3/3)
+2025-07-02 19:42:08,685 - INFO - 准备移动初始数据文件...
+2025-07-02 19:42:08,685 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-07-02 19:42:08,686 - INFO - 已移动 '王者荣耀.csv'
+2025-07-02 19:42:08,686 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀-outline.csv'
+2025-07-02 19:42:08,686 - INFO - 所有文件移动操作已完成
+2025-07-02 19:42:08,686 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-02 19:42:08,686 - INFO - 项目环境已准备就绪
+2025-07-02 19:42:08,686 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir
+2025-07-02 19:42:08,686 - INFO - 开始建立内部ID系统...
+2025-07-02 19:42:08,686 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-07-02 19:42:08,686 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-07-02 19:42:08,693 - INFO - 成功读取原始数据，共 27 条记录
+2025-07-02 19:42:08,705 - INFO - 成功生成内部ID，ID范围: 1-27
+2025-07-02 19:42:08,712 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀-id.csv
+2025-07-02 19:42:08,715 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/00_rawdata_dir/王者荣耀.csv
+2025-07-02 19:42:08,715 - INFO - ID系统建立完成
+2025-07-02 19:42:30,055 - INFO - 开始数据转换流程
+2025-07-02 19:42:30,055 - INFO - 首次调用路径获取函数，正在为应用 '王者荣耀' 初始化项目路径配置...
+2025-07-02 19:42:30,055 - INFO - 应用 '王者荣耀' 的路径配置已成功初始化。
+2025-07-02 19:42:30,071 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-07-02 19:42:30,071 - INFO - 映射题号 1 到列 '你 玩 王者 荣耀 多久 了 现在 还 在 玩 吗'
+2025-07-02 19:42:30,071 - INFO - 映射题号 2 到列 '大概 是 什么 段位'
+2025-07-02 19:42:30,071 - INFO - 映射题号 3 到列 '请问 你 的 性别 是'
+2025-07-02 19:42:30,071 - INFO - 映射题号 4 到列 '请问 你 的 年龄 是 目前 在 上学 还 在 工作'
+2025-07-02 19:42:30,072 - INFO - 映射题号 5 到列 '每天 都 玩 吗 一天 大概 玩 多久'
+2025-07-02 19:42:30,072 - INFO - 映射题号 6 到列 '会充 钱 吗'
+2025-07-02 19:42:30,072 - INFO - 映射题号 7 到列 '总体 上 你 觉得 这个 游戏 给 你 的 体验 如何 以 10 为 单位 估计 一个 具体 的 值 分数 的 原因 得分 的 原因 不 给 分 的 原因'
+2025-07-02 19:42:30,072 - INFO - 映射题号 8 到列 '你 最 喜欢 哪 一个 模式匹配 娱乐 还是 排位 为什么'
+2025-07-02 19:42:30,072 - INFO - 映射题号 9 到列 '你 通常 是 和 朋友 开黑 还是 和 不 认识 的 人 打 还是 单排 为什么 喜欢 这种 玩法'
+2025-07-02 19:42:30,072 - INFO - 映射题号 10 到列 '你 玩 王者 荣耀 是 为了 什么 打发 时间 提升 排名 和 朋友 娱乐 或 其他 排序 哪个 是 第一位 的'
+2025-07-02 19:42:30,072 - INFO - 映射题号 11 到列 '你 在 游戏 中 的 胜率 如何 以 10 为 单位 估计 一个 具体 的 比值'
+2025-07-02 19:42:30,072 - INFO - 映射题号 12 到列 '相对 于 你 认识 的 玩家 你 觉得 你 对 这个 游戏 掌握 的 如何 以 10 为 单位 估计 一个 具体 的 值'
+2025-07-02 19:42:30,072 - INFO - 映射题号 13 到列 '你 能 回忆 一下 最近 一次 赢得 特别 爽 的 经历 吗 当时 发生 了 什么'
+2025-07-02 19:42:30,072 - INFO - 映射题号 14 到列 '有没有 一次 输 得 特别 憋屈 的 经历 能 描述 下 当时 具体 发生 了 什么'
+2025-07-02 19:42:30,072 - INFO - 映射题号 15 到列 '你 经历 过 哪些 典型 的 输赢 情境 如果 难以 回答 可以 追问 你 经历 过 连胜 连败 逆风 翻盘 接近 胜利 突然 输 了 等 情况 吗 哪 一个 影响 最大 为什么'
+2025-07-02 19:42:30,072 - INFO - 映射题号 16 到列 '这些 输赢 情境 分别 给 你 带来 了 怎样 的 情绪 或 心理 体验'
+2025-07-02 19:42:30,072 - INFO - 映射题号 17 到列 '你 一般 会 事后 总结 自己 输赢 结果 吗 会 通过 查看 战绩 数据 输出 排行 来 为 胜负 找 原因 吗'
+2025-07-02 19:42:30,072 - INFO - 映射题号 18 到列 '你 觉得 你 在 游戏 中 能够 获胜 主要 是因为 什么 能 提出 3 条 能够 帮助 你 赢 的 条件 吗'
+2025-07-02 19:42:30,072 - INFO - 映射题号 19 到列 '你 觉得 你 在 游戏 中 的 失败 主要 是因为 什么 能 提出 3 条 吗 团队 合作 极端 场景 游戏 机制 玩家 实力'
+2025-07-02 19:42:30,072 - INFO - 映射题号 20 到列 '题目 用户 回答'
+2025-07-02 19:42:30,073 - INFO - 映射题号 21 到列 '在 深夜 疲劳 状态 下 游戏 与 精力充沛 时 相比 输赢 结果 对 您 情绪 的 影响 会 放大 还是 减弱 请 举例说明 分析 生理 状态 对 胜负 体验 的 调节作用 原因'
+2025-07-02 19:42:30,073 - INFO - 映射题号 22 到列 '你 输 了 后会 如何 做 追问 如果 输 的 很 厉害 例如 影响 到 排名 会 如何 做 暂停 游戏 换 模式 英雄 分析 录像 继续 硬打'
+2025-07-02 19:42:30,073 - INFO - 映射题号 23 到列 '你 有 什么 特殊 的 方法 能 让 你 提高 获胜 率 或 用 一些 方法 防止 输 特定 时间 玩游戏 特定 英雄 选择 控制 游戏 场次 组队 情况'
+2025-07-02 19:42:30,073 - INFO - 映射题号 24 到列 '你 觉得 一局 打 的 爽 不爽 是否 多 大程度 上 取决于 输赢'
+2025-07-02 19:42:30,073 - INFO - 映射题号 25 到列 '有没有 输 了 也 觉得 很 好玩 或者 赢 了 但 不 开心 的 经历'
+2025-07-02 19:42:30,073 - INFO - 映射题号 26 到列 '输赢 对 你 是否 继续 游戏 或者 是否 保持 热情 有 影响 吗'
+2025-07-02 19:42:30,073 - INFO - 映射题号 27 到列 '如果 您 可以 向 王者 荣耀 官方 提出 一个 切实可行 的 改进 建议您 希望 在 哪 方面 做出 改进 比如 匹配 惩罚 透明度 提升 等'
+2025-07-02 19:42:30,073 - WARNING - 以下列未被映射到任何题号: {'你 觉得 哪些 游戏 玩法 和 机制 会 对 你 输赢 起 作用 如果 回答 不 上来 再 继续 提醒 匹配 之类 的 不能 仅 停留 在 会 不会 还要 追问 某些 机制 在 什么 时候 为什么 会 不会 起 作用 原因'}
+2025-07-02 19:42:30,073 - INFO - 成功加载数据，形状: (27, 29)
+2025-07-02 19:42:30,073 - INFO - 建立了 28 个题号映射
+2025-07-02 19:42:30,095 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_question.txt
+2025-07-02 19:42:30,100 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir/王者荣耀_user.txt
+2025-07-02 19:42:30,120 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/question_data_dir/王者荣耀_question_用户信息.txt
+2025-07-02 19:42:30,120 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/question_data_dir/王者荣耀_question_总体感受.txt
+2025-07-02 19:42:30,121 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/question_data_dir/王者荣耀_question_竞技体验.txt
+2025-07-02 19:42:30,121 - INFO - 开始生成纵向(按用户)分类文本...
+2025-07-02 19:42:30,125 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/user_data_dir/王者荣耀_user_用户信息.txt
+2025-07-02 19:42:30,126 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/user_data_dir/王者荣耀_user_总体感受.txt
+2025-07-02 19:42:30,126 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/user_data_dir/王者荣耀_user_竞技体验.txt
+2025-07-02 19:42:30,126 - INFO - 
+=== 文件生成报告 ===
+2025-07-02 19:42:30,126 - INFO - 横向文本：
+2025-07-02 19:42:30,127 - INFO - 名称：王者荣耀_question.txt
+2025-07-02 19:42:30,127 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-07-02 19:42:30,127 - INFO - 纵向文本：
+2025-07-02 19:42:30,127 - INFO - 名称：王者荣耀_user.txt
+2025-07-02 19:42:30,127 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/01_preprocessed_for_llm_dir
+2025-07-02 19:42:30,127 - INFO - 横向category文本：
+2025-07-02 19:42:30,127 - INFO - 个数：3
+2025-07-02 19:42:30,127 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/用户信息/question_data_dir/王者荣耀_question_用户信息.txt
+2025-07-02 19:42:30,127 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/总体感受/question_data_dir/王者荣耀_question_总体感受.txt
+2025-07-02 19:42:30,127 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/王者荣耀_dir/02_interview_outline_dir/竞技体验/question_data_dir/王者荣耀_question_竞技体验.txt
+2025-07-02 19:42:30,127 - INFO - 
+数据转换流程成功完成
+2025-07-05 21:17:28,640 - INFO - 开始执行项目设置...
+2025-07-05 21:17:28,640 - INFO - 开始执行工作流程: 模式 'SETUP' for app '桃源深处'
+2025-07-05 21:17:28,640 - INFO - 验证配置 (1/3)
+2025-07-05 21:17:28,640 - INFO - 创建目录结构 (2/3)
+2025-07-05 21:17:28,640 - INFO - 正在检查并按需创建项目目录...
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/01_preprocessed_for_llm_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/04_deductive_coding_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/03_inductive_coding_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/codebook_data_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/codebook_data_dir
+2025-07-05 21:17:28,641 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/codebook_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/question_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/question_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/user_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/meta_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/question_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/question_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/codebook_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/meta_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/question_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/meta_data_dir
+2025-07-05 21:17:28,642 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/user_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/meta_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/question_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/codebook_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/codebook_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/meta_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/user_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/meta_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/user_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/user_data_dir
+2025-07-05 21:17:28,643 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/user_data_dir
+2025-07-05 21:17:28,643 - INFO - 所有必需的目录已创建完成
+2025-07-05 21:17:28,643 - INFO - 移动文件 (3/3)
+2025-07-05 21:17:28,643 - INFO - 准备移动初始数据文件...
+2025-07-05 21:17:28,643 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:17:28,644 - INFO - 已移动 '桃源深处.csv'
+2025-07-05 21:17:28,644 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:17:28,644 - INFO - 已移动 '桃源深处-outline.csv'
+2025-07-05 21:17:28,644 - INFO - 所有文件移动操作已完成
+2025-07-05 21:17:28,644 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-05 21:17:28,644 - INFO - 项目环境已准备就绪
+2025-07-05 21:17:28,644 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:17:28,644 - INFO - 开始建立内部ID系统...
+2025-07-05 21:17:28,644 - INFO - 首次调用路径获取函数，正在为应用 '桃源深处' 初始化项目路径配置...
+2025-07-05 21:17:28,645 - INFO - 应用 '桃源深处' 的路径配置已成功初始化。
+2025-07-05 21:17:28,648 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-05 21:17:28,657 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-05 21:17:28,658 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处-id.csv
+2025-07-05 21:17:28,659 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处.csv
+2025-07-05 21:17:28,659 - INFO - ID系统建立完成
+2025-07-05 21:28:03,226 - INFO - 开始执行项目设置...
+2025-07-05 21:28:03,227 - INFO - 开始执行工作流程: 模式 'SETUP' for app '桃源深处'
+2025-07-05 21:28:03,227 - INFO - 验证配置 (1/3)
+2025-07-05 21:28:03,227 - INFO - 创建目录结构 (2/3)
+2025-07-05 21:28:03,228 - INFO - 正在检查并按需创建项目目录...
+2025-07-05 21:28:03,228 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/question_data_dir
+2025-07-05 21:28:03,228 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/codebook_data_dir
+2025-07-05 21:28:03,229 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/user_data_dir
+2025-07-05 21:28:03,229 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/meta_data_dir
+2025-07-05 21:28:03,229 - INFO - 所有必需的目录已创建完成
+2025-07-05 21:28:03,229 - INFO - 移动文件 (3/3)
+2025-07-05 21:28:03,229 - INFO - 准备移动初始数据文件...
+2025-07-05 21:28:03,229 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:28:03,229 - INFO - 已移动 '桃源深处.csv'
+2025-07-05 21:28:03,229 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:28:03,229 - INFO - 已移动 '桃源深处-outline.csv'
+2025-07-05 21:28:03,229 - INFO - 所有文件移动操作已完成
+2025-07-05 21:28:03,229 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-05 21:28:03,229 - INFO - 项目环境已准备就绪
+2025-07-05 21:28:03,229 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:28:03,229 - INFO - 开始建立内部ID系统...
+2025-07-05 21:28:03,229 - INFO - 首次调用路径获取函数，正在为应用 '桃源深处' 初始化项目路径配置...
+2025-07-05 21:28:03,229 - INFO - 应用 '桃源深处' 的路径配置已成功初始化。
+2025-07-05 21:28:03,235 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-05 21:28:03,246 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-05 21:28:03,249 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处-id.csv
+2025-07-05 21:28:03,250 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处.csv
+2025-07-05 21:28:03,251 - INFO - ID系统建立完成
+2025-07-05 21:29:54,024 - INFO - 开始执行项目设置...
+2025-07-05 21:29:54,025 - INFO - 开始执行工作流程: 模式 'SETUP' for app '桃源深处'
+2025-07-05 21:29:54,026 - INFO - 验证配置 (1/3)
+2025-07-05 21:29:54,026 - INFO - 创建目录结构 (2/3)
+2025-07-05 21:29:54,026 - INFO - 正在检查并按需创建项目目录...
+2025-07-05 21:29:54,027 - INFO - 所有必需的目录已创建完成
+2025-07-05 21:29:54,027 - INFO - 移动文件 (3/3)
+2025-07-05 21:29:54,027 - INFO - 准备移动初始数据文件...
+2025-07-05 21:29:54,027 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:29:54,027 - INFO - 已移动 '桃源深处.csv'
+2025-07-05 21:29:54,027 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:29:54,027 - INFO - 已移动 '桃源深处-outline.csv'
+2025-07-05 21:29:54,027 - INFO - 所有文件移动操作已完成
+2025-07-05 21:29:54,027 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-05 21:29:54,027 - INFO - 项目环境已准备就绪
+2025-07-05 21:29:54,027 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:29:54,027 - INFO - 开始建立内部ID系统...
+2025-07-05 21:29:54,027 - INFO - 首次调用路径获取函数，正在为应用 '桃源深处' 初始化项目路径配置...
+2025-07-05 21:29:54,028 - INFO - 应用 '桃源深处' 的路径配置已成功初始化。
+2025-07-05 21:29:54,032 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-05 21:29:54,042 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-05 21:29:54,044 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处-id.csv
+2025-07-05 21:29:54,044 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处.csv
+2025-07-05 21:29:54,044 - INFO - ID系统建立完成
+2025-07-05 21:31:10,215 - INFO - 开始执行项目设置...
+2025-07-05 21:31:10,216 - INFO - 开始执行工作流程: 模式 'SETUP' for app '桃源深处'
+2025-07-05 21:31:10,216 - INFO - 验证配置 (1/3)
+2025-07-05 21:31:10,216 - INFO - 创建目录结构 (2/3)
+2025-07-05 21:31:10,216 - INFO - 正在检查并按需创建项目目录...
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/01_preprocessed_for_llm_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/03_inductive_coding_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/04_deductive_coding_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/question_data_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/question_data_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/meta_data_dir
+2025-07-05 21:31:10,217 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/question_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/meta_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/user_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/codebook_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/meta_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/question_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/question_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/user_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/question_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/user_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/user_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/codebook_data_dir
+2025-07-05 21:31:10,218 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/codebook_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/codebook_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/meta_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/codebook_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/meta_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/user_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/user_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/meta_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/codebook_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/meta_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/user_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/question_data_dir
+2025-07-05 21:31:10,219 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/codebook_data_dir
+2025-07-05 21:31:10,219 - INFO - 所有必需的目录已创建完成
+2025-07-05 21:31:10,219 - INFO - 移动文件 (3/3)
+2025-07-05 21:31:10,219 - INFO - 准备移动初始数据文件...
+2025-07-05 21:31:10,219 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:31:10,219 - INFO - 已移动 '桃源深处.csv'
+2025-07-05 21:31:10,219 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:31:10,220 - INFO - 已移动 '桃源深处-outline.csv'
+2025-07-05 21:31:10,220 - INFO - 所有文件移动操作已完成
+2025-07-05 21:31:10,220 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-05 21:31:10,220 - INFO - 项目环境已准备就绪
+2025-07-05 21:31:10,220 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir
+2025-07-05 21:31:10,220 - INFO - 开始建立内部ID系统...
+2025-07-05 21:31:10,220 - INFO - 首次调用路径获取函数，正在为应用 '桃源深处' 初始化项目路径配置...
+2025-07-05 21:31:10,220 - INFO - 应用 '桃源深处' 的路径配置已成功初始化。
+2025-07-05 21:31:10,225 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-05 21:31:10,236 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-05 21:31:10,237 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处-id.csv
+2025-07-05 21:31:10,238 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/00_rawdata_dir/桃源深处.csv
+2025-07-05 21:31:10,238 - INFO - ID系统建立完成
+2025-07-05 21:31:43,104 - INFO - 开始数据转换流程
+2025-07-05 21:31:43,104 - INFO - 首次调用路径获取函数，正在为应用 '桃源深处' 初始化项目路径配置...
+2025-07-05 21:31:43,105 - INFO - 应用 '桃源深处' 的路径配置已成功初始化。
+2025-07-05 21:31:43,120 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-07-05 21:31:43,120 - INFO - 映射题号 1 到列 '1请问你的年龄是?'
+2025-07-05 21:31:43,120 - INFO - 映射题号 2 到列 '2请问你的性别是?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 3 到列 '3请问你目前从事的职业是?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 4 到列 '4平时生活节奏如何？是否忙碌？压力大不大？'
+2025-07-05 21:31:43,121 - INFO - 映射题号 5 到列 '5平时在什么情况下打开游戏？【追问：①你刚刚说自己通常在下班或者空闲时间就会打开游戏看看，为什么呢? ②为什么疲劳的工作之后会想要玩这游戏呢？——为什么选择这类休闲游戏而不是那种刺激的射击类游戏】'
+2025-07-05 21:31:43,121 - INFO - 映射题号 6 到列 '6一般会玩多久游戏?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 7 到列 '7你最初接触这款游戏时，还记得当时是什么吸引玩下去的呢?/你第一次玩这个游戏时，最强烈的感受是什么?和现在相比有变化吗?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 8 到列 '8平时玩游戏的过程中，你最想要得到的是什么?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 9 到列 '9总体来说，您对《桃源深处》的满意度如何?最喜欢哪些方面?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 10 到列 '10平时上线一定要干的事?/玩这个游戏时，你觉得自己主要是在做什么?【追问：如果上线游戏后你只能进行两个操作你会选择什么？为什么？】'
+2025-07-05 21:31:43,121 - INFO - 映射题号 11 到列 '11游戏带给你休闲的感觉更多还是无聊的感觉更多?还是其他感受？为什么？'
+2025-07-05 21:31:43,121 - INFO - 映射题号 12 到列 '12游戏中有没有令您感觉“浪费时间”或“枯燥”的部分?/你从什么时候开始觉得游戏变得无聊?'
+2025-07-05 21:31:43,121 - INFO - 映射题号 13 到列 '13你觉得游戏的节奏是太快、太慢，还是刚刚好?（若太快或太慢是为什么？）'
+2025-07-05 21:31:43,121 - INFO - 映射题号 14 到列 '14您觉得这款游戏最休闲或放松的地方是什么?'
+2025-07-05 21:31:43,122 - INFO - 映射题号 15 到列 '15您如何描述《桃源深处有人家》的休闲体验？如果用“放松”“治愈”“平淡”“无聊”等词排序，您会如何选择？为什么这样选择?【追问：①（若强调“放松”）您能否举例说明某个瞬间或玩法让您感到特别放松？（如雨天种田、夜晚观星）②若提到“无聊”）您从何时开始产生这种感受？是玩法重复、目标缺失，还是其他原因？③（若矛盾表述）您提到“放松但偶尔无聊”，这两种感受会在什么场景下切换？】'
+2025-07-05 21:31:43,122 - INFO - 映射题号 16 到列 '16游戏节奏慢体现在哪些方面?/哪些设计成功营造了“休闲放松”的氛围?'
+2025-07-05 21:31:43,122 - INFO - 映射题号 17 到列 '17您如何评价游戏中的“资源获取节奏”？（如种植、建造所需时间）【追问：若玩家认为“等待时间过长”您更希望缩短等待时间，还是通过增加“等待期间的趣味交互”（如照料动物小游戏）来缓解焦虑？是否需要“资源交易”功能（玩家间以物易物）来缓解获取压力？】'
+2025-07-05 21:31:43,122 - INFO - 映射题号 18 到列 '18你觉得游戏中哪些地方是和这种慢节奏背道而驰的?你喜欢这些地方吗?为什么?'
+2025-07-05 21:31:43,122 - INFO - 映射题号 19 到列 '19您对游戏中的任务系统(如日常任务、主线任务)有何评价?是否有任务让您觉得“为了完成而完成”?【追问：若任务奖励从“固定资源”改为“自选奖励包”（如二选一），是否会提升您的参与意愿？是否需要增加“剧情联动任务”（如NPC委托触发隐藏故事）来增强代入感？】'
+2025-07-05 21:31:43,122 - INFO - 映射题号 20 到列 '20您如何看待游戏中“无时间限制”的设计（随时随地想玩就玩，想走就走）?它是否让您感到自由，还是导致缺乏目标感?【追问：若缺乏目标感：如果加入“可选挑战模式”（如限时丰收竞赛、装饰评分赛），您会愿意尝试吗？】'
+2025-07-05 21:31:43,122 - INFO - 映射题号 21 到列 '21[追问：若认为稍微有点缺乏目标感：您是否希望保留“完全无压力”的纯净模式，并通过其他方式（如成就系统）提供目标感？】'
+2025-07-05 21:31:43,122 - INFO - 映射题号 23 到列 '23您是否原因继续游玩此游戏？如果给继续游玩意愿评分1~5（5分意愿最高）您的打分是？'
+2025-07-05 21:31:43,122 - INFO - 映射题号 24 到列 '24您认为游戏里是否存在一些沉迷or防沉迷的机制？'
+2025-07-05 21:31:43,122 - WARNING - 以下列未被映射到任何题号: {'序号', '22追问：若增加“非强制”社交玩法（如好友互助农场、资源互换集市），您会因此更活跃吗？——您更希望社交以“异步互动”（如留言、点赞）还是“实时协作”（如联机任务）为主？或者您还有别的想法？】'}
+2025-07-05 21:31:43,122 - INFO - 成功加载数据，形状: (30, 26)
+2025-07-05 21:31:43,122 - INFO - 建立了 24 个题号映射
+2025-07-05 21:31:43,140 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/01_preprocessed_for_llm_dir/桃源深处_question.txt
+2025-07-05 21:31:43,142 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/01_preprocessed_for_llm_dir/桃源深处_user.txt
+2025-07-05 21:31:43,158 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/question_data_dir/桃源深处_question_基本信息.txt
+2025-07-05 21:31:43,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/question_data_dir/桃源深处_question_游戏习惯.txt
+2025-07-05 21:31:43,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/question_data_dir/桃源深处_question_游戏体验.txt
+2025-07-05 21:31:43,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/question_data_dir/桃源深处_question_总体感受.txt
+2025-07-05 21:31:43,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/question_data_dir/桃源深处_question_识别特征.txt
+2025-07-05 21:31:43,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/question_data_dir/桃源深处_question_继续意愿.txt
+2025-07-05 21:31:43,159 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/question_data_dir/桃源深处_question_防成谜.txt
+2025-07-05 21:31:43,159 - INFO - 开始生成纵向(按用户)分类文本...
+2025-07-05 21:31:43,163 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/user_data_dir/桃源深处_user_基本信息.txt
+2025-07-05 21:31:43,163 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/user_data_dir/桃源深处_user_游戏习惯.txt
+2025-07-05 21:31:43,163 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/user_data_dir/桃源深处_user_游戏体验.txt
+2025-07-05 21:31:43,164 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/user_data_dir/桃源深处_user_总体感受.txt
+2025-07-05 21:31:43,164 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/user_data_dir/桃源深处_user_识别特征.txt
+2025-07-05 21:31:43,164 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/user_data_dir/桃源深处_user_继续意愿.txt
+2025-07-05 21:31:43,164 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/user_data_dir/桃源深处_user_防成谜.txt
+2025-07-05 21:31:43,164 - INFO - 
+=== 文件生成报告 ===
+2025-07-05 21:31:43,164 - INFO - 横向文本：
+2025-07-05 21:31:43,164 - INFO - 名称：桃源深处_question.txt
+2025-07-05 21:31:43,164 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/01_preprocessed_for_llm_dir
+2025-07-05 21:31:43,164 - INFO - 纵向文本：
+2025-07-05 21:31:43,164 - INFO - 名称：桃源深处_user.txt
+2025-07-05 21:31:43,164 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/01_preprocessed_for_llm_dir
+2025-07-05 21:31:43,164 - INFO - 横向category文本：
+2025-07-05 21:31:43,164 - INFO - 个数：7
+2025-07-05 21:31:43,164 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/基本信息/question_data_dir/桃源深处_question_基本信息.txt
+2025-07-05 21:31:43,164 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏习惯/question_data_dir/桃源深处_question_游戏习惯.txt
+2025-07-05 21:31:43,164 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/游戏体验/question_data_dir/桃源深处_question_游戏体验.txt
+2025-07-05 21:31:43,164 - INFO - 文件4: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/总体感受/question_data_dir/桃源深处_question_总体感受.txt
+2025-07-05 21:31:43,164 - INFO - 文件5: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/识别特征/question_data_dir/桃源深处_question_识别特征.txt
+2025-07-05 21:31:43,164 - INFO - 文件6: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/继续意愿/question_data_dir/桃源深处_question_继续意愿.txt
+2025-07-05 21:31:43,164 - INFO - 文件7: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/桃源深处_dir/02_interview_outline_dir/防成谜/question_data_dir/桃源深处_question_防成谜.txt
+2025-07-05 21:31:43,164 - INFO - 
+数据转换流程成功完成
+2025-07-12 09:57:23,290 - INFO - 开始执行项目设置...
+2025-07-12 09:57:23,291 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'D5'
+2025-07-12 09:57:23,291 - INFO - 验证配置 (1/3)
+2025-07-12 09:57:23,291 - INFO - 创建目录结构 (2/3)
+2025-07-12 09:57:23,291 - INFO - 正在检查并按需创建项目目录...
+2025-07-12 09:57:23,292 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir
+2025-07-12 09:57:23,292 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/01_preprocessed_for_llm_dir
+2025-07-12 09:57:23,292 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir
+2025-07-12 09:57:23,292 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/04_deductive_coding_dir
+2025-07-12 09:57:23,292 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/03_inductive_coding_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/meta_data_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/user_data_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/meta_data_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/question_data_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/meta_data_dir
+2025-07-12 09:57:23,293 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/codebook_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/question_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/codebook_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/meta_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/user_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/codebook_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/user_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/user_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/codebook_data_dir
+2025-07-12 09:57:23,294 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/question_data_dir
+2025-07-12 09:57:23,295 - INFO - 已创建目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/question_data_dir
+2025-07-12 09:57:23,295 - INFO - 所有必需的目录已创建完成
+2025-07-12 09:57:23,295 - INFO - 移动文件 (3/3)
+2025-07-12 09:57:23,295 - INFO - 准备移动初始数据文件...
+2025-07-12 09:57:23,295 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 09:57:23,295 - INFO - 已移动 'D5.csv'
+2025-07-12 09:57:23,295 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 09:57:23,295 - INFO - 已移动 'D5-outline.csv'
+2025-07-12 09:57:23,295 - INFO - 所有文件移动操作已完成
+2025-07-12 09:57:23,295 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-12 09:57:23,295 - INFO - 项目环境已准备就绪
+2025-07-12 09:57:23,295 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 09:57:23,295 - INFO - 开始建立内部ID系统...
+2025-07-12 09:57:23,295 - INFO - 首次调用路径获取函数，正在为应用 'D5' 初始化项目路径配置...
+2025-07-12 09:57:23,296 - INFO - 应用 'D5' 的路径配置已成功初始化。
+2025-07-12 09:57:23,300 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-12 09:57:23,309 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-12 09:57:23,311 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5-id.csv
+2025-07-12 09:57:23,312 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5.csv
+2025-07-12 09:57:23,312 - INFO - ID系统建立完成
+2025-07-12 10:03:41,260 - INFO - 开始执行项目设置...
+2025-07-12 10:03:41,260 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'D5'
+2025-07-12 10:03:41,260 - INFO - 验证配置 (1/3)
+2025-07-12 10:03:41,261 - INFO - 创建目录结构 (2/3)
+2025-07-12 10:03:41,261 - INFO - 正在检查并按需创建项目目录...
+2025-07-12 10:03:41,261 - INFO - 所有必需的目录已创建完成
+2025-07-12 10:03:41,261 - INFO - 移动文件 (3/3)
+2025-07-12 10:03:41,261 - INFO - 准备移动初始数据文件...
+2025-07-12 10:03:41,262 - INFO - 已创建/确认目录: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 10:03:41,262 - INFO - 已移动 'D5.csv'
+2025-07-12 10:03:41,262 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5-outline.csv'
+2025-07-12 10:03:41,262 - INFO - 所有文件移动操作已完成
+2025-07-12 10:03:41,262 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-12 10:03:41,262 - INFO - 项目环境已准备就绪
+2025-07-12 10:03:41,262 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 10:03:41,262 - INFO - 开始建立内部ID系统...
+2025-07-12 10:03:41,262 - INFO - 首次调用路径获取函数，正在为应用 'D5' 初始化项目路径配置...
+2025-07-12 10:03:41,262 - INFO - 应用 'D5' 的路径配置已成功初始化。
+2025-07-12 10:03:41,265 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-12 10:03:41,276 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-12 10:03:41,278 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5-id.csv
+2025-07-12 10:03:41,278 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5.csv
+2025-07-12 10:03:41,279 - INFO - ID系统建立完成
+2025-07-12 10:04:19,976 - INFO - 开始执行项目设置...
+2025-07-12 10:04:19,977 - INFO - 开始执行工作流程: 模式 'SETUP' for app 'D5'
+2025-07-12 10:04:19,977 - INFO - 验证配置 (1/3)
+2025-07-12 10:04:19,977 - INFO - 创建目录结构 (2/3)
+2025-07-12 10:04:19,978 - INFO - 正在检查并按需创建项目目录...
+2025-07-12 10:04:19,978 - INFO - 所有必需的目录已创建完成
+2025-07-12 10:04:19,978 - INFO - 移动文件 (3/3)
+2025-07-12 10:04:19,978 - INFO - 准备移动初始数据文件...
+2025-07-12 10:04:19,978 - INFO - 数据文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5.csv'
+2025-07-12 10:04:19,978 - INFO - 大纲文件已在目标位置 '/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5-outline.csv'
+2025-07-12 10:04:19,978 - INFO - 所有文件移动操作已完成
+2025-07-12 10:04:19,979 - INFO - 工作流程 'SETUP' 执行成功
+2025-07-12 10:04:19,979 - INFO - 项目环境已准备就绪
+2025-07-12 10:04:19,979 - INFO - 确保文件已被移入正确位置: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir
+2025-07-12 10:04:19,979 - INFO - 开始建立内部ID系统...
+2025-07-12 10:04:19,979 - INFO - 首次调用路径获取函数，正在为应用 'D5' 初始化项目路径配置...
+2025-07-12 10:04:19,979 - INFO - 应用 'D5' 的路径配置已成功初始化。
+2025-07-12 10:04:19,982 - INFO - 成功读取原始数据，共 30 条记录
+2025-07-12 10:04:19,993 - INFO - 成功生成内部ID，ID范围: 1-30
+2025-07-12 10:04:19,994 - INFO - 成功保存带ID的文件到: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5-id.csv
+2025-07-12 10:04:19,995 - INFO - 修改了可能存在格式问题的原始文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/00_rawdata_dir/D5.csv
+2025-07-12 10:04:19,995 - INFO - ID系统建立完成
+2025-07-12 10:04:53,458 - INFO - 开始数据转换流程
+2025-07-12 10:04:53,459 - INFO - 首次调用路径获取函数，正在为应用 'D5' 初始化项目路径配置...
+2025-07-12 10:04:53,459 - INFO - 应用 'D5' 的路径配置已成功初始化。
+2025-07-12 10:04:53,471 - INFO - 使用内部ID列 '_id' 映射到题号 0
+2025-07-12 10:04:53,472 - INFO - 映射题号 1 到列 '1.您是从什么时候开始玩《第五人格》的？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 2 到列 '2.您打到过最高的段位是什么？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 3 到列 '3.您平时 是和谁一块玩游戏（自己打/朋友）？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 4 到列 '4.您平均每周玩几次？每次大约多久？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 5 到列 '5.您最喜欢的游戏环节是什么？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 6 到列 '6.最近一月，您的游戏频率有无变化？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 7 到列 '7.如果从10分满分打分，您给当前的恐怖体验打几分？为什么？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 8 到列 '8.恐怖感是否增强了您对游戏世界的代入感或沉浸感？'
+2025-07-12 10:04:53,472 - INFO - 映射题号 9 到列 '9.在您玩《第五人格》的过程中，有哪些时刻会让您感到害怕或紧张？请您尽量详细描述。'
+2025-07-12 10:04:53,472 - INFO - 映射题号 10 到列 '10.您觉得这些恐怖体验主要来自哪些游戏元素？（例如音乐、角色设计、场景变化等）'
+2025-07-12 10:04:53,472 - INFO - 映射题号 11 到列 '11.这些恐怖体验对您的游戏表现有影响吗？请您描述一下影响方式'
+2025-07-12 10:04:53,473 - INFO - 映射题号 12 到列 '12.您觉得这些恐怖体验会让游戏变得更有趣，还是会让您不愿意继续玩？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 13 到列 '13.您在玩游戏时，会不会主动去寻找一些让自己更害怕或刺激的情境？如果会，是为什么？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 14 到列 '14.您觉得在玩游戏时，是否会完全沉浸其中，忽略周围环境？请举例说明。'
+2025-07-12 10:04:53,473 - INFO - 映射题号 15 到列 '15.您认为《第五人格》中的“恐怖感”、“刺激感”和“紧张感”有什么区别？（对恐怖的定义）'
+2025-07-12 10:04:53,473 - INFO - 映射题号 16 到列 '16.您觉得整体而言，这款游戏的恐怖程度如何？对您是否构成吸引力？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 17 到列 '17.多人协作时，哪些队友行为让您觉得紧张或害怕？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 18 到列 '18.游戏的难度是否影响了您对恐怖的感受？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 19 到列 '19.游戏中道具/技能设定对“压迫感”的营造是否有效？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 20 到列 '20.改版后，您觉得游戏的恐怖氛围发生了变化吗？/哪里的变化'
+2025-07-12 10:04:53,473 - INFO - 映射题号 21 到列 '21.你觉得哪些恐怖元素对你来说比较重要？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 22 到列 '22.未来您希望游戏增加哪些新机制来增强恐怖感？'
+2025-07-12 10:04:53,473 - INFO - 映射题号 23 到列 '23.您还有其他对游戏发展的建议吗？'
+2025-07-12 10:04:53,473 - WARNING - 以下列未被映射到任何题号: {'序号'}
+2025-07-12 10:04:53,473 - INFO - 成功加载数据，形状: (30, 25)
+2025-07-12 10:04:53,473 - INFO - 建立了 24 个题号映射
+2025-07-12 10:04:53,491 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/01_preprocessed_for_llm_dir/D5_question.txt
+2025-07-12 10:04:53,493 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/01_preprocessed_for_llm_dir/D5_user.txt
+2025-07-12 10:04:53,510 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/question_data_dir/D5_question_用户画像与游戏习惯.txt
+2025-07-12 10:04:53,510 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/question_data_dir/D5_question_恐怖感与心理动机.txt
+2025-07-12 10:04:53,510 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/question_data_dir/D5_question_玩法机制中的恐怖感.txt
+2025-07-12 10:04:53,511 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/question_data_dir/D5_question_用户建议与内容保留.txt
+2025-07-12 10:04:53,511 - INFO - 开始生成纵向(按用户)分类文本...
+2025-07-12 10:04:53,514 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/user_data_dir/D5_user_用户画像与游戏习惯.txt
+2025-07-12 10:04:53,514 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/user_data_dir/D5_user_恐怖感与心理动机.txt
+2025-07-12 10:04:53,514 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/user_data_dir/D5_user_玩法机制中的恐怖感.txt
+2025-07-12 10:04:53,514 - INFO - 成功保存文件: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/user_data_dir/D5_user_用户建议与内容保留.txt
+2025-07-12 10:04:53,514 - INFO - 
+=== 文件生成报告 ===
+2025-07-12 10:04:53,514 - INFO - 横向文本：
+2025-07-12 10:04:53,514 - INFO - 名称：D5_question.txt
+2025-07-12 10:04:53,515 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/01_preprocessed_for_llm_dir
+2025-07-12 10:04:53,515 - INFO - 纵向文本：
+2025-07-12 10:04:53,515 - INFO - 名称：D5_user.txt
+2025-07-12 10:04:53,515 - INFO - 路径：/Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/01_preprocessed_for_llm_dir
+2025-07-12 10:04:53,515 - INFO - 横向category文本：
+2025-07-12 10:04:53,515 - INFO - 个数：4
+2025-07-12 10:04:53,515 - INFO - 文件1: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户画像与游戏习惯/question_data_dir/D5_question_用户画像与游戏习惯.txt
+2025-07-12 10:04:53,515 - INFO - 文件2: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/恐怖感与心理动机/question_data_dir/D5_question_恐怖感与心理动机.txt
+2025-07-12 10:04:53,515 - INFO - 文件3: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/玩法机制中的恐怖感/question_data_dir/D5_question_玩法机制中的恐怖感.txt
+2025-07-12 10:04:53,515 - INFO - 文件4: /Users/lijian/Desktop/GitHub/interview-coding-llm/interview-coding-llm/data_dir/D5_dir/02_interview_outline_dir/用户建议与内容保留/question_data_dir/D5_question_用户建议与内容保留.txt
+2025-07-12 10:04:53,515 - INFO - 
+数据转换流程成功完成

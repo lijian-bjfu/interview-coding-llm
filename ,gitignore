@@ -1,0 +1,5 @@
+data_dir/
+.DS_Store
+*.log
+tmp/
+.claude/

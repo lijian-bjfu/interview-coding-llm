@@ -3,10 +3,11 @@ MaxQDA Theme Code Generator
 
 将LLM分析的JSON数据转换为MaxQDA兼容的结构化文本格式。
 实现了系统化的编码生成和主题组织方法，同时保持数据完整性和可追溯性。
+新增了基于'quote_range'索引的直接定位方法，以提高效率和准确性。
 
 作者: Your Name
 日期: 2024
-版本: 3.0
+版本: 3.1
 """
 
 import os
@@ -118,9 +119,57 @@ def clean_text_for_maxqda(text: Optional[str], is_for_code_name: bool = False) -
 
     return cleaned_text
 
+def _extract_locations_for_single_quote(text_to_extract_from: str, range_info: List[int]) -> List[Dict[str, Any]]:
+    """
+    【新函数】直接根据提供的索引范围在文本中提取引文。
+    
+    参数:
+        text_to_extract_from: 要从中提取文本的源文本
+        range_info: 包含[start, end]索引的列表
+    
+    返回:
+        List[Dict]: 包含位置信息的字典列表 (如果成功，列表含一个元素)
+        每个字典包含:
+            - start: 起始位置
+            - end: 结束位置
+            - matched_text: 实际提取的文本
+            - match_type: 'direct_index' (直接索引)
+    """
+    global PRINT_CURRENT_ITEM_DETAILS
+    
+    if not isinstance(range_info, list) or len(range_info) != 2:
+        logger.warning(f"提供的range_info格式无效: {range_info}。应为 [start, end] 格式的列表。")
+        return []
+        
+    start, end = range_info
+    
+    if not (isinstance(start, int) and isinstance(end, int) and 0 <= start <= end):
+        logger.warning(f"提供的索引范围无效: start={start}, end={end}。")
+        return []
+
+    text_len = len(text_to_extract_from)
+    if end > text_len:
+        logger.warning(f"索引范围 [start={start}, end={end}] 超出文本长度 {text_len}。将截断至文本末尾。")
+        end = text_len
+        if start >= end:
+            logger.error(f"调整后的起始索引 {start} 大于或等于结束索引 {end}，无法提取。")
+            return []
+
+    extracted_text = text_to_extract_from[start:end]
+    
+    if PRINT_CURRENT_ITEM_DETAILS:
+        logger.debug(f"直接索引定位成功: 范围[{start}:{end}], 提取文本: '{extracted_text[:50]}...'")
+
+    return [{
+        'start': start,
+        'end': end,
+        'matched_text': extracted_text,
+        'match_type': 'direct_index'
+    }]
+
 def _find_locations_for_single_quote(text_to_search_in: str, quote_to_find: str) -> List[Dict[str, Any]]:
     """
-    在文本中查找引文的所有出现位置，支持模糊匹配。
+    【旧函数】在文本中查找引文的所有出现位置，支持模糊匹配。
     
     参数:
         text_to_search_in: 要搜索的源文本
@@ -147,7 +196,7 @@ def _find_locations_for_single_quote(text_to_search_in: str, quote_to_find: str)
         return []
         
     if PRINT_CURRENT_ITEM_DETAILS:
-        logger.debug(f"尝试定位引文: '{processed_quote[:50]}...' 在文本中: '{processed_text[:70]}...'")
+        logger.debug(f"尝试文本搜索定位引文: '{processed_quote[:50]}...' 在文本中: '{processed_text[:70]}...'")
     
     # 首先尝试精确匹配
     locations = []
@@ -482,7 +531,10 @@ def get_segments_and_codes_for_answer(
     themes_for_current_question: List[Dict],
     parent_question_cleaned: str
 ) -> List[Dict]:
-    """获取答案的分段和编码信息"""
+    """
+    【已修改】获取答案的分段和编码信息。
+    优先使用 'quote_range' 进行索引定位，失败则回退到文本搜索。
+    """
     aggregated_segments_map = {}
     
     # 标准化当前被访者ID
@@ -504,6 +556,7 @@ def get_segments_and_codes_for_answer(
         code_names_list = llm_entry.get("code_name", [])
         supporting_quotes_list = llm_entry.get("supporting_quote", [])
         pairs_list = llm_entry.get("pairs", [])
+        quote_ranges_list = llm_entry.get("quote_range", []) # 获取 range 列表
         
         # 验证数据格式
         if not (isinstance(code_names_list, list) and 
@@ -532,18 +585,34 @@ def get_segments_and_codes_for_answer(
                 if str(raw_initial_code).upper() == "NULL" or not str(raw_supporting_quote).strip():
                     continue
                     
-                # 清理编码和引文文本
+                # 清理编码文本
                 cleaned_initial_code = clean_text_for_maxqda(raw_initial_code, is_for_code_name=True)
                 if not cleaned_initial_code:
                     continue
                     
-                quote_to_find = clean_text_for_maxqda(raw_supporting_quote, is_for_code_name=False)
-                if not quote_to_find:
-                    continue
-                    
-                # 在原文中定位引文
-                found_locations = _find_locations_for_single_quote(original_answer_processed, quote_to_find)
+                # --- 定位引文的核心逻辑 ---
+                found_locations = []
+                # 优先使用基于索引的定位方法
+                if quote_ranges_list and 0 <= quote_idx < len(quote_ranges_list):
+                    range_info = quote_ranges_list[quote_idx]
+                    found_locations = _extract_locations_for_single_quote(
+                        original_answer_processed, 
+                        range_info
+                    )
+
+                # 如果索引方法失败或不可用，回退到基于文本搜索的方法
                 if not found_locations:
+                    if not quote_ranges_list:
+                        logger.debug(f"被访者 {normalized_current_id}: 未提供 'quote_range'，回退到文本搜索。")
+                    else:
+                        logger.warning(f"被访者 {normalized_current_id}: 使用 'quote_range' 定位失败，回退到文本搜索。")
+                    
+                    quote_to_find = clean_text_for_maxqda(raw_supporting_quote, is_for_code_name=False)
+                    if quote_to_find:
+                        found_locations = _find_locations_for_single_quote(original_answer_processed, quote_to_find)
+                
+                if not found_locations:
+                    logger.warning(f"被访者 {normalized_current_id}: 两种方法均未能定位引文: '{raw_supporting_quote[:50]}...'")
                     continue
                     
                 # 处理找到的每个位置
@@ -581,7 +650,7 @@ def get_segments_and_codes_for_answer(
                         aggregated_segments_map[segment_key]['codes_to_apply_set'].add(hierarchical_code)
                         
             except Exception as e:
-                logger.warning(f"处理编码-引文对时出错: {e}")
+                logger.warning(f"处理编码-引文对 '{pair_str}' 时出错: {e}")
                 continue
                 
     # 转换为列表格式并排序
@@ -764,7 +833,7 @@ def run_maxqda_conversion(
                 
                 # 检查是否有编码数据
                 if (current_parent_code_q_cleaned in loaded_llm_data_map and 
-                    question_header_from_csv not in questions_to_skip_coding):
+                    question_header_from_csv not in (questions_to_skip_coding or [])):
                     # 获取编码数据
                     llm_data = loaded_llm_data_map[current_parent_code_q_cleaned]
                     all_initial_codes = llm_data.get('all_initial_code_entries_for_question', [])
@@ -859,7 +928,7 @@ def main() -> None:
     """
     logger.info("="*80)
     logger.info("开始任务: 生成最终MaxQDA导入文件")
-    logger.info("脚本: 03inductive_create_maxqda_themecode.py | 版本: 3.0")
+    logger.info("脚本: 03inductive_create_maxqda_themecode.py | 版本: 3.1")
     logger.info(f"执行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     logger.info("="*80)
 
@@ -895,7 +964,7 @@ def main() -> None:
         df = pd.read_csv(original_file)
         id_column = df.columns[0]
         questions_to_skip = [id_column]  # 使用ID列作为要跳过编码的列
-        logger.info(f"使用第一列 '{questions_to_skip}' 作为ID列")
+        logger.info(f"使用第一列 '{id_column}' 作为ID列，并将跳过其编码")
 
         # 步骤3: 执行核心转换流程
         logger.info("\n步骤3: 执行核心转换流程...")
