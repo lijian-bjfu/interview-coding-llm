@@ -6,6 +6,7 @@
 功能
 ----
 为某个题目生成"归纳编码"用的完整 prompt。
+- 执行脚本后会列出 outline 中的题目，用户输入题号后生成对应 prompt。
 - 列出 outline 中所有题目供用户选号
 - 把 prompts/inductive_template.txt + 该题的访谈数据拼装成完整 prompt
 - 写入 01_preprocessed/_prompts/inductive_q{NN}_prompt.txt
